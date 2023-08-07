@@ -10,7 +10,9 @@
   top: 0;
   left: 0;
 }
-
+.section {
+  padding: 70px 0;
+}
 .slider img:first-child {
   z-index: 1;
 }
@@ -35,6 +37,34 @@
 .dot:hover {
   background-color: #717171;
 }
+.kc_row_inner,
+.kc-row-container.kc-container .kc-wrap-columns {
+  margin-left: -15px;
+  margin-right: -15px;
+  clear: both;
+  @media screen and (min-width: 999px) {
+    width: calc(100% + 30px);
+  }
+  @media screen and (min-width: 999px) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.kc_column_inner {
+  min-height: 1px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+.col-md-6 {
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+}
 #page {
   .seeAll {
     width: 100% !important;
@@ -43,31 +73,191 @@
     height: 0px !important;
     padding: 0px !important;
     margin: 0px !important;
-    .see-row {
-      clear: both;
-      float: left;
+  }
+  .see-row {
+    clear: both;
+    float: left;
+    width: 100%;
+    .seeAll-container {
+      padding-left: 0px;
+      padding-right: 0px;
       width: 100%;
-      .seeAll-container {
-        padding-left: 0px;
-        padding-right: 0px;
-        width: 100%;
-        max-width: 100%;
-        .seeAll-columns {
-          @media screen and (min-width: 999px) {
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
+      max-width: 100%;
+      .seeAll-columns {
+        @media screen and (min-width: 999px) {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          .seeAll-column {
+            clear: none;
+            min-height: 1px;
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            float: left;
             width: 100%;
-            flex-wrap: wrap;
-            .seeAll-column {
-              clear: none;
-              min-height: 1px;
-              position: relative;
-              padding-right: 15px;
-              padding-left: 15px;
-              float: left;
+            & > div {
+              background-color: #f5fafe;
               width: 100%;
+              padding: 30px 0px;
+              .row {
+                margin-left: -15px;
+                margin-right: -15px;
+                p {
+                  float: left;
+                  font-size: 18px;
+                  margin-top: 10px;
+                }
+                .yellowButton {
+                  float: right;
+                  height: 40px;
+                  background-color: #f4c23d;
+                  line-height: 40px;
+                  a {
+                    margin-left: 15px;
+                    font-size: 12px;
+                    font-family: "Montserrat", sans-serif;
+                    color: #222222;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-right: 10px;
+                    i {
+                      float: right;
+                      width: 40px;
+                      height: 40px;
+                      line-height: 40px;
+                      text-align: center;
+                      background-color: #f0b20e;
+                    }
+                  }
+                }
+              }
             }
+          }
+        }
+      }
+    }
+  }
+  .why-us {
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #ffffff;
+    .why-us-container {
+      width: 100%;
+      max-width: 1170px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box;
+      .why-us-columns {
+        @media screen and (min-width: 999px) {
+          width: calc(100% + 30px);
+        }
+        margin-left: -15px;
+        margin-right: -15px;
+        clear: both;
+        @media screen and (min-width: 999px) {
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          .why-us-column {
+            clear: none;
+          }
+        }
+        .left-why-us {
+          min-height: 1px;
+          position: relative;
+          padding-right: 15px;
+          padding-left: 15px;
+          float: left;
+          width: 750px;
+          .heading-left {
+            h2 {
+              font-family: "Montserrat", sans-serif;
+              margin-top: 0px;
+              font-size: 20px;
+              text-transform: uppercase;
+              color: #222222;
+              font-weight: 700;
+            }
+            span {
+              font-family: "Roboto", sans-serif;
+              font-size: 13px;
+              color: #888888;
+            }
+            .line {
+              margin-bottom: 80px;
+              margin-top: 15px;
+              width: 60px;
+              height: 2px;
+              background-color: #222222;
+            }
+          }
+          .service-left {
+            overflow: hidden;
+            margin-bottom: -53px;
+            display: flex;
+            flex-wrap: wrap;
+            .service-item {
+              margin-bottom: 60px;
+              padding: 0 15px;
+              i {
+                font-size: 16px;
+                float: left;
+                width: 55px;
+                height: 55px;
+                text-align: center;
+                line-height: 55px;
+                background-color: #f5fafe;
+                border-radius: 50%;
+                color: #222222;
+                margin-right: 15px;
+              }
+              h2 {
+                font-family: "Montserrat", sans-serif;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #222222;
+                font-weight: 700;
+              }
+              p {
+                margin-top: 15px;
+                margin-left: 70px;
+              }
+            }
+          }
+        }
+        .right-why-us {
+          @media only screen and (min-width: 1000px) and (max-width: 5000px) {
+            width: 33.33%;
+          }
+
+          .ki img {
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 10;
+            width: 370px;
+            height: 340px;
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+            box-shadow: -15px 20px #f5fafe;
+          }
+          .img-bg {
+            background-color: #f5fafe;
+            width: 370px;
+            height: 340px;
+            background-size: cover;
+            top: 20px;
+            right: 20px;
+            position: absolute;
+            z-index: 9;
+            display: none;
           }
         }
       }

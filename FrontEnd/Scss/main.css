@@ -399,6 +399,10 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   left: 0;
 }
 
+.section {
+  padding: 70px 0;
+}
+
 .slider img:first-child {
   z-index: 1;
 }
@@ -427,6 +431,41 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   background-color: #717171;
 }
 
+.kc_row_inner,
+.kc-row-container.kc-container .kc-wrap-columns {
+  margin-left: -15px;
+  margin-right: -15px;
+  clear: both;
+}
+@media screen and (min-width: 999px) {
+  .kc_row_inner,
+  .kc-row-container.kc-container .kc-wrap-columns {
+    width: calc(100% + 30px);
+  }
+}
+@media screen and (min-width: 999px) {
+  .kc_row_inner,
+  .kc-row-container.kc-container .kc-wrap-columns {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.kc_column_inner {
+  min-height: 1px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+
+@media (min-width: 992px) {
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
 #page .seeAll {
   width: 100% !important;
   clear: both !important;
@@ -435,24 +474,24 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   padding: 0px !important;
   margin: 0px !important;
 }
-#page .seeAll .see-row {
+#page .see-row {
   clear: both;
   float: left;
   width: 100%;
 }
-#page .seeAll .see-row .seeAll-container {
+#page .see-row .seeAll-container {
   padding-left: 0px;
   padding-right: 0px;
   width: 100%;
   max-width: 100%;
 }
 @media screen and (min-width: 999px) {
-  #page .seeAll .see-row .seeAll-container .seeAll-columns {
+  #page .see-row .seeAll-container .seeAll-columns {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
   }
-  #page .seeAll .see-row .seeAll-container .seeAll-columns .seeAll-column {
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column {
     clear: none;
     min-height: 1px;
     position: relative;
@@ -461,4 +500,165 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
     float: left;
     width: 100%;
   }
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column > div {
+    background-color: #f5fafe;
+    width: 100%;
+    padding: 30px 0px;
+  }
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column > div .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column > div .row p {
+    float: left;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column > div .row .yellowButton {
+    float: right;
+    height: 40px;
+    background-color: #f4c23d;
+    line-height: 40px;
+  }
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column > div .row .yellowButton a {
+    margin-left: 15px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    color: #222222;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  #page .see-row .seeAll-container .seeAll-columns .seeAll-column > div .row .yellowButton a i {
+    float: right;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f0b20e;
+  }
+}
+#page .why-us {
+  clear: both;
+  float: left;
+  width: 100%;
+  background: #ffffff;
+}
+#page .why-us .why-us-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+#page .why-us .why-us-container .why-us-columns {
+  margin-left: -15px;
+  margin-right: -15px;
+  clear: both;
+}
+@media screen and (min-width: 999px) {
+  #page .why-us .why-us-container .why-us-columns {
+    width: calc(100% + 30px);
+  }
+}
+@media screen and (min-width: 999px) {
+  #page .why-us .why-us-container .why-us-columns {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #page .why-us .why-us-container .why-us-columns .why-us-column {
+    clear: none;
+  }
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us {
+  min-height: 1px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 750px;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .heading-left h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .heading-left span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #888888;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .heading-left .line {
+  margin-bottom: 80px;
+  margin-top: 15px;
+  width: 60px;
+  height: 2px;
+  background-color: #222222;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .service-left {
+  overflow: hidden;
+  margin-bottom: -53px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .service-left .service-item {
+  margin-bottom: 60px;
+  padding: 0 15px;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .service-left .service-item i {
+  font-size: 16px;
+  float: left;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  background-color: #f5fafe;
+  border-radius: 50%;
+  color: #222222;
+  margin-right: 15px;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .service-left .service-item h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+}
+#page .why-us .why-us-container .why-us-columns .left-why-us .service-left .service-item p {
+  margin-top: 15px;
+  margin-left: 70px;
+}
+@media only screen and (min-width: 1000px) and (max-width: 5000px) {
+  #page .why-us .why-us-container .why-us-columns .right-why-us {
+    width: 33.33%;
+  }
+}
+#page .why-us .why-us-container .why-us-columns .right-why-us .ki img {
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 10;
+  width: 370px;
+  height: 340px;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  box-shadow: -15px 20px #f5fafe;
+}
+#page .why-us .why-us-container .why-us-columns .right-why-us .img-bg {
+  background-color: #f5fafe;
+  width: 370px;
+  height: 340px;
+  background-size: cover;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: 9;
+  display: none;
 }
