@@ -662,3 +662,152 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   z-index: 9;
   display: none;
 }
+#page .feature-listing {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+#page .feature-listing .kc-row-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  max-width: 100%;
+}
+#page .feature-listing .kc-row-container .feature-column {
+  min-height: 1px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+}
+#page .feature-listing .kc-row-container .feature-column .header {
+  text-align: center;
+}
+#page .feature-listing .kc-row-container .feature-column .header h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+}
+#page .feature-listing .kc-row-container .feature-column .header span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #888888;
+}
+#page .feature-listing .kc-row-container .feature-column .header i {
+  background-color: #f5fafe;
+  margin-top: 15px;
+  width: 40px;
+  height: 30px;
+  line-height: 26px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid #222222;
+  margin-bottom: 75px;
+}
+#page .feature-listing .kc-row-container .feature-column .header .line-dec {
+  margin-top: -90px;
+  margin-bottom: 70px;
+  width: 150px;
+  height: 2px;
+  background-color: #222222;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page .feature-listing .kc-row-container .feature-column .cars {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  #page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card {
+    width: 20%;
+    float: left;
+  }
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card img {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content {
+  background-color: #ffffff;
+  padding: 15px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  background-color: #ffffff;
+  padding: 15px;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .pricee {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 36px;
+  padding: 0px 12px;
+  margin-top: -15px;
+  margin-right: -15px;
+  float: right;
+  background-color: #f4c23d;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 700;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .line {
+  width: 40px;
+  height: 2px;
+  background-color: #eeeeee;
+  margin-top: 15px;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .car-info {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #888888;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .car-detail {
+  margin: -15px;
+  border-bottom: 2px solid #eeeeee;
+  border-top: 2px solid #eeeeee;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .car-detail ul {
+  padding: 0;
+  margin: 0px 15px;
+  list-style: none;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .car-detail ul li {
+  text-align: left;
+  padding-right: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px 3px;
+  border-right: 1px solid #eeeeee;
+  display: inline-block;
+  font-size: 13px;
+  color: #888888;
+  font-family: "Roboto", sans-serif;
+}
+#page .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card .content .car-detail ul li i {
+  margin-left: -5px;
+  margin-right: 5px;
+  color: #222222;
+}
