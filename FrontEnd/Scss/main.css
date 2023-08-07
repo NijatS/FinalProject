@@ -1009,3 +1009,54 @@ img {
   color: #336699;
   text-transform: uppercase;
 }
+#page .clients {
+  clear: both;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#page .clients .kc-row-container {
+  max-width: 1170px;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#page .clients .kc-row-container .client-column {
+  min-height: 1px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+}
+#page .clients .kc-row-container .client-column .brands {
+  opacity: 1;
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+#page .clients .kc-row-container .client-column .brands .carusel-outher {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+#page .clients .kc-row-container .client-column .brands .carusel-outher .carusel {
+  width: 3800px;
+  left: 0px;
+  display: block;
+  transition: all 1000ms ease 0s;
+}
+#page .clients .kc-row-container .client-column .brands .carusel-outher .carusel .carusel-item {
+  width: 190px;
+  float: left;
+}
+#page .clients .kc-row-container .client-column .brands .carusel-outher .carusel .carusel-item .item {
+  text-align: center;
+  background-color: #ffffff;
+  width: 170px;
+  height: 125px;
+  display: inline-block;
+}

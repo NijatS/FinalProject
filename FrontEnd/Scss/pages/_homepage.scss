@@ -49,14 +49,13 @@ img {
     width: calc(100% + 30px);
   }
   @media screen and (min-width: 999px) {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
+
 .kc_column_inner {
   min-height: 1px;
   position: relative;
@@ -604,6 +603,57 @@ img {
                 font-family: "Montserrat", sans-serif;
                 color: #336699;
                 text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .clients {
+    clear: both;
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .kc-row-container {
+      max-width: 1170px;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100%;
+      box-sizing: border-box;
+      .client-column {
+        min-height: 1px;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
+        .brands {
+          opacity: 1;
+          display: block;
+          text-align: center;
+          position: relative;
+          width: 100%;
+          .carusel-outher {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            .carusel {
+              width: 3800px;
+              left: 0px;
+              display: block;
+              transition: all 1000ms ease 0s;
+              .carusel-item {
+                width: 190px;
+                float: left;
+                .item {
+                  text-align: center;
+                  background-color: #ffffff;
+                  width: 170px;
+                  height: 125px;
+                  display: inline-block;
+                }
               }
             }
           }
