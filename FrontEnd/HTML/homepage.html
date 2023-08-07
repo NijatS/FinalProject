@@ -30,7 +30,6 @@
                           ><i class="fa fa-facebook"></i
                         ></a>
                       </li>
-
                       <li>
                         <a class="twitter" href="#" target="_blank"
                           ><i class="fa fa-twitter"></i
@@ -73,65 +72,110 @@
                 </div>
               </div>
             </div>
-            <div class="site-header" itemtype="http://schema.org/WPHeader">
-              <div id="main-header" class="main-header header-sticky">
-                <div class="inner-header container clearfix">
-                  <div class="logo">
-                    <a href="http://demo.mypsolution.com/wp13/"
-                      ><img
-                        src="http://demo.mypsolution.com/wp13/wp-content/themes/auction/assets/images/logo_white.png"
-                        alt=""
-                    /></a>
-                  </div>
-                  <div
-                    class="header-right-toggle pull-right hidden-md hidden-lg"
-                  >
-                    <a class="side-menu-button"><i class="fa fa-bars"></i></a>
-                  </div>
-                  <nav class="main-navigation text-left hidden-xs hidden-sm">
-                    <ul class="menu-nav">
-                      <li id="menu-item">
-                        <a href="http://demo.mypsolution.com/wp13/">Home</a>
-                      </li>
-                      <li id="menu-item">
-                        <a href="http://demo.mypsolution.com/wp13/">About Us</a>
-                      </li>
-                      <li id="menu-item">
-                        <a href="http://demo.mypsolution.com/wp13/">Services</a>
-                      </li>
-                      <li id="menu-item" class="open">
-                        <a
-                          title="Products"
-                          href="http://demo.mypsolution.com/wp13/shop/"
-                          data-toggle="dropdown"
-                          class="has-submenu"
-                          aria-haspopup="true"
-                          data-hover="dropdown"
-                          >Products <i class="fa fa-angle-down"></i
-                        ></a>
-                        <ul role="menu" class="sub-menu">
-                          <li>
-                            <a>Shop List</a>
-                          </li>
-                          <li>
-                            <a>Shop List</a>
-                          </li>
-                          <li>
-                            <a>Shop List</a>
-                          </li>
-                          <li>
-                            <a>Shop List</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </nav>
+          </div>
+          <div class="site-header" itemtype="http://schema.org/WPHeader">
+            <div id="main-header" class="main-header header-sticky">
+              <div class="inner-header container clearfix">
+                <div class="logo">
+                  <a href="http://demo.mypsolution.com/wp13/"
+                    ><img
+                      src="http://demo.mypsolution.com/wp13/wp-content/themes/auction/assets/images/logo_white.png"
+                      alt=""
+                  /></a>
                 </div>
+                <div class="header-right-toggle pull-right hidden-md hidden-lg">
+                  <a class="side-menu-button"><i class="fa fa-bars"></i></a>
+                </div>
+                <nav class="main-navigation text-left hidden-xs hidden-sm">
+                  <ul class="menu-nav">
+                    <li id="menu-item">
+                      <a href="http://demo.mypsolution.com/wp13/">Home</a>
+                    </li>
+                    <li id="menu-item">
+                      <a href="http://demo.mypsolution.com/wp13/">About Us</a>
+                    </li>
+                    <li id="menu-item">
+                      <a href="http://demo.mypsolution.com/wp13/">Services</a>
+                    </li>
+                    <li id="menu-item" class="open">
+                      <a
+                        data-toggle="dropdown"
+                        class="has-submenu"
+                        aria-haspopup="true"
+                        data-hover="dropdown"
+                        aria-expanded="true"
+                        >Products <i class="fa fa-angle-down"></i
+                      ></a>
+                      <ul role="menu" class="sub-menu">
+                        <li>
+                          <a>Shop List</a>
+                        </li>
+                        <li>
+                          <a>Shop List</a>
+                        </li>
+                        <li>
+                          <a>Shop List</a>
+                        </li>
+                        <li>
+                          <a>Shop List</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item">
+                      <a href="http://demo.mypsolution.com/wp13/">Blogs</a>
+                    </li>
+                    <li id="menu-item">
+                      <a href="http://demo.mypsolution.com/wp13/">Contact Us</a>
+                    </li>
+                    <li id="search-item">
+                      <p>
+                        <a href="#" class="showLink search-icon"
+                          ><i class="fa fa-search"></i
+                        ></a>
+                      </p>
+                      <div class="more example" style="display: none">
+                        <form method="get" class="blog-search">
+                          <input
+                            type="text"
+                            class="blog-search-field"
+                            placeholder="Type to search"
+                          />
+                        </form>
+                        <p>
+                          <a href="#" class="example-hide hideLink"
+                            ><i class="fa fa-close"></i
+                          ></a>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
+          </div>
+          <div class="slider">
+            <img id="img-1" src="../Images/car.jpg" alt="Image 1" />
+            <img id="img-2" src="../Images/logo.png" alt="Image 2" />
+            <img id="img-3" src="../Images/car.jpg" alt="Image 3" />
+          </div>
+          <div class="navigation-button">
+            <span class="dot active" onclick="changeSlide(0)"></span>
+            <span class="dot" onclick="changeSlide(1)"></span>
+            <span class="dot" onclick="changeSlide(2)"></span>
+          </div>
+          <div id="page">
+            <div class="seeAll"></div>
+            <section class="see-row">
+              <div class="seeAll-container">
+                <div class="seeAll-columns">
+                  <div class="seeAll-column"></div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
+<script src="../JavaScript/home.js"></script>
