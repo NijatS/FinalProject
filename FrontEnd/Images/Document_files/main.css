@@ -391,10 +391,6 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   position: relative;
 }
 
-img {
-  vertical-align: middle;
-}
-
 .slider img {
   width: 100%;
   height: 700px;
@@ -453,7 +449,6 @@ img {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
@@ -552,7 +547,6 @@ img {
 #page .why-us .why-us-container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
