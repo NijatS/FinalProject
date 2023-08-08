@@ -177,18 +177,19 @@ body .sidebar-menu-container .sidebar-menu-push {
   left: 0;
   z-index: 9999;
   height: 100%;
-  transition: transform 0.5s;
+  transition: transform 2s;
 }
 body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-overlay {
   position: absolute;
   z-index: 9999;
   top: 0;
   right: 0;
-  width: 0;
-  height: 0;
   background: rgba(0, 0, 0, 0.3);
-  content: "";
-  opacity: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s;
+  display: none;
 }
 body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner {
   position: relative;
@@ -432,6 +433,64 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   top: 0;
   right: 0;
 }
+body .sidebar-menu {
+  z-index: 9999;
+  visibility: visible;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  transition: all 2s;
+  overflow-y: auto;
+  width: 250px;
+}
+body .sidebar-menu .sidebar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body .sidebar-menu .sidebar .content {
+  position: absolute;
+  overflow: none;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+}
+body .sidebar-menu .sidebar .content .menu {
+  display: block;
+}
+body .sidebar-menu .sidebar .content .menu ul {
+  padding: 25px 15px;
+  margin: 0;
+  list-style: none;
+}
+body .sidebar-menu .sidebar .content .menu ul li {
+  display: block;
+  position: relative;
+}
+body .sidebar-menu .sidebar .content .menu ul li a {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  padding: 5px 10px;
+  margin: 0;
+  color: #222222;
+}
+body .sidebar-menu .sidebar .content .menu ul li .show-button {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  color: #8997a5;
+}
 
 .subscribe {
   padding: 30px 0px;
@@ -597,6 +656,12 @@ footer {
 }
 footer .fcol {
   float: left;
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  footer .fcol {
+    flex: 0 0 auto;
+    width: 100%;
+  }
 }
 footer .fcol .widget {
   margin-bottom: 53px;

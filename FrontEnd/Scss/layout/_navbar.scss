@@ -34,18 +34,20 @@ body {
       left: 0;
       z-index: 9999;
       height: 100%;
-      -webkit-transition: -webkit-transform 0.5s;
-      transition: transform 0.5s;
+      -webkit-transition: -webkit-transform 2s;
+      transition: transform 2s;
       .sidebar-menu-overlay {
         position: absolute;
         z-index: 9999;
         top: 0;
         right: 0;
-        width: 0;
-        height: 0;
         background: rgba(0, 0, 0, 0.3);
-        content: "";
-        opacity: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        display: none;
       }
       .sidebar-menu-inner {
         position: relative;
@@ -273,6 +275,64 @@ body {
                   top: 0;
                   right: 0;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sidebar-menu {
+    z-index: 9999;
+    visibility: visible;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    transition: all 2s;
+    overflow-y: auto;
+    width: 250px;
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      .content {
+        position: absolute;
+        overflow: none;
+        overflow-x: hidden;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        .menu {
+          display: block;
+          ul {
+            padding: 25px 15px;
+            margin: 0;
+            list-style: none;
+            li {
+              display: block;
+              position: relative;
+              a {
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                display: block;
+                padding: 5px 10px;
+                margin: 0;
+                color: #222222;
+              }
+              .show-button {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+                cursor: pointer;
+                color: #8997a5;
               }
             }
           }
