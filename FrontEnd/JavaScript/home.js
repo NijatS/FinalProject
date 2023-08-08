@@ -1,13 +1,17 @@
-var imgs = document.querySelectorAll(".slider img");
-var dots = document.querySelectorAll(".dot");
+const imgs = document.querySelectorAll(".slider img");
+const dots = document.querySelectorAll(".dot");
 const coruselElements = document.querySelectorAll(".carusel-item");
 const carusel = document.querySelector(".carusel");
-var currentImg = 0;
-const interval = 3000;
-var i = 0;
+let currentImg = 0;
+let i = 0;
+let j = 0;
 let x = 0;
-// var timer = setInterval(changeSlide(i), interval);
-setInterval(changeCarusel(), 1000);
+// var timer = setInterval(changeSlide, 3000, j);
+if (coruselElements.length > 6) {
+  let count = coruselElements.length - 6;
+  setInterval(changeCarusel, 2000, count);
+}
+
 currentImg = (currentImg + 1) % imgs.length;
 
 function changeSlide(n) {
@@ -24,19 +28,13 @@ function changeSlide(n) {
     currentImg = n;
   }
 }
-function changeCarusel() {
-  if (coruselElements.length > 6) {
-    let count = coruselElements.length - 6;
-    console.log(carusel);
-    if (i < count) {
-      x = x - 190;
-      console.log("a");
-      i++;
-    } else if (i == count) {
-      x = 0;
-      console.log("b");
-      i = 0;
-    }
-    carusel.style.transform = `translate3d(${x}px, 0px, 0px)`;
+function changeCarusel(count) {
+  if (i < count) {
+    x = x - 190;
+    i++;
+  } else if (i == count) {
+    x = 0;
+    i = 0;
   }
+  carusel.style.transform = `translate3d(${x}px, 0px, 0px)`;
 }

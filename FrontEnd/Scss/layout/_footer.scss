@@ -1,0 +1,96 @@
+.subscribe {
+  padding: 30px 0px;
+  background-image: linear-gradient(-90deg, #2f5e8e 40%, #336699 40%);
+  clear: both;
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    .left-subcribe {
+      float: left;
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #ffffff;
+        float: left;
+        margin-right: 60px;
+        margin-top: 27px;
+        @media (max-width: 991px) {
+          margin-bottom: 20px;
+          float: none;
+          text-align: center;
+          margin-right: 0px;
+        }
+      }
+      form {
+        padding-top: 15px;
+        @media (max-width: 1199px) {
+          clear: both;
+        }
+        input {
+          background-color: #ffffff;
+          border: none;
+          height: 40px;
+          width: 200px;
+          margin-right: -5px;
+          outline: none;
+          font-family: "Roboto", sans-serif;
+          font-size: 13px;
+          color: #888888;
+          padding-left: 15px;
+          float: left;
+          @media (max-width: 991px) {
+            margin-bottom: 15px;
+            float: none;
+            width: 100%;
+          }
+        }
+        .simple-button {
+          float: none;
+          display: block;
+          margin-bottom: 20px;
+          button {
+            display: inline-block;
+            background-color: #f4c23d;
+            line-height: 40px;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            font-size: 11px;
+            font-family: "Montserrat", sans-serif;
+            color: #222222;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+          }
+        }
+      }
+    }
+    .right-subcribe {
+      float: left;
+      .right-content {
+        float: right;
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li {
+            display: inline-block;
+            margin: 0px -1px;
+            a {
+              background-color: #264c73;
+              width: 64px;
+              height: 64px;
+              display: inline-block;
+              text-align: center;
+              line-height: 64px;
+              color: #ffffff;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

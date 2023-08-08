@@ -385,6 +385,109 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
   right: 0;
 }
 
+.subscribe {
+  padding: 30px 0px;
+  background-image: linear-gradient(-90deg, #2f5e8e 40%, #336699 40%);
+  clear: both;
+}
+.subscribe .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.subscribe .row .left-subcribe {
+  float: left;
+}
+.subscribe .row .left-subcribe h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  float: left;
+  margin-right: 60px;
+  margin-top: 27px;
+}
+@media (max-width: 991px) {
+  .subscribe .row .left-subcribe h2 {
+    margin-bottom: 20px;
+    float: none;
+    text-align: center;
+    margin-right: 0px;
+  }
+}
+.subscribe .row .left-subcribe form {
+  padding-top: 15px;
+}
+@media (max-width: 1199px) {
+  .subscribe .row .left-subcribe form {
+    clear: both;
+  }
+}
+.subscribe .row .left-subcribe form input {
+  background-color: #ffffff;
+  border: none;
+  height: 40px;
+  width: 200px;
+  margin-right: -5px;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  color: #888888;
+  padding-left: 15px;
+  float: left;
+}
+@media (max-width: 991px) {
+  .subscribe .row .left-subcribe form input {
+    margin-bottom: 15px;
+    float: none;
+    width: 100%;
+  }
+}
+.subscribe .row .left-subcribe form .simple-button {
+  float: none;
+  display: block;
+  margin-bottom: 20px;
+}
+.subscribe .row .left-subcribe form .simple-button button {
+  display: inline-block;
+  background-color: #f4c23d;
+  line-height: 40px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  color: #222222;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+.subscribe .row .right-subcribe {
+  float: left;
+}
+.subscribe .row .right-subcribe .right-content {
+  float: right;
+}
+.subscribe .row .right-subcribe .right-content ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.subscribe .row .right-subcribe .right-content ul li {
+  display: inline-block;
+  margin: 0px -1px;
+}
+.subscribe .row .right-subcribe .right-content ul li a {
+  background-color: #264c73;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  text-align: center;
+  line-height: 64px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
 .slider {
   width: 100%;
   height: 710px;
