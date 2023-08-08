@@ -2,11 +2,22 @@
   padding: 30px 0px;
   background-image: linear-gradient(-90deg, #2f5e8e 40%, #336699 40%);
   clear: both;
+  @media (max-width: 991px) {
+    background-image: none;
+    background-color: #336699;
+  }
   .row {
     margin-left: -15px;
     margin-right: -15px;
     .left-subcribe {
       float: left;
+      @media (max-width: 1199px) {
+        width: 50%;
+      }
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+
       h2 {
         font-family: "Montserrat", sans-serif;
         font-size: 18px;
@@ -50,6 +61,12 @@
           float: none;
           display: block;
           margin-bottom: 20px;
+          @media (max-width: 991px) {
+            float: none;
+            text-align: center;
+            display: block;
+            margin-bottom: 20px;
+          }
           button {
             display: inline-block;
             background-color: #f4c23d;
@@ -69,8 +86,20 @@
     }
     .right-subcribe {
       float: left;
+      @media (max-width: 1199px) {
+        width: 50%;
+      }
+      @media (max-width: 991px) {
+        margin-bottom: 9px;
+        width: 100%;
+      }
       .right-content {
         float: right;
+        @media (max-width: 991px) {
+          margin-top: 30px;
+          float: none;
+          text-align: center;
+        }
         ul {
           padding: 0;
           margin: 0;
@@ -87,6 +116,11 @@
               line-height: 64px;
               color: #ffffff;
               font-size: 15px;
+              @media (max-width: 991px) {
+                width: 54px;
+                height: 54px;
+                line-height: 54px;
+              }
             }
           }
         }
@@ -98,10 +132,16 @@ footer {
   background-color: #26313c;
   padding: 60px 0px 70px 0px;
   clear: both;
+  @media (max-width: 991px) {
+    padding-top: 30px;
+  }
   .fcol {
     float: left;
     .widget {
       margin-bottom: 53px;
+      @media (max-width: 991px) {
+        margin-top: 0;
+      }
     }
     .about-info {
       margin-bottom: 0;
@@ -133,7 +173,7 @@ footer {
     .featured-links {
       margin-bottom: 0;
       @media (max-width: 991px) {
-        margin-top: 50px;
+        margin-top: 30px;
       }
       h4 {
         font-family: "Montserrat", sans-serif;
@@ -147,6 +187,9 @@ footer {
       .featured-links-container {
         ul {
           columns: 2;
+          @media (max-width: 991px) {
+            columns: 1;
+          }
           a {
             margin-bottom: 15px;
             display: block;
@@ -205,7 +248,7 @@ footer {
     .gallery {
       font-size: 0;
       @media (max-width: 991px) {
-        margin-top: 80px;
+        margin-top: 50px;
       }
       .gallery-item {
         width: 25%;
@@ -226,6 +269,10 @@ footer {
   p {
     margin-bottom: 0px;
     color: #8997a5;
+    @media (max-width: 991px) {
+      text-align: center;
+      margin-top: 10px;
+    }
     span {
       font-style: normal;
       color: #f4c23d;
@@ -236,6 +283,12 @@ footer {
     margin: 0;
     list-style: none;
     float: right;
+    @media (max-width: 991px) {
+      float: none;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
     li {
       margin-left: 15px;
       display: inline-block;
@@ -258,6 +311,12 @@ footer {
   display: inline-block;
   visibility: visible;
   opacity: 1;
+  @media (max-width: 991px) {
+    right: 20px;
+    bottom: 20px;
+    height: 30px;
+    width: 30px;
+  }
   @media (min-width: 992px) {
     height: 60px;
     width: 60px;
