@@ -207,3 +207,182 @@
     }
   }
 }
+.user-comment {
+  .header {
+    h2 {
+      margin-top: 0px;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #222222;
+      font-weight: 700;
+    }
+    span {
+      font-family: "Roboto", sans-serif;
+      font-size: 13px;
+      color: #888888;
+    }
+    i {
+      margin-top: 15px;
+      background-color: #ffffff;
+      width: 40px;
+      height: 30px;
+      line-height: 26px;
+      text-align: center;
+      display: inline-block;
+      border: 2px solid #222222;
+      margin-bottom: 75px;
+    }
+    .line {
+      margin-top: -90px;
+      margin-bottom: 70px;
+      width: 150px;
+      height: 2px;
+      background-color: #222222;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .kc-column-inner {
+    width: 100% !important;
+    .user-carusel {
+      opacity: 1;
+      display: block;
+      position: relative;
+      width: 100%;
+      .user-carusel-outer {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        .user-carusel-container {
+          width: 4560px;
+          left: 0px;
+          display: block;
+          transition: all 1000ms ease 0s;
+          transform: translate3d(0px, 0px, 0px);
+          position: relative;
+          backface-visibility: hidden;
+          display: flex;
+          .user-carusel-item {
+            width: 1140px;
+            float: left;
+            transform: translate3d(0, 0, 0);
+
+            div {
+              @media (min-width: 767px) {
+                margin-left: 6.666666666666664%;
+              }
+              @media (min-width: 1200px) {
+                margin-left: 15.666666666666664%;
+                width: 66.66666666666666%;
+              }
+            }
+            p {
+              font-size: 14px;
+              font-family: "Roboto", sans-serif;
+              color: #888888;
+              line-height: 22px;
+            }
+            img {
+              margin-top: 30px;
+            }
+            h2 {
+              font-size: 12px;
+              color: #336699;
+              text-transform: uppercase;
+              font-weight: 700;
+              margin-bottom: 0px;
+            }
+            span {
+              font-family: "Roboto", sans-serif;
+              font-size: 11px;
+              color: #888888;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+    .carusel-controls {
+      top: -200px;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      height: 0;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      @media (max-width: 992px) {
+        top: -150px;
+      }
+      .bt-back {
+        float: left;
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+        background: #fff;
+        border: 1px solid #336699;
+        transform: rotate(45deg);
+        left: 0px;
+        color: #336699;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+          top: 3px;
+          left: 3px;
+          right: 3px;
+          bottom: 3px;
+          border: 2px solid #336699;
+        }
+        .back {
+          z-index: 11;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          line-height: 32px;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          top: 50%;
+          color: #336699;
+          &::before {
+            content: "\f060";
+          }
+        }
+      }
+      .bt-next {
+        float: right;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        z-index: 10;
+        background: #fff;
+        border: 1px solid #336699;
+        transform: rotate(45deg);
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+          top: 3px;
+          left: 3px;
+          right: 3px;
+          bottom: 3px;
+          border: 2px solid #336699;
+        }
+        .next {
+          z-index: 11;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          line-height: 32px;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          top: 50%;
+          color: #336699;
+        }
+      }
+    }
+  }
+}
