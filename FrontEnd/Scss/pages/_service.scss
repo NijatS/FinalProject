@@ -5,6 +5,12 @@
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 970px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 750px;
+  }
   .wrap-columns {
     margin-left: -15px;
     margin-right: -15px;
@@ -25,9 +31,53 @@
       padding-left: 15px;
       float: left;
       clear: none;
+      width: 100%;
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 100%;
+        float: none;
+      }
       @media (max-width: 767px) {
         float: none;
         width: 100%;
+      }
+
+      .kc-row-inner {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-right: -15px;
+        clear: both;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media (min-width: 768px) and (max-width: 991px) {
+          width: 100%;
+          float: none;
+        }
+        @media (max-width: 767px) {
+          float: none !important;
+          flex-direction: column;
+        }
+
+        .kc-column-inner {
+          min-height: 1px;
+          position: relative;
+          padding-right: 15px;
+          padding-left: 15px;
+          float: left;
+          @media (min-width: 1000px) and (max-width: 5000px) {
+            width: 25%;
+          }
+          @media (min-width: 768px) and (max-width: 991px) {
+            width: 100%;
+            float: none;
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+          @media (max-width: 767px) {
+            float: none !important;
+          }
+        }
       }
     }
   }
@@ -210,6 +260,9 @@
     clear: both;
     float: left;
     width: 100%;
+    @media (max-width: 991px) {
+      margin-bottom: -25px;
+    }
     .header {
       h2 {
         margin-top: 0px;
@@ -242,6 +295,98 @@
         background-color: #222222;
         margin-left: auto;
         margin-right: auto;
+      }
+    }
+    .pricing-table {
+      border: 1px solid #eeeeee;
+      border-top: 5px solid #336699;
+      text-align: center;
+      width: 260px;
+      @media (max-width: 991px) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: 1199px) {
+        width: 210px;
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+        width: 720px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      h2 {
+        margin: 20px 0 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eeeeee;
+      }
+      span {
+        width: 100%;
+        border-bottom: 1px solid #eeeeee;
+        padding-bottom: 10px;
+        display: inline-block;
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 400;
+        em {
+          font-style: normal;
+          font-size: 12px;
+          display: inline-block;
+        }
+      }
+      ul {
+        text-align: left;
+        padding-left: 25px;
+        margin-top: 30px;
+        list-style: none;
+        li {
+          display: block;
+          font-family: "Roboto", sans-serif;
+          font-size: 13px;
+          margin: 10px 0px;
+          color: #333333;
+          line-height: 1.428571429;
+          i {
+            margin-right: 10px;
+            width: 14px;
+            height: 14px;
+            background-color: #336699;
+            color: #ffffff;
+            text-align: center;
+            line-height: 14px;
+            border-radius: 50%;
+            font-size: 8px;
+          }
+        }
+        .close {
+          color: #888888;
+          i {
+            background-color: #da3015;
+          }
+        }
+      }
+      .signup-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        width: 80%;
+        a {
+          display: inline-block;
+          background-color: #f4c23d;
+          line-height: 40px;
+          text-align: center;
+          width: 120px;
+          height: 40px;
+          font-size: 11px;
+          color: #222222;
+          font-weight: 700;
+          text-transform: uppercase;
+          @media (max-width: 991px) {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
