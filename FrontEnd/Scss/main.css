@@ -149,6 +149,13 @@ h6 {
   margin-bottom: 10px;
 }
 
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  color: #888888;
+}
+
 body {
   font-size: 14px;
   line-height: 1.428571429;
@@ -2543,5 +2550,168 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   top: 50%;
+  color: #336699;
+}
+
+#page .contact {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+#page .contact .text-block {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 1000px) and (max-width: 5000px) {
+  #page .contact .left-contact {
+    width: 66.66%;
+  }
+}
+@media (max-width: 991px) {
+  #page .contact .left-contact .contact-form {
+    margin-bottom: 30px;
+  }
+}
+#page .contact .left-contact .contact-form i {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  left: 30px;
+  color: #336699;
+}
+#page .contact .left-contact .contact-form br {
+  display: none;
+}
+#page .contact .left-contact .contact-form span {
+  position: relative;
+}
+#page .contact .left-contact .contact-form span input {
+  border: 1px solid #eeeeee;
+  margin-bottom: 25px;
+  width: 100%;
+  padding-left: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #888888;
+  height: 40px;
+  outline: none;
+  line-height: inherit;
+}
+#page .contact .left-contact .contact-form span textarea {
+  border: 1px solid #eeeeee;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 140px;
+  max-height: 180px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #888888;
+  height: 40px;
+  padding: 12px 45px;
+  outline: none;
+}
+#page .contact .left-contact .contact-form .col-md-6 {
+  position: relative;
+}
+@media (min-width: 992px) {
+  #page .contact .left-contact .contact-form .col-md-6 {
+    width: 50%;
+  }
+}
+#page .contact .left-contact .contact-form .col-md-12 {
+  position: relative;
+}
+@media (min-width: 992px) {
+  #page .contact .left-contact .contact-form .col-md-12 {
+    width: 100%;
+  }
+}
+#page .contact .left-contact .contact-form .col-md-12 .button {
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  #page .contact .left-contact .contact-form .col-md-12 .button {
+    display: block;
+  }
+}
+#page .contact .left-contact .contact-form .col-md-12 .button button {
+  background-color: #f4c23d;
+  font-size: 12px;
+  color: #222222;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-color: #f4c23d;
+  display: inline-block;
+  width: auto;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  margin-bottom: 25px;
+  height: 40px;
+  outline: none;
+}
+@media (max-width: 600px) {
+  #page .contact .left-contact .contact-form .col-md-12 .button button {
+    width: 100%;
+  }
+}
+#page .contact .left-contact .contact-form .col-md-12 .button span {
+  position: absolute;
+  z-index: 1;
+  background-color: #f0b20e;
+  right: 11px;
+  top: 12px;
+  visibility: hidden;
+  display: inline-block;
+  background-image: url(../../images/ajax-loader.gif);
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+}
+#page .contact .left-contact .contact-form .col-md-12 .button i {
+  float: right;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f0b20e;
+  color: #222222;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 100%;
+}
+@media (max-width: 600px) {
+  #page .contact .left-contact .contact-form .col-md-12 .button i {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 5000px) {
+  #page .contact .right-contact {
+    width: 33.33%;
+  }
+}
+#page .contact .right-contact h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 7px;
+  margin-top: 22px;
+}
+#page .contact .right-contact p {
+  font-size: 12px;
+}
+#page .contact .right-contact a {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
   color: #336699;
 }
