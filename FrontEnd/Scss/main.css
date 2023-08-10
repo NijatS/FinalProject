@@ -2716,6 +2716,74 @@ img {
   color: #336699;
 }
 
+.button {
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .button {
+    display: block;
+  }
+}
+.button button {
+  background-color: #f4c23d;
+  font-size: 12px;
+  color: #222222;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-color: #f4c23d;
+  display: inline-block;
+  width: auto;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  margin-bottom: 25px;
+  height: 40px;
+  outline: none;
+}
+@media (max-width: 600px) {
+  .button button {
+    width: 100%;
+  }
+}
+.button span {
+  position: absolute;
+  z-index: 1;
+  background-color: #f0b20e;
+  right: 11px;
+  top: 12px;
+  visibility: hidden;
+  display: inline-block;
+  background-image: url(../../images/ajax-loader.gif);
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+}
+.button i {
+  float: right;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f0b20e;
+  color: #222222;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 100%;
+}
+@media (max-width: 600px) {
+  .button i {
+    display: none;
+  }
+}
+
 .blog-page .blog-item {
   margin-bottom: 40px;
 }
@@ -2955,4 +3023,156 @@ img {
   display: inline-block;
   margin-bottom: 8px;
   margin-right: 3px;
+}
+
+.blog-item h6 {
+  margin: 30px 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.blog-item blockquote {
+  border-left: none;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #888888;
+  display: block;
+  min-height: 60px;
+  padding: 10px 20px;
+}
+.blog-item blockquote::before {
+  content: '"';
+  margin-right: 15px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 65px;
+  width: 50px;
+  height: 50px;
+  background-color: #f4c23d;
+  display: block;
+  font-size: 34px;
+  float: left;
+}
+
+.author {
+  padding: 20px 0px 25px 0px;
+  margin: 50px 20px 0px 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
+}
+@media (max-width: 601px) {
+  .author {
+    text-align: center;
+  }
+}
+.author .share-button {
+  width: 120px;
+  height: 40px;
+  border: 1px solid #eeeeee;
+  text-align: center;
+  float: right;
+  margin-top: 6px;
+}
+@media (max-width: 601px) {
+  .author .share-button {
+    float: none;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    width: auto;
+  }
+}
+.author .share-button a {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  color: #222222;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+@media (max-width: 601px) {
+  .author .share-button a {
+    display: block;
+  }
+}
+.author img {
+  float: left;
+  max-width: 100%;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+@media (max-width: 601px) {
+  .author img {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+.author span {
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  color: #888888;
+  text-transform: uppercase;
+  display: inline-block;
+}
+@media (max-width: 601px) {
+  .author span {
+    margin-bottom: 5px;
+  }
+}
+.author h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0px;
+}
+
+.empty {
+  margin-top: 0;
+  height: 1px;
+}
+
+.leave-comment > div {
+  margin-top: 50px;
+}
+.leave-comment > div h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .leave-comment > div .leave-comment-form .col-md-6 {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .leave-comment > div .leave-comment-form .col-md-6 {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .leave-comment > div .leave-comment-form .col-md-12 {
+    width: 100%;
+  }
+}
+.leave-comment > div .leave-comment-form input,
+.leave-comment > div .leave-comment-form textarea {
+  border: 1px solid #eeeeee;
+  margin-bottom: 25px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #888888;
+  height: 40px;
+  padding-left: 15px;
+  outline: none;
+}
+.leave-comment > div .leave-comment-form textarea {
+  max-width: 100%;
+  min-height: 140px;
+  max-height: 180px;
+  padding: 10px 15px;
 }
