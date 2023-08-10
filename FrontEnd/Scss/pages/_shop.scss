@@ -1,0 +1,78 @@
+.shop-page {
+  .col-md-9 {
+    @media (min-width: 992px) {
+      width: 75%;
+    }
+    .feature {
+      background-color: #f5fafe;
+      margin-bottom: 30px;
+      text-align: right;
+      .info-text {
+        overflow: hidden;
+        padding-top: 15px;
+        padding-left: 20px;
+        p {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #333333;
+          padding-top: 7px;
+          margin: 0 0 1em;
+          float: left;
+        }
+        form {
+          padding-right: 18px;
+          margin: 0 0 1em;
+          float: right;
+          select {
+            cursor: pointer;
+            border: 1px solid #e5f2ff;
+            width: 180px;
+            height: 36px;
+            padding: 5px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            color: #336699;
+            text-transform: uppercase;
+            outline: none;
+            vertical-align: top;
+            option {
+              font-size: 10px;
+              color: #888888;
+              margin-bottom: 5px;
+            }
+          }
+          div {
+            float: right;
+            margin-left: 9px;
+            ul {
+              padding: 0;
+              margin: 0;
+              list-style: none;
+              li {
+                margin: 0 2px;
+                display: inline-block;
+                a {
+                  color: #336699;
+                  width: 36px;
+                  height: 36px;
+                  text-align: center;
+                  line-height: 36px;
+                  display: inline-block;
+                  border: 1px solid #e5f2ff;
+                  background-color: #ffffff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .col-md-3 {
+    position: relative;
+    @media (min-width: 992px) {
+      width: 25%;
+    }
+  }
+}
