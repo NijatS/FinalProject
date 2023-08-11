@@ -7,14 +7,22 @@ let currentImg = 0;
 let i = 0;
 let j = 0;
 let x = 0;
-// var timer = setInterval(changeSlide, 3000, j);
+setInterval(autoSlide, 3000);
+currentImg = (currentImg + 1) % imgs.length;
+
 if (coruselElements.length > 6) {
   let count = coruselElements.length - 6;
   setInterval(changeCarusel, 2000, count);
 }
-
-currentImg = (currentImg + 1) % imgs.length;
-
+function autoSlide() {
+  if (j < imgs.length - 1) {
+    j++;
+    changeSlide(j);
+  } else {
+    j = 0;
+    changeSlide(j);
+  }
+}
 function changeSlide(n) {
   for (var i = 0; i < imgs.length; i++) {
     imgs[i].style.opacity = 0;
@@ -23,11 +31,6 @@ function changeSlide(n) {
   currentImg = n;
   imgs[currentImg].style.opacity = 1;
   dots[currentImg].className += " active";
-  if (n != undefined) {
-    clearInterval(timer);
-    timer = setInterval(changeSlide, interval);
-    currentImg = n;
-  }
 }
 function changeCarusel(count) {
   if (window.screen.width >= 900 && window.screen.width <= 1140) {
