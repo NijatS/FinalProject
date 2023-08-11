@@ -195,29 +195,39 @@
             </div>
           </div>
           <div id="page">
-            <section class="login-area">
+            <section class="register-area">
               <div class="container">
                 <div class="row">
                   <div class="col-md-6 text-center">
-                    <div class="login-container">
-                      <div class="login-text">
+                    <div class="register-container">
+                      <div class="register-text">
                         <h2>regitser</h2>
                         <span
                           >Please register using account detail bellow.</span
                         >
                       </div>
-                      <div class="login-form">
+                      <div class="register-form">
                         <form method="post">
+                          <input type="text" placeholder="Name" />
+                          <input type="text" placeholder="Surname" />
                           <input type="text" placeholder="Username" />
+                          <input type="email" placeholder="Email" />
                           <input type="password" placeholder="Password" />
+                          <input
+                            type="password"
+                            placeholder="Confirm Password"
+                          />
+                          <select name="">
+                            <option value="0">Select of them</option>
+                            <option value="">Buyer</option>
+                            <option value="">Seller</option>
+                          </select>
                           <div class="button-box">
-                            <div class="login-toggle-btn">
-                              <input type="checkbox" id="remember" />
-                              <label for="remember">Remember me</label>
+                            <div class="register-toggle-btn">
                               <a href="#">Forgot Password?</a>
                             </div>
                             <button type="submit" class="default-btn">
-                              Login
+                              Register
                             </button>
                           </div>
                         </form>

@@ -9,12 +9,14 @@
       width: 50%;
       margin-left: 25%;
     }
-    .login-container {
+    .login-container,
+    .register-container {
       background: #f5f5f5 none repeat scroll 0 0;
       overflow: hidden;
       padding: 37px 40px;
       text-align: left;
-      .login-text {
+      .login-text,
+      .register-text {
         text-align: center;
         margin-bottom: 30px;
         h2 {
@@ -28,8 +30,10 @@
           font-size: 15px;
         }
       }
-      .login-form {
-        input {
+      .login-form,
+      .register-form {
+        input,
+        select {
           background: #ffffff none repeat scroll 0 0;
           border-radius: 3px;
           color: #666666;
@@ -41,7 +45,8 @@
           border: medium none rgba(0, 0, 0, 0);
           box-shadow: none;
         }
-        .login-toggle-btn {
+        .login-toggle-btn,
+        .register-toggle-btn {
           padding-top: 20px;
           input {
             height: 15px;
