@@ -3481,3 +3481,98 @@ img {
 .shop-page .col-md-3 .video-widget .content i::before {
   content: "\f04b";
 }
+
+.login-area,
+.register-area {
+  padding-bottom: 150px;
+  padding-top: 150px;
+}
+.login-area .col-md-6,
+.register-area .col-md-6 {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .login-area .col-md-6,
+  .register-area .col-md-6 {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+.login-area .col-md-6 .login-container,
+.register-area .col-md-6 .login-container {
+  background: #f5f5f5 none repeat scroll 0 0;
+  overflow: hidden;
+  padding: 37px 40px;
+  text-align: left;
+}
+.login-area .col-md-6 .login-container .login-text,
+.register-area .col-md-6 .login-container .login-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login-area .col-md-6 .login-container .login-text h2,
+.register-area .col-md-6 .login-container .login-text h2 {
+  color: #444;
+  font-size: 30px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.login-area .col-md-6 .login-container .login-text span,
+.register-area .col-md-6 .login-container .login-text span {
+  font-size: 15px;
+}
+.login-area .col-md-6 .login-container .login-form input,
+.register-area .col-md-6 .login-container .login-form input {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 3px;
+  color: #666666;
+  margin-bottom: 20px;
+  font-size: 14px;
+  height: 40px;
+  padding-left: 10px;
+  width: 100%;
+  border: medium none rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
+.login-area .col-md-6 .login-container .login-form .login-toggle-btn,
+.register-area .col-md-6 .login-container .login-form .login-toggle-btn {
+  padding-top: 20px;
+}
+.login-area .col-md-6 .login-container .login-form .login-toggle-btn input,
+.register-area .col-md-6 .login-container .login-form .login-toggle-btn input {
+  height: 15px;
+  margin: 0;
+  position: relative;
+  top: 1px;
+  width: 17px;
+}
+.login-area .col-md-6 .login-container .login-form .login-toggle-btn label,
+.register-area .col-md-6 .login-container .login-form .login-toggle-btn label {
+  color: #606060;
+  font-size: 15px;
+  font-weight: 400;
+}
+.login-area .col-md-6 .login-container .login-form .login-toggle-btn a,
+.register-area .col-md-6 .login-container .login-form .login-toggle-btn a {
+  color: #ec1c23;
+  float: right;
+  transition: all 0.2s ease 0s;
+  outline: medium none;
+}
+.login-area .col-md-6 .login-container .login-form button,
+.register-area .col-md-6 .login-container .login-form button {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #ec1c23;
+  border-radius: 30px;
+  color: #ec1c23;
+  font-size: 14px;
+  margin-top: 40px;
+  padding: 8px 36px;
+  text-transform: uppercase;
+  transition: all 0.5s ease 0s;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  overflow: hidden;
+}
