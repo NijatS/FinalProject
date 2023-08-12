@@ -3503,6 +3503,236 @@ img {
   content: "\f04b";
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.car-detail .col-md-8 {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .car-detail .col-md-8 {
+    width: 66.6666666667%;
+  }
+}
+.car-detail .col-md-8 .product {
+  margin-bottom: 0;
+  position: relative;
+}
+.car-detail .col-md-8 .product .content {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.car-detail .col-md-8 .product .content::after {
+  display: table;
+  clear: both;
+}
+.car-detail .col-md-8 .product .content::before {
+  content: " ";
+  display: table;
+}
+.car-detail .col-md-8 .product .content h1 {
+  background-color: #f5fafe;
+  padding-left: 20px;
+  padding-right: 189px;
+  padding-bottom: 12px;
+  padding-top: 20px;
+  margin-bottom: 6px;
+  clear: none;
+  margin-top: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  float: left;
+  width: 100%;
+}
+.car-detail .col-md-8 .product .content p {
+  color: #77a464;
+  font-size: 1.25em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 0 10px;
+  display: block;
+}
+.car-detail .col-md-8 .product .content p span {
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #f4c23d;
+  padding-left: 9px;
+  padding-right: 7px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  color: #333333;
+}
+.car-detail .col-md-8 .product .images {
+  opacity: 1;
+  float: none;
+  width: 100%;
+  clear: both;
+  position: relative;
+  margin-bottom: 2em;
+}
+.car-detail .col-md-8 .product .images figure {
+  margin: 0;
+}
+.car-detail .col-md-8 .product .images figure .sliders {
+  margin-top: 20px;
+  padding: 0;
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  position: relative;
+  zoom: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.car-detail .col-md-8 .product .images figure .sliders .viewport {
+  overflow: hidden;
+  position: relative;
+  height: 337px;
+  transition: all 1s ease;
+  max-height: 2000px;
+}
+.car-detail .col-md-8 .product .images figure .sliders .viewport .slides {
+  width: 1400%;
+  transition-duration: 0.6s;
+  transform: translate3d(0px, 0px, 0px);
+  zoom: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.car-detail .col-md-8 .product .images figure .sliders .viewport .slides li {
+  width: 742px;
+  float: left;
+  backface-visibility: hidden;
+  display: block;
+}
+.car-detail .col-md-8 .product .images figure .sliders .viewport .slides li div {
+  min-height: 0px;
+  position: relative;
+  overflow: hidden;
+}
+.car-detail .col-md-8 .product .images figure .sliders .viewport .slides li div a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  max-width: 100%;
+  height: 350px;
+}
+.car-detail .col-md-8 .product .images figure .sliders .viewport .slides li div > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  width: 770px;
+  height: 350px;
+  border: none;
+  max-width: none;
+  max-height: none;
+  display: block;
+  box-shadow: none;
+}
+.car-detail .col-md-8 .product .images figure .sliders ol {
+  overflow: hidden;
+  zoom: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: static;
+  width: 100%;
+  text-align: center;
+}
+.car-detail .col-md-8 .product .images figure .sliders ol li {
+  float: none;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 100px;
+  list-style: none;
+  display: inline-block;
+  zoom: 1;
+}
+.car-detail .col-md-8 .product .images figure .sliders ol li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+  cursor: pointer;
+  opacity: 0.5;
+  margin: 0;
+  max-width: 100%;
+  transition: all 1s ease;
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav a {
+  opacity: 1;
+  text-decoration: none;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  line-height: 32px;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #336699;
+  transition: all 0.3s ease-in-out;
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav a::before {
+  font-family: "FontAwesome";
+  font-size: 16px;
+  display: inline-block;
+  color: #fff;
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav .nav-prev {
+  left: 0px;
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav .nav-prev::before {
+  content: "\f104";
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav .nav-next {
+  right: 0px;
+}
+.car-detail .col-md-8 .product .images figure .sliders .direction-nav .nav-next::before {
+  content: "\f105";
+}
+
 .login-area,
 .register-area {
   padding-bottom: 150px;
