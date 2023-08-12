@@ -4,7 +4,12 @@ const slideContainer = document.querySelector(".slides");
 const slideElements = document.querySelectorAll(".slides>li");
 const decreaseBtn = document.querySelector(".nav-prev");
 const increaseBtn = document.querySelector(".nav-next");
+const sections = document.querySelectorAll(".tabs>ul li");
+const infos = document.querySelectorAll(".info");
 sImages[0].style.opacity = "1";
+infos[0].style.display = "block";
+sections[0].style.color = "inherit";
+sections[0].style.borderBottom = "2px solid #f4c23d";
 for (let i = 0; i < sImages.length; i++) {
   sImages[i].addEventListener("click", () => {
     style = getComputedStyle(slideElements[0]);
@@ -62,4 +67,24 @@ increaseBtn.addEventListener("click", () => {
       break;
     }
   }
+});
+sections.forEach((section) => {
+  section.addEventListener("click", () => {
+    sections.forEach((sectionAll) => {
+      sectionAll.style.color = "#888888";
+      sectionAll.style.border = "none";
+    });
+    section.style.color = "inherit";
+    section.style.borderBottom = "2px solid #f4c23d";
+    infos.forEach((info) => {
+      info.style.display = "none";
+      if (
+        info.classList.contains(
+          section.textContent.trim().toLocaleLowerCase().split(" ")[0]
+        )
+      ) {
+        info.style.display = "block";
+      }
+    });
+  });
 });
