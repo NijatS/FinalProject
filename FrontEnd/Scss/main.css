@@ -216,6 +216,9 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner {
   background: #fff;
 }
 body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner #sub-header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
   width: 100%;
   height: 42px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -444,6 +447,7 @@ body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header
 }
 body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header .main-navigation .menu-nav #search-item .example {
   display: none;
+  transition: 3s;
 }
 body .sidebar-menu-container .sidebar-menu-push .sidebar-menu-inner .site-header .main-navigation .menu-nav #search-item input {
   margin-top: 25px;

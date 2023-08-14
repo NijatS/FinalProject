@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "KpYNi8XO3rz8kFIpQSz9fwUHC2LTF42RVD/iMTrA3QE=",
+  "Source": "Miles.App",
+  "BasePath": "_content/Miles.App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Miles.App\\wwwroot",
+      "Source": "Miles.App",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

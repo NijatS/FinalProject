@@ -56,6 +56,9 @@ body {
         overflow: hidden;
         background: #fff;
         #sub-header {
+          position: fixed;
+          top: 0;
+          z-index: 99;
           width: 100%;
           height: 42px;
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -272,6 +275,7 @@ body {
                 }
                 .example {
                   display: none;
+                  transition: 3s;
                 }
                 input {
                   margin-top: 25px;
