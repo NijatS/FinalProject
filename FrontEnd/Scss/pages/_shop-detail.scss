@@ -528,7 +528,7 @@
     }
     .detail {
       background-color: #f5fafe;
-      .info {
+      .infoCar {
         margin: 10px 20px;
         padding-bottom: 10px;
         ul {
@@ -741,7 +741,7 @@
   stroke: currentColor;
 }
 .base-timer__path-remaining.green {
-  color: rgb(65, 184, 131);
+  color: rgb(65, 184, 131) !important;
 }
 .base-timer__path-remaining.orange {
   color: orange;
@@ -784,5 +784,32 @@
     font-family: "Roboto", sans-serif;
     font-size: 22px;
     line-height: 22px;
+  }
+}
+#sold-on,
+#win {
+  display: none;
+  position: absolute;
+  top: 60px;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  word-wrap: break-word;
+  width: 200px;
+  align-items: center;
+  span {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    line-height: 22px;
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    word-spacing: 5px;
+    line-height: initial;
+    &:first-child {
+      font-size: 20px;
+    }
   }
 }

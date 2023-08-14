@@ -7,9 +7,12 @@ const increaseBtn = document.querySelector(".nav-next");
 const sections = document.querySelectorAll(".tabs>ul li");
 const infos = document.querySelectorAll(".info");
 const time = document.querySelector(
-  ".car-detail .col-md-4 .info  li:first-child"
+  ".car-detail .col-md-4 .infoCar  li:first-child"
 );
 const bidButton = document.querySelector("#bidButton");
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
 let i = 0;
 setInterval(timeCalculate, 1000);
 const decreaseBit = document.querySelector(".buttons button:first-child");
@@ -116,14 +119,21 @@ decreaseBit.addEventListener("click", () => {
   document.querySelector(".bid input").value = text;
 });
 increaseBit.addEventListener("click", () => {
-  let number =
-    parseInt(
-      document.querySelector(".bid input").value.split("$")[1].replace(",", "")
-    ) + 500;
-
-  const format = number.toLocaleString("en-US");
-  let text = "$" + format;
-  document.querySelector(".bid input").value = text;
+  increase();
+});
+bidButton.addEventListener("click", () => {
+  document.querySelector("#base-timer-bid").textContent =
+    document.querySelector(".bid input").value;
+  increase();
+  document.querySelector(".base-timer__path-remaining ").style.transition =
+    "none";
+  timePassed = -1;
+  timeLeft = TIME_LIMIT;
+  document
+    .getElementById("base-timer-path-remaining")
+    .classList.add(`${remainingPathColor}`);
+  format();
+  playClick();
 });
 function timeCalculate() {
   if (time.textContent.split(":")[1] == "0D 0H 0min") {
@@ -153,12 +163,10 @@ function timeCalculate() {
 const enquiry = document.querySelector(".enquiry");
 const circle = document.querySelector(".circle");
 const TIME_LIMIT = 20;
-let timePassed = 0;
+let timePassed = 10;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
-const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
+
 const COLOR_CODES = {
   info: {
     color: "green",
@@ -200,6 +208,13 @@ circle.innerHTML = `<div class="base-timer">
 <span id="base-timer-bid">$22,000</span>
 <span id="base-timer-word">Bid</span>
 </div>
+<div id = "sold-on">
+<span>Sold On Approval!</span>
+</div>
+<div id = "win">
+<span>Congratulation</span>
+<span>You Win!</span>
+</div>
 </div>`;
 function calculateTimeFraction() {
   const rawTimeFraction = timeLeft / TIME_LIMIT;
@@ -207,6 +222,19 @@ function calculateTimeFraction() {
 }
 function onTimesUp() {
   clearInterval(timerInterval);
+  document.querySelector("#base-timer-div").style.display = "none";
+  document.querySelector(".bid").style.display = "none";
+  if (true) {
+    document.querySelector("#win").style.display = "flex";
+    document.getElementById("base-timer-path-remaining").style.color = "green";
+    document.querySelector(".base-timer__circle").style.fill = "green";
+  } else {
+    document.querySelector("#sold-on").style.display = "flex";
+    document.getElementById("base-timer-path-remaining").style.color = "blue";
+    document.querySelector(".base-timer__circle").style.fill = "blue";
+  }
+  let myAudio = document.querySelector("#audioWin");
+  myAudio.play();
 }
 function setCircleDasharray() {
   const circleDasharray = `${(
@@ -246,13 +274,12 @@ function formatTime(time) {
 }
 function startTimer() {
   timerInterval = setInterval(() => {
-    timePassed = timePassed += 1;
+    timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML =
       formatTime(timeLeft);
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
-
     if (timeLeft === 0) {
       onTimesUp();
     }
@@ -262,7 +289,17 @@ function playClick() {
   let myAudio = document.querySelector("#audio");
   myAudio.play();
 }
-bidButton.addEventListener("click", () => {
-  timePassed = 0;
-  playClick();
-});
+function increase() {
+  let number =
+    parseInt(
+      document.querySelector(".bid input").value.split("$")[1].replace(",", "")
+    ) + 500;
+
+  const format = number.toLocaleString("en-US");
+  let text = "$" + format;
+  document.querySelector(".bid input").value = text;
+}
+function format() {
+  document.querySelector(".base-timer__path-remaining ").style.transition =
+    "1s linear all";
+}

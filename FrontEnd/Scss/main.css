@@ -4044,16 +4044,16 @@ img {
 .car-detail .col-md-4 .detail {
   background-color: #f5fafe;
 }
-.car-detail .col-md-4 .detail .info {
+.car-detail .col-md-4 .detail .infoCar {
   margin: 10px 20px;
   padding-bottom: 10px;
 }
-.car-detail .col-md-4 .detail .info ul {
+.car-detail .col-md-4 .detail .infoCar ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.car-detail .col-md-4 .detail .info ul li {
+.car-detail .col-md-4 .detail .infoCar ul li {
   padding: 10px 0px;
   border-bottom: 1px solid #eeeeee;
   display: block;
@@ -4062,7 +4062,7 @@ img {
   color: #336699;
   font-weight: 700;
 }
-.car-detail .col-md-4 .detail .info ul li span {
+.car-detail .col-md-4 .detail .infoCar ul li span {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #888888;
@@ -4071,7 +4071,7 @@ img {
   font-weight: 400;
   font-style: normal;
 }
-.car-detail .col-md-4 .detail .info ul li span:nth-child(2) {
+.car-detail .col-md-4 .detail .infoCar ul li span:nth-child(2) {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #888888;
@@ -4266,7 +4266,7 @@ img {
 }
 
 .base-timer__path-remaining.green {
-  color: rgb(65, 184, 131);
+  color: rgb(65, 184, 131) !important;
 }
 
 .base-timer__path-remaining.orange {
@@ -4312,6 +4312,36 @@ img {
   font-family: "Roboto", sans-serif;
   font-size: 22px;
   line-height: 22px;
+}
+
+#sold-on,
+#win {
+  display: none;
+  position: absolute;
+  top: 60px;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  word-wrap: break-word;
+  width: 200px;
+  align-items: center;
+}
+#sold-on span,
+#win span {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  line-height: 22px;
+  display: inline-block;
+  width: 70%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  word-spacing: 5px;
+  line-height: initial;
+}
+#sold-on span:first-child,
+#win span:first-child {
+  font-size: 20px;
 }
 
 .login-area,
