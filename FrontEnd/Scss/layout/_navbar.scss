@@ -318,40 +318,59 @@ body {
     z-index: 9999;
     visibility: visible;
     position: fixed;
-    left: -250px;
+    left: -300px;
     top: 0;
     height: 100%;
     margin: 0;
-    padding: 0;
     background: #fff;
     transition: all 2s;
+    width: 300px;
+    padding: 20px 25px;
     overflow-y: auto;
-    width: 250px;
+    overflow-x: hidden;
     .sidebar {
       position: relative;
       width: 100%;
       height: 100%;
-      overflow: hidden;
       .content {
         position: absolute;
-        overflow: none;
-        overflow-x: hidden;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         padding: 0;
         .menu {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
           ul {
-            padding: 25px 15px;
             margin: 0;
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
             li {
-              display: block;
+              display: flex;
+              align-items: center;
               position: relative;
+              gap: 5px;
+              button {
+                width: 100%;
+                cursor: pointer;
+                color: #fff;
+                font-size: 18px;
+                background-color: #336699;
+                border: none;
+                padding: 10px;
+                word-spacing: normal;
+                border-radius: 10px;
+              }
+              i {
+                font-size: 16px;
+              }
               a {
-                font-size: 13px;
+                font-size: 16px;
                 font-weight: 700;
                 text-transform: uppercase;
                 display: block;
@@ -365,6 +384,48 @@ body {
                 right: 15px;
                 cursor: pointer;
                 color: #8997a5;
+              }
+              &:first-child {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                height: 70px;
+                img {
+                  width: 70px;
+                  height: 100%;
+                  border-radius: 10px;
+                }
+                div {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5px;
+                  span {
+                    font-size: 13px;
+                    color: #222222;
+                    &:first-child {
+                      font-weight: 700;
+                    }
+                  }
+                }
+              }
+            }
+            .searchNavbar {
+              width: 100%;
+              margin: 30px 0;
+              input {
+                width: 100%;
+                height: 40px;
+                background-color: #eee;
+                padding: 2px 5px;
+                padding-left: 30px;
+                border-radius: 10px;
+                position: relative;
+              }
+              i {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 7px;
               }
             }
           }

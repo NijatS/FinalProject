@@ -483,26 +483,24 @@ body .sidebar-menu {
   z-index: 9999;
   visibility: visible;
   position: fixed;
-  left: -250px;
+  left: -300px;
   top: 0;
   height: 100%;
   margin: 0;
-  padding: 0;
   background: #fff;
   transition: all 2s;
+  width: 300px;
+  padding: 20px 25px;
   overflow-y: auto;
-  width: 250px;
+  overflow-x: hidden;
 }
 body .sidebar-menu .sidebar {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 body .sidebar-menu .sidebar .content {
   position: absolute;
-  overflow: none;
-  overflow-x: hidden;
   top: 0;
   right: 0;
   bottom: 0;
@@ -510,19 +508,40 @@ body .sidebar-menu .sidebar .content {
   padding: 0;
 }
 body .sidebar-menu .sidebar .content .menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 body .sidebar-menu .sidebar .content .menu ul {
-  padding: 25px 15px;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 body .sidebar-menu .sidebar .content .menu ul li {
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
+  gap: 5px;
+}
+body .sidebar-menu .sidebar .content .menu ul li button {
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  background-color: #336699;
+  border: none;
+  padding: 10px;
+  word-spacing: normal;
+  border-radius: 10px;
+}
+body .sidebar-menu .sidebar .content .menu ul li i {
+  font-size: 16px;
 }
 body .sidebar-menu .sidebar .content .menu ul li a {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   display: block;
@@ -536,6 +555,48 @@ body .sidebar-menu .sidebar .content .menu ul li .show-button {
   right: 15px;
   cursor: pointer;
   color: #8997a5;
+}
+body .sidebar-menu .sidebar .content .menu ul li:first-child {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 70px;
+}
+body .sidebar-menu .sidebar .content .menu ul li:first-child img {
+  width: 70px;
+  height: 100%;
+  border-radius: 10px;
+}
+body .sidebar-menu .sidebar .content .menu ul li:first-child div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .sidebar-menu .sidebar .content .menu ul li:first-child div span {
+  font-size: 13px;
+  color: #222222;
+}
+body .sidebar-menu .sidebar .content .menu ul li:first-child div span:first-child {
+  font-weight: 700;
+}
+body .sidebar-menu .sidebar .content .menu ul .searchNavbar {
+  width: 100%;
+  margin: 30px 0;
+}
+body .sidebar-menu .sidebar .content .menu ul .searchNavbar input {
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+  padding: 2px 5px;
+  padding-left: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+body .sidebar-menu .sidebar .content .menu ul .searchNavbar i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7px;
 }
 
 .subscribe {
