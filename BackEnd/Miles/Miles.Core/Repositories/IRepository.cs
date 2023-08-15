@@ -11,7 +11,7 @@ namespace Miles.Core.Repositories
     {
         public Task AddAsync(T entity);
         public Task Update(T entity);
-        public Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>> expression, params string[] includes);
+        public Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>> expression,int count,int page, params string[] includes);
         public Task<T> GetAsync(Expression<Func<T, bool>> expression, params string[] includes);
         public Task<int> SaveAsync();
         public int Save();

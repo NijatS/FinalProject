@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Azure;
+using Microsoft.EntityFrameworkCore;
 using Miles.Core.Repositories;
 using Miles.Data.Context;
 using System;
@@ -23,9 +24,13 @@ namespace Miles.Data.Repositories
             await _context.Set<T>().AddAsync(entity);
         }
 
-        public async Task<IQueryable<T>> GetAllAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression, params string[] includes)
+        public async Task<IQueryable<T>> GetAllAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression,int count,int page, params string[] includes)
         {
             var query = _context.Set<T>().Where(expression);
+            if(count != 0)
+            {
+                query = query.Skip((page - 1) * count).Take(count);
+            }
             if (includes is not null)
             {
                 foreach (var include in includes)
