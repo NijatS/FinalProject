@@ -1,0 +1,209 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\click.wav",
+      "PackagePath": "staticwebassets\\Audio\\click.wav"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\win.mp3",
+      "PackagePath": "staticwebassets\\Audio\\win.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\01-blog-570x400.jpg",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\01-blog-570x400.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\01-featured.jpg",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\01-featured.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\all.min.css",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\car.jpg",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\car.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\css2",
+      "PackagePath": "staticwebassets\\Images\\Document_files"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\feature-image.jpg",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\feature-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\home.js.download",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\home.js.download"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo_white.png",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\logo_white.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\main.css",
+      "PackagePath": "staticwebassets\\Images\\Document_files\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\avatar.png",
+      "PackagePath": "staticwebassets\\Images\\avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\azerbaijan.png",
+      "PackagePath": "staticwebassets\\Images\\azerbaijan.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car.jpg",
+      "PackagePath": "staticwebassets\\Images\\car.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car1.jpg",
+      "PackagePath": "staticwebassets\\Images\\car1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car2.jpeg",
+      "PackagePath": "staticwebassets\\Images\\car2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car3.avif",
+      "PackagePath": "staticwebassets\\Images\\car3.avif"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car4.jpeg",
+      "PackagePath": "staticwebassets\\Images\\car4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.heic",
+      "PackagePath": "staticwebassets\\Images\\nijat.heic"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\nijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\about.js",
+      "PackagePath": "staticwebassets\\JavaScript\\about.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\home.js",
+      "PackagePath": "staticwebassets\\JavaScript\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\service.js",
+      "PackagePath": "staticwebassets\\JavaScript\\service.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\shop-detail.js",
+      "PackagePath": "staticwebassets\\JavaScript\\shop-detail.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\sidebar.js",
+      "PackagePath": "staticwebassets\\JavaScript\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_reset.scss",
+      "PackagePath": "staticwebassets\\Scss\\base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_typrography.scss",
+      "PackagePath": "staticwebassets\\Scss\\base\\_typrography.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\components\\_headers.scss",
+      "PackagePath": "staticwebassets\\Scss\\components\\_headers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\Scss\\layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\layout\\_navbar.scss",
+      "PackagePath": "staticwebassets\\Scss\\layout\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\main.css",
+      "PackagePath": "staticwebassets\\Scss\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\main.scss",
+      "PackagePath": "staticwebassets\\Scss\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_about.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog-detail.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_blog-detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_contact.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_homepage.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_homepage.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_login.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_login.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_service.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_service.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop-detail.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_shop-detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop.scss",
+      "PackagePath": "staticwebassets\\Scss\\pages\\_shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_colors.scss",
+      "PackagePath": "staticwebassets\\Scss\\utils\\_colors.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Scss\\utils\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_variables.scss",
+      "PackagePath": "staticwebassets\\Scss\\utils\\_variables.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Miles.App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Miles.App.props",
+      "PackagePath": "build\\Miles.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Miles.App.props",
+      "PackagePath": "buildMultiTargeting\\Miles.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Miles.App.props",
+      "PackagePath": "buildTransitive\\Miles.App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

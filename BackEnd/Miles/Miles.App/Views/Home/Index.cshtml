@@ -1,8 +1,469 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿<div class="slider">
+    <img id="img-1" src="../Images/car.jpg" alt="Image 1" />
+    <img id="img-2" src="../Images/car1.jpg" alt="Image 2" />
+    <img id="img-3" src="../Images/car.jpg" alt="Image 3" />
+</div>
+<div class="navigation-button">
+    <span class="dot active" onclick="changeSlide(0)"></span>
+    <span class="dot" onclick="changeSlide(1)"></span>
+    <span class="dot" onclick="changeSlide(2)"></span>
+</div>
+<div id="page">
+    <div class="seeAll"></div>
+    <section class="see-row">
+        <div class="seeAll-container">
+            <div class="seeAll-columns">
+                <div class="seeAll-column">
+                    <div class="base-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>
+                                        Owners of salvage-title vehicles will encounter
+                                        some unique issues.
+                                    </p>
+                                    <div class="yellowButton">
+                                        <a href="">
+                                            See All Cars
+                                            <i class="fa fa-car"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-us section">
+        <div class="why-us-container kc-row-container kc-container">
+            <div class="why-us-columns kc-wrap-columns">
+                <div class="why-us-column col-sm-12">
+                    <div class="kc-elm kc_row kc_row_inner">
+                        <div class="left-why-us">
+                            <div class="heading-left">
+                                <h2>Why choose us?</h2>
+                                <span>
+                                    Vivamus gravida magna massa in cursus mi vehicula
+                                    at. Nunc sem quam suscipit
+                                </span>
+                                <div class="line"></div>
+                            </div>
+                            <div class="service-left">
+                                <div class="col-md-6">
+                                    <div class="service-item">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                        <div class="service-head">
+                                            <h2>Results of Drivers</h2>
+                                        </div>
+                                        <p>
+                                            Integer nec posuere metus, at feugiat. Sed
+                                            sodales venenat malesuada.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                        <div class="service-head">
+                                            <h2>Results of Drivers</h2>
+                                        </div>
+                                        <p>
+                                            Integer nec posuere metus, at feugiat. Sed
+                                            sodales venenat malesuada.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                        <div class="service-head">
+                                            <h2>Results of Drivers</h2>
+                                        </div>
+                                        <p>
+                                            Integer nec posuere metus, at feugiat. Sed
+                                            sodales venenat malesuada.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-item">
+                                        <i class="fa fa-bar-chart-o"></i>
+                                        <div class="service-head">
+                                            <h2>Results of Drivers</h2>
+                                        </div>
+                                        <p>
+                                            Integer nec posuere metus, at feugiat. Sed
+                                            sodales venenat malesuada.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-why-us kc_column_inner">
+                            <div class="kc_wrapper kc-col-inner-container">
+                                <div class="right-img">
+                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/feature-image.jpg"
+                                         alt="" />
+                                    <div class="img-bg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature-listing section">
+        <div class="kc-row-container">
+            <div class="kc-wrap-columns">
+                <div class="feature-column col-sm-12">
+                    <div>
+                        <div class="header">
+                            <h2>Featured Cars Listing</h2>
+                            <span>
+                                Vivamus gravida magna massa in cursus mi vehicula at.
+                                Nunc sem quam suscipit
+                            </span>
+                            <div class="dec">
+                                <i class="fa fa-car"></i>
+                            </div>
+                            <div class="line-dec"></div>
+                        </div>
+                        <div class="cars">
+                            <div class="cars-container">
+                                <div class="car-card col-md-15 col-sm-6">
+                                    <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
+                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
+                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                             srcset="
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
+                                "
+                                             sizes="(max-width: 310px) 100vw, 310px" />
+                                    </a>
+                                    <div class="content">
+                                        <span class="pricee">
+                                            <span class="price">$52,000</span>
+                                        </span>
+                                        <a href="">
+                                            <h2>MERCEDES AMG 6.3</h2>
+                                        </a>
+                                        <div class="line"></div>
+                                        <div class="car-info">
+                                            Selvage drinking vinegar roof party bitters
+                                            beard wolf...
+                                        </div>
+                                        <div class="car-detail">
+                                            <ul>
+                                                <li><i class="fas fa-gas-pump"></i>Diesel</li>
+                                                <li><i class="fa fa-car"></i>Sport</li>
+                                                <li><i class="fas fa-road"></i>13,000</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-card col-md-15 col-sm-6">
+                                    <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
+                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
+                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                             srcset="
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
+                                "
+                                             sizes="(max-width: 310px) 100vw, 310px" />
+                                    </a>
+                                    <div class="content">
+                                        <span class="pricee">
+                                            <span class="price">$52,000</span>
+                                        </span>
+                                        <a href="">
+                                            <h2>MERCEDES AMG 6.3</h2>
+                                        </a>
+                                        <div class="line"></div>
+                                        <div class="car-info">
+                                            Selvage drinking vinegar roof party bitters
+                                            beard wolf...
+                                        </div>
+                                        <div class="car-detail">
+                                            <ul>
+                                                <li><i class="fas fa-gas-pump"></i>Diesel</li>
+                                                <li><i class="fa fa-car"></i>Sport</li>
+                                                <li><i class="fas fa-road"></i>13,000</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-card col-md-15 col-sm-6">
+                                    <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
+                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
+                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                             srcset="
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
+                                "
+                                             sizes="(max-width: 310px) 100vw, 310px" />
+                                    </a>
+                                    <div class="content">
+                                        <span class="pricee">
+                                            <span class="price">$52,000</span>
+                                        </span>
+                                        <a href="">
+                                            <h2>MERCEDES AMG 6.3</h2>
+                                        </a>
+                                        <div class="line"></div>
+                                        <div class="car-info">
+                                            Selvage drinking vinegar roof party bitters
+                                            beard wolf...
+                                        </div>
+                                        <div class="car-detail">
+                                            <ul>
+                                                <li><i class="fas fa-gas-pump"></i>Diesel</li>
+                                                <li><i class="fa fa-car"></i>Sport</li>
+                                                <li><i class="fas fa-road"></i>13,000</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-card col-md-15 col-sm-6">
+                                    <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
+                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
+                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                             srcset="
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
+                                "
+                                             sizes="(max-width: 310px) 100vw, 310px" />
+                                    </a>
+                                    <div class="content">
+                                        <span class="pricee">
+                                            <span class="price">$52,000</span>
+                                        </span>
+                                        <a href="">
+                                            <h2>MERCEDES AMG 6.3</h2>
+                                        </a>
+                                        <div class="line"></div>
+                                        <div class="car-info">
+                                            Selvage drinking vinegar roof party bitters
+                                            beard wolf...
+                                        </div>
+                                        <div class="car-detail">
+                                            <ul>
+                                                <li><i class="fas fa-gas-pump"></i>Diesel</li>
+                                                <li><i class="fa fa-car"></i>Sport</li>
+                                                <li><i class="fas fa-road"></i>13,000</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car-card col-md-15 col-sm-6">
+                                    <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
+                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
+                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                             srcset="
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
+                                "
+                                             sizes="(max-width: 310px) 100vw, 310px" />
+                                    </a>
+                                    <div class="content">
+                                        <span class="pricee">
+                                            <span class="price">$52,000</span>
+                                        </span>
+                                        <a href="">
+                                            <h2>MERCEDES AMG 6.3</h2>
+                                        </a>
+                                        <div class="line"></div>
+                                        <div class="car-info">
+                                            Selvage drinking vinegar roof party bitters
+                                            beard wolf...
+                                        </div>
+                                        <div class="car-detail">
+                                            <ul>
+                                                <li><i class="fas fa-gas-pump"></i>Diesel</li>
+                                                <li><i class="fa fa-car"></i>Sport</li>
+                                                <li><i class="fas fa-road"></i>13,000</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blogs section">
+        <div class="kc-row-container">
+            <div class="kc-wrap-columns">
+                <div class="blog-column col-sm-12">
+                    <div>
+                        <div class="header">
+                            <h2>Blog News</h2>
+                            <span>
+                                Vivamus gravida magna massa in cursus mi vehicula at.
+                                Nunc sem quam suscipit
+                            </span>
+                            <div class="dec">
+                                <i class="fa fa-file"></i>
+                            </div>
+                            <div class="line-dec"></div>
+                        </div>
+                        <div class="data">
+                            <div class="left-data col-md-6">
+                                <div>
+                                    <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">
+                                        <img width="570"
+                                             height="400"
+                                             src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-570x400.jpg"
+                                             class="attachment-auction_homeblogonly size-auction_homeblogonly wp-post-image"
+                                             srcset="
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-570x400.jpg 570w,
+                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-117x83.jpg  117w
+                                "
+                                             sizes="(max-width: 570px) 100vw, 570px" />
+                                    </a>
+                                    <div class="video-content">
+                                        <div class="inner-content">
+                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                            <div class="title">
+                                                <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">
+                                                    <h2>Phasellus hendrerit eros</h2>
+                                                </a>
+                                                <ul>
+                                                    <li>Dec 16, 2016</li>
+                                                    <li>
+                                                        Posted by
+                                                        <a href="http://demo.mypsolution.com/wp13/author/dexthemes/">Dexthemes</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fk_link"
+                                                           href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/#respond">0 Comments</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-data col-md-6">
+                                <div class="blog-item">
+                                    <div class="up-content">
+                                        <ul>
+                                            <li>Dec 16, 2016</li>
+                                            <li>
+                                                Posted by
+                                                <a href="http://demo.mypsolution.com/wp13/author/dexthemes/">Dexthemes</a>
+                                            </li>
+                                        </ul>
+                                        <div class="title">
+                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">
+                                                <h2>Phasellus hendrerit eros</h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="text-content">
+                                        Phasellus hendrerit eros eget massa maximus
+                                        placerat. Etiam vel est tristique, iaculis orci
+                                        rhoncus, faucibus orci. Fusce pharetra augue…
+                                    </div>
+                                    <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">READ MORE</a>
+                                </div>
+                                <div class="blog-item">
+                                    <div class="up-content">
+                                        <ul>
+                                            <li>Dec 16, 2016</li>
+                                            <li>
+                                                Posted by
+                                                <a href="http://demo.mypsolution.com/wp13/author/dexthemes/">Dexthemes</a>
+                                            </li>
+                                        </ul>
+                                        <div class="title">
+                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">
+                                                <h2>Phasellus hendrerit eros</h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="text-content">
+                                        Phasellus hendrerit eros eget massa maximus
+                                        placerat. Etiam vel est tristique, iaculis orci
+                                        rhoncus, faucibus orci. Fusce pharetra augue…
+                                    </div>
+                                    <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clients section">
+        <div class="kc-row-container">
+            <div class="kc-wrap-columns">
+                <div class="client-column col-sm-12">
+                    <div>
+                        <div class="brands">
+                            <div class="carusel-outher">
+                                <div class="carusel">
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="carusel-item">
+                                        <div class="item">
+                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
+                                                 alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

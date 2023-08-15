@@ -1,0 +1,215 @@
+#page {
+  .contact {
+    clear: both;
+    float: left;
+    width: 100%;
+    .text-block {
+      clear: both;
+      width: 100%;
+      float: left;
+    }
+    .left-contact {
+      @media only screen and (min-width: 1000px) and (max-width: 5000px) {
+        width: 66.66%;
+      }
+      .contact-form {
+        @media (max-width: 991px) {
+          margin-bottom: 30px;
+        }
+        i {
+          position: absolute;
+          z-index: 1;
+          top: 12px;
+          left: 30px;
+          color: #336699;
+        }
+        br {
+          display: none;
+        }
+        span {
+          position: relative;
+          input {
+            border: 1px solid #eeeeee;
+            margin-bottom: 25px;
+            width: 100%;
+            padding-left: 45px;
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+            color: #888888;
+            height: 40px;
+            outline: none;
+            line-height: inherit;
+          }
+          textarea {
+            border: 1px solid #eeeeee;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 100%;
+            min-height: 140px;
+            max-height: 180px;
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+            color: #888888;
+            height: 40px;
+            padding: 12px 45px;
+            outline: none;
+          }
+        }
+        .col-md-6 {
+          position: relative;
+          @media (min-width: 992px) {
+            width: 50%;
+          }
+        }
+        .col-md-12 {
+          position: relative;
+          @media (min-width: 992px) {
+            width: 100%;
+          }
+          .button {
+            background: transparent;
+            position: relative;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 8px;
+            @media (max-width: 600px) {
+              display: block;
+            }
+            button {
+              background-color: #f4c23d;
+              font-size: 12px;
+              color: #222222;
+              font-weight: 700;
+              text-transform: uppercase;
+              border-color: #f4c23d;
+              display: inline-block;
+              width: auto;
+              padding: 0 15px;
+              border: 1px solid transparent;
+              margin-bottom: 25px;
+              height: 40px;
+              outline: none;
+              @media (max-width: 600px) {
+                width: 100%;
+              }
+            }
+            span {
+              position: absolute;
+              z-index: 1;
+              background-color: #f0b20e;
+              right: 11px;
+              top: 12px;
+              visibility: hidden;
+              display: inline-block;
+              background-image: url(../../images/ajax-loader.gif);
+              width: 16px;
+              height: 16px;
+              border: none;
+              padding: 0;
+              margin: 0 0 0 4px;
+              vertical-align: middle;
+            }
+            i {
+              float: right;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              background-color: #f0b20e;
+              color: #222222;
+              position: absolute;
+              right: 0;
+              top: 0;
+              left: 100%;
+              @media (max-width: 600px) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-contact {
+      @media only screen and (min-width: 1000px) and (max-width: 5000px) {
+        width: 33.33%;
+      }
+      h4 {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 7px;
+        margin-top: 22px;
+      }
+      p {
+        font-size: 12px;
+      }
+      a {
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        color: #336699;
+      }
+    }
+  }
+}
+.button {
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 8px;
+  @media (max-width: 600px) {
+    display: block;
+  }
+  button {
+    background-color: #f4c23d;
+    font-size: 12px;
+    color: #222222;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-color: #f4c23d;
+    display: inline-block;
+    width: auto;
+    padding: 0 15px;
+    border: 1px solid transparent;
+    margin-bottom: 25px;
+    height: 40px;
+    outline: none;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  span {
+    position: absolute;
+    z-index: 1;
+    background-color: #f0b20e;
+    right: 11px;
+    top: 12px;
+    visibility: hidden;
+    display: inline-block;
+    background-image: url(../../images/ajax-loader.gif);
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 4px;
+    vertical-align: middle;
+  }
+  i {
+    float: right;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f0b20e;
+    color: #222222;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 100%;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}

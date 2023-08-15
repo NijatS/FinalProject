@@ -1,0 +1,88 @@
+.login-area,
+.register-area {
+  padding-bottom: 150px;
+  padding-top: 150px;
+  .col-md-6 {
+    width: 100%;
+
+    @media (min-width: 992px) {
+      width: 50%;
+      margin-left: 25%;
+    }
+    .login-container,
+    .register-container {
+      background: #f5f5f5 none repeat scroll 0 0;
+      overflow: hidden;
+      padding: 37px 40px;
+      text-align: left;
+      .login-text,
+      .register-text {
+        text-align: center;
+        margin-bottom: 30px;
+        h2 {
+          color: #444;
+          font-size: 30px;
+          margin-bottom: 5px;
+          text-transform: capitalize;
+          font-weight: 700;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+      .login-form,
+      .register-form {
+        input,
+        select {
+          background: #ffffff none repeat scroll 0 0;
+          border-radius: 3px;
+          color: #666666;
+          margin-bottom: 20px;
+          font-size: 14px;
+          height: 40px;
+          padding-left: 10px;
+          width: 100%;
+          border: medium none rgba(0, 0, 0, 0);
+          box-shadow: none;
+        }
+        .login-toggle-btn,
+        .register-toggle-btn {
+          padding-top: 20px;
+          input {
+            height: 15px;
+            margin: 0;
+            position: relative;
+            top: 1px;
+            width: 17px;
+          }
+          label {
+            color: #606060;
+            font-size: 15px;
+            font-weight: 400;
+          }
+          a {
+            color: #ec1c23;
+            float: right;
+            transition: all 0.2s ease 0s;
+            outline: medium none;
+          }
+        }
+        button {
+          background: transparent none repeat scroll 0 0;
+          border: 1px solid #ec1c23;
+          border-radius: 30px;
+          color: #ec1c23;
+          font-size: 14px;
+          margin-top: 40px;
+          padding: 8px 36px;
+          text-transform: uppercase;
+          transition: all 0.5s ease 0s;
+          display: inline-block;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 700;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
