@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Miles.Core.Entities;
 using Miles.Core.Repositories;
-using Miles.Data.Repositories;
-using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Blogs;
 using Miles.Service.Responses;
 using Miles.Service.Services.Interfaces;
@@ -15,10 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Miles.Service.Extensions;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
 using Miles.Data.Context;
-using Microsoft.Extensions.Hosting;
-using Miles.Service.Helpers;
 
 namespace Miles.Service.Services.Implementations
 {

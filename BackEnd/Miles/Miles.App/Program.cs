@@ -30,6 +30,8 @@ builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 builder.Services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
 builder.Services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
 

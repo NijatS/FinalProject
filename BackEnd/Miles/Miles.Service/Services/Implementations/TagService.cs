@@ -47,10 +47,10 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<Tag> categories = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<Tag> tags = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
             return new ApiResponse
             {
-                items = categories,
+                items = tags,
                 StatusCode = 200
             };
         }

@@ -4599,3 +4599,6 @@ img {
   font-weight: 700;
   overflow: hidden;
 }
+.swal2-container {
+    z-index: 10000;
+}

@@ -22,6 +22,12 @@
     <title>Document</title>
 </head>
 <body>
+    @if (!string.IsNullOrWhiteSpace((string)TempData["Email"]))
+    {
+        <div style="display:none;" id="emailFormat">
+            @TempData["Email"]
+        </div>
+    }
     <div class="sidebar-menu-container">
         <div class="sidebar-menu-push">
             <div class="sidebar-menu-overlay"></div>
@@ -428,6 +434,6 @@
     </nav>
 </body>
 </html>
-<script src="~/JavaScript/home.js"></script>
+
 <script src="~/JavaScript/sidebar.js"></script>
 

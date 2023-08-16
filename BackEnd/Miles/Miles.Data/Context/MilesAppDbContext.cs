@@ -16,7 +16,9 @@ namespace Miles.Data.Context
         public DbSet<Tag> Tags { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<BlogTag> BlogTags { get; set; }
-        public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
+		public DbSet<Message> Messages { get; set; }
+
+		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,7 +26,8 @@ namespace Miles.Data.Context
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new TagConfiguration());
             modelBuilder.ApplyConfiguration(new BlogConfiguration());
-            base.OnModelCreating(modelBuilder);
+			modelBuilder.ApplyConfiguration(new MessageConfiguration());
+			base.OnModelCreating(modelBuilder);
         }
     }
 }

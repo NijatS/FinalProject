@@ -1,0 +1,169 @@
+﻿@model ContactVM
+@if (!string.IsNullOrWhiteSpace((string)TempData["Message"]))
+{
+    <div style="display:none;" id="messageFormat">
+        @TempData["Message"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Success"]))
+{
+    <div style="display:none;" id="success">
+        @TempData["Success"]
+    </div>
+}
+
+<div id="page">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24276.6926404433!2d49.923566552793744!3d40.4844102624403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40308a4c8f58edd7%3A0x44d1c481a2b5b961!2sZabrat!5e0!3m2!1sen!2saz!4v1691645055716!5m2!1sen!2saz"
+            width="100%"
+            height="600"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section class="contact section">
+        <div class="row-container">
+            <div class="wrap-columns">
+                <div class="kc-column">
+                    <div>
+                        <div class="kc-row-inner">
+                            <div class="left-contact kc-column-inner">
+                                <div>
+                                    <div class="text-block">
+                                        <form asp-controller="contact" asp-action="sendemail" method="post"
+                                              class="contact-form">
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                    <i class="fa fa-user"></i><br />
+                                                    <span>
+                                                        <input type="text"
+                                                               aria-required="true"
+                                                               name="firstname"
+                                                               aria-invalid="false"
+                                                               placeholder="First name" />
+                                                        <span class="text text-danger" asp-validation-for="@Model.Message.FirstName"></span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                    <i class="fa fa-envelope"></i><br />
+                                                    <span>
+                                                        <input type="email"
+                                                               name="email"
+                                                               aria-required="true"
+                                                               aria-invalid="false"
+                                                               placeholder="Email Address" />
+                                                        <span class="text text-danger" asp-validation-for="@Model.Message.Email"></span>
+
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                    <i class="fa fa-phone"></i><br />
+                                                    <span>
+                                                        <input type="text"
+                                                               name="phone"
+                                                               aria-required="true"
+                                                               aria-invalid="false"
+                                                               placeholder="Phone" />
+                                                        <span class="text text-danger" asp-validation-for="@Model.Message.Phone"></span>
+
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                    <i class="fa fa-address-card-o"></i><br />
+                                                    <span>
+                                                        <input type="text"
+                                                               name="address"
+                                                               aria-required="true"
+                                                               aria-invalid="false"
+                                                               placeholder="Your address" />
+                                                        <span class="text text-danger" asp-validation-for="@Model.Message.Address"></span>
+
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                    <i class="fa fa-comments-o"></i><br />
+                                                    <span>
+                                                        <textarea cols="40"
+                                                                  rows="10"
+                                                                  name="text"
+                                                                  aria-invalid="false"
+                                                                  placeholder="Write message"></textarea>
+                                                        <span class="text text-danger" asp-validation-for="@Model.Message.Text"></span>
+
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="button">
+                                                        <button type="submit">
+                                                            Send Message
+                                                        </button>
+                                                        <span></span>
+                                                        <i class="fa fa-paper-plane"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-contact kc-column-inner">
+                                <div>
+                                    <div class="text-block">
+                                        <h4>Phone</h4>
+                                        <p>+33 20966400 1342</p>
+                                        <h4>Fax</h4>
+                                        <p>+33 20966400 1342</p>
+                                        <h4>Email</h4>
+                                        <p><a href="#">info@auction.com</a></p>
+                                        <h4>Address</h4>
+                                        <p>
+                                            2855 Simpson Square<br />
+                                            Coldwater, OK 67029
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const messageFormat = document.querySelector("#messageFormat");
+    const successFormat = document.querySelector("#success");
+    const emailFormat = document.querySelector("#emailFormat");
+    if (messageFormat != undefined) {
+        const message = messageFormat.innerHTML;
+        if (message != "") {
+            Swal.fire(
+                'Contact',
+                `${message}`,
+                'question'
+            )
+        }
+    }
+    if (successFormat != undefined) {
+        const message = successFormat.innerHTML;
+        if (message != "") {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: `${message}`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    }
+    if (emailFormat != undefined) {
+        const message = emailFormat.innerHTML;
+        if (message != "") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${message}`,
+            })
+        }
+    }
+</script>
