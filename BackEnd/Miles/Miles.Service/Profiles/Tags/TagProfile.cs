@@ -9,7 +9,7 @@ using Miles.Service.Dtos.Categories;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Tags;
 
-namespace Miles.Service.Profiles.Categories
+namespace Miles.Service.Profiles.Tags
 {
     public class TagProfile:Profile
     {

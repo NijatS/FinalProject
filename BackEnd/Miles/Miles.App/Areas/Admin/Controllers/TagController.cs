@@ -1,18 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
-using Miles.Service.Dtos.Tags;
+using Miles.Service.Dtos.UserPricings;
 using Miles.Service.Services.Interfaces;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class TagController : Controller
+    public class UserPricingController : Controller
     {
         private readonly MilesAppDbContext _context;
-        private readonly ITagService _service;
+        private readonly IUserPricingService _service;
 
-        public TagController(MilesAppDbContext context, ITagService service)
+        public UserPricingController(MilesAppDbContext context, IUserPricingService service)
         {
             _context = context;
             _service = service;
@@ -20,7 +20,7 @@ namespace Miles.App.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Categories.Where(x => !x.IsDeleted).Count();
+            int TotalCount = _context.UserPricings.Where(x => !x.IsDeleted).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
@@ -34,7 +34,7 @@ namespace Miles.App.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(TagPostDto dto)
+        public async Task<IActionResult> Create(UserPricingPostDto dto)
         {
             if (!ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace Miles.App.Areas.Admin.Controllers
             }
             return View(result.items);
         }
-        public async Task<IActionResult> Update(int id,TagUpdateDto dto)
+        public async Task<IActionResult> Update(int id,UserPricingUpdateDto dto)
         {
             if (!ModelState.IsValid)
             {

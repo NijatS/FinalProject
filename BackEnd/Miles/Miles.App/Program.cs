@@ -32,6 +32,10 @@ builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<IFeatureRepository, FeatureRepository>();
+builder.Services.AddScoped<IFeatureService, FeatureService>();
+builder.Services.AddScoped<IUserPricingRepository, UserPricingRepository>();
+builder.Services.AddScoped<IUserPricingService, UserPricingService>();
 builder.Services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
 builder.Services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
 

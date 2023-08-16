@@ -1922,7 +1922,7 @@ img {
 }
 
 .page-heading {
-  background-image: url(http://demo.mypsolution.com/wp13/wp-content/uploads/2017/02/page-heading-bg-demo.jpg);
+  background-image: url(../Images/header.jpg);
   background-color: #232124;
   margin-top: 110px;
   width: 100%;
@@ -1997,7 +1997,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 60px 0px;
-  background: transparent url(http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/fact-bg-300x42.jpg) 0% 0%/auto repeat scroll;
+  background: transparent url(../Images/serviceSection.jpg) 0% 0%/auto repeat scroll;
   display: flex;
 }
 #page .facts .facts-container {

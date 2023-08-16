@@ -12,7 +12,7 @@ namespace Miles.Service.Services.Interfaces
     {
         public Task<ApiResponse> CreateAsync(TagPostDto dto);
         public Task<ApiResponse> GetAsync(int id);
-        public Task<ApiResponse> GetAllAsync(int count,int page);
+        public Task<ApiResponse> GetAllAsync(int count, int page);
         public Task<ApiResponse> UpdateAsync(int id, TagUpdateDto dto);
         public Task<ApiResponse> RemoveAsync(int id);
     }
