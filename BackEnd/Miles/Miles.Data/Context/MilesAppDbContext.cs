@@ -19,9 +19,11 @@ namespace Miles.Data.Context
 		public DbSet<Message> Messages { get; set; }
         public DbSet<UserPricing> UserPricings { get; set; }
         public DbSet<Feature> Features { get; set; }
+		public DbSet<Associate> Associates { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
 
 
-        public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
+		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,7 +34,9 @@ namespace Miles.Data.Context
 			modelBuilder.ApplyConfiguration(new MessageConfiguration());
             modelBuilder.ApplyConfiguration(new UserPricingConfiguration());
             modelBuilder.ApplyConfiguration(new FeatureConfiguration());
-            base.OnModelCreating(modelBuilder);
+			modelBuilder.ApplyConfiguration(new AssociateConfiguration());
+			modelBuilder.ApplyConfiguration(new SliderConfiguration());
+			base.OnModelCreating(modelBuilder);
         }
     }
 }

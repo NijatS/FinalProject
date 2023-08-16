@@ -11,42 +11,12 @@ using Miles.Service.Validations.Categories;
 using System.Text.Json.Serialization;
 using Miles.Core.Entities.BaseEntities;
 using Miles.Core.Entities;
+using Miles.App.ServiceRegistrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddDbContext<MilesAppDbContext>(opt =>
-{
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
-});
-
-builder.Services.AddControllers()?.AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<CategoryPostDtoValidation>());
-
-builder.Services.AddAutoMapper(typeof(CategoryProfile));
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<ITagRepository, TagRepository>();
-builder.Services.AddScoped<ITagService, TagService>();
-builder.Services.AddScoped<IBlogRepository, BlogRepository>();
-builder.Services.AddScoped<IBlogService, BlogService>();
-builder.Services.AddScoped<IMessageRepository, MessageRepository>();
-builder.Services.AddScoped<IMessageService, MessageService>();
-builder.Services.AddScoped<IFeatureRepository, FeatureRepository>();
-builder.Services.AddScoped<IFeatureService, FeatureService>();
-builder.Services.AddScoped<IUserPricingRepository, UserPricingRepository>();
-builder.Services.AddScoped<IUserPricingService, UserPricingService>();
-builder.Services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
-builder.Services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
-
-
-builder.Services.AddHttpContextAccessor();
-
-builder.Services.AddControllers().AddJsonOptions(x =>
-                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-builder.Services.AddSwaggerGen();
-builder.Services.AddFluentValidationRulesToSwagger();
-
+builder.Services.Register(builder.Configuration);
 builder.Services.AddRazorPages();
 var app = builder.Build();
 
