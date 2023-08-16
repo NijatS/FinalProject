@@ -1,0 +1,59 @@
+﻿@model BlogPostDto
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+	<div class="form-group">
+			<label asp-for="Title">Title:</label>
+			<input type="text" class="form-control" asp-for="Title" />
+			<span asp-validation-for="Title" class="text text-danger"></span>
+	</div>
+		<div class="form-group">
+			<label asp-for="Description">Description:</label>
+			<input type="text" class="form-control" asp-for="Description" />
+			<span asp-validation-for="Description" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Comment">Comment:</label>
+			<input type="text" class="form-control" asp-for="Comment" />
+			<span asp-validation-for="Comment" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Author">Author:</label>
+			<input type="text" class="form-control" asp-for="Author" />
+			<span asp-validation-for="Author" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="CategoryIds">Categories</label>
+			<select multiple asp-for="CategoryIds" class="form-select" aria-label="Default select example">
+				@foreach (var item in ViewBag.Categories)
+				{
+					<option value="@item.Id">@item.Name</option>
+				}
+			</select>
+			<span asp-validation-for="CategoryIds" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="TagIds">Tags</label>
+			<select multiple asp-for="TagIds" class="form-select" aria-label="Default select example">
+				@foreach (var item in ViewBag.Tags)
+				{
+					<option value="@item.Id">@item.Name</option>
+				}
+			</select>
+			<span asp-validation-for="TagIds" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.file">Main Photo:</label>
+			<input type="file" class="form-control" asp-for="@Model.file" />
+			<span asp-validation-for="file" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.fileAuthor">Author Photo:</label>
+			<input type="file" class="form-control" asp-for="@Model.fileAuthor" />
+			<span asp-validation-for="fileAuthor" class="text text-danger"></span>
+		</div>
+			@Html.AntiForgeryToken()
+		<button type="submit" style="width:100%; " class="btn btn-outline-dark">Create</button>
+	</form>
+</div>

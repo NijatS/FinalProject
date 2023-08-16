@@ -27,7 +27,7 @@ namespace Miles.Data.Repositories
         public async Task<IQueryable<T>> GetAllAsync(System.Linq.Expressions.Expression<Func<T, bool>> expression,int count,int page, params string[] includes)
         {
             var query = _context.Set<T>().Where(expression);
-            if(count != 0)
+            if(count != 0 && page !=0)
             {
                 query = query.Skip((page - 1) * count).Take(count);
             }

@@ -9,7 +9,8 @@ using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Miles.Service.Validations.Categories;
 using System.Text.Json.Serialization;
-
+using Miles.Core.Entities.BaseEntities;
+using Miles.Core.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,14 @@ builder.Services.AddControllers()?.AddFluentValidation(fvc => fvc.RegisterValida
 builder.Services.AddAutoMapper(typeof(CategoryProfile));
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
+builder.Services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
+
+
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers().AddJsonOptions(x =>

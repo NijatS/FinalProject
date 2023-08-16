@@ -2,19 +2,20 @@
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Services.Interfaces;
+using NuGet.Protocol;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly ICategoryService _service;
+        private readonly MilesAppDbContext _context;
 
-        public CategoryController(MilesAppDbContext context, ICategoryService service)
+        public CategoryController(ICategoryService service, MilesAppDbContext context)
         {
-            _context = context;
             _service = service;
+            _context = context;
         }
 
         public async Task<IActionResult> Index(int page = 1)
