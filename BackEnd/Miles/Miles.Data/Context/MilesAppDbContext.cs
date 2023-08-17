@@ -21,9 +21,10 @@ namespace Miles.Data.Context
         public DbSet<Feature> Features { get; set; }
 		public DbSet<Associate> Associates { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+		public DbSet<Setting> Settings { get; set; }
+        public DbSet<TextWhy> TextWhies { get; set; }
 
-
-		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
+        public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -36,7 +37,9 @@ namespace Miles.Data.Context
             modelBuilder.ApplyConfiguration(new FeatureConfiguration());
 			modelBuilder.ApplyConfiguration(new AssociateConfiguration());
 			modelBuilder.ApplyConfiguration(new SliderConfiguration());
-			base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new SettingConfiguration());
+            modelBuilder.ApplyConfiguration(new TextWhyConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

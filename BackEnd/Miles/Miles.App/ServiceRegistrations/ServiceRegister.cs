@@ -39,7 +39,9 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<IAssociateService, AssociateService>();
 			services.AddScoped<ISliderRepository, SliderRepository>();
 			services.AddScoped<ISliderService, SliderService>();
-			services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
+            services.AddScoped<ISettingRepository, SettingRepository>();
+            services.AddScoped<ISettingService, SettingService>();
+            services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
 			services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
 			services.AddHttpContextAccessor();
 

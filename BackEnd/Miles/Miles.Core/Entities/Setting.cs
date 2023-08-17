@@ -14,7 +14,9 @@ namespace Miles.Core.Entities
 		public string Phone2 { get; set; }
 		public string Email { get; set; }
 		public string Logo { get; set; }
+		public string LogoUrl { get; set; }
 		public string PhotoWhy { get; set; }
+		public string PhotoWhyUrl { get; set; }
 		public List<TextWhy> TextWhies { get; set; }
 		public List<Social> Socials { get; set; }
 	}

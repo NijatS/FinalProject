@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\Images\Blogs\Authors\" />
     <Folder Include="wwwroot\Images\Associates\" />
+    <Folder Include="wwwroot\Images\Settings\" />
     <Folder Include="wwwroot\Images\Sliders\" />
   </ItemGroup>
 

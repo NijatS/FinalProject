@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Miles.Core.Repositories
 {
-    public interface IAssociateRepository:IRepository<Associate>
+    public interface ITextWhyRepository:IRepository<TextWhy>
     {
     }
 }
