@@ -1,0 +1,31 @@
+﻿@model SocialPostDto
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+		<div class="form-group">
+			<label asp-for="Icon">Name:</label>
+			<input type="text" class="form-control" asp-for="Icon" />
+			<span asp-validation-for="Icon" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Link">Link:</label>
+			<input min="0" max="100" class="form-control" asp-for="Link" />
+			<span asp-validation-for="Link" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="StaffId">Staff</label>
+			<select asp-for="StaffId" class="form-select" aria-label="Default select example">
+				<option selected value="0">Select one of them</option>
+				@foreach (var item in ViewBag.Staffs)
+				{
+					<option value="@item.Id">@item.FullName</option>
+				}
+			</select>
+			<span asp-validation-for="StaffId" class="text text-danger"></span>
+		</div>
+		<div class="text text-warning">If you add social to setting,please don`t select Staff</div>
+		@Html.AntiForgeryToken()
+		<button type="submit" style="width:100%; " class="btn btn-outline-dark">Create</button>
+	</form>
+</div>
