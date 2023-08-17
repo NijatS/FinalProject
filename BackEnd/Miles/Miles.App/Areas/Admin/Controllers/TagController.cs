@@ -1,18 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
+using Miles.Service.Dtos.Tags;
 using Miles.Service.Dtos.UserPricings;
 using Miles.Service.Services.Interfaces;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class UserPricingController : Controller
+    public class TagController : Controller
     {
         private readonly MilesAppDbContext _context;
-        private readonly IUserPricingService _service;
+        private readonly ITagService _service;
 
-        public UserPricingController(MilesAppDbContext context, IUserPricingService service)
+        public TagController(MilesAppDbContext context, ITagService service)
         {
             _context = context;
             _service = service;
@@ -20,11 +21,11 @@ namespace Miles.App.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.UserPricings.Where(x => !x.IsDeleted).Count();
+            int TotalCount = _context.Categories.Where(x => !x.IsDeleted).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            var result = await _service.GetAllAsync(count, page);
             return View(result.items);
         }
         [HttpGet]
@@ -34,7 +35,7 @@ namespace Miles.App.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(UserPricingPostDto dto)
+        public async Task<IActionResult> Create(TagPostDto dto)
         {
             if (!ModelState.IsValid)
             {
@@ -58,13 +59,13 @@ namespace Miles.App.Areas.Admin.Controllers
             }
             return View(result.items);
         }
-        public async Task<IActionResult> Update(int id,UserPricingUpdateDto dto)
+        public async Task<IActionResult> Update(int id, TagUpdateDto dto)
         {
             if (!ModelState.IsValid)
             {
                 return View(dto);
             }
-            var result = await _service.UpdateAsync(id,dto);
+            var result = await _service.UpdateAsync(id, dto);
             if (result.StatusCode == 400)
             {
                 ModelState.AddModelError("", result.Description);
@@ -75,7 +76,7 @@ namespace Miles.App.Areas.Admin.Controllers
         public async Task<IActionResult> Remove(int id)
         {
             var result = await _service.RemoveAsync(id);
-            if(result.StatusCode == 404)
+            if (result.StatusCode == 404)
             {
                 return NotFound();
             }

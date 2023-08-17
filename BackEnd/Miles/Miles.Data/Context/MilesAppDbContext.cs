@@ -26,6 +26,8 @@ namespace Miles.Data.Context
         public DbSet<Position> Positions { get; set; }
         public DbSet<Staff> Staffs { get; set; }
 		public DbSet<Social> Socials { get; set; }
+		public DbSet<AboutText> AboutTexts { get; set; }
+		public DbSet<AboutSkill> AboutSkills { get; set; }
 		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
@@ -43,7 +45,9 @@ namespace Miles.Data.Context
             modelBuilder.ApplyConfiguration(new TextWhyConfiguration());
             modelBuilder.ApplyConfiguration(new StaffConfiguration());
 			modelBuilder.ApplyConfiguration(new SocialConfiguration());
-            base.OnModelCreating(modelBuilder);
+			modelBuilder.ApplyConfiguration(new AboutTextConfiguration());
+			modelBuilder.ApplyConfiguration(new AboutSkillConfiguration());
+			base.OnModelCreating(modelBuilder);
         }
     }
 }

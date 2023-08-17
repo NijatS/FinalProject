@@ -49,6 +49,10 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<IStaffService, StaffService>();
 			services.AddScoped<ISocialRepository, SocialRepository>();
 			services.AddScoped<ISocialService, SocialService>();
+			services.AddScoped<IAboutTextRepository, AboutTextRepository>();
+			services.AddScoped<IAboutTextService, AboutTextService>();
+			services.AddScoped<IAboutSkillRepository, AboutSkillRepository>();
+			services.AddScoped<IAboutSkillService, AboutSkillService>();
 			services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
 			services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
 			services.AddHttpContextAccessor();
