@@ -1546,15 +1546,14 @@ img {
   display: flex;
   justify-content: center;
 }
-.blogs .kc-row-container {
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .blogs .kc-row-container {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 1170px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 @media (min-width: 768px) and (max-width: 991px) {
   .blogs .kc-row-container {
     width: 750px;

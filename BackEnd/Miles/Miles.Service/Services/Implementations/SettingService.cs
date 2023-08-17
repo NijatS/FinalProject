@@ -12,29 +12,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Miles.Service.Extensions;
-using static System.Net.WebRequestMethods;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Miles.Service.Dtos.Blogs;
+using Microsoft.EntityFrameworkCore;
+using Miles.Service.ViewModels;
 
 namespace Miles.Service.Services.Implementations
 {
     public class SettingService : ISettingService
     {
         private readonly ISettingRepository _repository;
+        private readonly IBlogRepository _blogRepository;
         private readonly IMapper _mapper;
 		private readonly IWebHostEnvironment _evn;
 		private readonly IHttpContextAccessor _http;
 
-		public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http)
-		{
-			_repository = repository;
-			_mapper = mapper;
-			_evn = evn;
-			_http = http;
-		}
+        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository)
+        {
+            _repository = repository;
+            _mapper = mapper;
+            _evn = evn;
+            _http = http;
+            _blogRepository = blogRepository;
+        }
 
-		public async Task<ApiResponse> CreateAsync(SettingPostDto dto)
+        public async Task<ApiResponse> CreateAsync(SettingPostDto dto)
         {
             Setting Setting = _mapper.Map<Setting>(dto);
 			Setting.Logo = dto.Logo.CreateImage(_evn.WebRootPath, "Images/Settings");
@@ -136,6 +139,16 @@ namespace Miles.Service.Services.Implementations
                 StatusCode = 200,
                 items = Setting
             };
+        }
+        public async Task<SettingVM> GetSetting()
+        {
+            SettingVM settingVM = new SettingVM
+            {
+                Setting = await _repository
+                           .GetAsync(x => !x.IsDeleted, "Socials"),
+                Blogs = await _blogRepository.GetAllAsync(x=>!x.IsDeleted,0,0).Result.ToListAsync()
+            };
+            return settingVM;
         }
     }
 }

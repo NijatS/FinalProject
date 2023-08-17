@@ -22,7 +22,7 @@ namespace Miles.App.Areas.Admin.Controllers
         public async Task<IActionResult> Index(int page = 1)
         {
             int TotalCount = _context.Socials.Where(x => !x.IsDeleted).Count();
-            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
             var result = await _service.GetAllAsync(count,page);

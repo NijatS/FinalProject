@@ -1,12 +1,26 @@
-﻿<div class="slider">
-    <img id="img-1" src="../Images/car.jpg" alt="Image 1" />
-    <img id="img-2" src="../Images/car1.jpg" alt="Image 2" />
-    <img id="img-3" src="../Images/car.jpg" alt="Image 3" />
+﻿@model HomeVM
+@{
+    int i = 0;
+}
+<div class="slider">
+    @foreach(var item in Model.Sliders)
+    {
+        <img id="img-@item.Id" src="~/Images/Sliders/@item.Image" alt="Image @item.Id" />
+    }
 </div>
 <div class="navigation-button">
-    <span class="dot active" onclick="changeSlide(0)"></span>
-    <span class="dot" onclick="changeSlide(1)"></span>
-    <span class="dot" onclick="changeSlide(2)"></span>
+    @foreach (var item in Model.Sliders)
+    {
+        if (i == 0)
+        {
+            <span class="dot active" onclick="changeSlide(@item.Id)"></span>
+        }
+        else
+        {
+            <span class="dot" onclick="changeSlide(@item.Id)"></span>
+        }
+        i++;
+    }
 </div>
 <div id="page">
     <div class="seeAll"></div>
@@ -23,7 +37,7 @@
                                         some unique issues.
                                     </p>
                                     <div class="yellowButton">
-                                        <a href="">
+                                        <a asp-action="index" asp-controller="shop">
                                             See All Cars
                                             <i class="fa fa-car"></i>
                                         </a>
@@ -51,60 +65,27 @@
                                 <div class="line"></div>
                             </div>
                             <div class="service-left">
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
+                                @foreach(var item in Model.Why)
+                                {
+                                    <div class="col-md-6">
+                                        <div class="service-item">
+                                            <i class="fa fa-@item.Icon"></i>
+                                            <div class="service-head">
+                                                <h2>@item.Title</h2>
+                                            </div>
+                                            <p>
+                                              @item.Text
+                                            </p>
                                         </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
+
+                                }
                             </div>
                         </div>
                         <div class="right-why-us kc_column_inner">
                             <div class="kc_wrapper kc-col-inner-container">
                                 <div class="right-img">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/feature-image.jpg"
+                                    <img src="~/Images//Settings/@Model.Setting.PhotoWhy"
                                          alt="" />
                                     <div class="img-bg"></div>
                                 </div>
@@ -314,87 +295,67 @@
                         <div class="data">
                             <div class="left-data col-md-6">
                                 <div>
-                                    <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">
+                                      @foreach(var item in Model.Blogs.Skip(0).OrderByDescending(x => x.CreatedAt).Take(1))
+                                    {
+                                        <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">
                                         <img width="570"
                                              height="400"
-                                             src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-570x400.jpg"
+                                             style="width:100%;height:400px;"
+                                             src="~/Images/Blogs/@item.Image"
                                              class="attachment-auction_homeblogonly size-auction_homeblogonly wp-post-image"
-                                             srcset="
-                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-570x400.jpg 570w,
-                                  http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-117x83.jpg  117w
-                                "
-                                             sizes="(max-width: 570px) 100vw, 570px" />
+                                             />
                                     </a>
                                     <div class="video-content">
                                         <div class="inner-content">
-                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">
+                                                <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">
                                                 <i class="fa fa-link"></i>
                                             </a>
                                             <div class="title">
-                                                <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">
-                                                    <h2>Phasellus hendrerit eros</h2>
+                                                    <a asp-action ="detail" asp-controller="blog" asp-route-id="@item.Id">
+                                                    <h2>@item.Title</h2>
                                                 </a>
                                                 <ul>
-                                                    <li>Dec 16, 2016</li>
+                                                        <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
                                                     <li>
                                                         Posted by
-                                                        <a href="http://demo.mypsolution.com/wp13/author/dexthemes/">Dexthemes</a>
+                                                            <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Author</a>
                                                     </li>
-                                                    <li>
+                                                    <li style="border:none;">
                                                         <a class="fk_link"
-                                                           href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/#respond">0 Comments</a>
+                                                               asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">0 Comments</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    }
                                 </div>
                             </div>
                             <div class="right-data col-md-6">
-                                <div class="blog-item">
-                                    <div class="up-content">
-                                        <ul>
-                                            <li>Dec 16, 2016</li>
-                                            <li>
-                                                Posted by
-                                                <a href="http://demo.mypsolution.com/wp13/author/dexthemes/">Dexthemes</a>
-                                            </li>
-                                        </ul>
-                                        <div class="title">
-                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">
-                                                <h2>Phasellus hendrerit eros</h2>
-                                            </a>
+                                @foreach(var item in Model.Blogs.Skip(0).OrderByDescending(x => x.CreatedAt).Take(2))
+                                {
+                                    <div class="blog-item">
+                                        <div class="up-content">
+                                            <ul>
+                                                <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
+                                                <li style="border:none;">
+                                                    Posted by
+                                                    <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Author</a>
+                                                </li>
+                                            </ul>
+                                            <div class="title">
+                                                <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">
+                                                    <h2>@item.Title</h2>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="text-content">
-                                        Phasellus hendrerit eros eget massa maximus
-                                        placerat. Etiam vel est tristique, iaculis orci
-                                        rhoncus, faucibus orci. Fusce pharetra augue…
-                                    </div>
-                                    <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">READ MORE</a>
-                                </div>
-                                <div class="blog-item">
-                                    <div class="up-content">
-                                        <ul>
-                                            <li>Dec 16, 2016</li>
-                                            <li>
-                                                Posted by
-                                                <a href="http://demo.mypsolution.com/wp13/author/dexthemes/">Dexthemes</a>
-                                            </li>
-                                        </ul>
-                                        <div class="title">
-                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">
-                                                <h2>Phasellus hendrerit eros</h2>
-                                            </a>
+                                        <div class="text-content">
+                                            @item.Description.Substring(0, 150)...
                                         </div>
+                                        <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">READ MORE</a>
                                     </div>
-                                    <div class="text-content">
-                                        Phasellus hendrerit eros eget massa maximus
-                                        placerat. Etiam vel est tristique, iaculis orci
-                                        rhoncus, faucibus orci. Fusce pharetra augue…
-                                    </div>
-                                    <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">READ MORE</a>
-                                </div>
+                                }
+                              
                             </div>
                         </div>
                     </div>

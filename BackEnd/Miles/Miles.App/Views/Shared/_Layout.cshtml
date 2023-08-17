@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@inject Miles.Service.Services.Interfaces.ISettingService settingService
+@{
+    SettingVM settingVM = await settingService.GetSetting();
+    //await settingService.PostSubscribe(subscribe);
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -38,52 +43,26 @@
                             <div class="col-md-6 col-sm-12">
                                 <div class="social-icons">
                                     <ul>
-                                        <li>
-                                            <a class="facebook" href="#" target="_blank">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="twitter" href="#" target="_blank">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="linkedin" href="#" target="_blank">
-                                                <i class="fab fa-linkedin"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="linkedin" href="#" target="_blank">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="youtube" href="#" target="_blank">
-                                                <i class="fab fa-youtube"></i>
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="dribbble" href="#" target="_blank">
-                                                <i class="fab fa-dribbble"></i>
-                                            </a>
-                                        </li>
+                                        @foreach(var item in settingVM.Setting.Socials)
+                                        {
+                                            <li>
+                                                <a class="facebook" href="@item.Link" target="_blank">
+                                                    <i class="fab fa-@item.Icon"></i>
+                                                </a>
+                                            </li>
+                                        }
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="right-info hidden-sm">
                                     <ul>
-                                        <li>Call us: <em>570-694-4002</em></li>
+                                        <li>Call us: <em>@settingVM.Setting.Phone1</em></li>
                                         <li>
-                                            <a href="./login.html">Login</a>
+                                            <a asp-action="login" asp-controller="account">Login</a>
                                         </li>
                                         <li>
-                                            <a href="./register.html">Register</a>
+                                            <a asp-action="register" asp-controller="account">Register</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -95,9 +74,8 @@
                     <div id="main-header" class="main-header header-sticky">
                         <div class="inner-header container clearfix">
                             <div class="logo">
-                                <a href="http://demo.mypsolution.com/wp13/">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/themes/auction/assets/images/logo_white.png"
-                                         alt="" />
+                                <a asp-controller="home" asp-action="index">
+                                    <img src="~/Images/Settings/@settingVM.Setting.Logo" style="width:140px;height40px;">
                                 </a>
                             </div>
                             <div class="header-right-toggle pull-right hidden-md hidden-lg">
@@ -106,10 +84,10 @@
                             <nav class="main-navigation text-left hidden-xs hidden-sm">
                                 <ul class="menu-nav">
                                     <li id="menu-item">
-                                        <a href="../HTML/homepage.html">Home</a>
+                                        <a asp-action="index" asp-controller="home">Home</a>
                                     </li>
                                     <li id="menu-item">
-                                        <a href="../HTML/about.html">About Us</a>
+                                        <a asp-action="index" asp-controller="about">About Us</a>
                                     </li>
                                     <li id="menu-item">
                                         <a href="../HTML/service.html">Services</a>
@@ -171,25 +149,12 @@
                             <div class="right-subcribe col-md-4">
                                 <div class="right-content">
                                     <ul>
-                                        <li>
-                                            <a href="#"><i class="fab fa-facebook"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#"><i class="fa fa-rss"></i></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="#"><i class="fab fa-youtube"></i></a>
-                                        </li>
+                                        @foreach(var item in settingVM.Setting.Socials.Take(5))
+                                        {
+                                            <li>
+                                                <a href="@item.Link"><i class="fab fa-@item.Icon"></i></a>
+                                            </li>
+                                        }
                                     </ul>
                                 </div>
                             </div>
@@ -201,7 +166,7 @@
                         <div class="row">
                             <div class="col-md-3 fcol">
                                 <div class="widget main-logo">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/themes/auction/assets/images/logo-2.png" />
+                                    <img src="~/Images/Settings/@settingVM.Setting.Logo" style="width:140px;height:42px;">
                                     <div class="textwidget">
                                         Maecenas ne mollis orci. Phasell iacu sapie non aliquet ex
                                         euismo ac.
@@ -210,14 +175,13 @@
                                 <div class="widget about-info">
                                     <ul>
                                         <li>
-                                            <i class="fas fa-map-marker-alt"></i> Raver Croft Drive
-                                            Knoxville, 37921
+                                            <i class="fas fa-map-marker-alt"></i> @settingVM.Setting.Address
                                         </li>
 
-                                        <li><i class="fa fa-phone"></i> +55 417-634-7071</li>
+                                        <li><i class="fa fa-phone"></i> @settingVM.Setting.Phone2</li>
 
                                         <li>
-                                            <i class="fa fa-envelope-o"></i> contact@auction.com
+                                            <i class="fa fa-envelope-o"></i> @settingVM.Setting.Email
                                         </li>
                                     </ul>
                                 </div>
@@ -228,7 +192,7 @@
                                     <div class="featured-links-container">
                                         <ul id="menu-menu-in-widget-footer" class="menu">
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/about-us/">About us</a>
+                                                <a asp-action="index" asp-controller="about">About us</a>
                                             </li>
                                             <li>
                                                 <a href="http://demo.mypsolution.com/wp13/services/">Services</a>
@@ -265,26 +229,19 @@
                             <div class="col-md-3 fcol">
                                 <div class="widget featured-links recent-post">
                                     <h4>Recent Post</h4>
-                                    <div class="latest-item">
-                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-150x150.jpg" />
-                                        <h6>
-                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">Phasellus hendrerit eros</a>
-                                        </h6>
-                                        <ul>
-                                            <li>Dec 16, 2016</li>
-                                            <li>0 comments</li>
-                                        </ul>
-                                    </div>
-                                    <div class="latest-item">
-                                        <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-blog-150x150.jpg" />
-                                        <h6>
-                                            <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">Phasellus hendrerit eros</a>
-                                        </h6>
-                                        <ul>
-                                            <li>Dec 16, 2016</li>
-                                            <li>0 comments</li>
-                                        </ul>
-                                    </div>
+                                    @foreach(var item in settingVM.Blogs.Take(2))
+                                    {
+                                        <div class="latest-item">
+                                            <img src="~/Images/Blogs/@item.Image"  style="width:64px;height:64px;"/>
+                                            <h6>
+                                                <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
+                                            </h6>
+                                            <ul>
+                                                <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
+                                                <li>0 comments</li>
+                                            </ul>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                             <div class="col-md-3 fcol">
@@ -350,23 +307,23 @@
                                            aria-current="page">Home</a>
                                     </li>
                                     <li>
-                                        <a href="http://demo.mypsolution.com/wp13/"
+                                        <a asp-action="index" asp-controller="blog"
                                            aria-current="page">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="http://demo.mypsolution.com/wp13/"
+                                        <a asp-action="index" asp-controller="contact"
                                            aria-current="page">Contact</a>
                                     </li>
                                     <li>
-                                        <a href="http://demo.mypsolution.com/wp13/"
+                                        <a asp-action ="index" asp-controller="service"
                                            aria-current="page">Services</a>
                                     </li>
                                     <li>
-                                        <a href="http://demo.mypsolution.com/wp13/"
+                                        <a asp-action="index" asp-controller="shop"
                                            aria-current="page">Shop</a>
                                     </li>
                                     <li>
-                                        <a href="http://demo.mypsolution.com/wp13/"
+                                        <a asp-action="index" asp-controller="about"
                                            aria-current="page">About Us</a>
                                     </li>
                                 </ul>
@@ -396,27 +353,27 @@
                         </li>
                         <li>
                             <i class="fa fa-home"></i>
-                            <a title="Home" href="./homepage.html">Home</a>
+                            <a title="Home" asp-action="index" asp-controller="home">Home</a>
                         </li>
                         <li>
                             <i class="fa fa-share"></i>
-                            <a href="./about.html">About</a>
+                            <a asp-action="index" asp-controller="about">About</a>
                         </li>
                         <li>
                             <i class="fa fa-wrench"></i>
-                            <a title="Home" href="./service.html">Services</a>
+                            <a title="Home" asp-action="index" asp-controller="service">Services</a>
                         </li>
                         <li>
                             <i class="fa fa-car"></i>
-                            <a title="Home" href="./shop.html">Shop</a>
+                            <a title="Home" asp-action="index" asp-controller="shop">Shop</a>
                         </li>
                         <li>
                             <i class="fa fa-id-card"></i>
-                            <a title="Home" href="./blog.html">Blogs</a>
+                            <a title="Home" asp-action="index" asp-controller="blog">Blogs</a>
                         </li>
                         <li>
                             <i class="fa fa-phone"></i>
-                            <a title="Home" href="./contact.html">Contact Us</a>
+                            <a title="Home" asp-action="index" asp-controller="contact">Contact Us</a>
                         </li>
                     </ul>
                     <ul>

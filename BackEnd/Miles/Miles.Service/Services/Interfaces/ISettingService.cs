@@ -1,5 +1,7 @@
-﻿using Miles.Service.Dtos.Settings;
+﻿using Miles.Core.Entities;
+using Miles.Service.Dtos.Settings;
 using Miles.Service.Responses;
+using Miles.Service.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +17,6 @@ namespace Miles.Service.Services.Interfaces
         public Task<ApiResponse> GetAllAsync(int count,int page);
         public Task<ApiResponse> UpdateAsync(int id, SettingUpdateDto dto);
         public Task<ApiResponse> RemoveAsync(int id);
+        public Task<SettingVM> GetSetting();
     }
 }

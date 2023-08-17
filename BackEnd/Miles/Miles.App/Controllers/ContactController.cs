@@ -1,7 +1,7 @@
 ﻿using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Miles.App.ViewModels;
+using Miles.Service.ViewModels;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Interfaces;

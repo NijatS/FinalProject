@@ -6,6 +6,7 @@
                 <th scope="col">Id</th>
                 <th scope="col">Name:</th>
                 <th scope="col">Author:</th>
+                <th scope="col">Blog Photo:</th>
                 <th scope="col">Author Photo:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
@@ -18,6 +19,7 @@
                     <th scope="row">@item.Id</th>
                     <th>@item.Title</th>
                     <th>@item.Author</th>
+                    <th><img style="width:100px;height:100px" src="~/Images/Blogs/@item.Image" /></th>
                     <th><img style="width:100px;height:100px" src="~/Images/Blogs/Authors/@item.AuthorImage" /></th>
                     <td>
                         <a asp-controller="blog" asp-action="update" asp-route-id="@item.Id">
