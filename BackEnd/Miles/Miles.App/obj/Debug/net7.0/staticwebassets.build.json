@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EDyWNQEE5gZPyoSF/q95nrxbf7MS6C4mFJsT2S92Tg0=",
+  "Hash": "ywupBG5P6Qtj9M0pt462WnmuYL4CKYpCkvZcW6pCZVo=",
   "Source": "Miles.App",
   "BasePath": "_content/Miles.App",
   "Mode": "Default",
@@ -2633,6 +2633,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Sliders\\88a4d961-2f6e-42ac-b75d-09c0df4355abimages (1).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\df928698-f403-471c-b007-87ee9dc94300nijat.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Staffs/df928698-f403-471c-b007-87ee9dc94300nijat.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Staffs\\df928698-f403-471c-b007-87ee9dc94300nijat.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\about.js",

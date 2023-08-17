@@ -23,6 +23,8 @@ namespace Miles.Data.Context
         public DbSet<Slider> Sliders { get; set; }
 		public DbSet<Setting> Settings { get; set; }
         public DbSet<TextWhy> TextWhies { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
 
         public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
@@ -39,6 +41,7 @@ namespace Miles.Data.Context
 			modelBuilder.ApplyConfiguration(new SliderConfiguration());
             modelBuilder.ApplyConfiguration(new SettingConfiguration());
             modelBuilder.ApplyConfiguration(new TextWhyConfiguration());
+            modelBuilder.ApplyConfiguration(new StaffConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }
