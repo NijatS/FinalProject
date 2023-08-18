@@ -23,9 +23,19 @@ namespace Miles.Service.Validations.Messages
             .NotEmpty()
             .NotNull().WithMessage("Address can not be null")
             .MaximumLength(100);
-            RuleFor(x => x.Email)
-          .NotEmpty()
-          .NotNull().WithMessage("Email can not be null");
+            RuleFor(x => x)
+                  .Custom((x, context) =>
+                  {
+                      if (x.Email != null)
+                      {
+                          Regex re = new Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+                          if (!re.IsMatch(x.Email))
+                          {
+                              context.AddFailure("email", "Email format must be correct");
+                          }
+                      }
+                  }
+                  );
             RuleFor(x => x.Phone)
        .NotEmpty()
        .NotNull().WithMessage("PhoneNumber can not be null");

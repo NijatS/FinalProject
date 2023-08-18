@@ -27,14 +27,16 @@ namespace Miles.Service.Services.Implementations
         private readonly IMapper _mapper;
 		private readonly IWebHostEnvironment _evn;
 		private readonly IHttpContextAccessor _http;
+        private readonly IAccountService _accountService;
 
-        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository)
+        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService)
         {
             _repository = repository;
             _mapper = mapper;
             _evn = evn;
             _http = http;
             _blogRepository = blogRepository;
+            _accountService = accountService;
         }
 
         public async Task<ApiResponse> CreateAsync(SettingPostDto dto)
@@ -65,9 +67,17 @@ namespace Miles.Service.Services.Implementations
             };
         }
 
-        public async Task<ApiResponse> GetAsync(int id)
+        public async Task<ApiResponse> GetAsync(int? id)
         {
-            Setting Setting = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            Setting Setting = new Setting();
+            if(id == null)
+            {
+                Setting = await _repository.GetAsync(x => !x.IsDeleted);
+            }
+            else
+            {
+                Setting = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            }
             if (Setting is null)
             {
                 return new ApiResponse
@@ -145,9 +155,16 @@ namespace Miles.Service.Services.Implementations
             SettingVM settingVM = new SettingVM
             {
                 Setting = await _repository
-                           .GetAsync(x => !x.IsDeleted, "Socials"),
-                Blogs = await _blogRepository.GetAllAsync(x=>!x.IsDeleted,0,0).Result.ToListAsync()
+                         .GetAsync(x => !x.IsDeleted, "Socials"),
+                Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0).Result.ToListAsync(),
+                
             };
+            if (_http.HttpContext.User.Identity.IsAuthenticated)
+            {
+                var result = await _accountService.GetUser();
+                settingVM.AppUser = (AppUser)result.items;
+            }
+
             return settingVM;
         }
     }

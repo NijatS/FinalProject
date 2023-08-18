@@ -12,23 +12,30 @@ namespace Miles.App.Controllers
     public class ContactController : Controller
     {
         private readonly IMessageService _service;
-
-        public ContactController(IMessageService service)
+        private readonly ISettingService _settingService;
+        public ContactController(IMessageService service, ISettingService settingService)
         {
             _service = service;
+            _settingService = settingService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var result =await _settingService.GetSetting();
             ContactVM contactVM = new ContactVM()
             {
-                
+                Setting = result.Setting,
             };
             return View(contactVM);
         }
         [HttpPost]
         public async Task<IActionResult> SendEmail(MessagePostDto dto)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["Email"] = "Please fill All fields";
+                return RedirectToAction(nameof(Index));
+            }
             string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
 
             Regex re = new Regex(strRegex);

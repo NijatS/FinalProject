@@ -132,15 +132,14 @@
                                 <div>
                                     <div class="text-block">
                                         <h4>Phone</h4>
-                                        <p>+33 20966400 1342</p>
-                                        <h4>Fax</h4>
-                                        <p>+33 20966400 1342</p>
+                                        <p>@Model.Setting.Phone1</p>
+                                        <h4>Phone 2</h4>
+                                        <p>@Model.Setting.Phone2</p>
                                         <h4>Email</h4>
-                                        <p><a href="#">info@auction.com</a></p>
+                                        <p><a href="mailto:@Model.Setting.Email">@Model.Setting.Email</a></p>
                                         <h4>Address</h4>
                                         <p>
-                                            2855 Simpson Square<br />
-                                            Coldwater, OK 67029
+                                            @Model.Setting.Address<br />
                                         </p>
                                     </div>
                                 </div>

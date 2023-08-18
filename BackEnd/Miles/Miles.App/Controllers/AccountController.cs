@@ -159,7 +159,7 @@ namespace Miles.App.Controllers
                 return View(dto);
             }
             var result = await _service.ResetPasswordPost(dto);
-            if (result.StatusCode != 200)
+            if (result.StatusCode != 203)
             {
                 if (result.StatusCode == 404)
                 {

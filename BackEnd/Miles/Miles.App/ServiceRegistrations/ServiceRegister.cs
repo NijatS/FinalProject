@@ -34,8 +34,8 @@ namespace Miles.App.ServiceRegistrations
                 options.Lockout.AllowedForNewUsers = true;
                 options.Password.RequireNonAlphanumeric = true;
                 options.Password.RequireDigit = true;
-                //options.SignIn.RequireConfirmedEmail = true;
-                options.User.RequireUniqueEmail = true;
+				options.SignIn.RequireConfirmedEmail = true;
+				options.User.RequireUniqueEmail = true;
             });
             services.AddAutoMapper(typeof(CategoryProfile));
 			services.AddScoped<ICategoryRepository, CategoryRepository>();

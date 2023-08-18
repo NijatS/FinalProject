@@ -27,6 +27,8 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @if (!string.IsNullOrWhiteSpace((string)TempData["Email"]))
     {
         <div style="display:none;" id="emailFormat">
@@ -61,10 +63,10 @@
                                         @if (User.Identity.IsAuthenticated)
                                         {
                                             <li>
-                                                <a asp-action="info" asp-controller="account">@User.Identity.Name</a>
+                                                    <a asp-action="info" asp-controller="account">@User.Identity.Name</a>
                                             </li>
                                             <li>
-                                                <a asp-action="logout" asp-controller="account">LogOut</a>
+                                                <a asp-action="logout" asp-controller="account">Logout</a>
                                             </li>
                                         }
                                         else
@@ -111,7 +113,7 @@
                                         <a href="./blog.html">Blogs</a>
                                     </li>
                                     <li id="menu-item">
-                                        <a href="./contact.html">Contact Us</a>
+                                        <a asp-action="index" asp-controller="contact">Contact Us</a>
                                     </li>
                                     <li id="search-item">
                                         <p>
@@ -353,11 +355,19 @@
                 <nav class="menu">
                     <ul>
                         <li>
-                            <img src="../Images/nijat.jpg" alt="" />
-                            <div>
-                                <span>Nijat Soltanov</span>
-                                <span>nicatsoltanli03@gmail.com</span>
-                            </div>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <img src="~/Images/Users/@settingVM.AppUser.Image" alt="" />
+                                <div>
+                                    <span>@settingVM.AppUser.Name @settingVM.AppUser.Surname</span>
+                                    <span>@settingVM.AppUser.Email</span>
+                                </div>
+                            }
+                            else
+                            {
+                                <img src="~/Images/Users/User-avatar.svg.png" alt="" />
+
+                            }
                         </li>
                         <li class="searchNavbar">
                             <input type="text" placeholder="Search..." />
@@ -389,13 +399,27 @@
                         </li>
                     </ul>
                     <ul>
+                         @if (User.Identity.IsAuthenticated)
+                            {
                         <li>
-                            <i class="fa fa-sign-out"></i>
-                            <a href="#">Log out</a>
+                                <i class="fa fa-sign-out"></i>
+                                <a asp-action="logout" asp-controller="account">Log out</a>
+                           
                         </li>
-                        <li>
-                            <button>Login</button>
-                        </li>
+                            <li>
+                                <button><a asp-action="info" asp-controller="account" style="padding:0;color:inherit;">Info</a></button>
+                            </li>
+                        }
+
+                           @if (!User.Identity.IsAuthenticated)
+                            {
+                            <li>
+                                <button><a asp-action="signup" asp-controller="account" style="padding:0;color:inherit;">Register</a></button>
+                            </li>
+                           <li>
+                                <button><a asp-action="login" asp-controller="account" style="padding:0;color:inherit;">Login</a></button>
+                           </li>
+                            }
                     </ul>
                 </nav>
             </div>
@@ -403,6 +427,5 @@
     </nav>
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="~/JavaScript/sidebar.js"></script>
 

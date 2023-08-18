@@ -181,7 +181,7 @@ namespace Miles.Service.Services.Implementations
         public async Task<ApiResponse> ResetPasswordPost(ResetPasswordDto dto)
         {
             var user = await _userManager.FindByEmailAsync(dto.Mail);
-            string errors = null;
+            string errors = "";
             if (user is null)
             {
                 return new ApiResponse
@@ -195,7 +195,7 @@ namespace Miles.Service.Services.Implementations
             {
                 foreach(var error in result.Errors)
                 {
-                    errors += error;
+                    errors += error.Description;
                 }
                 return new ApiResponse
                 {
@@ -205,7 +205,7 @@ namespace Miles.Service.Services.Implementations
             }
             return new ApiResponse
             {
-                StatusCode = 203,
+                StatusCode = 203
             };
         }
         public async Task<ApiResponse> Info()
@@ -238,7 +238,8 @@ namespace Miles.Service.Services.Implementations
             }
             return new ApiResponse
             {
-                StatusCode = 203
+                StatusCode = 203,
+                items = user
             };
         }
         public async Task<ApiResponse> Update(UpdateDto dto)
