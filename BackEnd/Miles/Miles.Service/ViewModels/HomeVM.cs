@@ -12,6 +12,7 @@ namespace Miles.Service.ViewModels
         public IEnumerable<Slider> Sliders { get; set; }
         public IEnumerable<Blog> Blogs { get; set; }
         public IEnumerable<TextWhy> Why { get; set; }
+        public IEnumerable<Associate> Associates { get; set; }
         public Setting Setting { get; set; }
     }
 }

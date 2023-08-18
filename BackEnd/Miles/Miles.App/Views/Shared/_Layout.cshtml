@@ -58,12 +58,24 @@
                                 <div class="right-info hidden-sm">
                                     <ul>
                                         <li>Call us: <em>@settingVM.Setting.Phone1</em></li>
-                                        <li>
-                                            <a asp-action="login" asp-controller="account">Login</a>
-                                        </li>
-                                        <li>
-                                            <a asp-action="register" asp-controller="account">Register</a>
-                                        </li>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <li>
+                                                <a asp-action="info" asp-controller="account">@User.Identity.Name</a>
+                                            </li>
+                                            <li>
+                                                <a asp-action="logout" asp-controller="account">LogOut</a>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li>
+                                                <a asp-action="login" asp-controller="account">Login</a>
+                                            </li>
+                                            <li>
+                                                <a asp-action="signup" asp-controller="account">Register</a>
+                                            </li>
+                                        }
                                     </ul>
                                 </div>
                             </div>
@@ -391,6 +403,6 @@
     </nav>
 </body>
 </html>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="~/JavaScript/sidebar.js"></script>
 

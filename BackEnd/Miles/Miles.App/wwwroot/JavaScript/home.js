@@ -3,6 +3,8 @@ const dots = document.querySelectorAll(".dot");
 const coruselElements = document.querySelectorAll(".carusel-item");
 const carusel = document.querySelector(".carusel");
 const clientColumn = document.querySelector(".client-column");
+const verifyEmail = document.querySelector("#verifyEmail");
+const successVerify = document.querySelector("#successVerify")
 let currentImg = 0;
 let i = 0;
 let j = 0;
@@ -63,4 +65,28 @@ function changeCarusel(count) {
     i = 0;
   }
   carusel.style.transform = `translate3d(${x}px, 0px, 0px)`;
+}
+if (verifyEmail != undefined) {
+    const message1 = verifyEmail.innerHTML;
+    if (message1 != "") {
+        Swal.fire({
+            title: `${message1}`,
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    }
+}
+if (successVerify != undefined) {
+    const message = successVerify.innerHTML;
+    if (message != "") {
+        Swal.fire(
+            `${message}`,
+            'You clicked the button!',
+            'success'
+        )
+    }
 }

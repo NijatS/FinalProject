@@ -1,5 +1,6 @@
 ﻿using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Core.Repositories;
@@ -22,7 +23,21 @@ namespace Miles.App.ServiceRegistrations
 			{
 				opt.UseSqlServer(configuration.GetConnectionString("Default"));
 			});
-			services.AddAutoMapper(typeof(CategoryProfile));
+            services.AddIdentity<AppUser, IdentityRole>()
+                    .AddDefaultTokenProviders()
+                           .AddEntityFrameworkStores<MilesAppDbContext>();
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Default Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.AllowedForNewUsers = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireDigit = true;
+                //options.SignIn.RequireConfirmedEmail = true;
+                options.User.RequireUniqueEmail = true;
+            });
+            services.AddAutoMapper(typeof(CategoryProfile));
 			services.AddScoped<ICategoryRepository, CategoryRepository>();
 			services.AddScoped<ICategoryService, CategoryService>();
 			services.AddScoped<ITagRepository, TagRepository>();
@@ -52,7 +67,9 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<IAboutTextRepository, AboutTextRepository>();
 			services.AddScoped<IAboutTextService, AboutTextService>();
 			services.AddScoped<IAboutSkillRepository, AboutSkillRepository>();
-			services.AddScoped<IAboutSkillService, AboutSkillService>();
+			services.AddScoped<IEmailService, EmailService>();
+			services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAboutSkillService, AboutSkillService>();
 			services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
 			services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
 			services.AddHttpContextAccessor();

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Data.Configurations;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Miles.Data.Context
 {
-    public class MilesAppDbContext : DbContext
+    public class MilesAppDbContext : IdentityDbContext<AppUser>
     {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }

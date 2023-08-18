@@ -173,6 +173,34 @@
       "PackagePath": "staticwebassets\\Images\\Staffs\\df928698-f403-471c-b007-87ee9dc94300nijat.jpg"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1c4e0ae5-3936-4c4d-9270-03d402edeb10nijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\1c4e0ae5-3936-4c4d-9270-03d402edeb10nijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1f8f0bb8-abbe-4a43-bc28-2f2a45ff3c6dnijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\1f8f0bb8-abbe-4a43-bc28-2f2a45ff3c6dnijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\853c55cd-4a06-45da-84eb-7d70c20b2ab8nijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\853c55cd-4a06-45da-84eb-7d70c20b2ab8nijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\8c6ff7f2-0451-4c28-853b-5ceb64449baanijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\8c6ff7f2-0451-4c28-853b-5ceb64449baanijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\deba7bd7-fb13-41f4-876e-c47f2b8cf109nijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\deba7bd7-fb13-41f4-876e-c47f2b8cf109nijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\e89c047b-5dfe-4071-a4de-714a4aec78aenijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\e89c047b-5dfe-4071-a4de-714a4aec78aenijat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\ffded672-2b58-45ae-b5d5-21252b1bca67nijat.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\ffded672-2b58-45ae-b5d5-21252b1bca67nijat.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\avatar.png",
       "PackagePath": "staticwebassets\\Images\\avatar.png"
     },
@@ -315,6 +343,10 @@
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_variables.scss",
       "PackagePath": "staticwebassets\\Scss\\utils\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\email.html",
+      "PackagePath": "staticwebassets\\Templates\\email.html"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\maps\\style.css.map",

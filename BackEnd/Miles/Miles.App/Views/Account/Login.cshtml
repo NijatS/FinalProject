@@ -1,0 +1,61 @@
+﻿@model LoginDto
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Login</h1>
+                <div class="line"></div>
+                <span>
+                    Praesent volutpat nisi sed imperdiet facilisis felis turpis
+                    fermentum lectus
+                </span>
+                <div class="pages">
+                    <ul>
+                        <li>
+                            <a href="http://demo.mypsolution.com/wp13/">Home</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i></li>
+                        <li>
+                            <a href="http://demo.mypsolution.com/wp13/services/">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="page">
+    <section class="login-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="login-container">
+                        <div class="login-text">
+                            <h2>login</h2>
+                            <span>Please login using account detail bellow.</span>
+                        </div>
+                        <div class="login-form">
+                            <form method="post">
+                                <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+                                <span class="text text-danger" asp-validation-for="Email"></span>
+                                <input asp-for="Email" placeholder="Username" />
+                                <span class="text text-danger" asp-validation-for="Password"></span>
+                                <input asp-for="Password" type="password" placeholder="Password" />
+                                <div class="button-box">
+                                    <div class="login-toggle-btn">
+                                        <input type="checkbox" asp-for="RememberMe" id="remember" />
+                                        <label asp-for="RememberMe">Remember me</label>
+                                        <a asp-action="forgetpassword" asp-controller="account">Forgot Password?</a>
+                                    </div>
+                                    <button type="submit" class="default-btn">
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

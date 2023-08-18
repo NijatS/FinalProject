@@ -2,6 +2,18 @@
 @{
     int i = 0;
 }
+@if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
+{
+    <div style="display:none;" id="verifyEmail">
+        @TempData["Register"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Verify"]))
+{
+    <div style="display:none;" id="successVerify">
+        @TempData["Verify"]
+    </div>
+}
 <div class="slider">
     @foreach(var item in Model.Sliders)
     {
