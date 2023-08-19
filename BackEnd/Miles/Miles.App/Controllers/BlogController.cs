@@ -69,8 +69,7 @@ namespace Miles.App.Controllers
         {
             var resultCategory = await _categoryService.GetAllAsync(0, 0);
             var resultTag = await _tagService.GetAllAsync(0, 0);
-            var resultBlog = await _blogService.GetAllAsync(0, 0, x => !x.IsDeleted);
-           
+            var resultBlog = await _blogService.GetAllAsync(0, 0,null);
             BlogVM blogVM = new BlogVM
             {
                 Categories = (IEnumerable<Category>)resultCategory.items,

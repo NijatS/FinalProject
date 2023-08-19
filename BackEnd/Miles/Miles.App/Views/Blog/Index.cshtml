@@ -15,11 +15,11 @@
                 <div class="pages">
                     <ul>
                         <li>
-                            <a href="http://demo.mypsolution.com/wp13/">Home</a>
+                            <a asp-action="index" asp-controller="home">Home</a>
                         </li>
                         <li><i class="fa fa-dot-circle-o"></i></li>
                         <li>
-                            <a href="http://demo.mypsolution.com/wp13/services/">Blogs</a>
+                            <a style="color: #f4c23d;" asp-action="index" asp-controller="blog">Blogs</a>
                         </li>
                     </ul>
                 </div>
@@ -91,7 +91,7 @@
                         @foreach (var item in Model.Categories)
                         {
                         <li class="category-item">
-                            <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Where(x=>!x.IsDeleted).ToList().Count) </span></a>
+                            <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Where(x=>!x.IsDeleted && x.Blog!=null).ToList().Count) </span></a>
                         </li>
                         }
                     </ul>

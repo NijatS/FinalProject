@@ -26,7 +26,6 @@ namespace Miles.App.Controllers
             _associateService = associateService;
             _subscribeService = subscribeService;
         }
-
         public async Task<IActionResult> Index()
         {
             var resultSlide = await _sliderService.GetAllAsync(0, 0);
@@ -46,20 +45,18 @@ namespace Miles.App.Controllers
         [HttpPost]
         public async Task<IActionResult> PostSubscribe(SubscribePostDto dto)
         {
-            //string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
-
-            //Regex re = new Regex(strRegex);
             if (!ModelState.IsValid)
             {
                 TempData["Mail"] = "Please add valid email";
                 return RedirectToAction(nameof(Index));
             }
-            //if (!re.IsMatch(subscribe.Email))
-            //{
-            //    return RedirectToAction("index", "home");
-            //}
+            var result= await _subscribeService.CreateAsync(dto);
+            if(result.StatusCode != 201)
+            {
+                TempData["Mail"] = "This email is registered";
+                return RedirectToAction(nameof(Index));
+            }
             TempData["Verify"] = "Added succesfully";
-            await _subscribeService.CreateAsync(dto);
             return RedirectToAction(nameof(Index));
         }
     }

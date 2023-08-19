@@ -1,0 +1,218 @@
+﻿<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Shop</h1>
+                <div class="line"></div>
+                <span>
+                    Praesent volutpat nisi sed imperdiet facilisis felis turpis
+                    fermentum lectus
+                </span>
+                <div class="pages">
+                    <ul>
+                        <li>
+                            <a asp-action="index" asp-controller="home">Home</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i></li>
+                        <li>
+                            <a style="color: #f4c23d;" asp-action="index" asp-controller="shop">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="shop-page section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div>
+                    <div class="main">
+                        <div class="feature">
+                            <div class="info-text">
+                                <p>Showing 1–6 of 15 results</p>
+                                <form action="" method="get">
+                                    <select class="sort-car">
+                                        <option>Sort by popularity</option>
+                                        <option>Sort by average rating</option>
+                                        <option>Sort by newness</option>
+                                        <option>Sort by price: low to high</option>
+                                        <option>Sort by price: high to low</option>
+                                    </select>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="fa fa-list"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-square"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <ul class="products">
+                            <li class="product">
+                                <a href="#">
+                                    <img src="../Images/car.jpg" />
+                                    <div class="content">
+                                        <span class="price">$52,000</span>
+                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <div class="line"></div>
+                                        <p>
+                                            Selvage drinking vinegar roof party bitters
+                                            beard...
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="#">
+                                    <img src="../Images/car.jpg" />
+                                    <div class="content">
+                                        <span class="price">$52,000</span>
+                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <div class="line"></div>
+                                        <p>
+                                            Selvage drinking vinegar roof party bitters
+                                            beard...
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="#">
+                                    <img src="../Images/car.jpg" />
+                                    <div class="content">
+                                        <span class="price">$52,000</span>
+                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <div class="line"></div>
+                                        <p>
+                                            Selvage drinking vinegar roof party bitters
+                                            beard...
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="#">
+                                    <img src="../Images/car.jpg" />
+                                    <div class="content">
+                                        <span class="price">$52,000</span>
+                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <div class="line"></div>
+                                        <p>
+                                            Selvage drinking vinegar roof party bitters
+                                            beard...
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="#">
+                                    <img src="../Images/car.jpg" />
+                                    <div class="content">
+                                        <span class="price">$52,000</span>
+                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <div class="line"></div>
+                                        <p>
+                                            Selvage drinking vinegar roof party bitters
+                                            beard...
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="#">
+                                    <img src="../Images/car.jpg" />
+                                    <div class="content">
+                                        <span class="price">$52,000</span>
+                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <div class="line"></div>
+                                        <p>
+                                            Selvage drinking vinegar roof party bitters
+                                            beard...
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="sidebar-widget">
+                    <h4>Filter by</h4>
+                    <select>
+                        <option>Any Car Types</option>
+                        <option>SUV</option>
+                        <option>Sedan</option>
+                        <option>Truck</option>
+                    </select>
+                </div>
+                <div class="sidebar-widget">
+                    <select>
+                        <option>Any Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Truck</option>
+                    </select>
+                </div>
+                <div class="sidebar-widget">
+                    <select>
+                        <option>Any Makes</option>
+                        <option>USA</option>
+                        <option>Korea</option>
+                        <option>Japan</option>
+                    </select>
+                </div>
+                <div class="sidebar-widget">
+                    <input type="text"
+                           onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                           placeholder="$ Min Price"
+                           name="mprice" />
+                    <input type="text"
+                           onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                           placeholder="$ Max Price" />
+                    <button type="submit" class="buttonFilter">Filter</button>
+                </div>
+                <div class="sidebar-widget">
+                    <select>
+                        <option>Any Car Brand</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Truck</option>
+                    </select>
+                </div>
+                <div class="sidebar-widget">
+                    <select>
+                        <option>Any Car Model</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Truck</option>
+                    </select>
+                </div>
+                <div class="sidebar-widget">
+                    <select>
+                        <option>Engine</option>
+                        <option>Black</option>
+                        <option>White</option>
+                        <option>Truck</option>
+                    </select>
+                </div>
+                <div class="video-widget">
+                    <div>
+                        <img src="../Images/car1.jpg" alt="" />
+                        <div class="content">
+                            <a href="https://www.youtube.com/watch?v=X_SAPwBf5oc">
+                                <i class="fa fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

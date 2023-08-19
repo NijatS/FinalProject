@@ -24,6 +24,14 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<ApiResponse> CreateAsync(SubscribePostDto dto)
         {
+            if (await _repository.isExsist(x => x.Email.Trim().ToLower() == dto.Email.Trim().ToLower()))
+            {
+                return new ApiResponse
+                {
+                    StatusCode = 400,
+                    Description = $"{dto.Email} Already exists"
+                };
+            }
             Subscribe Subscribe = _mapper.Map<Subscribe>(dto);
             await _repository.AddAsync(Subscribe);
             await _repository.SaveAsync();

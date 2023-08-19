@@ -12,11 +12,11 @@
                 <div class="pages">
                     <ul>
                         <li>
-                            <a href="http://demo.mypsolution.com/wp13/">Home</a>
+                            <a asp-action="index" asp-controller="home">Home</a>
                         </li>
                         <li><i class="fa fa-dot-circle-o"></i></li>
                         <li>
-                            <a href="http://demo.mypsolution.com/wp13/services/">Blogs</a>
+                            <a style="color: #f4c23d;" asp-action="index" asp-controller="blog">Detail</a>
                         </li>
                     </ul>
                 </div>
@@ -114,22 +114,19 @@
                 </div>
             </div>
             <div class="col-md-4 sidebar-block">
-                <div class="sidebar-blog search-blog">
-                    <form method="get" role="search">
-                        <div>
-                            <input type="text" placeholder="Search for:" />
-                            <button type="submit">Search</button>
-                        </div>
-                    </form>
-                </div>
+            
                 <div class="sidebar-blog category-blog">
                     <h4>Categories</h4>
                     <ul>
                         @foreach (var item in Model.Categories)
                         {
-                            <li class="category-item">
-                                <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Count) </span></a>
-                            </li>
+                            if (@item.BlogCategories.Where(x => !x.IsDeleted && x.Blog != null).ToList().Count>0)
+                            {
+                                <li class="category-item">
+                                    <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span></span></a>
+                                </li>
+                            }
+                            
                         }
                     </ul>
                 </div>
