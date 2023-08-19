@@ -23,7 +23,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="../Scss/main.css" />
+    <link rel="stylesheet" href="~/Scss/main.css" />
     <title>Document</title>
 </head>
 <body>
@@ -110,7 +110,7 @@
                                         <a asp-action="index" asp-controller="shop">Shop </a>
                                     </li>
                                     <li id="menu-item">
-                                        <a asp-action="index" asp-controller="blog">Blogs</a>
+                                        <a asp-action="index" asp-controller="blog" asp-route-id="null">Blogs</a>
                                     </li>
                                     <li id="menu-item">
                                         <a asp-action="index" asp-controller="contact">Contact Us</a>
@@ -147,9 +147,11 @@
                                 <div class="left-content">
                                     <h2>SUBSCRIBE TO THE AUCTION</h2>
                                     <div class="sent-email">
-                                        <form class="sent-email-form" method="post">
+                                        <form class="sent-email-form" method="post" asp-controller="home" asp-action="PostSubscribe">
+                                            <div asp-validation-summary="ModelOnly"></div>
                                             <div>
-                                                <input type="text"
+                                                <input type="email"
+                                                       name="email"
                                                        class="email-input"
                                                        placeholder="E-mail Address" />
                                                 <div class="simple-button">

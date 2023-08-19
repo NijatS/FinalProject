@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Subscribe>
+<div class="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Email:</th>
+                <th scope="col">Create Time:</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <th>@item.Email</th>
+                    <th>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</th>
+                    <td>
+                        <a onclick="if(!confirm('Are you sure?')){return false;}"
+                           asp-controller="Subscribe" asp-action="remove" asp-route-id="@item.Id"
+                           class=" delete-item"><i class="fas fa-trash text text-danger"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <ul class="pagination">
+        <li><a class=" page-link" asp-controller="Subscribe" asp-action="index" asp-route-page="1">«</a></li>
+        @for (int i = 1; i <= ViewBag.TotalPage; i++)
+        {
+            @if (i == ViewBag.CurrentPage)
+            {
+                <li class="page-item active"><a class=" page-link" asp-controller="Subscribe" asp-action="index" asp-route-page="@i">@i</a></li>
+            }
+            else
+            {
+                <li class="page-item"><a class=" page-link" asp-controller="Subscribe" asp-action="index" asp-route-page="@i">@i</a></li>
+            }
+        }
+        <li><a class="page-link" asp-controller="Subscribe" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+    </ul>
+    <div>
+     
+    </div>
+</div>

@@ -136,7 +136,8 @@ namespace Miles.Service.Services.Implementations
 			return new ApiResponse
             {
                 StatusCode = 200,
-                items = dto
+                items = dto,
+                itemView = Blog
             };
         }
 

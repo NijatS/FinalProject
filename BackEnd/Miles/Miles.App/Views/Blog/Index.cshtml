@@ -30,11 +30,11 @@
 <section class="blog-page section">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 main-block">
+            <div class="col-md-8 main-block blog_container">
                 @foreach(var item in Model.Blogs){
                 <div class="blog-item">
                     <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">
-                        <img src="~/Images/Blogs/@item.Image" alt="" />
+                        <img style="height:400px" src="~/Images/Blogs/@item.Image" alt="" />
                     </a>
                     <div class="content">
                         <div class="info">
@@ -80,8 +80,8 @@
                 <div class="sidebar-blog search-blog">
                     <form method="get" role="search">
                         <div>
-                            <input type="text" placeholder="Search for:" />
-                            <button type="submit">Search</button>
+                            <input type="text" class="searchInput" placeholder="Search for:" />
+                            <button class="SearchButton" type="submit">Search</button>
                         </div>
                     </form>
                 </div>
@@ -91,7 +91,7 @@
                         @foreach (var item in Model.Categories)
                         {
                         <li class="category-item">
-                            <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Count) </span></a>
+                            <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Where(x=>!x.IsDeleted).ToList().Count) </span></a>
                         </li>
                         }
                     </ul>
@@ -103,7 +103,7 @@
                         <div class="post-item">
                             <img src="~/Images/Blogs/@item.Image" alt="" />
                             <h6>
-                                <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
+                                <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
                             </h6>
                             <ul>
                                 <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
@@ -126,3 +126,53 @@
         </div>
     </div>
 </section>
+<script>
+    const submit = document.querySelector(".SearchButton");
+    const searchInput = document.querySelector(".searchInput")
+    const container = document.querySelector(".blog_container")
+    searchInput.addEventListener("input", (e) => {
+        e.preventDefault();
+        if (searchInput.value == "") {
+            location.reload();
+        }
+        let href = `/blog/search?search=${searchInput.value}`;
+        fetch(href)
+            .then(x => x.json())
+            .then(x => {
+                container.innerHTML = ""
+                x.forEach(item => {
+                    let text = JSON.stringify(item.description).substring(0, 250);
+                    let date = new Date(`${item.createdAt}`);
+                    console.log(date);
+                    let view = `<div class="blog-item">
+                        <a asp-action="detail" asp-controller="blog" asp-route-id="${item.id}">
+                            <img style="height:400px" src="/Images/Blogs/${item.image}" alt="" />
+                        </a>
+                        <div class="content">
+                            <div class="info">
+                                <ul>
+                                             <li>${date.toLocaleDateString()}</li>
+                                    <li>
+                                        Posted by
+                                            <a asp-action="detail" asp-controller="blog" asp-route-id="${item.id}">${item.author}</a>
+                                    </li>
+                                </ul>
+                                <div class="title">
+                                        <a asp-action ="detail" asp-controller="blog" asp-route-id="${item.id}">
+                                                <h2>${item.title}</h2>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <p>
+                                   ${text}...
+                                </p>
+                                    <a asp-action="detail" asp-controller="blog" asp-route-id="${item.Id}">READ MORE</a>
+                            </div>
+                        </div>
+                    </div>`;
+                    container.innerHTML += view;
+                })
+            })
+    })
+</script>

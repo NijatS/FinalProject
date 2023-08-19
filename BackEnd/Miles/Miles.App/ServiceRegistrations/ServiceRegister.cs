@@ -54,7 +54,9 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<IAssociateService, AssociateService>();
 			services.AddScoped<ISliderRepository, SliderRepository>();
 			services.AddScoped<ISliderService, SliderService>();
-			services.AddScoped<ITextWhyRepository, TextWhyRepository>();
+            services.AddScoped<ISubscribeRepository, SubscribeRepository>();
+            services.AddScoped<ISubscribeService, SubscribeService>();
+            services.AddScoped<ITextWhyRepository, TextWhyRepository>();
 			services.AddScoped<ITextWhyService, TextWhyService>();
 			services.AddScoped<ISettingRepository, SettingRepository>();
             services.AddScoped<ISettingService, SettingService>();

@@ -29,7 +29,8 @@ namespace Miles.Data.Context
 		public DbSet<Social> Socials { get; set; }
 		public DbSet<AboutText> AboutTexts { get; set; }
 		public DbSet<AboutSkill> AboutSkills { get; set; }
-		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
+		public DbSet<Subscribe> Subscribes { get; set; }
+        public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -48,7 +49,8 @@ namespace Miles.Data.Context
 			modelBuilder.ApplyConfiguration(new SocialConfiguration());
 			modelBuilder.ApplyConfiguration(new AboutTextConfiguration());
 			modelBuilder.ApplyConfiguration(new AboutSkillConfiguration());
-			base.OnModelCreating(modelBuilder);
+			modelBuilder.ApplyConfiguration(new SubscribeConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

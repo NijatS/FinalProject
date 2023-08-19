@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Miles.App.Controllers
 {
@@ -37,6 +39,29 @@ namespace Miles.App.Controllers
                 Setting = _settingService.GetSetting().Result.Setting
             };
             return View(homeVM);
+        }
+        [HttpPost]
+        public async Task<IActionResult> PostSubscribe(Subscribe subscribe)
+        {
+            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+
+            Regex re = new Regex(strRegex);
+            if (subscribe == null)
+            {
+                return NotFound();
+            }
+            if (!re.IsMatch(subscribe.Email))
+            {
+                TempData["Email"] = "Please add valid email";
+                return RedirectToAction("index", "home");
+            }
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Invalid Email");
+            }
+            //await _context.AddAsync(subscribe);
+            //await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿<div class="page-heading">
+﻿@model BlogVM
+<div class="page-heading">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -29,72 +30,48 @@
             <div class="col-md-8 main-block">
                 <div class="blog-item">
                     <a href="#">
-                        <img src="../Images/car1.jpg" alt="" />
+                        <img src="~/Images/Blogs/@Model.Blog.Image" alt="" />
                     </a>
                     <div class="content">
                         <div class="info">
                             <ul>
-                                <li>Dec 16, 2016</li>
+                                <li>@Model.Blog.CreatedAt.Day/@Model.Blog.CreatedAt.Month/@Model.Blog.CreatedAt.Year</li>
                                 <li>
                                     Posted by
-                                    <a href="#">Dexthemes</a>
+                                    <a href="#">@Model.Blog.Author</a>
                                 </li>
                             </ul>
                             <div class="title">
                                 <a href="#">
-                                    <h2>Phasellus hendrerit eros</h2>
+                                    <h2>@Model.Blog.Title</h2>
                                 </a>
                             </div>
                         </div>
                         <div class="text">
-                            <p>
-                                Phasellus hendrerit eros eget massa maximus placerat.
-                                Etiam vel est tristique, iaculis orci rhoncus,
-                                faucibus orci. Fusce pharetra augue ac blandit
-                                posuere. Duis urna neque, posuere vitae facilisis et,
-                                sodales ac eros. Donec quis congue elit. Fusce
-                                ultrices ex vitae turpis cursus, eget venenatis tellus
-                                posuere.
-                            </p>
-                            <p>
-                                Pellentesque iaculis fermentum augue, volutpat
-                                lobortis ipsum pretium in. Aliquam pulvinar lorem non
-                                ex malesuada, eget ultrices eros feugiat. Morbi in
-                                sollicitudin leo.
-                            </p>
-                            <h6>Nam porttitor metus vitae faucibus cursus</h6>
-                            <p>
-                                Vivamus et orci ac magna elementum faucibus rutrum
-                                vitae risus. Aenean turpis mi, efficitur ac enim ac,
-                                efficitur lobortis diam. Proin tempor egestas urna,
-                                blandit vestibulum purus volutpat ut.
-                            </p>
-                            <p>
-                                Ut egestas consequat urna non sagittis. Nulla ut velit
-                                nec sapien sollicitudin convallis. Duis fermentum
-                                suscipit magna a eleifend. Duis in porta ipsum, eu
-                                condimentum felis. Quisque venenatis pretium quam, et
-                                sollicitudin massa sollicitudin sed. Donec condimentum
-                                risus at mattis venenatis.
-                            </p>
+                            @if (Model.Blog.Description.Length >= 250)
+                            {
+                                <p>
+                                    @Model.Blog.Description.Substring(0,250)...
+                                </p>
+                                <h6>Nam porttitor metus vitae faucibus cursus</h6>
+                                <p>
+                                    @Model.Blog.Description.Substring(250,Model.Blog.Description.Length-250)
+
+                                </p>
+                            }
+                            else
+                            {
+                                <p>
+                                    @Model.Blog.Description...
+                                </p>
+                            }
+
                             <blockquote>
                                 <p>
-                                    Vivamus et orci ac magna elementum faucibus rutrum
-                                    vitae risus. Aenean turpis mi, efficitur enim ac,
-                                    efficitur lobortis diam. Proin tempor egestas urna,
-                                    blandit.
+                                   @Model.Blog.Comment
                                 </p>
                             </blockquote>
-                            <h6>Nam porttitor metus vitae faucibus cursus</h6>
-                            <p>
-                                Mauris vitae viverra metus. In hac habitasse platea
-                                dictumst. Integer commodo sapien massa, vitae
-                                consequat turpis efficitur nec. Sed eleifend magna
-                                ornare, vulputate lectus eu, maximus diam. Etiam
-                                congue, tellus posuere tincidunt dignissim, felis ante
-                                sollicitudin ante, ac porta risus orci quis ipsum.
-                                Donec purus sem, viverra vel convallis.
-                            </p>
+                         
                         </div>
                     </div>
                 </div>
@@ -102,9 +79,9 @@
                     <div class="share-button">
                         <a href="#">Share Post</a>
                     </div>
-                    <img src="../Images/avatar.png" alt="" />
+                    <img style="width:55px;height:55px;" src="~/Images/Blogs/Authors/@Model.Blog.AuthorImage" alt="" />
                     <span>written by</span>
-                    <h4 class="author-name">nijat</h4>
+                    <h4 class="author-name">@Model.Blog.Author</h4>
                 </div>
                 <div class="col-sm-12">
                     <div class="empty"></div>
@@ -148,55 +125,38 @@
                 <div class="sidebar-blog category-blog">
                     <h4>Categories</h4>
                     <ul>
-                        <li class="category-item">
-                            <a>Branding<span> (0) </span></a>
-                        </li>
-                        <li class="category-item">
-                            <a>Business<span> (0) </span></a>
-                        </li>
-                        <li class="category-item">
-                            <a>Company News<span> (0) </span></a>
-                        </li>
-                        <li class="category-item">
-                            <a>Development<span> (0) </span></a>
-                        </li>
-                        <li class="category-item">
-                            <a>Technology<span> (0) </span></a>
-                        </li>
+                        @foreach (var item in Model.Categories)
+                        {
+                            <li class="category-item">
+                                <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Count) </span></a>
+                            </li>
+                        }
                     </ul>
                 </div>
                 <div class="sidebar-blog post-blog">
                     <h4>Recent Post</h4>
-                    <div class="post-item">
-                        <img src="../Images/car.jpg" alt="" />
-                        <h6>
-                            <a href="#">Phasellus hendrerit eros</a>
-                        </h6>
-                        <ul>
-                            <li>Dec 16, 2016</li>
-                            <li>0 comments</li>
-                        </ul>
-                    </div>
-                    <div class="post-item">
-                        <img src="../Images/car.jpg" alt="" />
-                        <h6>
-                            <a href="#">Phasellus hendrerit eros</a>
-                        </h6>
-                        <ul>
-                            <li>Dec 16, 2016</li>
-                            <li>0 comments</li>
-                        </ul>
-                    </div>
+                    @foreach (var item in Model.Blogs.Take(2).OrderByDescending(x => x.CreatedAt))
+                    {
+                        <div class="post-item">
+                            <img src="~/Images/Blogs/@item.Image" alt="" />
+                            <h6>
+                                <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
+                            </h6>
+                            <ul>
+                                <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
+                                <li>0 comments</li>
+                            </ul>
+                        </div>
+
+                    }
                 </div>
                 <div class="sidebar-blog tags-blog">
                     <h4>TAGS</h4>
                     <div class="tags">
-                        <a href="#">clean</a>
-                        <a href="#">high resolution</a>
-                        <a href="#">videos</a>
-                        <a href="#">photos</a>
-                        <a href="#">walpaper</a>
-                        <a href="#">clean</a>
+                        @foreach (var item in Model.Tags)
+                        {
+                            <a href="#">@item.Name</a>
+                        }
                     </div>
                 </div>
             </div>
