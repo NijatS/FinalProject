@@ -24,11 +24,10 @@ namespace Miles.App.Controllers
             var resultText = await _textWhyService.GetAllAsync(0, 0);
             var userPricing = await _userPricingService.GetAllAsync(0, 0);
 
-
             ServiceVM serviceVM = new ServiceVM
 			{
                 Why = (IEnumerable<TextWhy>)resultText.items,
-                UserPricings = (IEnumerable<UserPricing>)userPricing,
+                UserPricings = (IEnumerable<UserPricing>)userPricing.items,
                 Setting = result.Setting,
 			};
 

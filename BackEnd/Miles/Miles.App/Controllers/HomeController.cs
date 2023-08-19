@@ -25,7 +25,7 @@ namespace Miles.App.Controllers
         public async Task<IActionResult> Index()
         {
             var resultSlide = await _sliderService.GetAllAsync(0, 0);
-            var resultBlog = await _blogService.GetAllAsync(0, 0);
+            var resultBlog = await _blogService.GetAllAsync(0, 0, null);
             var resultText = await _textWhyService.GetAllAsync(0, 0);
             var resultAssociate = await _associateService.GetAllAsync(0, 0);
             HomeVM homeVM = new HomeVM

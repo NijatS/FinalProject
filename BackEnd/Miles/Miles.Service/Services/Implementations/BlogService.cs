@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Http;
 using Miles.Service.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Miles.Data.Context;
+using System.Linq.Expressions;
 
 namespace Miles.Service.Services.Implementations
 {
@@ -93,9 +94,18 @@ namespace Miles.Service.Services.Implementations
                 items = Blog
             };
         }
-        public async Task<ApiResponse> GetAllAsync(int count,int page)
+        public async Task<ApiResponse> GetAllAsync(int count,int page, Expression<Func<Blog, bool>>? expression)
         {
-            IEnumerable<Blog> blogs = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<Blog> blogs = new List<Blog>();
+            if (expression is null)
+            {
+               blogs = await _repository.GetAllAsync(x => !x.IsDeleted, count, page);
+            }
+            else
+            {
+               blogs = await _repository.GetAllAsync(expression, count, page);
+
+            }
             return new ApiResponse
             {
                 items = blogs,

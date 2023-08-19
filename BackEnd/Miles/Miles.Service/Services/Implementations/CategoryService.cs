@@ -46,7 +46,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<Category> categories = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<Category> categories = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"BlogCategories");
             return new ApiResponse
             {
                 items = categories,

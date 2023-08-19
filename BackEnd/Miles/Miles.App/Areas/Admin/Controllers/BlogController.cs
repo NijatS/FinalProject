@@ -31,7 +31,7 @@ namespace Miles.App.Areas.Admin.Controllers
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             ViewBag.CurrentPage = page;
             int count = 4;
-            var result = await _service.GetAllAsync(count,page);
+            var result = await _service.GetAllAsync(count,page, null);
             return View(result.items);
         }
         [HttpGet]

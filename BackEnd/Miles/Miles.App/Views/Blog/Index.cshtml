@@ -1,0 +1,128 @@
+﻿@model BlogVM
+@{
+    int i = 0;
+}
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Our Blogs</h1>
+                <div class="line"></div>
+                <span>
+                    Praesent volutpat nisi sed imperdiet facilisis felis turpis
+                    fermentum lectus
+                </span>
+                <div class="pages">
+                    <ul>
+                        <li>
+                            <a href="http://demo.mypsolution.com/wp13/">Home</a>
+                        </li>
+                        <li><i class="fa fa-dot-circle-o"></i></li>
+                        <li>
+                            <a href="http://demo.mypsolution.com/wp13/services/">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="blog-page section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 main-block">
+                @foreach(var item in Model.Blogs){
+                <div class="blog-item">
+                    <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">
+                        <img src="~/Images/Blogs/@item.Image" alt="" />
+                    </a>
+                    <div class="content">
+                        <div class="info">
+                            <ul>
+                                    <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
+                                <li>
+                                    Posted by
+                                        <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Author</a>
+                                </li>
+                            </ul>
+                            <div class="title">
+                                    <a asp-action ="detail" asp-controller="blog" asp-route-id="@item.Id">
+                                    <h2>@item.Title</h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>
+                               @item.Description.Substring(0,150)...
+                            </p>
+                                <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+                }
+                <ul class="pagination">
+                    <li><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="1">«</a></li>
+                    @for (int j = 1; j <= ViewBag.TotalPage; j++)
+                    {
+                        @if (j == ViewBag.CurrentPage)
+                        {
+                            <li class="page-item active"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
+                        }
+                        else
+                        {
+                            <li class="page-item"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
+                        }
+                    }
+                    <li><a class="page-link" asp-controller="blog" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 sidebar-block">
+                <div class="sidebar-blog search-blog">
+                    <form method="get" role="search">
+                        <div>
+                            <input type="text" placeholder="Search for:" />
+                            <button type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-blog category-blog">
+                    <h4>Categories</h4>
+                    <ul>
+                        @foreach (var item in Model.Categories)
+                        {
+                        <li class="category-item">
+                            <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Name<span> (@item.BlogCategories.Count) </span></a>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <div class="sidebar-blog post-blog">
+                    <h4>Recent Post</h4>
+                    @foreach(var item in Model.Blogs.Take(2).OrderByDescending(x => x.CreatedAt))
+                    {
+                        <div class="post-item">
+                            <img src="~/Images/Blogs/@item.Image" alt="" />
+                            <h6>
+                                <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
+                            </h6>
+                            <ul>
+                                <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
+                                <li>0 comments</li>
+                            </ul>
+                        </div>
+
+                    }
+                </div>
+                <div class="sidebar-blog tags-blog">
+                    <h4>TAGS</h4>
+                    <div class="tags">
+                        @foreach (var item in Model.Tags)
+                        {
+                            <a href="#">@item.Name</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

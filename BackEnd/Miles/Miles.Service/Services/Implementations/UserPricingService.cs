@@ -47,7 +47,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<UserPricing> UserPricings = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<UserPricing> UserPricings = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Features");
             return new ApiResponse
             {
                 items = UserPricings,
@@ -57,7 +57,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAsync(int id)
         {
-            UserPricing UserPricing = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            UserPricing UserPricing = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id, "Features");
             if (UserPricing is null)
             {
                 return new ApiResponse
