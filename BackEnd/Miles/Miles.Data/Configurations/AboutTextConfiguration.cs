@@ -16,9 +16,9 @@ namespace Miles.Data.Configurations
             builder.Property(x => x.Title).IsRequired()
                 .HasMaxLength(20);
 			builder.Property(x => x.SubTitle).IsRequired()
-				.HasMaxLength(20);
+				.HasMaxLength(50);
 			builder.Property(x => x.Text).IsRequired()
-				.HasMaxLength(200);
+				.HasMaxLength(500);
 			builder.Property(x => x.CreatedAt)
               .HasDefaultValue(DateTime.UtcNow.AddHours(4));
         }

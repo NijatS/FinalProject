@@ -51,7 +51,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<Staff> Staffs = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Position");
+            IEnumerable<Staff> Staffs = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Position","Socials");
             return new ApiResponse
             {
                 items = Staffs,

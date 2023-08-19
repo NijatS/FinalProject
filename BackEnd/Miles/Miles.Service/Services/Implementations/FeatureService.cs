@@ -39,7 +39,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<Feature> Features = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<Feature> Features = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"UserPricings");
             return new ApiResponse
             {
                 items = Features,

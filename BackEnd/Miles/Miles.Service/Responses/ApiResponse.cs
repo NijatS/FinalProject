@@ -12,6 +12,7 @@ namespace Miles.Service.Responses
         public int StatusCode { get; set; }
         public string Description { get; set; }
         public string Token { get; set; }
+        public object itemView { get; set; }
 
     }
 }

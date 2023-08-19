@@ -47,9 +47,18 @@ namespace Miles.Service.Services.Implementations
             };
         }
 
-        public async Task<ApiResponse> GetAsync(int id)
+        public async Task<ApiResponse> GetAsync(int? id)
         {
-            AboutText AboutText = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            AboutText AboutText = new AboutText();
+
+            if (id == null)
+            {
+                AboutText = await _repository.GetAsync(x => !x.IsDeleted);
+            }
+            else
+            {
+                AboutText = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            }
             if (AboutText is null)
             {
                 return new ApiResponse
@@ -63,7 +72,8 @@ namespace Miles.Service.Services.Implementations
             return new ApiResponse
             {
                 StatusCode = 200,
-                items = dto
+                items = dto,
+                itemView = AboutText
             };
         }
 

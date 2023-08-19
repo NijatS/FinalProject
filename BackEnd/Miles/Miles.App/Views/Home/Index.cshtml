@@ -77,27 +77,13 @@
                                 <div class="line"></div>
                             </div>
                             <div class="service-left">
-                                @foreach(var item in Model.Why)
-                                {
-                                    <div class="col-md-6">
-                                        <div class="service-item">
-                                            <i class="fa fa-@item.Icon"></i>
-                                            <div class="service-head">
-                                                <h2>@item.Title</h2>
-                                            </div>
-                                            <p>
-                                              @item.Text
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                }
+                                @await Html.PartialAsync("_WhySection", Model.Why)
                             </div>
                         </div>
                         <div class="right-why-us kc_column_inner">
                             <div class="kc_wrapper kc-col-inner-container">
                                 <div class="right-img">
-                                    <img src="~/Images//Settings/@Model.Setting.PhotoWhy"
+                                    <img src="~/Images/Settings/@Model.Setting.PhotoWhy"
                                          alt="" />
                                     <div class="img-bg"></div>
                                 </div>

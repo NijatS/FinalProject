@@ -5,6 +5,7 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name:</th>
+                <th scope="col">Model:</th>
                 <th scope="col">Activ:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
@@ -16,6 +17,7 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
+                    <th>@item.UserPricing.Name</th>
                     <th>@item.Icon</th>
                     <td>
                         <a asp-controller="Feature" asp-action="update" asp-route-id="@item.Id">

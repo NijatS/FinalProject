@@ -8,6 +8,7 @@ using Miles.Service.Dtos.Socials;
 using Miles.Service.Responses;
 using Miles.Service.Services.Interfaces;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,16 +20,18 @@ namespace Miles.Service.Services.Implementations
     {
         private readonly ISocialRepository _repository;
 		private readonly ISettingRepository _settingRepository;
+        private readonly IStaffRepository _staffRepository;
 		private readonly IMapper _mapper;
 
-		public SocialService(ISocialRepository repository, IMapper mapper, ISettingRepository settingRepository)
-		{
-			_repository = repository;
-			_mapper = mapper;
-			_settingRepository = settingRepository;
-		}
+        public SocialService(ISocialRepository repository, IMapper mapper, ISettingRepository settingRepository, IStaffRepository staffRepository)
+        {
+            _repository = repository;
+            _mapper = mapper;
+            _settingRepository = settingRepository;
+            _staffRepository = staffRepository;
+        }
 
-		public async Task<ApiResponse> CreateAsync(SocialPostDto dto)
+        public async Task<ApiResponse> CreateAsync(SocialPostDto dto)
         {
             Social Social = _mapper.Map<Social>(dto);
 			if (dto.StaffId == 0 && dto.SettingId == 0)
@@ -120,10 +123,6 @@ namespace Miles.Service.Services.Implementations
                 Social.StaffId = null;
                 Social.SettingId = _settingRepository.GetAsync(x => !x.IsDeleted).Result.Id;
             }
-            else
-            {
-                Social.StaffId = dto.StaffId;
-            }
 			if (Social is null)
             {
                 return new ApiResponse
@@ -135,7 +134,7 @@ namespace Miles.Service.Services.Implementations
             Social.UpdatedAt = DateTime.UtcNow.AddHours(4);
             Social.Icon = dto.Icon;
 			Social.Link = dto.Link;
-			await _repository.SaveAsync();
+            await _repository.SaveAsync();
             return new ApiResponse
             {
                 StatusCode = 200,

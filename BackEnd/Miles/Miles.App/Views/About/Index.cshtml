@@ -1,4 +1,5 @@
-﻿<div class="page-heading">
+﻿@model AboutVM
+<div class="page-heading">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -33,24 +34,13 @@
                             <div class="kc-column-inner">
                                 <div class="left-about">
                                     <div>
-                                        <h2>Whfo is the auction?</h2>
-                                        <p><span>Irony distillery fashion axe</span></p>
+                                        <h2>@Model.AboutText.Title</h2>
+                                        <p><span>@Model.AboutText.SubTitle</span></p>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit. Phasellus sed est sed orcit
-                                            elit auctor ullamcorper et imperdiet lectus.
-                                            Vivamus gravida metus vitae nunc sempe lacinia
-                                            est pulvinar. Ut sit amet lacus luctus, iaculis
-                                            turpis sit amet.
+                                          @Model.AboutText.Text.Substring(0,250)
                                         </p>
                                         <p>
-                                            Maecenas eros mi, lacinia eu ultricies vel,
-                                            elementum et justo. Ut at tortor a odio vestib
-                                            suscipit non sit amet dolor. Morbi molestie
-                                            magna nec metus facilisis, at iaculis
-                                            adipiscing. Praesent ac diam velit. Curabitur
-                                            lacinia tristique velit ut laoreet. Nam pretium
-                                            id risuse fermentum. Aenean eu euismod justo.
+                                            @Model.AboutText.Text.Substring(250,Model.AboutText.Text.Length-250)
                                         </p>
                                         <p><a href="#">Read More</a></p>
                                     </div>
@@ -58,34 +48,15 @@
                             </div>
                             <div class="kc-column-inner">
                                 <div class="right-about">
+                                    @foreach(var item in Model.AboutSkills.Take(5)){
                                     <div class="skillbar clearfix">
                                         <div class="skillbar-title">
-                                            <h6>Photoshop</h6>
-                                            <span>(68%)</span>
+                                            <h6>@item.Name</h6>
+                                            <span>(@item.Degree%)</span>
                                         </div>
-                                        <div class="skillbar-bar"></div>
+                                        <div class="skillbar-bar" style="width:@item.Degree%"></div>
                                     </div>
-                                    <div class="skillbar clearfix">
-                                        <div class="skillbar-title">
-                                            <h6>Photoshop</h6>
-                                            <span>(68%)</span>
-                                        </div>
-                                        <div class="skillbar-bar"></div>
-                                    </div>
-                                    <div class="skillbar clearfix">
-                                        <div class="skillbar-title">
-                                            <h6>Photoshop</h6>
-                                            <span>(68%)</span>
-                                        </div>
-                                        <div class="skillbar-bar"></div>
-                                    </div>
-                                    <div class="skillbar clearfix">
-                                        <div class="skillbar-title">
-                                            <h6>Photoshop</h6>
-                                            <span>(68%)</span>
-                                        </div>
-                                        <div class="skillbar-bar"></div>
-                                    </div>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -111,130 +82,35 @@
                             <div class="line"></div>
                         </div>
                         <div class="team-cards kc-row-inner">
+                            @foreach(var item in Model.Staffs.Take(4)){
                             <div class="kc-column-inner">
                                 <div>
                                     <div class="team-member text-center">
                                         <img alt=""
-                                             src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/member-1.jpg" />
+                                             src="~/Images/Staffs/@item.Image" style="height:220px; width:220px;"/>
                                         <div class="socials">
                                             <div class="line"></div>
-                                            <p>Donec sit amet eros sit amet quam auctor</p>
+                                            <p>@item.Info</p>
                                             <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-google"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
+                                                    @foreach(var social in item.Socials.Where(x=>!x.IsDeleted).Take(4))
+                                                    {
+                                                        <li>
+                                                            <a href="@social.Link">
+                                                                <i class="fa fa-@social.Icon"></i>
+                                                            </a>
+                                                        </li>
+                                                    }
                                             </ul>
                                         </div>
                                         <div class="info">
-                                            <h2>CASEY ALGARIN</h2>
-                                            <span>DESIGNER</span>
+                                            <h2>@item.FullName</h2>
+                                            <span>@item.Position.Name</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="kc-column-inner">
-                                <div>
-                                    <div class="team-member text-center">
-                                        <img alt=""
-                                             src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/member-1.jpg" />
-                                        <div class="socials">
-                                            <div class="line"></div>
-                                            <p>Donec sit amet eros sit amet quam auctor</p>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-google"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="info">
-                                            <h2>CASEY ALGARIN</h2>
-                                            <span>DESIGNER</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="kc-column-inner">
-                                <div>
-                                    <div class="team-member text-center">
-                                        <img alt=""
-                                             src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/member-1.jpg" />
-                                        <div class="socials">
-                                            <div class="line"></div>
-                                            <p>Donec sit amet eros sit amet quam auctor</p>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-google"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="info">
-                                            <h2>CASEY ALGARIN</h2>
-                                            <span>DESIGNER</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="kc-column-inner">
-                                <div>
-                                    <div class="team-member text-center">
-                                        <img alt=""
-                                             src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/member-1.jpg" />
-                                        <div class="socials">
-                                            <div class="line"></div>
-                                            <p>Donec sit amet eros sit amet quam auctor</p>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-google"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="info">
-                                            <h2>CASEY ALGARIN</h2>
-                                            <span>DESIGNER</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            }
+                         
                         </div>
                     </div>
                 </div>
@@ -394,3 +270,4 @@
         </div>
     </section>
 </div>
+<script src="~/JavaScript/about.js"></script>

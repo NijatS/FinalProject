@@ -22,13 +22,13 @@ namespace Miles.Service.Validations.AboutTexts
 		.NotEmpty()
 		.NotNull()
 		.MinimumLength(3)
-		.MaximumLength(20);
+		.MaximumLength(50);
 
 			RuleFor(x => x.Text)
            	.NotEmpty()
 	          .NotNull()
 	            .MinimumLength(3)
-	         .MaximumLength(200);
+	         .MaximumLength(500);
 		}
     }
 }

@@ -1,4 +1,5 @@
-﻿<div class="page-heading">
+﻿@model ServiceVM
+<div class="page-heading">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -39,60 +40,13 @@
                                 <div class="line"></div>
                             </div>
                             <div class="service-left">
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="service-item">
-                                        <i class="fa fa-bar-chart-o"></i>
-                                        <div class="service-head">
-                                            <h2>Results of Drivers</h2>
-                                        </div>
-                                        <p>
-                                            Integer nec posuere metus, at feugiat. Sed
-                                            sodales venenat malesuada.
-                                        </p>
-                                    </div>
-                                </div>
+                                @await Html.PartialAsync("_WhySection", Model.Why)
                             </div>
                         </div>
                         <div class="right-why-us kc_column_inner">
                             <div class="kc_wrapper kc-col-inner-container">
                                 <div class="right-img">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/feature-image.jpg"
+                                    <img src="~/Images/Settings/@Model.Setting.PhotoWhy"
                                          alt="" />
                                     <div class="img-bg"></div>
                                 </div>

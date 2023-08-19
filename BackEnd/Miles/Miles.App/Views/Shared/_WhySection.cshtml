@@ -1,0 +1,17 @@
+﻿@model IEnumerable<TextWhy>
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6">
+        <div class="service-item">
+            <i class="fa fa-@item.Icon"></i>
+            <div class="service-head">
+                <h2>@item.Title</h2>
+            </div>
+            <p>
+                @item.Text
+            </p>
+        </div>
+    </div>
+
+}

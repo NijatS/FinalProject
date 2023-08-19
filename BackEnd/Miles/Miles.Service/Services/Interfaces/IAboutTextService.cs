@@ -11,7 +11,7 @@ namespace Miles.Service.Services.Interfaces
     public interface IAboutTextService
     {
         public Task<ApiResponse> CreateAsync(AboutTextPostDto dto);
-        public Task<ApiResponse> GetAsync(int id);
+        public Task<ApiResponse> GetAsync(int? id);
         public Task<ApiResponse> GetAllAsync(int count, int page);
         public Task<ApiResponse> UpdateAsync(int id, AboutTextUpdateDto dto);
         public Task<ApiResponse> RemoveAsync(int id);
