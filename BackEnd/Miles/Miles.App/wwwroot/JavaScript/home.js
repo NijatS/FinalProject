@@ -4,7 +4,8 @@ const coruselElements = document.querySelectorAll(".carusel-item");
 const carusel = document.querySelector(".carusel");
 const clientColumn = document.querySelector(".client-column");
 const verifyEmail = document.querySelector("#verifyEmail");
-const successVerify = document.querySelector("#successVerify")
+const successVerify = document.querySelector("#successVerify");
+const emailRegister = document.querySelector("#emailRegister");
 let currentImg = 0;
 let i = 0;
 let j = 0;
@@ -88,5 +89,16 @@ if (successVerify != undefined) {
             'You clicked the button!',
             'success'
         )
+    }
+}
+if (emailRegister != undefined) {
+    const message = emailRegister.innerHTML;
+    if (message != "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `${message}`,
+         
+        })
     }
 }

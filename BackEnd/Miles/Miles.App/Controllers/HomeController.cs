@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
+using Miles.Service.Dtos.Subscribes;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
 using System.Collections.Generic;
@@ -15,13 +16,15 @@ namespace Miles.App.Controllers
         private readonly ITextWhyService _textWhyService;
         private readonly ISettingService _settingService;
         private readonly IAssociateService _associateService;
-        public HomeController(ISliderService sliderService, IBlogService blogService, ITextWhyService textWhyService, ISettingService settingService, IAssociateService associateService)
+        private readonly ISubscribeService _subscribeService;
+        public HomeController(ISliderService sliderService, IBlogService blogService, ITextWhyService textWhyService, ISettingService settingService, IAssociateService associateService, ISubscribeService subscribeService)
         {
             _sliderService = sliderService;
             _blogService = blogService;
             _textWhyService = textWhyService;
             _settingService = settingService;
             _associateService = associateService;
+            _subscribeService = subscribeService;
         }
 
         public async Task<IActionResult> Index()
@@ -41,26 +44,22 @@ namespace Miles.App.Controllers
             return View(homeVM);
         }
         [HttpPost]
-        public async Task<IActionResult> PostSubscribe(Subscribe subscribe)
+        public async Task<IActionResult> PostSubscribe(SubscribePostDto dto)
         {
-            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+            //string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
 
-            Regex re = new Regex(strRegex);
-            if (subscribe == null)
-            {
-                return NotFound();
-            }
-            if (!re.IsMatch(subscribe.Email))
-            {
-                TempData["Email"] = "Please add valid email";
-                return RedirectToAction("index", "home");
-            }
+            //Regex re = new Regex(strRegex);
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Invalid Email");
+                TempData["Mail"] = "Please add valid email";
+                return RedirectToAction(nameof(Index));
             }
-            //await _context.AddAsync(subscribe);
-            //await _context.SaveChangesAsync();
+            //if (!re.IsMatch(subscribe.Email))
+            //{
+            //    return RedirectToAction("index", "home");
+            //}
+            TempData["Verify"] = "Added succesfully";
+            await _subscribeService.CreateAsync(dto);
             return RedirectToAction(nameof(Index));
         }
     }
