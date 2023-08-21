@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Miles.Core.Entities;
 using Miles.Core.Repositories;
-using Miles.Data.Repositories;
-using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Associates;
 using Miles.Service.Responses;
 using Miles.Service.Services.Interfaces;
@@ -12,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Miles.Service.Extensions;
-using static System.Net.WebRequestMethods;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 

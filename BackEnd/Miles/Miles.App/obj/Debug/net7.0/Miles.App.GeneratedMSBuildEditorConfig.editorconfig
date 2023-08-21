@@ -64,6 +64,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Brand/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Brand/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Brand/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -134,6 +146,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Message/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVzc2FnZVxTaG93LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Model/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW9kZWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Model/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW9kZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Model/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW9kZWxcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nijat/OneDrive/Desktop/FinalProject/BackEnd/Miles/Miles.App/Areas/Admin/Views/Position/Create.cshtml]

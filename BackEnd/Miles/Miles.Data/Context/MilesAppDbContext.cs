@@ -34,7 +34,9 @@ namespace Miles.Data.Context
         public DbSet<Country> Countries { get; set; }
         public DbSet<Fuel> Fuels { get; set; }
         public DbSet<Color> Colors { get; set; }
-        
+        public DbSet<Brand> Brands { get; set; }
+
+        public DbSet<Model> Models { get; set; }
 
         public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
@@ -60,6 +62,8 @@ namespace Miles.Data.Context
             modelBuilder.ApplyConfiguration(new CountryConfiguration());
             modelBuilder.ApplyConfiguration(new FuelConfiguration());
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
+            modelBuilder.ApplyConfiguration(new BrandConfiguration());
+            modelBuilder.ApplyConfiguration(new ModelConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }
