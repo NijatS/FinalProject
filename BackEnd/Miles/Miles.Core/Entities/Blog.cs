@@ -16,9 +16,8 @@ namespace Miles.Core.Entities
         public string AuthorImage { get; set; }
         public string Image { get; set; }
         public string ImageUrl { get; set; }
-
         public List<BlogCategory>? BlogCategories { get; set; }
         public List<BlogTag>? BlogTags { get; set; }
-
+        public List<Comment>? Comments { get; set; }
     }
 }

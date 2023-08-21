@@ -326,7 +326,7 @@
                                                     </li>
                                                     <li style="border:none;">
                                                         <a class="fk_link"
-                                                               asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">0 Comments</a>
+                                                               asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Comments.Count() Comments</a>
                                                     </li>
                                                 </ul>
                                             </div>

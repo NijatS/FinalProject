@@ -69,7 +69,9 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<IAboutTextRepository, AboutTextRepository>();
 			services.AddScoped<IAboutTextService, AboutTextService>();
 			services.AddScoped<IAboutSkillRepository, AboutSkillRepository>();
-			services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IEmailService, EmailService>();
 			services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IAboutSkillService, AboutSkillService>();
 			services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();

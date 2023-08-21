@@ -99,11 +99,11 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Blog> blogs = new List<Blog>();
             if (expression is null)
             {
-               blogs = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "BlogCategories");
+               blogs = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "BlogCategories","Comments");
             }
             else
             {
-               blogs = await _repository.GetAllAsync(expression, count, page, "BlogCategories");
+               blogs = await _repository.GetAllAsync(expression, count, page, "BlogCategories", "Comments");
 
             }
             return new ApiResponse
@@ -115,7 +115,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAsync(int id)
         {
-            Blog Blog = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id, "BlogCategories","BlogTags");
+            Blog Blog = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id, "BlogCategories","BlogTags", "Comments");
             if (Blog is null)
             {
                 return new ApiResponse

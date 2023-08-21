@@ -30,6 +30,7 @@ namespace Miles.Data.Context
 		public DbSet<AboutText> AboutTexts { get; set; }
 		public DbSet<AboutSkill> AboutSkills { get; set; }
 		public DbSet<Subscribe> Subscribes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
         public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
@@ -50,6 +51,7 @@ namespace Miles.Data.Context
 			modelBuilder.ApplyConfiguration(new AboutTextConfiguration());
 			modelBuilder.ApplyConfiguration(new AboutSkillConfiguration());
 			modelBuilder.ApplyConfiguration(new SubscribeConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

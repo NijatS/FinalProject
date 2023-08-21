@@ -83,24 +83,18 @@
                     <span>written by</span>
                     <h4 class="author-name">@Model.Blog.Author</h4>
                 </div>
-                <div class="col-sm-12">
-                    <div class="empty"></div>
-                </div>
                 <div class="leave-comment">
                     <div>
                         <h2>Leave a comment</h2>
-                        <form method="post" class="leave-comment-form row">
+                        <form method="post" asp-action="PostComment" asp-controller="Blog" class="leave-comment-form row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Your name" />
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" placeholder="Your email" />
+                                <input type="text" name="blogId" hidden value="@Model.Blog.Id"/>
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="Subject" />
+                                <input type="text" name="subject" placeholder="Subject" />
                             </div>
                             <div class="col-md-12">
-                                <textarea placeholder="Your message here..."></textarea>
+                                <textarea name="text" placeholder="Your message here..."></textarea>
                             </div>
                             <div class="col-md-12">
                                 <div class="button">
@@ -110,6 +104,24 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="empty" style="height:max-content">
+                        <h2>Comments</h2>
+                        @foreach(var item in Model.Comments.Where(x=>x.BlogId==Model.Blog.Id && !x.IsDeleted)){
+                            <div class="comment">
+                            <img src="~/Images/Users/@item.AppUser.Image"/>
+                            <div >
+                                <div class="comment-info">
+                                        <h4>@item.AppUser.Name @item.AppUser.Surname</h4>
+                                        <span>@item.CreatedAt.ToShortDateString()</span>
+                                </div>
+                                <span>@item.Subject</span>
+                                    <span>@item.Text</span>
+                            </div>
+                        </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -141,7 +153,7 @@
                             </h6>
                             <ul>
                                 <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
-                                <li>0 comments</li>
+                                <li>@item.Comments.Count() comments</li>
                             </ul>
                         </div>
 

@@ -14,6 +14,6 @@ namespace Miles.Core.Entities
         public string Image { get; set; }
         public int UserPricingId { get; set; }
         public UserPricing UserPricing { get; set; }
-
+        public List<Comment>? Comments { get; set; }
     }
 }
