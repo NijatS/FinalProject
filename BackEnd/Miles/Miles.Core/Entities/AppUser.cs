@@ -13,6 +13,8 @@ namespace Miles.Core.Entities
         public string Surname { get; set; }
         public string Image { get; set; }
         public int UserPricingId { get; set; }
+        public int CountryId { get; set; }
+        public Country Country { get; set; }
         public UserPricing UserPricing { get; set; }
         public List<Comment>? Comments { get; set; }
     }

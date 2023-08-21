@@ -1,0 +1,19 @@
+﻿@model CountryPostDto
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+	<div class="form-group">
+			<label asp-for="Name">Name:</label>
+			<input type="text" class="form-control" asp-for="Name" />
+			<span asp-validation-for="Name" class="text text-danger"></span>
+	</div>
+		<div class="form-group">
+			<label asp-for="@Model.file">Flag Image:</label>
+			<input type="file" class="form-control" asp-for="@Model.file" />
+			<span asp-validation-for="file" class="text text-danger"></span>
+		</div>
+			@Html.AntiForgeryToken()
+		<button type="submit" style="width:100%; " class="btn btn-outline-dark">Create</button>
+	</form>
+</div>

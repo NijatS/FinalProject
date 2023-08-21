@@ -58,7 +58,9 @@ namespace Miles.App.ServiceRegistrations
             services.AddScoped<ISubscribeService, SubscribeService>();
             services.AddScoped<ITextWhyRepository, TextWhyRepository>();
 			services.AddScoped<ITextWhyService, TextWhyService>();
-			services.AddScoped<ISettingRepository, SettingRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<ICountryService, CountryService>();
+            services.AddScoped<ISettingRepository, SettingRepository>();
             services.AddScoped<ISettingService, SettingService>();
             services.AddScoped<IPositionRepository, PositionRepository>();
             services.AddScoped<IPositionService, PositionService>();

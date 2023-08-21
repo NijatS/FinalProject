@@ -375,55 +375,17 @@
                         <div class="brands">
                             <div class="carusel-outher">
                                 <div class="carusel">
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
+                                @foreach(var item in Model.Associates)
+                                    {
+                                        <div class="carusel-item">
+                                            <div class="item">
+                                                <img src="~/Images/Associates/@item.Image"
+                                                style="width:100%;height:100%;"
+                                                     alt="" />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="carusel-item">
-                                        <div class="item">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/client-1.png"
-                                                 alt="" />
-                                        </div>
-                                    </div>
-                                </div>
+                                    }
+                                 </div> 
                             </div>
                         </div>
                     </div>
@@ -433,3 +395,4 @@
     </section>
 </div>
 <script src="~/JavaScript/home.js"></script>
+<script src="~/JavaScript/swipper.js"></script>

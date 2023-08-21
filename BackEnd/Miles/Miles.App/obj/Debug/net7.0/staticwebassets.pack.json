@@ -9,12 +9,60 @@
       "PackagePath": "staticwebassets\\Audio\\win.mp3"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\063ce013-68f8-4514-b775-3d8049e81ae7toyota.jpg",
+      "PackagePath": "staticwebassets\\Images\\Associates\\063ce013-68f8-4514-b775-3d8049e81ae7toyota.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\4134ecab-a8ed-4cf8-a464-c6670053a664code.webp",
+      "PackagePath": "staticwebassets\\Images\\Associates\\4134ecab-a8ed-4cf8-a464-c6670053a664code.webp"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\6df4171c-ab34-4d82-aa95-3d7006327b11images (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Associates\\6df4171c-ab34-4d82-aa95-3d7006327b11images (1).jpg"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\78821df3-e8a8-4e87-8ed3-016d59345ae6download.jpg",
       "PackagePath": "staticwebassets\\Images\\Associates\\78821df3-e8a8-4e87-8ed3-016d59345ae6download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8d5adcf7-00e5-4b99-886d-0e23099b7c1alexus.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\8d5adcf7-00e5-4b99-886d-0e23099b7c1alexus.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8e559e03-6c03-4099-b11e-f51f84ec10behyundai.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\8e559e03-6c03-4099-b11e-f51f84ec10behyundai.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\a3db4c4c-d5d5-484d-a4be-18d5a26ddd04toyota.webp",
+      "PackagePath": "staticwebassets\\Images\\Associates\\a3db4c4c-d5d5-484d-a4be-18d5a26ddd04toyota.webp"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\c18ec833-10a4-47f6-9c76-21f748b3d0a1mers.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\c18ec833-10a4-47f6-9c76-21f748b3d0a1mers.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\cbd2bb70-7b86-4218-9095-db7108c24a49toyota.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\cbd2bb70-7b86-4218-9095-db7108c24a49toyota.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\dab5fcac-8ebf-4f0e-b0eb-408220befee3chevy.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\dab5fcac-8ebf-4f0e-b0eb-408220befee3chevy.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ddc972a8-7545-4ef0-8a65-f150a80dd295bmw.png",
+      "PackagePath": "staticwebassets\\Images\\Associates\\ddc972a8-7545-4ef0-8a65-f150a80dd295bmw.png"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ed289dd7-71c2-4ec7-bea9-f3a4d7d1db72cadillac.svg",
+      "PackagePath": "staticwebassets\\Images\\Associates\\ed289dd7-71c2-4ec7-bea9-f3a4d7d1db72cadillac.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\f4e0069e-3158-4224-a28c-baa972bff31ftoyota.webp",
+      "PackagePath": "staticwebassets\\Images\\Associates\\f4e0069e-3158-4224-a28c-baa972bff31ftoyota.webp"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\0983b816-11b0-4977-a545-f1b97bdb4e80car.jpg",
@@ -331,6 +379,10 @@
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\sidebar.js",
       "PackagePath": "staticwebassets\\JavaScript\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\swipper.js",
+      "PackagePath": "staticwebassets\\JavaScript\\swipper.js"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_reset.scss",
