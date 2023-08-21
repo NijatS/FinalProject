@@ -53,6 +53,17 @@
                                 <span class="text text-danger" asp-validation-for="file"></span>
                                 <input asp-for="file"
                                        placeholder="Photo"  style="height:max-content;padding:0;"/>
+                                <div class="form-group">
+                                    <label asp-for="CountryId">Country</label>
+                                    <select asp-for="CountryId" class="form-select" aria-label="Default select example">
+                                        <option selected value="0">Select one of them</option>
+                                        @foreach (var item in ViewBag.Countries)
+                                        {
+                                            <option value="@item.Id" style="background-image:url(~/Images/Countries/@item.FlagImage);">@item.Name</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="CountryId" class="text text-danger"></span>
+                                </div>
                              @*    <select name="">
                                     <option value="0">Select of them</option>
                                     <option value="">Buyer</option>

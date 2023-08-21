@@ -20,6 +20,7 @@ namespace Miles.Service.Dtos.Accounts
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
         public bool isTerm { get; set; }
+        public int CountryId { get; set; }
         public IFormFile file { get; set; }
     }
 }

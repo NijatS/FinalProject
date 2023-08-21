@@ -32,6 +32,10 @@ namespace Miles.Data.Context
 		public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Fuel> Fuels { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        
+
         public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
@@ -54,6 +58,8 @@ namespace Miles.Data.Context
 			modelBuilder.ApplyConfiguration(new SubscribeConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
             modelBuilder.ApplyConfiguration(new CountryConfiguration());
+            modelBuilder.ApplyConfiguration(new FuelConfiguration());
+            modelBuilder.ApplyConfiguration(new ColorConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

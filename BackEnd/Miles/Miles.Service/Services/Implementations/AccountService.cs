@@ -40,7 +40,8 @@ namespace Miles.Service.Services.Implementations
                 Surname = dto.Surname,
                 Email = dto.Email,
                 UserName = dto.UserName,
-                UserPricingId = 1
+                UserPricingId = 1,
+                CountryId = dto.CountryId
             };
             appUser.Image = dto.file.CreateImage(_evn.WebRootPath, "Images/Users");
             var result = await _userManager.CreateAsync(appUser, dto.Password);

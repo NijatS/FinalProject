@@ -44,7 +44,9 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<ITagService, TagService>();
 			services.AddScoped<IBlogRepository, BlogRepository>();
 			services.AddScoped<IBlogService, BlogService>();
-			services.AddScoped<IMessageRepository, MessageRepository>();
+            services.AddScoped<IColorRepository, ColorRepository>();
+            services.AddScoped<IColorService, ColorService>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
 			services.AddScoped<IMessageService, MessageService>();
 			services.AddScoped<IFeatureRepository, FeatureRepository>();
 			services.AddScoped<IFeatureService, FeatureService>();
@@ -58,6 +60,8 @@ namespace Miles.App.ServiceRegistrations
             services.AddScoped<ISubscribeService, SubscribeService>();
             services.AddScoped<ITextWhyRepository, TextWhyRepository>();
 			services.AddScoped<ITextWhyService, TextWhyService>();
+            services.AddScoped<IFuelRepository, FuelRepository>();
+            services.AddScoped<IFuelService, FuelService>();
             services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<ICountryService, CountryService>();
             services.AddScoped<ISettingRepository, SettingRepository>();

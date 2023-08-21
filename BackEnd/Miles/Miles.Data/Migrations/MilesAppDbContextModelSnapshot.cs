@@ -166,7 +166,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 249, DateTimeKind.Utc).AddTicks(2266));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(7675));
 
                     b.Property<int>("Degree")
                         .HasColumnType("int");
@@ -199,7 +199,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 249, DateTimeKind.Utc).AddTicks(882));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(6492));
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -325,7 +325,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(2824));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 545, DateTimeKind.Utc).AddTicks(7014));
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -375,7 +375,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 247, DateTimeKind.Utc).AddTicks(6988));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 545, DateTimeKind.Utc).AddTicks(775));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -479,7 +479,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 247, DateTimeKind.Utc).AddTicks(3929));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 544, DateTimeKind.Utc).AddTicks(8165));
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -496,6 +496,36 @@ namespace Miles.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Miles.Core.Entities.Color", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 547, DateTimeKind.Utc).AddTicks(3529));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Colors");
                 });
 
             modelBuilder.Entity("Miles.Core.Entities.Comment", b =>
@@ -516,7 +546,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 249, DateTimeKind.Utc).AddTicks(7086));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(9833));
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -552,7 +582,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 249, DateTimeKind.Utc).AddTicks(9459));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 547, DateTimeKind.Utc).AddTicks(1244));
 
                     b.Property<string>("FlagImage")
                         .IsRequired()
@@ -590,7 +620,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(1516));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 545, DateTimeKind.Utc).AddTicks(4986));
 
                     b.Property<bool>("Icon")
                         .ValueGeneratedOnAdd()
@@ -618,6 +648,36 @@ namespace Miles.Data.Migrations
                     b.ToTable("Features");
                 });
 
+            modelBuilder.Entity("Miles.Core.Entities.Fuel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 547, DateTimeKind.Utc).AddTicks(2296));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Fuels");
+                });
+
             modelBuilder.Entity("Miles.Core.Entities.Message", b =>
                 {
                     b.Property<int>("Id")
@@ -634,7 +694,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 247, DateTimeKind.Utc).AddTicks(8416));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 545, DateTimeKind.Utc).AddTicks(2305));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -709,7 +769,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(5444));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(1169));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -761,7 +821,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(3877));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 545, DateTimeKind.Utc).AddTicks(9262));
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -793,7 +853,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(9516));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(5161));
 
                     b.Property<string>("Icon")
                         .IsRequired()
@@ -835,7 +895,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(8318));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(3855));
 
                     b.Property<string>("FullName")
                         .IsRequired()
@@ -882,7 +942,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 249, DateTimeKind.Utc).AddTicks(4905));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(8692));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -910,7 +970,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 247, DateTimeKind.Utc).AddTicks(5637));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 544, DateTimeKind.Utc).AddTicks(9543));
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -940,7 +1000,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 248, DateTimeKind.Utc).AddTicks(6886));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 546, DateTimeKind.Utc).AddTicks(2452));
 
                     b.Property<string>("Icon")
                         .IsRequired()
@@ -983,7 +1043,7 @@ namespace Miles.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 17, 57, 57, 247, DateTimeKind.Utc).AddTicks(9666));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 18, 49, 12, 545, DateTimeKind.Utc).AddTicks(3434));
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");

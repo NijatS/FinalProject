@@ -16,21 +16,26 @@ namespace Miles.App.Controllers
     {
         private readonly IAccountService _service;
         private readonly IEmailService _mailService;
-
-        public AccountController(IEmailService mailService, IAccountService service)
+        private readonly ICountryService _countryService;
+        public AccountController(IEmailService mailService, IAccountService service, ICountryService countryService)
         {
             _mailService = mailService;
             _service = service;
+            _countryService = countryService;
         }
         [HttpGet]
         public async Task<IActionResult> SignUp()
         {
+            var result = await _countryService.GetAllAsync(0, 0);
+            ViewBag.Countries = result.items;
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignUp(RegisterDto dto)
         {
+            var resultCountry = await _countryService.GetAllAsync(0, 0);
+            ViewBag.Countries = resultCountry.items;
             if (!ModelState.IsValid)
             {
                 return View(dto);
