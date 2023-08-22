@@ -56,6 +56,8 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<IAssociateService, AssociateService>();
 			services.AddScoped<ISliderRepository, SliderRepository>();
 			services.AddScoped<ISliderService, SliderService>();
+            services.AddScoped<IBanRepository, BanRepository>();
+            services.AddScoped<IBanService, BanService>();
             services.AddScoped<IBrandRepository, BrandRepository>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IModelRepository, ModelRepository>();

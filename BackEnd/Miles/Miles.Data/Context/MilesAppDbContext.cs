@@ -35,10 +35,11 @@ namespace Miles.Data.Context
         public DbSet<Fuel> Fuels { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Brand> Brands { get; set; }
-
+        public DbSet<Ban> Bans { get; set; }
         public DbSet<Model> Models { get; set; }
+		public DbSet<Car> Cars { get; set; }
 
-        public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
+		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -64,7 +65,9 @@ namespace Miles.Data.Context
             modelBuilder.ApplyConfiguration(new ColorConfiguration());
             modelBuilder.ApplyConfiguration(new BrandConfiguration());
             modelBuilder.ApplyConfiguration(new ModelConfiguration());
-            base.OnModelCreating(modelBuilder);
+			modelBuilder.ApplyConfiguration(new BanConfiguration());
+			modelBuilder.ApplyConfiguration(new CarConfiguration());
+			base.OnModelCreating(modelBuilder);
         }
     }
 }

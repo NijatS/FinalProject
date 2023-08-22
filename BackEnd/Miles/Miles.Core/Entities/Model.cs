@@ -12,5 +12,6 @@ namespace Miles.Core.Entities
         public string Name { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
+        public List<Car> Cars { get; set; } 
     }
 }
