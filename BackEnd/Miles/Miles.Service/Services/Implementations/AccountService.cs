@@ -290,6 +290,14 @@ namespace Miles.Service.Services.Implementations
                 StatusCode = 203
             };
         }
+        public async Task<ApiResponse> GetAllUsers()
+        {
+            return new ApiResponse
+            {
+                StatusCode = 200,
+                items = _userManager.Users
+			};
+		}
 
     }
 }

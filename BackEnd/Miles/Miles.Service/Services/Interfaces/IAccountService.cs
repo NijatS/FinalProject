@@ -20,6 +20,8 @@ namespace Miles.Service.Services.Interfaces
         public Task<ApiResponse> Info();
         public Task<ApiResponse> GetUser();
         public Task<ApiResponse> Update(UpdateDto dto);
+        public Task<ApiResponse> GetAllUsers();
 
-    }
+
+	}
 }

@@ -17,6 +17,6 @@ namespace Miles.Core.Entities
         public Country Country { get; set; }
         public UserPricing UserPricing { get; set; }
         public List<Comment>? Comments { get; set; }
-        public List<Car>? Cars { get; set; }
+        public List<Car> Cars { get; set; }
     }
 }

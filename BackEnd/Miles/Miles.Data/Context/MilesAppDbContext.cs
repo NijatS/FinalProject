@@ -38,8 +38,9 @@ namespace Miles.Data.Context
         public DbSet<Ban> Bans { get; set; }
         public DbSet<Model> Models { get; set; }
 		public DbSet<Car> Cars { get; set; }
+        public DbSet<CarImage> CarImages { get; set; }
 
-		public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
+        public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -67,7 +68,8 @@ namespace Miles.Data.Context
             modelBuilder.ApplyConfiguration(new ModelConfiguration());
 			modelBuilder.ApplyConfiguration(new BanConfiguration());
 			modelBuilder.ApplyConfiguration(new CarConfiguration());
-			base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new CarImageConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

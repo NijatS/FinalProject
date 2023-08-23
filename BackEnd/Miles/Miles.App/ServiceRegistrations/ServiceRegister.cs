@@ -68,6 +68,8 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<ITextWhyService, TextWhyService>();
             services.AddScoped<IFuelRepository, FuelRepository>();
             services.AddScoped<IFuelService, FuelService>();
+            services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<ICarService, CarService>();
             services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped<ICountryService, CountryService>();
             services.AddScoped<ISettingRepository, SettingRepository>();

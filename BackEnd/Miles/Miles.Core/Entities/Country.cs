@@ -13,6 +13,5 @@ namespace Miles.Core.Entities
         public string FlagImage { get; set; }
         public string FlagUrl { get; set; }
         public List<AppUser>? AppUsers { get; set; }
-        public List<Car>? Cars { get; set; }
     }
 }

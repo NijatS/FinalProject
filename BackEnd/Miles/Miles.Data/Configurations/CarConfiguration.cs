@@ -30,7 +30,7 @@ namespace Miles.Data.Configurations
 				IsRequired(); 
             builder.Property(x => x.FuelCity).
 				IsRequired();
-            builder.Property(x => x.FuelWay).
+			builder.Property(x => x.FuelWay).
 				IsRequired(); 
             builder.Property(x => x.Motor).
 				IsRequired();
@@ -43,8 +43,6 @@ namespace Miles.Data.Configurations
 			builder.Property(x => x.AppUserId).
                  IsRequired();
 			builder.Property(x => x.BanId).
-                 IsRequired();
-			builder.Property(x => x.CountryId).
                  IsRequired();
 			builder.Property(x => x.CreatedAt)
                 .HasDefaultValue(DateTime.UtcNow.AddHours(4));
