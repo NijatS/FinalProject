@@ -26,10 +26,29 @@ namespace Miles.App.Controllers
 			_fuelService = fuelService;
 			_banService = banService;
 		}
-		public async Task<IActionResult> Index(string? brand,string? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
+		public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
             var resultCar = await _carService.GetAllAsync(0, 0,null);
             IEnumerable<Car> Cars = (IEnumerable<Car>)resultCar.items;
+            if (sort is not null && sort != 0)
+            {
+                if (sort == 1)
+                {
+                    Cars = Cars.OrderBy(x => x.Price);
+                }
+                else if (sort == 2)
+                {
+                    Cars = Cars.OrderByDescending(x => x.Price);
+                }
+                else if(sort == 3)
+                {
+                    Cars = Cars.OrderBy(x => x.FabricationYear);
+                }
+                else
+                {
+                    Cars = Cars.OrderBy(x => x.Model.Name);
+                }
+            }
             int TotalCount = Cars.Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 6);
             ViewBag.CurrentPage = page;
@@ -42,14 +61,15 @@ namespace Miles.App.Controllers
 			ViewBag.Colors = resultColor.items;
 			ViewBag.Brands = resultBrand.items;
             Expression<Func<Car, bool>> expression = (x=>!x.IsDeleted);
+            
             if (brand is not null )
 			{
                 Expression<Func<Car, bool>> expression1 = (x => x.Model.Brand.Name == brand);
                 expression = CombineFilters(expression, expression1);
             }
-            if (model is not null )
+            if (model is not null && model !=0)
             {
-                Expression<Func<Car, bool>> expression1 = (x => x.Model.Name == model);
+                Expression<Func<Car, bool>> expression1 = (x => x.ModelId == model);
                 expression = CombineFilters(expression, expression1);
             }
             if(minyear is not null)
@@ -87,8 +107,11 @@ namespace Miles.App.Controllers
                 Expression<Func<Car, bool>> expression1 = (x => x.FuelId == fuel) ;
                 expression = CombineFilters(expression, expression1);
             }
-            resultCar = await _carService.GetAllAsync(0, 0,expression);
-            Cars = (IEnumerable<Car>)resultCar.items;
+            if (sort is null || sort == 0)
+            {
+                resultCar = await _carService.GetAllAsync(0, 0, expression);
+                Cars = (IEnumerable<Car>)resultCar.items;
+            }
             TotalCount = Cars.Count();
             return View(Cars);
         }
@@ -96,23 +119,12 @@ namespace Miles.App.Controllers
         {
             return View();
         }
-		public async Task<IActionResult> Filter()
-		{
-			return View();
-		}
-        public Expression<Func<Car, bool>> CombineFilters(Expression<Func<Car, bool>> filter1, Expression<Func<Car, bool>> filter2)
+        private Expression<Func<Car, bool>> CombineFilters(Expression<Func<Car, bool>> filter1, Expression<Func<Car, bool>> filter2)
         {
-            // Create parameter expression
             ParameterExpression parameter = Expression.Parameter(typeof(Car), "car");
-
-            // Invoke the filter expressions with the parameter
             var invokedFilter1 = Expression.Invoke(filter1, parameter);
             var invokedFilter2 = Expression.Invoke(filter2, parameter);
-
-            // Combine the expressions using AndAlso
             Expression combinedExpr = Expression.AndAlso(invokedFilter1, invokedFilter2);
-
-            // Create and return the combined lambda expression
             return Expression.Lambda<Func<Car, bool>>(combinedExpr, parameter);
         }
     }

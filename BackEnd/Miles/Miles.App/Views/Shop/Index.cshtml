@@ -33,21 +33,19 @@
                         <div class="feature">
                             <div class="info-text">
                                 <p>Showing 1–6 of 15 results</p>
-                                <form action="" method="get">
-                                    <select class="sort-car">
-                                        <option>Sort by popularity</option>
-                                        <option>Sort by average rating</option>
-                                        <option>Sort by newness</option>
-                                        <option>Sort by price: low to high</option>
-                                        <option>Sort by price: high to low</option>
+                                <form method="post" asp-controller="shop" asp-action="index">
+                                    <select name="sort" class="sort-car">
+                                        <option value="0">Sort</option>
+                                        <option value="1">Sort by price: low to high</option>
+                                        <option value="2">Sort by price: high to low</option>
+                                        <option value="3">Sort by year</option>
+                                        <option value="4">Sort by name</option>
+                                      
                                     </select>
                                     <div>
                                         <ul>
                                             <li>
-                                                <a href="#"><i class="fa fa-list"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fa fa-square"></i></a>
+                                                <button type="submit"><i class="fa fa-list"></i></button>
                                             </li>
                                         </ul>
                                     </div>
@@ -192,10 +190,14 @@
             }
             input.addEventListener("change", () => {
                 modelInput.innerHTML = ""
+                var opt = document.createElement('option');
+                opt.value = 0;
+                opt.innerHTML = "All";
+                modelInput.appendChild(opt);
                 for (let i = 0; i < elements.length; i++) {
                     if (elements[i].brand.name == input.value) {
                         var opt = document.createElement('option');
-                        opt.value = elements[i].name;
+                        opt.value = elements[i].id;
                         opt.innerHTML = elements[i].name;
                         modelInput.appendChild(opt);
                     }
