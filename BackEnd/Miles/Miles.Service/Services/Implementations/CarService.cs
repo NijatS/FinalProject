@@ -69,11 +69,11 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Car> Cars = new List<Car>();
             if (expression is null)
             {
-               Cars = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "Fuel","Ban");
+               Cars = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "Fuel","Ban","Model","CarImages","AppUser");
             }
             else
             {
-               Cars = await _repository.GetAllAsync(expression, count, page, "Fuel", "Ban");
+               Cars = await _repository.GetAllAsync(expression, count, page, "Fuel", "Ban", "Model", "CarImages", "AppUser");
 
             }
             return new ApiResponse

@@ -45,7 +45,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<Ban> Bans = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<Ban> Bans = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Cars");
             return new ApiResponse
             {
                 items = Bans,

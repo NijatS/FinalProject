@@ -3346,7 +3346,8 @@ img {
   list-style: none;
   clear: both;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap:32px;
   flex-wrap: wrap;
 }
 .shop-page .col-md-9 .products .product {
@@ -3435,16 +3436,22 @@ img {
   }
 }
 .shop-page .col-md-3 .sidebar-widget {
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #336699;
-  margin-bottom: 50px;
-  margin-top: -50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #336699;
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
+
+.shop-page .col-md-3 .sidebar-widget:nth-child(5) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .shop-page .col-md-3 .sidebar-widget:nth-child(4) {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .shop-page .col-md-3 .sidebar-widget h4 {
   margin: 0 -20px 20px;
@@ -3497,30 +3504,31 @@ img {
 .shop-page .col-md-3 .sidebar-widget input::placeholder {
   color: #a7cdf2;
 }
-.shop-page .col-md-3 .sidebar-widget .buttonFilter {
-  font-size: 12px;
-  color: #222222;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: 160px;
-  height: 40px;
-  background-color: #f4c23d;
-  line-height: 40px;
-  padding: 0;
-  border-radius: 0;
-  width: 100%;
-  margin-left: 0;
-  display: inline-block;
-  outline: none;
-  margin: 0;
-  position: relative;
-  text-decoration: none;
-  overflow: visible;
-  left: auto;
-  border: 0;
-  white-space: nowrap;
-  margin-bottom: 20px;
-}
+    .shop-page .col-md-3 .sidebar-widget .buttonFilter {
+        font-size: 12px;
+        color: #222222;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 160px;
+        height: 40px;
+        background-color: #f4c23d;
+        line-height: 40px;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        margin-left: 0;
+        display: inline-block;
+        outline: none;
+        margin: 0;
+        position: relative;
+        text-decoration: none;
+        overflow: visible;
+        left: auto;
+        border: 0;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 .shop-page .col-md-3 .sidebar-widget .buttonFilter::after {
   float: right;
   width: 40px;

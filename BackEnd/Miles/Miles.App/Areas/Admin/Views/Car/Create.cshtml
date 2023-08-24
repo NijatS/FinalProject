@@ -108,16 +108,6 @@
 		<div class="form-group">
 			<div class="row">
 				<div class="col-sm">
-					<label asp-for="CountryId">Country:</label>
-					<select asp-for="CountryId" class="form-select" aria-label="Default select example">
-						@foreach (var item in ViewBag.Countries)
-						{
-							<option value="@item.Id">@item.Name</option>
-						}
-					</select>
-					<span asp-validation-for="CountryId" class="text text-danger"></span>
-				</div>
-				<div class="col-sm">
 					<label asp-for="AppUserId">User:</label>
 					<select asp-for="AppUserId" class="form-select" aria-label="Default select example">
 						@foreach (var item in ViewBag.Users)
@@ -129,13 +119,18 @@
 				</div>
 				<div class="col-sm">
 					<label asp-for="ColorId">Color:</label>
-					<select asp-for="ColorId" class="form-select" aria-label="Default select example">
+					<select name="color" asp-for="ColorId" class="form-select" aria-label="Default select example">
 						@foreach (var item in ViewBag.Colors)
 						{
 							<option value="@item.Id">@item.Name</option>
 						}
 					</select>
 					<span asp-validation-for="ColorId" class="text text-danger"></span>
+				</div>
+				<div class="col-sm">
+					<label asp-for="ActionDate">Action Date:</label>
+					<input class="form-control" asp-for="ActionDate" />
+					<span asp-validation-for="ActionDate" class="text text-danger"></span>
 				</div>
 				<div class="col-sm">
 					<label asp-for="Price">Price:</label>

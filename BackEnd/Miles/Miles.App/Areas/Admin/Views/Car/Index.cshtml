@@ -5,7 +5,10 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Vin:</th>
+                <th scope="col">Owner:</th>
                 <th scope="col">Model:</th>
+                <th scope="col">Auction Date:</th>
+                <th scope="col">Image:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -16,7 +19,14 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Vin</th>
+                    <th>@item.AppUser.Name @item.AppUser.Surname</th>
                     <th>@item.Model.Name</th>
+                    <th>@item.ActionDate</th>
+                    @foreach(var image in item.CarImages.Where(x => x.isMain))
+                    {
+                        <th><img style="width:100px;height:100px" src="~/Images/Cars/@image.Image" /></th>
+
+                    }
                     <td>
                         <a asp-controller="Car" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

@@ -68,9 +68,6 @@ namespace Miles.Service.Validations.Cars
             RuleFor(x => x.BanId)
 .NotEmpty()
         .NotNull();
-            RuleFor(x => x.CountryId)
-.NotEmpty()
-.NotNull();
             RuleFor(x => x)
             .Custom((x, context) =>
             {

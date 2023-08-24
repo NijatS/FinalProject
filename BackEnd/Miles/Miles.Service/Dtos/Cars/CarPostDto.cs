@@ -25,9 +25,7 @@ namespace Miles.Service.Dtos.Cars
         public string Description { get; set; }
         public string AppUserId { get; set; }
         public int BanId { get; set; }
-        public int CountryId { get; set; }
-		public DateTime ActionDate { get; set; }
-
+        public DateTime ActionDate { get; set; }
 		public List<IFormFile>? FormFiles { get; set; }
     }
 }

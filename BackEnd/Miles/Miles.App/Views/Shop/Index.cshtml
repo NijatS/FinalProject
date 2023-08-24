@@ -1,4 +1,5 @@
-﻿<div class="page-heading">
+﻿@model IEnumerable<Car>
+<div class="page-heading">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -54,152 +55,104 @@
                             </div>
                         </div>
                         <ul class="products">
+                            @foreach(var item in Model){
                             <li class="product">
-                                <a href="#">
-                                    <img src="../Images/car.jpg" />
+                                <a asp-action="detail" asp-controller="shop" asp-route-id="@item.Id">
+                                        @foreach (var image in item.CarImages.Where(x => x.isMain))
+                                        {
+                                            <img style="height:175px;" src="~/Images/Cars/@image.Image" />
+                                        }
                                     <div class="content">
-                                        <span class="price">$52,000</span>
-                                        <h4>MERCEDES AMG 6.3</h4>
+                                        <span class="price">$@item.Price</span>
+                                        <h4>@item.Model.Name @item.FabricationYear</h4>
                                         <div class="line"></div>
-                                        <p>
-                                            Selvage drinking vinegar roof party bitters
-                                            beard...
+                                            <p style=" word-wrap: break-word;">
+                                            @item.Description.Substring(0,40)...
                                         </p>
                                     </div>
                                 </a>
                             </li>
-                            <li class="product">
-                                <a href="#">
-                                    <img src="../Images/car.jpg" />
-                                    <div class="content">
-                                        <span class="price">$52,000</span>
-                                        <h4>MERCEDES AMG 6.3</h4>
-                                        <div class="line"></div>
-                                        <p>
-                                            Selvage drinking vinegar roof party bitters
-                                            beard...
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product">
-                                <a href="#">
-                                    <img src="../Images/car.jpg" />
-                                    <div class="content">
-                                        <span class="price">$52,000</span>
-                                        <h4>MERCEDES AMG 6.3</h4>
-                                        <div class="line"></div>
-                                        <p>
-                                            Selvage drinking vinegar roof party bitters
-                                            beard...
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product">
-                                <a href="#">
-                                    <img src="../Images/car.jpg" />
-                                    <div class="content">
-                                        <span class="price">$52,000</span>
-                                        <h4>MERCEDES AMG 6.3</h4>
-                                        <div class="line"></div>
-                                        <p>
-                                            Selvage drinking vinegar roof party bitters
-                                            beard...
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product">
-                                <a href="#">
-                                    <img src="../Images/car.jpg" />
-                                    <div class="content">
-                                        <span class="price">$52,000</span>
-                                        <h4>MERCEDES AMG 6.3</h4>
-                                        <div class="line"></div>
-                                        <p>
-                                            Selvage drinking vinegar roof party bitters
-                                            beard...
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="product">
-                                <a href="#">
-                                    <img src="../Images/car.jpg" />
-                                    <div class="content">
-                                        <span class="price">$52,000</span>
-                                        <h4>MERCEDES AMG 6.3</h4>
-                                        <div class="line"></div>
-                                        <p>
-                                            Selvage drinking vinegar roof party bitters
-                                            beard...
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
+                       }
+                        </ul>
+                        <ul class="pagination">
+                            <li><a class=" page-link" asp-controller="car" asp-action="index" asp-route-page="1">«</a></li>
+                            @for (int j = 1; j <= ViewBag.TotalPage; j++)
+                            {
+                                @if (j == ViewBag.CurrentPage)
+                                {
+                                    <li class="page-item active"><a class=" page-link" asp-controller="car" asp-action="index" asp-route-page="@j">@j</a></li>
+                                }
+                                else
+                                {
+                                    <li class="page-item"><a class=" page-link" asp-controller="car" asp-action="index" asp-route-page="@j">@j</a></li>
+                                }
+                            }
+                            <li><a class="page-link" asp-controller="car" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
+                <form method="post"  asp-controller="shop" asp-action="index">
                 <div class="sidebar-widget">
                     <h4>Filter by</h4>
-                    <select>
-                        <option>Any Car Types</option>
-                        <option>SUV</option>
-                        <option>Sedan</option>
-                        <option>Truck</option>
+                    <select name="brand" id="brandInput">
+                        <option disabled selected>Any Car Brand</option>
+                        @foreach (var item in ViewBag.Brands)
+                        {
+                            <option value="@item.Name">@item.Name</option>
+                        }
                     </select>
                 </div>
                 <div class="sidebar-widget">
-                    <select>
-                        <option>Any Color</option>
-                        <option>Black</option>
-                        <option>White</option>
-                        <option>Truck</option>
+                    <select name="model" id="modelInput">
+                        <option disabled selected>Any Model</option>
                     </select>
                 </div>
                 <div class="sidebar-widget">
-                    <select>
-                        <option>Any Makes</option>
-                        <option>USA</option>
-                        <option>Korea</option>
-                        <option>Japan</option>
+                    <select name="minyear" id="date-dropdown" style="width:48%;">
+                        <option disabled selected>Min Year:</option>
+                    </select>
+                    <select name="maxyear" id="date-dropdown1" style="width:48%;">
+                        <option disabled selected> Max Year:</option>
                     </select>
                 </div>
                 <div class="sidebar-widget">
                     <input type="text"
                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                            placeholder="$ Min Price"
-                           name="mprice" />
+                           name="minprice" />
                     <input type="text"
                            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                           name="maxprice"
                            placeholder="$ Max Price" />
                     <button type="submit" class="buttonFilter">Filter</button>
                 </div>
                 <div class="sidebar-widget">
-                    <select>
-                        <option>Any Car Brand</option>
-                        <option>Black</option>
-                        <option>White</option>
-                        <option>Truck</option>
+                        <select name="ban">
+                        <option disabled selected>Ban</option>
+                        @foreach (var item in ViewBag.Bans)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
                     </select>
                 </div>
                 <div class="sidebar-widget">
-                    <select>
-                        <option>Any Car Model</option>
-                        <option>Black</option>
-                        <option>White</option>
-                        <option>Truck</option>
+                        <select name="color" >
+                        <option disabled selected>Color</option>
+                        @foreach (var item in ViewBag.Colors)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
                     </select>
                 </div>
                 <div class="sidebar-widget">
-                    <select>
-                        <option>Engine</option>
-                        <option>Black</option>
-                        <option>White</option>
-                        <option>Truck</option>
+                        <select name ="fuel">
+                        <option disabled selected>Fuel</option>
+                        @foreach (var item in ViewBag.Fuels)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
                     </select>
                 </div>
                 <div class="video-widget">
@@ -212,7 +165,56 @@
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>
 </section>
+<script>
+    const input = document.querySelector("#brandInput");
+    const modelInput = document.querySelector("#modelInput");
+    const dateDropdown = document.querySelector("#date-dropdown");
+    const dateDropdown1 = document.querySelector("#date-dropdown1");
+    let currentYear = new Date().getFullYear();
+    let earliestYear = 2000;
+    let href = `/admin/model/GetAll`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            const elements = x;
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].brandId == input.value) {
+                    var opt = document.createElement('option');
+                    opt.value = elements[i].id;
+                    opt.innerHTML = elements[i].name;
+                    modelInput.appendChild(opt);
+                }
+            }
+            input.addEventListener("change", () => {
+                modelInput.innerHTML = ""
+                for (let i = 0; i < elements.length; i++) {
+                    if (elements[i].brand.name == input.value) {
+                        var opt = document.createElement('option');
+                        opt.value = elements[i].name;
+                        opt.innerHTML = elements[i].name;
+                        modelInput.appendChild(opt);
+                    }
+                }
+            })
+        });
+    while (currentYear >= earliestYear) {
+        let dateOption = document.createElement('option');
+        dateOption.text = currentYear;
+        dateOption.value = currentYear;
+        dateDropdown.add(dateOption);
+        currentYear -= 1;
+    }
+     currentYear = new Date().getFullYear();
+    while (currentYear >= earliestYear) {
+        let dateOption = document.createElement('option');
+        dateOption.text = currentYear;
+        dateOption.value = currentYear;
+        dateDropdown1.add(dateOption);
+        currentYear -= 1;
+    }
+</script>

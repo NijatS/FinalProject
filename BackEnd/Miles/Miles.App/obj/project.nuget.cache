@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1iYtHkBU3qQ2F4GxfmZZddRtk4UURL3IbF7aOEoz0vFd9Y5m4Z/FtZ7HDQsd55dTNpJd56F3htfmeo/VPHnPUg==",
+  "dgSpecHash": "LTa4cC4WbuT18q9BtPFpsrmKsv5nf81wpIuNIp4zjtYc6Oa3LnCteLvTLJKWV7+Mshvs7CUW9+5aKnl9DbRKhw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\Miles.App.csproj",
   "expectedPackageFiles": [
@@ -65,7 +65,7 @@
     "C:\\Users\\Nijat\\.nuget\\packages\\microelements.swashbuckle.fluentvalidation\\5.7.0\\microelements.swashbuckle.fluentvalidation.5.7.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.10\\microsoft.aspnetcore.cryptography.internal.7.0.10.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.10\\microsoft.aspnetcore.cryptography.keyderivation.7.0.10.nupkg.sha512",
-    "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.32\\microsoft.aspnetcore.http.features.3.1.32.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.10\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
