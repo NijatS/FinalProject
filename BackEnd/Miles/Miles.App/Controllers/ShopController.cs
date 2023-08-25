@@ -2,11 +2,15 @@
 using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Miles.Core.Entities;
+using Miles.Service.Dtos.Comments;
+using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
+using Miles.Service.ViewModels;
 using System;
 using System.Composition;
 using System.Linq.Expressions;
+using System.Text.RegularExpressions;
 
 namespace Miles.App.Controllers
 {
@@ -17,16 +21,20 @@ namespace Miles.App.Controllers
 		private readonly IColorService _colorService;
 		private readonly IFuelService _fuelService;
 		private readonly IBanService _banService;
+        private readonly IAccountService _accountService;
+        private readonly ICommentService _commentService;
 
-		public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService)
-		{
-			_carService = carService;
-			_brandService = brandService;
-			_colorService = colorService;
-			_fuelService = fuelService;
-			_banService = banService;
-		}
-		public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
+        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService)
+        {
+            _carService = carService;
+            _brandService = brandService;
+            _colorService = colorService;
+            _fuelService = fuelService;
+            _banService = banService;
+            _accountService = accountService;
+            _commentService = commentService;
+        }
+        public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
             var resultCar = await _carService.GetAllAsync(0, 0,null);
             IEnumerable<Car> Cars = (IEnumerable<Car>)resultCar.items;
@@ -115,9 +123,18 @@ namespace Miles.App.Controllers
             TotalCount = Cars.Count();
             return View(Cars);
         }
-        public async Task<IActionResult> Detail()
+        public async Task<IActionResult> Detail(int id)
         {
-            return View();
+            var resultCar = await _carService.GetAsync(id);
+            var resultCars = await _carService.GetAllAsync(0 ,0,x=> x.Id != id);
+            var resultComment = await _commentService.GetAllAsync(0,0,x=>x.CarID == id && !x.IsDeleted);
+            ShopVM shopVM = new ShopVM()
+            {
+                Car = (Car)resultCar.itemView,
+                Cars = (IEnumerable<Car>)resultCars.items,
+                Comments = (IEnumerable<Comment>)resultComment.items,
+            };
+            return View(shopVM);
         }
         private Expression<Func<Car, bool>> CombineFilters(Expression<Func<Car, bool>> filter1, Expression<Func<Car, bool>> filter2)
         {
@@ -126,6 +143,45 @@ namespace Miles.App.Controllers
             var invokedFilter2 = Expression.Invoke(filter2, parameter);
             Expression combinedExpr = Expression.AndAlso(invokedFilter1, invokedFilter2);
             return Expression.Lambda<Func<Car, bool>>(combinedExpr, parameter);
+        }
+        public async Task<IActionResult> PostComment(CommentPostDto dto)
+        {
+            var result = await _accountService.GetUser();
+            AppUser appUser = (AppUser)result.items;
+            dto.AppUserId = appUser.Id;
+            dto.AppUser = appUser;
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            await _commentService.CreateAsync(dto);
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+        [HttpPost]
+        public async Task<IActionResult> SendEmail(MessagePostDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["Email"] = "Please fill All fields";
+                return RedirectToAction(nameof(Index));
+            }
+            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+
+            Regex re = new Regex(strRegex);
+            if (!re.IsMatch(dto.Email))
+            {
+                TempData["Email"] = "Please add valid email";
+                return RedirectToAction(nameof(Index));
+            }
+            if (!ModelState.IsValid)
+            {
+                TempData["Message"] = "Please fill all inputs qaqa";
+                return RedirectToAction(nameof(Index));
+            }
+
+            var result = await _service.CreateAsync(dto);
+            TempData["Success"] = "Successfully send message";
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Miles.Service.Services.Interfaces
     {
         public Task<ApiResponse> CreateAsync(CommentPostDto dto);
         public Task<ApiResponse> GetAsync(int id);
-        public Task<ApiResponse> GetAllAsync(int count, int page, Expression<Func<Blog, bool>>? expression);
+        public Task<ApiResponse> GetAllAsync(int count, int page, Expression<Func<Comment, bool>>? expression);
         public Task<ApiResponse> RemoveAsync(int id);
     }
 }

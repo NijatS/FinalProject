@@ -39,7 +39,6 @@ namespace Miles.Data.Context
         public DbSet<Model> Models { get; set; }
 		public DbSet<Car> Cars { get; set; }
         public DbSet<CarImage> CarImages { get; set; }
-
         public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }

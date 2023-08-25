@@ -37,10 +37,17 @@ namespace Miles.Service.Services.Implementations
                 items = Comment
             };
         }
-        public async Task<ApiResponse> GetAllAsync(int count,int page, Expression<Func<Blog, bool>>? expression)
+        public async Task<ApiResponse> GetAllAsync(int count,int page, Expression<Func<Comment, bool>>? expression)
         {
             IEnumerable<Comment> Comments = new List<Comment>();
-            Comments = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "AppUser");
+            if (expression is null)
+            {
+                Comments = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "AppUser");
+            }
+            else
+            {
+                Comments = await _repository.GetAllAsync(expression, count, page, "AppUser");
+            }
             return new ApiResponse
             {
                 items = Comments,

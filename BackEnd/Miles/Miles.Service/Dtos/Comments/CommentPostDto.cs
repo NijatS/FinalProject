@@ -12,7 +12,8 @@ namespace Miles.Service.Dtos.Comments
     {
         public AppUser? AppUser { get; set; }
         public string? AppUserId { get; set; }
-        public int BlogId { get; set; }
+        public int? BlogId { get; set; }
+        public int? CarID { get; set; }
         public string Subject { get; set; }
         public string Text { get; set; }
     }

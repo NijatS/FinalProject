@@ -30,6 +30,6 @@ namespace Miles.Core.Entities
         public Ban Ban { get; set; }
         public AppUser AppUser { get; set; }
         public DateTime ActionDate { get; set; }
-		public List<CarImage> CarImages { get; set; }
+        public List<CarImage> CarImages { get; set; }
 	}
 }

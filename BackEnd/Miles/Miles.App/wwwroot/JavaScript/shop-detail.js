@@ -14,6 +14,7 @@ const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 let i = 0;
+document.querySelector(".auction").style.display = "none";
 setInterval(timeCalculate, 1000);
 const decreaseBit = document.querySelector(".buttons button:first-child");
 const increaseBit = document.querySelector(".buttons button:last-child");
@@ -136,29 +137,30 @@ bidButton.addEventListener("click", () => {
   playClick();
 });
 function timeCalculate() {
-  if (time.textContent.split(":")[1] == "0D 0H 0min") {
-    i++;
-    enquiry.children[0].querySelector("h4").textContent = "Live Auction";
-    enquiry.style.margin = "0";
-    enquiry.children[1].style.display = "none";
-    enquiry.children[enquiry.children.length - 1].style.display = "none";
-    enquiry.parentElement.style.flexDirection = "column-reverse";
-    enquiry.parentElement.style.alignSelf = "flex-start";
-    enquiry.parentElement.style.gap = "30px";
-    if (i == 1) {
-      startTimer();
-      document.querySelector(".bid input").value =
-        "$" +
-        (
-          parseInt(
-            document
-              .querySelector("#base-timer-bid")
-              .textContent.split("$")[1]
-              .replace(",", "")
-          ) + 500
-        ).toLocaleString("en-US");
+    if (time.textContent.split(":")[1] === "0D 0H 0min") {
+        i++;
+        document.querySelector(".auction").style.display = "flex";
+        enquiry.children[0].querySelector("h4").textContent = "Live Auction";
+        enquiry.style.margin = "0";
+        enquiry.children[1].style.display = "none";
+        enquiry.children[enquiry.children.length - 1].style.display = "none";
+        enquiry.parentElement.style.flexDirection = "column-reverse";
+        enquiry.parentElement.style.alignSelf = "flex-start";
+        enquiry.parentElement.style.gap = "30px";
+        if (i == 1) {
+            startTimer();
+            document.querySelector(".bid input").value =
+                "$" +
+                (
+                    parseInt(
+                        document
+                            .querySelector("#base-timer-bid")
+                            .textContent.split("$")[1]
+                            .replace(",", "")
+                    ) + 500
+                ).toLocaleString("en-US");
+        }
     }
-  }
 }
 const enquiry = document.querySelector(".enquiry");
 const circle = document.querySelector(".circle");

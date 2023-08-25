@@ -26,20 +26,18 @@ namespace Miles.Service.Services.Implementations
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _evn;
         private readonly IHttpContextAccessor _http;
-        private readonly ICategoryRepository _categoryRepository;
-        private readonly ITagRepository _tagRepository;
+        private readonly IBrandRepository _brandRepository;
         private readonly MilesAppDbContext _context;
-		public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, ICategoryRepository categoryRepository, ITagRepository tagRepository, MilesAppDbContext context)
-		{
-			_repository = repository;
-			_mapper = mapper;
-			_evn = evn;
-			_http = http;
-			_categoryRepository = categoryRepository;
-			_tagRepository = tagRepository;
-			_context = context;
-		}
-		public async Task<ApiResponse> CreateAsync(CarPostDto dto)
+        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository)
+        {
+            _repository = repository;
+            _mapper = mapper;
+            _evn = evn;
+            _http = http;
+            _context = context;
+            _brandRepository = brandRepository;
+        }
+        public async Task<ApiResponse> CreateAsync(CarPostDto dto)
         {
             int i = 0;
             Car Car = _mapper.Map<Car>(dto);
@@ -74,8 +72,8 @@ namespace Miles.Service.Services.Implementations
             else
             {
                Cars = await _repository.GetAllAsync(expression, count, page, "Fuel", "Ban", "Model", "CarImages", "AppUser");
-
             }
+        
             return new ApiResponse
             {
                 items = Cars,
@@ -85,7 +83,8 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAsync(int id)
         {
-            Car Car = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id, "CarCategories","CarTags", "Comments");
+            Car Car = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id, "Fuel", "Ban", "Model", "CarImages", "AppUser","Color");
+            Car.Model.Brand = await _brandRepository.GetAsync(x => x.Id == Car.Model.BrandId);
             if (Car is null)
             {
                 return new ApiResponse
@@ -125,7 +124,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> UpdateAsync(int id, CarUpdateDto dto)
         {
-			Car Car = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted, "CarCategories", "CarTags");
+			Car Car = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted, "Fuel", "Ban", "Model", "CarImages", "AppUser");
 			if (Car is null)
 			{
 				return new ApiResponse

@@ -1,8 +1,9 @@
-﻿<div class="page-heading">
+﻿@model ShopVM
+<div class="page-heading">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>MERCEDES AMG 6.3</h1>
+                <h1>@Model.Car.Model.Brand.Name @Model.Car.Model.Name @Model.Car.FabricationYear</h1>
                 <div class="line"></div>
                 <span> Lorem ipsum dolor sit amet </span>
                 <div class="pages">
@@ -28,9 +29,9 @@
                     <div class="product">
                         <div>
                             <div class="content">
-                                <h1>MERCEDES AMG 6.3</h1>
+                                <h1>@Model.Car.Model.Brand.Name @Model.Car.Model.Name</h1>
                                 <p class="price">
-                                    <span>$52,000</span>
+                                    <span>$@Model.Car.Price.ToString("#,##0")</span>
                                 </p>
                             </div>
                             <div class="images">
@@ -38,69 +39,27 @@
                                     <div class="sliders">
                                         <div class="viewport">
                                             <ul class="slides">
-                                                <li>
-                                                    <div>
-                                                        <a href="">
-                                                            <img src="../Images/car.jpg" alt="" />
-                                                        </a>
-                                                        <img src="../Images/car.jpg" alt="" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div>
-                                                        <a href="">
-                                                            <img src="../Images/car1.jpg" alt="" />
-                                                        </a>
-                                                        <img src="../Images/car1.jpg" alt="" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div>
-                                                        <a href="">
-                                                            <img src="../Images/car2.jpeg" alt="" />
-                                                        </a>
-                                                        <img src="../Images/car2.jpeg" alt="" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div>
-                                                        <a href="">
-                                                            <img src="../Images/car3.avif" alt="" />
-                                                        </a>
-                                                        <img src="../Images/car3.avif" alt="" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div>
-                                                        <a href="">
-                                                            <img src="../Images/car4.jpeg" alt="" />
-                                                        </a>
-                                                        <img src="../Images/car4.jpeg" alt="" />
-                                                    </div>
-                                                </li>
+                                                    @foreach (var item in @Model.Car.CarImages)
+                                                    {
+                                                    <li>
+                                                        <div>
+                                                            <a href="">
+                                                                <img src="~/Images/Cars/@item.Image" alt="" />
+                                                            </a>
+                                                            <img src="~/Images/Cars/@item.Image" alt="" />
+                                                        </div>
+                                                    </li>
+                                                    }
                                             </ul>
                                         </div>
                                         <ol>
+                                               @foreach (var item in @Model.Car.CarImages)
+                                                    {
                                             <li>
-                                                <img src="../Images/car.jpg"
+                                                    <img src="~/Images/Cars/@item.Image"
                                                      draggable="false" />
                                             </li>
-                                            <li>
-                                                <img src="../Images/car1.jpg"
-                                                     draggable="false" />
-                                            </li>
-                                            <li>
-                                                <img src="../Images/car2.jpeg"
-                                                     draggable="false" />
-                                            </li>
-                                            <li>
-                                                <img src="../Images/car3.avif"
-                                                     draggable="false" />
-                                            </li>
-                                            <li>
-                                                <img src="../Images/car4.jpeg"
-                                                     draggable="false" />
-                                            </li>
+                                                    }
                                         </ol>
                                         <ul class="direction-nav">
                                             <li>
@@ -127,7 +86,14 @@
                                     <a href="#" onclick="return false;">Additional information</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="return false;">Reviews (0)</a>
+                                    @if(Model.Comments is null)
+                                    {
+                                        <a href="#" onclick="return false;">Reviews (0)</a>
+
+                                    }
+                                    else{
+                                    <a href="#" onclick="return false;">Reviews (@Model.Comments.Count())</a>
+                                    }
                                 </li>
                             </ul>
                             <div class="description info">
@@ -137,42 +103,13 @@
                                         <div class="wrap-columns">
                                             <div class="kc-column">
                                                 <div>
-                                                    <div class="text">
+                                                    <div class="text" style="word-wrap:break-word;">
                                                         <p>
-                                                            Selvage drinking vinegar roof party
-                                                            bitters beard wolf craft beer Blue
-                                                            Bottle, literally you probably haven’t
-                                                            heard of them. Deep v jean shorts
-                                                            Williamsburg synth pork belly actually.
-                                                            Organic PBRB viral four loko Bushwick
-                                                            pork belly. Selvage fashion axe
-                                                            sartorial cliche before they sold out,
-                                                            mustache vinyl DIY gastropub
-                                                            fingerstache mlkshk. High Life lo-fi
-                                                            chillwave meggings.
+                                                      @Model.Car.Description.Substring(0,250)
                                                         </p>
                                                         <p>
-                                                            Migas gluten-free ennui Truffaut ugh,
-                                                            listicle umami plaid lomo sustainable
-                                                            mumblecore street art biodiesel
-                                                            readymade. Polaroid ethical Pitchfork,
-                                                            sartorial bitters mlkshk cliche keytar
-                                                            tofu four loko pork belly High Life lomo
-                                                            listicle.
-                                                        </p>
-                                                        <p>
-                                                            Semiotics Vice Wes Anderson Bushwick
-                                                            organic. Chambray twee Banksy,
-                                                            asymmetrical disrupt bitters selfies
-                                                            Helvetica. Gentrify direct trade disrupt
-                                                            Odd Future. Bespoke tote bag small
-                                                            batch, try-hard drinking vinegar cronut
-                                                            beard migas ethical. Seitan wolf Vice
-                                                            banh mi YOLO flannel. Banh mi pug cred
-                                                            church-key, cardigan drinking vinegar
-                                                            hella bicycle rights ugh sustainable.
-                                                            Marfa Bushwick aesthetic, locavore
-                                                            messenger bag 8-bit tote bag.
+                                                            @Model.Car.Description.Substring(250,Model.Car.Description.Length-250)
+
                                                         </p>
                                                     </div>
                                                     <div class="kc-row-inner">
@@ -223,23 +160,23 @@
                                     <tbody>
                                         <tr>
                                             <th>Car Types</th>
-                                            <td><p>Miles, Price, Year</p></td>
+                                            <td><p>@Model.Car.Ban.Name</p></td>
                                         </tr>
                                         <tr>
                                             <th>Color</th>
-                                            <td><p>Miles, Price, Year</p></td>
+                                            <td><p>@Model.Car.Color.Name</p></td>
                                         </tr>
                                         <tr>
                                             <th>Makes</th>
-                                            <td><p>Miles, Price, Year</p></td>
+                                            <td><p>@Model.Car.Model.Brand.Name</p></td>
                                         </tr>
                                         <tr>
                                             <th>Car Model</th>
-                                            <td><p>Miles, Price, Year</p></td>
+                                            <td><p>@Model.Car.Model.Name</p></td>
                                         </tr>
                                         <tr>
-                                            <th>Style</th>
-                                            <td><p>Miles, Price, Year</p></td>
+                                            <th>Fuel</th>
+                                            <td><p>@Model.Car.Fuel.Name</p></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -247,12 +184,18 @@
                             <div class="reviews info">
                                 <div class="comments">
                                     <h2>Reviews</h2>
-                                    <p>There are no reviews yet.</p>
+                                    @if (Model.Comments.Count() == 0)
+                                    {
+                                        <p>There are no reviews yet.</p>
+                                    }
                                 </div>
                                 <div class="review-form">
                                     <div>
-                                        <h3>Be the first to review “MERCEDES AMG 6.3”</h3>
-                                        <form action="" method="post">
+                                            @if (Model.Comments.Count() ==0)
+                                    {
+                                        <h3>Be the first to review “@Model.Car.Model.Brand.Name @Model.Car.Model.Name”</h3>
+                                    }
+                                        <form method="post" asp-action="PostComment" asp-controller="Blog">
                                             <p>
                                                 <span id="email-notes">
                                                     Your email address will not be published.
@@ -260,34 +203,23 @@
                                                 </span>
                                             </p>
                                             <p>
-                                                <input placeholder="Name"
+                                                <input 
+                                                       style="display:none;"
+                                                       name="carID"
+                                                       value="@Model.Car.Id"
+                                                       aria-required="true" />
+                                            </p>
+                                            <p>
+                                                <input placeholder="Subject"
                                                        type="text"
+                                                       name="subject"
                                                        size="30"
                                                        aria-required="true" />
                                             </p>
                                             <p>
-                                                <label>
-                                                    <input placeholder="Email"
-                                                           type="email"
-                                                           size="30"
-                                                           aria-required="true" />
-                                                </label>
-                                            </p>
-                                            <!-- <p>
-                                              <label>Your Rating</label>
-                                            </p>
-                                            <p class="stars">
-                                              <span>
-                                                <a href="#">1</a>
-                                                <a href="#">2</a>
-                                                <a href="#">3</a>
-                                                <a href="#">4</a>
-                                                <a href="#">5</a>
-                                              </span>
-                                            </p> -->
-                                            <p>
                                                 <textarea placeholder="Your Review"
                                                           cols="45"
+                                                          name ="text"
                                                           rows="8"
                                                           aria-required="true"></textarea>
                                             </p>
@@ -297,7 +229,27 @@
                                         </form>
                                     </div>
                                 </div>
+                                <div class="col-sm-12">
+                                    <div class="empty" style="height:max-content">
+                                        <h2>Comments</h2>
+                                        @foreach (var item in Model.Comments)
+                                        {
+                                            <div class="comment">
+                                                <img src="~/Images/Users/@item.AppUser.Image" />
+                                                <div>
+                                                    <div class="comment-info">
+                                                        <h4>@item.AppUser.Name @item.AppUser.Surname</h4>
+                                                        <span>@item.CreatedAt.ToShortDateString()</span>
+                                                    </div>
+                                                    <span>@item.Subject</span>
+                                                    <span>@item.Text</span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
                             </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -309,21 +261,21 @@
                     </div>
                     <div class="infoCar">
                         <ul>
-                            <li><span>Time Left:</span><span>0D 0H 0min</span></li>
-                            <li><span>Vin:</span>21JDNSODK2</li>
-                            <li><span>Make:</span>Mercedes-Benz</li>
-                            <li><span>Fabrication Year:</span>2015</li>
-                            <li><span>Odometer:</span>134,000km</li>
-                            <li><span>Fuel Type:</span>Benzin</li>
-                            <li><span>No. of Gears:</span>6</li>
-                            <li><span>Transmission:</span>Automatic</li>
-                            <li><span>Color:</span>White</li>
-                            <li><span>Fuel Economy:</span>12l/City - 10l/hwy</li>
-                            <li><span>Motor Capacity:</span>( 179KW / 400BHP )</li>
+                            <li><span>Time Left:</span><span>0D 0H min</span></li>
+                            <li><span>Vin:</span>@Model.Car.Vin</li>
+                            <li><span>Make:</span>@Model.Car.Model.Brand.Name</li>
+                            <li><span>Fabrication Year:</span>@Model.Car.FabricationYear</li>
+                            <li><span>Odometer:</span>@Model.Car.Odometer.ToString("#,##0")km</li>
+                            <li><span>Fuel Type:</span>@Model.Car.Fuel.Name</li>
+                            <li><span>No. of Gears:</span>@Model.Car.NoGears</li>
+                            <li><span>Transmission:</span>@Model.Car.Transmission</li>
+                            <li><span>Color:</span>@Model.Car.Color.Name</li>
+                            <li><span>Fuel Economy:</span>@Model.Car.FuelCity l/City - @Model.Car.FuelWay l/hwy</li>
+                            <li><span>Motor:</span>@Model.Car.Motor</li>
                             <li>
                                 <span>Country of Origin:</span>Germany ( Munich )
                             </li>
-                            <li><span>Price:</span>$25,000</li>
+                            <li><span>Price:</span>$@Model.Car.Price.ToString("#,##0")</li>
                         </ul>
                     </div>
                 </div>
@@ -382,8 +334,8 @@
                                 <button>+</button>
                             </div>
                             <button id="bidButton" type="submit">Bid</button>
-                            <audio id="audio" src="../Audio/click.wav"></audio>
-                            <audio id="audioWin" src="../Audio/win.mp3"></audio>
+                            <audio id="audio" src="~/Audio/click.wav"></audio>
+                            <audio id="audioWin" src="~/Audio/win.mp3"></audio>
                         </div>
                     </div>
                     <div class="subhead">
@@ -391,7 +343,7 @@
                         <div class="number">
                             <h6>(+994)70-613-90-13</h6>
                             CAR CODE:
-                            <span>55637</span>
+                            <span>@Model.Car.Id</span>
                         </div>
                     </div>
                 </div>
@@ -417,130 +369,45 @@
                     </div>
                     <div class="cars">
                         <div class="cars-container">
-                            <div class="car-card col-md-15 col-sm-6">
-                                <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
-                                         class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                         srcset="
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
-                              "
-                                         sizes="(max-width: 310px) 100vw, 310px" />
-                                </a>
-                                <div class="content">
-                                    <span class="pricee">
-                                        <span class="price">$52,000</span>
-                                    </span>
-                                    <a href="">
-                                        <h2>MERCEDES AMG 6.3</h2>
+                            @foreach(var item in Model.Cars.Take(4))
+                            {
+                                <div class="car-card col-md-15 col-sm-6">
+                                    <a asp-action="detail" asp-controller="shop" asp-route-id="@item.Id">
+                                        @foreach(var photo in item.CarImages){
+                                            if(photo.isMain){
+                                             <img src="~/Images/Cars/@photo.Image"
+                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                                             srcset="
+                                                    ~/Images/Cars/@photo.Image        310w,
+                                                   ~/Images/Cars/@photo.Image 300w
+                                                     "
+                                             style="height:180px;"
+                                             sizes="(max-width: 310px) 100vw, 310px" />
+                                             }
+                                             }
                                     </a>
-                                    <div class="line"></div>
-                                    <div class="car-info">
-                                        Selvage drinking vinegar roof party bitters beard
-                                        wolf...
-                                    </div>
-                                    <div class="car-detail">
-                                        <ul>
-                                            <li><i class="fas fa-gas-pump"></i>Diesel</li>
-                                            <li><i class="fa fa-car"></i>Sport</li>
-                                            <li><i class="fas fa-road"></i>13,000</li>
-                                        </ul>
+                                    <div class="content">
+                                        <span class="pricee">
+                                            <span class="price">$@item.Price.ToString("#,##0")</span>
+                                        </span>
+                                        <a href="">
+                                            <h2>@item.Model.Name @item.FabricationYear</h2>
+                                        </a>
+                                        <div class="line"></div>
+                                        <div class="car-info"
+                                        style="word-wrap:break-word;">
+                                            @item.Description.Substring(0,50)...
+                                        </div>
+                                        <div class="car-detail">
+                                            <ul>
+                                                <li><i class="fas fa-gas-pump"></i>@item.Fuel.Name</li>
+                                                <li><i class="fa fa-car"></i>@item.Ban.Name</li>
+                                                <li><i class="fas fa-road"></i>@item.Odometer.ToString("#,##0")</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="car-card col-md-15 col-sm-6">
-                                <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
-                                         class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                         srcset="
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
-                              "
-                                         sizes="(max-width: 310px) 100vw, 310px" />
-                                </a>
-                                <div class="content">
-                                    <span class="pricee">
-                                        <span class="price">$52,000</span>
-                                    </span>
-                                    <a href="">
-                                        <h2>MERCEDES AMG 6.3</h2>
-                                    </a>
-                                    <div class="line"></div>
-                                    <div class="car-info">
-                                        Selvage drinking vinegar roof party bitters beard
-                                        wolf...
-                                    </div>
-                                    <div class="car-detail">
-                                        <ul>
-                                            <li><i class="fas fa-gas-pump"></i>Diesel</li>
-                                            <li><i class="fa fa-car"></i>Sport</li>
-                                            <li><i class="fas fa-road"></i>13,000</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="car-card col-md-15 col-sm-6">
-                                <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
-                                         class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                         srcset="
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
-                              "
-                                         sizes="(max-width: 310px) 100vw, 310px" />
-                                </a>
-                                <div class="content">
-                                    <span class="pricee">
-                                        <span class="price">$52,000</span>
-                                    </span>
-                                    <a href="">
-                                        <h2>MERCEDES AMG 6.3</h2>
-                                    </a>
-                                    <div class="line"></div>
-                                    <div class="car-info">
-                                        Selvage drinking vinegar roof party bitters beard
-                                        wolf...
-                                    </div>
-                                    <div class="car-detail">
-                                        <ul>
-                                            <li><i class="fas fa-gas-pump"></i>Diesel</li>
-                                            <li><i class="fa fa-car"></i>Sport</li>
-                                            <li><i class="fas fa-road"></i>13,000</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="car-card col-md-15 col-sm-6">
-                                <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">
-                                    <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg"
-                                         class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                         srcset="
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured.jpg         310w,
-                                http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/01-featured-300x203.jpg 300w
-                              "
-                                         sizes="(max-width: 310px) 100vw, 310px" />
-                                </a>
-                                <div class="content">
-                                    <span class="pricee">
-                                        <span class="price">$52,000</span>
-                                    </span>
-                                    <a href="">
-                                        <h2>MERCEDES AMG 6.3</h2>
-                                    </a>
-                                    <div class="line"></div>
-                                    <div class="car-info">
-                                        Selvage drinking vinegar roof party bitters beard
-                                        wolf...
-                                    </div>
-                                    <div class="car-detail">
-                                        <ul>
-                                            <li><i class="fas fa-gas-pump"></i>Diesel</li>
-                                            <li><i class="fa fa-car"></i>Sport</li>
-                                            <li><i class="fas fa-road"></i>13,000</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>

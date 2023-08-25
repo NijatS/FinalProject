@@ -4247,7 +4247,7 @@ img {
   font-style: normal;
 }
 .car-detail .col-md-4 .enquiry .auction {
-  display: flex;
+  /*display: flex;*/
   padding: 10px 0;
   justify-content: center;
   align-items: center;
@@ -4649,3 +4649,11 @@ img {
         color: #888888;
         display: inline-block;
     }
+.empty >h2 {
+    padding-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border-bottom: 2px solid #eeeeee !important;
+}
