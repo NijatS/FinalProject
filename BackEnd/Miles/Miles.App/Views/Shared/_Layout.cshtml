@@ -272,46 +272,15 @@
                             <div class="col-md-3 fcol">
                                 <div class="widget featured-links gallery">
                                     <h4>GALLERY</h4>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-8/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/05-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-7/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/07-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-6/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/08-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-8/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/05-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-7/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/07-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-6/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/08-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-8/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/05-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="gallery-item">
-                                        <a href="http://demo.mypsolution.com/wp13/portfolio/portfolio-item-7/">
-                                            <img src="http://demo.mypsolution.com/wp13/wp-content/uploads/2016/12/07-blog-150x150.jpg" />
-                                        </a>
-                                    </div>
+                                    @foreach(var item in settingVM.CarImages.Take(8))
+                                    {
+                                        <div class="gallery-item">
+                                            <a asp-action="detail" asp-controller="shop" asp-route-id="@item.CarId">
+                                                <img src="~/Images/Cars/@item.Image"
+                                                     style="aspect-ratio : 1 / 1;">
+                                            </a>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -439,4 +408,3 @@
 </body>
 </html>
 <script src="~/JavaScript/sidebar.js"></script>
-

@@ -14,7 +14,6 @@ using System.Threading.Tasks;
 using Miles.Service.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Miles.Service.Dtos.Blogs;
 using Microsoft.EntityFrameworkCore;
 using Miles.Service.ViewModels;
 
@@ -28,8 +27,9 @@ namespace Miles.Service.Services.Implementations
 		private readonly IWebHostEnvironment _evn;
 		private readonly IHttpContextAccessor _http;
         private readonly IAccountService _accountService;
+        private readonly ICarImageService _carImageService;
 
-        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService)
+        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService, ICarImageService carImageService)
         {
             _repository = repository;
             _mapper = mapper;
@@ -37,6 +37,7 @@ namespace Miles.Service.Services.Implementations
             _http = http;
             _blogRepository = blogRepository;
             _accountService = accountService;
+            _carImageService = carImageService;
         }
 
         public async Task<ApiResponse> CreateAsync(SettingPostDto dto)
@@ -152,16 +153,18 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<SettingVM> GetSetting()
         {
+            var result = await _carImageService.GetAllAsync(0, 0, x => x.isMain && !x.IsDeleted);
             SettingVM settingVM = new SettingVM
             {
                 Setting = await _repository
                          .GetAsync(x => !x.IsDeleted, "Socials"),
                 Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0,"Comments").Result.ToListAsync(),
+                CarImages =(IEnumerable<CarImage>)result.items
                 
             };
             if (_http.HttpContext.User.Identity.IsAuthenticated)
             {
-                var result = await _accountService.GetUser();
+                 result = await _accountService.GetUser();
                 settingVM.AppUser = (AppUser)result.items;
             }
 
