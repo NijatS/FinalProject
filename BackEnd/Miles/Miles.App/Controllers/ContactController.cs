@@ -6,6 +6,7 @@ using Miles.Core.Entities;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Interfaces;
 using System.Text.RegularExpressions;
+using Miles.Service.Services.Implementations;
 
 namespace Miles.App.Controllers
 {
@@ -13,10 +14,15 @@ namespace Miles.App.Controllers
     {
         private readonly IMessageService _service;
         private readonly ISettingService _settingService;
-        public ContactController(IMessageService service, ISettingService settingService)
+        private readonly IEmailService _emailService;
+        private readonly IAccountService _accountService;
+
+        public ContactController(IMessageService service, ISettingService settingService, IEmailService emailService, IAccountService accountService)
         {
             _service = service;
             _settingService = settingService;
+            _emailService = emailService;
+            _accountService = accountService;
         }
 
         public async Task<IActionResult> Index()
@@ -31,10 +37,16 @@ namespace Miles.App.Controllers
         [HttpPost]
         public async Task<IActionResult> SendEmail(MessagePostDto dto)
         {
+            var result = await _accountService.GetUserById(dto.appUserId);
+            AppUser appUser = (AppUser) result.items;
+            if(dto.Address is null)
+            {
+                dto.Address = "For dealer";
+            }
             if (!ModelState.IsValid)
             {
                 TempData["Email"] = "Please fill All fields";
-                return RedirectToAction(nameof(Index));
+                return Redirect(Request.Headers["Referer"].ToString());
             }
             string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
 
@@ -42,17 +54,26 @@ namespace Miles.App.Controllers
             if (!re.IsMatch(dto.Email))
             {
                 TempData["Email"] = "Please add valid email";
-                return RedirectToAction(nameof(Index));
+                return Redirect(Request.Headers["Referer"].ToString());
             }
             if (!ModelState.IsValid)
             {
                TempData["Message"] = "Please fill all inputs qaqa";
-                return RedirectToAction(nameof(Index));
+                return Redirect(Request.Headers["Referer"].ToString());
             }
-           
-            var result = await _service.CreateAsync(dto);
+            result = await _service.CreateAsync(dto);
             TempData["Success"] = "Successfully send message";
-            return RedirectToAction(nameof(Index));
+            if (dto.Address == "For dealer")
+            {
+                string text = "User: " + dto.FirstName + "\n" +
+                              "Email:" + dto.Email + "\n" +
+                              "Number: " + dto.Phone + "\n" +
+                              "Text: " + dto.Text + "\n";
+                await _emailService.SendMail("nicatsoltanli03@gmail.com", appUser.Email,
+                "Auction Info",text, null, appUser.Name + " " + appUser.Surname);
+            }
+            return Redirect(Request.Headers["Referer"].ToString());
+
         }
     }
 }

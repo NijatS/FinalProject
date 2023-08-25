@@ -1,4 +1,16 @@
 ﻿@model ShopVM
+@if (!string.IsNullOrWhiteSpace((string)TempData["Message"]))
+{
+    <div style="display:none;" id="messageFormat">
+        @TempData["Message"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Success"]))
+{
+    <div style="display:none;" id="success">
+        @TempData["Success"]
+    </div>
+}
 <div class="page-heading">
     <div class="container">
         <div class="row">
@@ -284,17 +296,26 @@
                         <h4>VEHICLE ENQUIRY</h4>
                     </div>
                     <div class="contact-form">
-                        <form action="" method="post">
+                        <form asp-controller="contact" asp-action="sendemail" method="post">
                             <p>
                                 The dealer's details will be emailed to you
                                 immediately after you submit your query.
                             </p>
                             <p>
                                 <label>
+                                    <input 
+                                           size="40"
+                                           name="appUserId"
+                                           value="@Model.Car.AppUserId"
+                                           style="display:none"
+                                            />
+                                </label>
+                                <label>
                                     <input type="text"
                                            size="40"
                                            aria-required="true"
                                            aria-invalid="false"
+                                           name="firstname"
                                            placeholder="Your Name" />
                                 </label>
                                 <label>
@@ -302,11 +323,13 @@
                                            size="40"
                                            aria-required="true"
                                            aria-invalid="false"
+                                           name="email"
                                            placeholder="Your Email" />
                                 </label>
                                 <label>
                                     <input type="text"
                                            size="40"
+                                           name="phone"
                                            aria-required="true"
                                            aria-invalid="false"
                                            placeholder="Your Phone Number" />
@@ -314,6 +337,7 @@
                                 <label>
                                     <textarea cols="40"
                                               rows="10"
+                                              name="text"
                                               aria-invalid="false"
                                               placeholder="Message..."></textarea>
                                 </label>
@@ -369,45 +393,7 @@
                     </div>
                     <div class="cars">
                         <div class="cars-container">
-                            @foreach(var item in Model.Cars.Take(4))
-                            {
-                                <div class="car-card col-md-15 col-sm-6">
-                                    <a asp-action="detail" asp-controller="shop" asp-route-id="@item.Id">
-                                        @foreach(var photo in item.CarImages){
-                                            if(photo.isMain){
-                                             <img src="~/Images/Cars/@photo.Image"
-                                             class="attachment-shop_catalog size-shop_catalog wp-post-image"
-                                             srcset="
-                                                    ~/Images/Cars/@photo.Image        310w,
-                                                   ~/Images/Cars/@photo.Image 300w
-                                                     "
-                                             style="height:180px;"
-                                             sizes="(max-width: 310px) 100vw, 310px" />
-                                             }
-                                             }
-                                    </a>
-                                    <div class="content">
-                                        <span class="pricee">
-                                            <span class="price">$@item.Price.ToString("#,##0")</span>
-                                        </span>
-                                        <a href="">
-                                            <h2>@item.Model.Name @item.FabricationYear</h2>
-                                        </a>
-                                        <div class="line"></div>
-                                        <div class="car-info"
-                                        style="word-wrap:break-word;">
-                                            @item.Description.Substring(0,50)...
-                                        </div>
-                                        <div class="car-detail">
-                                            <ul>
-                                                <li><i class="fas fa-gas-pump"></i>@item.Fuel.Name</li>
-                                                <li><i class="fa fa-car"></i>@item.Ban.Name</li>
-                                                <li><i class="fas fa-road"></i>@item.Odometer.ToString("#,##0")</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
+                            @await Html.PartialAsync("_Car", Model.Cars.Take(4))
                         </div>
                     </div>
                 </div>

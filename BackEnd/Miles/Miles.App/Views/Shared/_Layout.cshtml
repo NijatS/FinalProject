@@ -214,32 +214,31 @@
                                                 <a asp-action="index" asp-controller="about">About us</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/services/">Services</a>
+                                                <a asp-action="index" asp-controller="service">Services</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/contact-us/">Meet the team</a>
+                                                <a asp-action="index" asp-controller="about">Meet the team</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/"
-                                                   aria-current="page">Privacy Policy</a>
+                                                <a asp-action="index" asp-controller="about">Privacy Policy</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/blog/">Company News</a>
+                                                <a asp-action="index" asp-controller="blog">Company News</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/shop/">Shop</a>
+                                                <a asp-action="index" asp-controller="shop">Shop</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/product/mercedes-amg-6-3-15/">New Vehicle</a>
+                                                <a asp-action="index" asp-controller="shop">New Vehicle</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-4-3/">Features</a>
+                                                <a asp-action="index" asp-controller="service">Features</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/phasellus-hendrerit-eros-3-3/">Promotion</a>
+                                                <a asp-action="index" asp-controller="service">Promotion</a>
                                             </li>
                                             <li>
-                                                <a href="http://demo.mypsolution.com/wp13/contact-us/">Contact</a>
+                                                <a asp-action="index" asp-controller="contact">Contact</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -253,11 +252,18 @@
                                         <div class="latest-item">
                                             <img src="~/Images/Blogs/@item.Image"  style="width:64px;height:64px;"/>
                                             <h6>
-                                                <a asp-action="index" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
+                                                <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">@item.Title</a>
                                             </h6>
                                             <ul>
                                                 <li>@item.CreatedAt.Day/@item.CreatedAt.Month/@item.CreatedAt.Year</li>
-                                                <li>0 comments</li>
+                                                @if(item.Comments is null)
+                                                {
+                                                    <li>0 comments</li>
+
+                                                }
+                                                else{
+                                                <li>@item.Comments.Count() comments</li>
+                                                }
                                             </ul>
                                         </div>
                                     }

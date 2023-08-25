@@ -20,8 +20,6 @@ namespace Miles.Service.Validations.Messages
                .MinimumLength(3)
                .MaximumLength(20);
             RuleFor(x => x.Address)
-            .NotEmpty()
-            .NotNull().WithMessage("Address can not be null")
             .MaximumLength(100);
             RuleFor(x => x)
                   .Custom((x, context) =>

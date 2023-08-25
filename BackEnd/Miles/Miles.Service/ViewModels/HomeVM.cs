@@ -13,6 +13,7 @@ namespace Miles.Service.ViewModels
         public IEnumerable<Blog> Blogs { get; set; }
         public IEnumerable<TextWhy> Why { get; set; }
         public IEnumerable<Associate> Associates { get; set; }
+        public IEnumerable<Car> Cars { get; set; }
         public Setting Setting { get; set; }
     }
 }

@@ -157,31 +157,5 @@ namespace Miles.App.Controllers
             await _commentService.CreateAsync(dto);
             return Redirect(Request.Headers["Referer"].ToString());
         }
-        [HttpPost]
-        public async Task<IActionResult> SendEmail(MessagePostDto dto)
-        {
-            if (!ModelState.IsValid)
-            {
-                TempData["Email"] = "Please fill All fields";
-                return RedirectToAction(nameof(Index));
-            }
-            string strRegex = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
-
-            Regex re = new Regex(strRegex);
-            if (!re.IsMatch(dto.Email))
-            {
-                TempData["Email"] = "Please add valid email";
-                return RedirectToAction(nameof(Index));
-            }
-            if (!ModelState.IsValid)
-            {
-                TempData["Message"] = "Please fill all inputs qaqa";
-                return RedirectToAction(nameof(Index));
-            }
-
-            var result = await _service.CreateAsync(dto);
-            TempData["Success"] = "Successfully send message";
-            return RedirectToAction(nameof(Index));
-        }
     }
 }

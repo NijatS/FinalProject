@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Car>
+@foreach (var item in Model)
+{
+    <div class="car-card col-md-15 col-sm-6">
+        <a asp-action="detail" asp-controller="shop" asp-route-id="@item.Id">
+            @foreach (var photo in item.CarImages)
+            {
+                if (photo.isMain)
+                {
+                    <img src="~/Images/Cars/@photo.Image"
+                         class="attachment-shop_catalog size-shop_catalog wp-post-image"
+                         srcset="
+                                                    ~/Images/Cars/@photo.Image        310w,
+                                                   ~/Images/Cars/@photo.Image 300w
+                                                     "
+                         style="height:180px;"
+                         sizes="(max-width: 310px) 100vw, 310px" />
+                }
+            }
+        </a>
+        <div class="content">
+            <span class="pricee">
+                <span class="price">$@item.Price.ToString("#,##0")</span>
+            </span>
+            <a href="">
+                <h2>@item.Model.Name @item.FabricationYear</h2>
+            </a>
+            <div class="line"></div>
+            <div class="car-info"
+                 style="word-wrap:break-word;">
+                @item.Description.Substring(0,50)...
+            </div>
+            <div class="car-detail">
+                <ul>
+                    <li><i class="fas fa-gas-pump"></i>@item.Fuel.Name</li>
+                    <li><i class="fa fa-car"></i>@item.Ban.Name</li>
+                    <li><i class="fas fa-road"></i>@item.Odometer.ToString("#,##0")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}

@@ -298,6 +298,21 @@ namespace Miles.Service.Services.Implementations
                 items = _userManager.Users
 			};
 		}
-
+        public async Task<ApiResponse> GetUserById(string id)
+        {
+            AppUser? appUser = await _userManager.FindByIdAsync(id);
+            if (appUser is null)
+            {
+                return new ApiResponse
+                {
+                    StatusCode = 404
+                };
+            }
+            return new ApiResponse
+            {
+                StatusCode = 203,
+                items = appUser
+            };
+        }
     }
 }

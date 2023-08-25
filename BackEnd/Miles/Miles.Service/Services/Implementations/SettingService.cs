@@ -156,7 +156,7 @@ namespace Miles.Service.Services.Implementations
             {
                 Setting = await _repository
                          .GetAsync(x => !x.IsDeleted, "Socials"),
-                Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0).Result.ToListAsync(),
+                Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0,"Comments").Result.ToListAsync(),
                 
             };
             if (_http.HttpContext.User.Identity.IsAuthenticated)

@@ -305,3 +305,38 @@ function format() {
   document.querySelector(".base-timer__path-remaining ").style.transition =
     "1s linear all";
 }
+const messageFormat = document.querySelector("#messageFormat");
+const successFormat = document.querySelector("#success");
+const emailFormat = document.querySelector("#emailFormat");
+if (messageFormat != undefined) {
+    const message = messageFormat.innerHTML;
+    if (message != "") {
+        Swal.fire(
+            'Contact',
+            `${message}`,
+            'question'
+        )
+    }
+}
+if (successFormat != undefined) {
+    const message = successFormat.innerHTML;
+    if (message != "") {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: `${message}`,
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+}
+if (emailFormat != undefined) {
+    const message = emailFormat.innerHTML;
+    if (message != "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `${message}`,
+        })
+    }
+}

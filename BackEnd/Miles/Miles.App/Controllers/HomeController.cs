@@ -17,7 +17,8 @@ namespace Miles.App.Controllers
         private readonly ISettingService _settingService;
         private readonly IAssociateService _associateService;
         private readonly ISubscribeService _subscribeService;
-        public HomeController(ISliderService sliderService, IBlogService blogService, ITextWhyService textWhyService, ISettingService settingService, IAssociateService associateService, ISubscribeService subscribeService)
+        private readonly ICarService _carService;
+        public HomeController(ISliderService sliderService, IBlogService blogService, ITextWhyService textWhyService, ISettingService settingService, IAssociateService associateService, ISubscribeService subscribeService, ICarService carService)
         {
             _sliderService = sliderService;
             _blogService = blogService;
@@ -25,6 +26,7 @@ namespace Miles.App.Controllers
             _settingService = settingService;
             _associateService = associateService;
             _subscribeService = subscribeService;
+            _carService = carService;
         }
         public async Task<IActionResult> Index()
         {
@@ -32,13 +34,15 @@ namespace Miles.App.Controllers
             var resultBlog = await _blogService.GetAllAsync(0, 0, null);
             var resultText = await _textWhyService.GetAllAsync(0, 0);
             var resultAssociate = await _associateService.GetAllAsync(0, 0);
+            var resultCar = await _carService.GetAllAsync(0, 0,null);
             HomeVM homeVM = new HomeVM
             {
-                Sliders =(IEnumerable<Slider>)resultSlide.items,
+                Sliders = (IEnumerable<Slider>)resultSlide.items,
                 Blogs = (IEnumerable<Blog>)resultBlog.items,
                 Why = (IEnumerable<TextWhy>)resultText.items,
                 Associates = (IEnumerable<Associate>)resultAssociate.items,
-                Setting = _settingService.GetSetting().Result.Setting
+                Setting = _settingService.GetSetting().Result.Setting,
+                Cars = (IEnumerable<Car>)resultCar.items,
             };
             return View(homeVM);
         }
