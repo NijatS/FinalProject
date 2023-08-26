@@ -27,8 +27,9 @@ namespace Miles.Service.Services.Implementations
         private readonly IWebHostEnvironment _evn;
         private readonly IHttpContextAccessor _http;
         private readonly IBrandRepository _brandRepository;
+        private readonly IBrandService _brandService;   
         private readonly MilesAppDbContext _context;
-        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository)
+        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository, IBrandService brandService)
         {
             _repository = repository;
             _mapper = mapper;
@@ -36,6 +37,7 @@ namespace Miles.Service.Services.Implementations
             _http = http;
             _context = context;
             _brandRepository = brandRepository;
+            _brandService = brandService;
         }
         public async Task<ApiResponse> CreateAsync(CarPostDto dto)
         {
@@ -72,8 +74,13 @@ namespace Miles.Service.Services.Implementations
             else
             {
                Cars = await _repository.GetAllAsync(expression, count, page, "Fuel", "Ban", "Model", "CarImages", "AppUser");
+            
             }
-        
+            foreach (var Car in Cars)
+            {
+                var result = await _brandService.GetAsync(Car.Model.BrandId);
+                Car.Model.Brand = (Brand)result.itemView;
+            }
             return new ApiResponse
             {
                 items = Cars,

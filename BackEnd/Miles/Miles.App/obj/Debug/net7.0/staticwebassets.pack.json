@@ -501,6 +501,10 @@
       "PackagePath": "staticwebassets\\JavaScript\\home.js"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\search.js",
+      "PackagePath": "staticwebassets\\JavaScript\\search.js"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\service.js",
       "PackagePath": "staticwebassets\\JavaScript\\service.js"
     },

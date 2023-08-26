@@ -157,5 +157,11 @@ namespace Miles.App.Controllers
             await _commentService.CreateAsync(dto);
             return Redirect(Request.Headers["Referer"].ToString());
         }
+        public async Task<IActionResult> Search(string search)
+        {
+           var result = await _carService.GetAllAsync(0, 0, x => !x.IsDeleted && (x.Model.Name.Trim().ToLower() +" " + x.Model.Brand.Name.Trim().ToLower()).Contains(search.Trim().ToLower()) || (x.Model.Brand.Name.Trim().ToLower() + " " + x.Model.Name.Trim().ToLower()).Contains(search.Trim().ToLower()));
+           IEnumerable<Car> Cars = (IEnumerable<Car>)result.items;
+           return Json(Cars);
+        }
     }
 }

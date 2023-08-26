@@ -4657,3 +4657,30 @@ img {
     text-transform: uppercase !important;
     border-bottom: 2px solid #eeeeee !important;
 }
+.searchValue {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    background-color: #f1f7fb;
+    overflow-y:auto;
+    padding:0 5px;
+}
+.searchItem{
+    width:100%;
+    height:40px;
+    margin:5px 0;
+    display:flex;
+    align-items:center;
+    gap:10px
+}
+.searchItem img{
+    height:40px;
+    width:40px;
+}
+.searchItem h4 {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #222222;
+        font-weight: 700;
+        display: inline-block;
+    }

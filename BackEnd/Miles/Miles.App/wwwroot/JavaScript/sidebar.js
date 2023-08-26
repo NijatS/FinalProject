@@ -6,6 +6,8 @@ const sidebarMenuOverlay = document.querySelector(".sidebar-menu-overlay");
 const searchBtn = document.querySelector("#search-item .fa-search");
 const closeBtn = document.querySelector("#search-item .fa-close");
 const example = document.querySelector(".example");
+
+
 sideBarButton.addEventListener("click", (e) => {
   sidebarMenu.style.left = "0px";
   sidebarMenuPush.style.transform = "translate3d(300px, 0, 0)";
@@ -25,3 +27,4 @@ closeBtn.addEventListener("click", () => {
   searchBtn.parentElement.style.display = "block";
   example.style.display = "none";
 });
+
