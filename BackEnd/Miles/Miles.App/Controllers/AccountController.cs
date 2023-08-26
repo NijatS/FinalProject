@@ -8,6 +8,7 @@ using Miles.Data.Context;
 using Miles.Service.Dtos.Accounts;
 using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
+using Miles.Service.ViewModels;
 using NuGet.Common;
 
 namespace Miles.App.Controllers
@@ -17,11 +18,14 @@ namespace Miles.App.Controllers
         private readonly IAccountService _service;
         private readonly IEmailService _mailService;
         private readonly ICountryService _countryService;
-        public AccountController(IEmailService mailService, IAccountService service, ICountryService countryService)
+        private readonly ICarService _carService;
+
+        public AccountController(IEmailService mailService, IAccountService service, ICountryService countryService, ICarService carService)
         {
             _mailService = mailService;
             _service = service;
             _countryService = countryService;
+            _carService = carService;
         }
         [HttpGet]
         public async Task<IActionResult> SignUp()
@@ -80,8 +84,10 @@ namespace Miles.App.Controllers
                 TempData["AdminInfo"] = result.Description;
                 return RedirectToAction("index", "home");
             }
-            AppUser appUser = (AppUser)result.items;
-            return View(appUser);
+            InfoVM info = (InfoVM)result.items;
+            result = await _carService.GetAllAsync(0, 0, x => x.AppUserId == info.AppUser.Id && !x.IsDeleted);
+            info.Cars = (IEnumerable<Car>)result.items;
+            return View(info);
 
         }
         [HttpGet]
@@ -175,11 +181,14 @@ namespace Miles.App.Controllers
             }
             return RedirectToAction("login", "account");
         }
+       
         [Authorize]
         public async Task<IActionResult> Update()
         {
+            var resultCountry = await _countryService.GetAllAsync(0, 0);
+            ViewBag.Countries = resultCountry.items;
             var result = await _service.GetUser();
-            if(result.StatusCode != 200)
+            if(result.StatusCode != 203)
             {
                 return NotFound();
             }
@@ -190,6 +199,8 @@ namespace Miles.App.Controllers
                 Email = user.Email,
                 Name = user.Name,
                 Surname = user.Surname,
+                CountryId = user.CountryId,
+                Image = user.Image
             };
             return View(dto);
         }
@@ -197,6 +208,8 @@ namespace Miles.App.Controllers
         [Authorize]
         public async Task<IActionResult> Update(UpdateDto dto)
         {
+            var resultCountry = await _countryService.GetAllAsync(0, 0);
+            ViewBag.Countries = resultCountry.items;
             if (!ModelState.IsValid)
             {
                 return View(dto);

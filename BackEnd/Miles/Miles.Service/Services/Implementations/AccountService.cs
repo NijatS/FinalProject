@@ -3,11 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
+using Miles.Data.Context;
 using Miles.Service.Dtos.Accounts;
 using Miles.Service.Extensions;
 using Miles.Service.Responses;
 using Miles.Service.Services.Interfaces;
+using Miles.Service.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +26,6 @@ namespace Miles.Service.Services.Implementations
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IWebHostEnvironment _evn;
         private readonly IHttpContextAccessor _http;
-
         public AccountService(UserManager<AppUser> userManager, IWebHostEnvironment evn, IHttpContextAccessor http, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
@@ -221,10 +223,14 @@ namespace Miles.Service.Services.Implementations
                     Description = "You cannot see Admin Info"
                 };
             }
+            InfoVM infoVM = new InfoVM
+            {
+                AppUser = appUser
+            };
             return new ApiResponse
             {
                 StatusCode = 200,
-                items = appUser
+                items = infoVM
             };
         }
         public async Task<ApiResponse> GetUser()
@@ -252,6 +258,10 @@ namespace Miles.Service.Services.Implementations
                 {
                     StatusCode = 404
                 };
+            }
+            if(dto.file is not null)
+            {
+                user.Image = dto.file.CreateImage(_evn.WebRootPath, "Images/Users");
             }
             user.Name = dto.Name;
             user.Email = dto.Email;

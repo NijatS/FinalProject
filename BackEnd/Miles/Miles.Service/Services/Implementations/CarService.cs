@@ -27,9 +27,10 @@ namespace Miles.Service.Services.Implementations
         private readonly IWebHostEnvironment _evn;
         private readonly IHttpContextAccessor _http;
         private readonly IBrandRepository _brandRepository;
-        private readonly IBrandService _brandService;   
+        private readonly IBrandService _brandService;  
+        private readonly IAccountService _accountService;
         private readonly MilesAppDbContext _context;
-        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository, IBrandService brandService)
+        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository, IBrandService brandService, IAccountService accountService)
         {
             _repository = repository;
             _mapper = mapper;
@@ -38,6 +39,7 @@ namespace Miles.Service.Services.Implementations
             _context = context;
             _brandRepository = brandRepository;
             _brandService = brandService;
+            _accountService = accountService;
         }
         public async Task<ApiResponse> CreateAsync(CarPostDto dto)
         {

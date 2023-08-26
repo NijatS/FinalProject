@@ -1,4 +1,4 @@
-﻿@model AppUser
+﻿@model InfoVM
 <div class="page-heading">
     <div class="container">
         <div class="row">
@@ -28,32 +28,74 @@
     <section class="login-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center info-section">
                     <div class="login-container">
                         <div class="login-text">
                             <h2>info</h2>
                         </div>
                         <div class="login-form">
                             <form method="post">
-                                <label asp-for="Name"></label>
-                                <input asp-for="Name" disabled placeholder="Name" />
-                                <label asp-for="Surname"></label>
-                                <input asp-for="Surname" disabled placeholder="Surname" />
-                                <label asp-for="UserName"></label>
-                                <input asp-for="UserName" disabled placeholder="UserName" />
-                                <label asp-for="Email"></label>
-                                <input asp-for="Email" disabled placeholder="Email" />
-                                <label asp-for="UserPricing"></label>
-                                <input asp-for="UserPricingId" disabled placeholder="UserPricingId" />
-                                <div class="button-box">
-                                    <button asp-controller="account" asp-action="update" class="default-btn">
-                                        Update
+                                <label asp-for="AppUser.Name"></label>
+                                <input asp-for="AppUser.Name" disabled placeholder="Name" />
+                                <label asp-for="AppUser.Surname"></label>
+                                <input asp-for="AppUser.Surname" disabled placeholder="Surname" />
+                                <label asp-for="AppUser.UserName"></label>
+                                <input asp-for="AppUser.UserName" disabled placeholder="UserName" />
+                                <label asp-for="AppUser.Email"></label>
+                                <input asp-for="AppUser.Email" disabled placeholder="Email" />
+                                <label asp-for="AppUser.UserPricing"></label>
+                                <input asp-for="AppUser.UserPricingId" disabled placeholder="UserPricingId" />
+                                <div class="button-box" style="display:flex;justify-content:space-between">
+                                    <button type="button" class="default-btn" style="width:48%">
+                                        <a asp-controller="account" asp-action="update" style="color: #ec1c23;">
+                                            Update
+                                        </a>
                                     </button>
-                                    <button type="submit" class="default-btn">
+                                    <button type="button" class="default-btn carsButton" style="width:48%">
                                         My Cars
                                     </button>
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                    <div class="cars-container">
+                        <div class="cars-text">
+                            <h2>Cars</h2>
+                            <button class="button-55" role="button">Exit</button>
+                            <div class="cars">
+                                @foreach(var item in Model.Cars)
+                                {
+                                    <div class="car">
+                                        @foreach(var photo in item.CarImages.Where(x=>x.isMain && !x.IsDeleted))
+                                        {
+                                            <img src="~/Images/Cars/@photo.Image" />
+
+                                        }
+                                        <div class="info">
+                                            <h4>@item.Model.Brand.Name @item.Model.Name @item.FabricationYear</h4>
+                                            <p>Auction Price : $@item.Price.ToString("#,##0")</p>
+                                            <p>Auction Date : @item.ActionDate.ToShortDateString() </p>
+                                        </div>
+                                        <div class="status">
+                                            <h4>Status : Gozluyur </h4>
+                                            <p>Auction Winner : Soltanov Nijat</p>
+                                            <div class="buttons">
+                                                <button class="button-85" role="button">Sell</button>
+                                                <button class="button-85" role="button">Cancel</button>
+                                            </div>
+                                        </div>
+                                        <div class="upde">
+                                            <a asp-action="update" asp-controller="car" asp-route-id="@item.Id">
+                                                <i class="fas fa-edit "></i>
+                                            </a>
+                                            <a onclick="if(!confirm('Are you sure?')){return false;}" class=" delete-item" 
+                                              asp-action="remove" asp-controller="car" asp-route-id="@item.Id">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,3 +103,17 @@
         </div>
     </section>
 </div>
+<script>
+    const carsButton = document.querySelector(".carsButton");
+    const loginContainer = document.querySelector(".login-container")
+    const carsContainer = document.querySelector(".cars-container")
+    const closeCars = document.querySelector(".button-55")
+    carsButton.addEventListener("click", () => {
+        loginContainer.style.transform = "translateX(-1200px)";
+        carsContainer.style.transform = "translateX(0px)"
+    })
+    closeCars.addEventListener("click", () => {
+        loginContainer.style.transform = "translateX(0px)";
+        carsContainer.style.transform = "translateX(1200px)"
+    })
+</script>

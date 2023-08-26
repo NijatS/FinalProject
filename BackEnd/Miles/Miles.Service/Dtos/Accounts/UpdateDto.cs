@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -20,5 +21,8 @@ namespace Miles.Service.Dtos.Accounts
         [DataType(DataType.Password)]
         [Compare("Password")]
         public string? ConfirmPassword { get; set; }
+        public int CountryId { get; set; }
+        public IFormFile? file { get; set; }
+        public string? Image { get; set; }
     }
 }
