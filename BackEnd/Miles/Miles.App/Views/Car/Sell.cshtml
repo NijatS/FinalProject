@@ -1,0 +1,210 @@
+﻿@model CarPostDto
+<div id="page">
+    <section class="login-area">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <div class="sell-container">
+                        <div class="sell-text">
+                            <h2>sell</h2>
+                        </div>
+                        <div class="sell-form">
+							<form method="post" enctype="multipart/form-data">
+								<div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+								<div class="form-group">
+									<label asp-for="Vin">Vin:</label>
+									<input type="text" class="form-control" asp-for="Vin" />
+									<span asp-validation-for="Vin" class="text text-danger"></span>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm">
+											<label>Brand</label>
+											<select class="form-select" name="Brand" id="brandInput" aria-label="Default select example">
+												@foreach (var item in ViewBag.Brands)
+												{
+													<option value="@item.Id">@item.Name</option>
+												}
+											</select>
+											<span asp-validation-for="ModelId" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="BanId">Ban:</label>
+											<select asp-for="BanId" class="form-select" aria-label="Default select example">
+												@foreach (var item in ViewBag.Bans)
+												{
+													<option value="@item.Id">@item.Name</option>
+												}
+											</select>
+											<span asp-validation-for="BanId" class="text text-danger"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm">
+											<label asp-for="ModelId">Model:</label>
+											<select asp-for="ModelId" id="modelInput" class="form-select" aria-label="Default select example">
+												@* 	@foreach (var item in (IEnumerable<Model>)ViewBag.Models)
+												{
+												<option value="@item.Id">@item.Name</option>
+												} *@
+											</select>
+											<span asp-validation-for="ModelId" class="text text-danger"></span>
+
+										</div>
+										<div class="col-sm">
+											<label asp-for="FabricationYear">Fabrication Year:</label>
+											<select asp-for="FabricationYear" id="date-dropdown" class="form-select" aria-label="Default select example">
+											</select>
+											<span asp-validation-for="FabricationYear" class="text text-danger"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm">
+											<label asp-for="FuelId">Fuel:</label>
+											<select asp-for="FuelId" class="form-select" aria-label="Default select example">
+												@foreach (var item in ViewBag.Fuels)
+												{
+													<option value="@item.Id">@item.Name</option>
+												}
+											</select>
+											<span asp-validation-for="FuelId" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="FuelCity">Fuel City:</label>
+											<input min="0" class="form-control" asp-for="FuelCity" />
+											<span asp-validation-for="FuelCity" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="FuelWay">Fuel Way:</label>
+											<input min="0" class="form-control" asp-for="FuelWay" />
+											<span asp-validation-for="FuelWay" class="text text-danger"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm">
+											<label asp-for="Transmission">Transmission:</label>
+											<select asp-for="Transmission" class="form-select" aria-label="Default select example">
+												<option value="Manual">Manual</option>
+												<option value="Automatic">Automatic</option>
+												<option value="CVT">CVT</option>
+											</select>
+											<span asp-validation-for="Transmission" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="NoGears">Gears:</label>
+											<input min="1" class="form-control" asp-for="NoGears" />
+											<span asp-validation-for="NoGears" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="Odometer">Odometer:</label>
+											<input class="form-control" asp-for="Odometer" />
+											<span asp-validation-for="Odometer" class="text text-danger"></span>
+										</div>
+
+										<div class="col-sm">
+											<label asp-for="Motor">Motor:</label>
+											<input class="form-control" asp-for="Motor" />
+											<span asp-validation-for="Motor" class="text text-danger"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-sm">
+											<label asp-for="AppUserId">User:</label>
+											<select asp-for="AppUserId" class="form-select" aria-label="Default select example">
+												@foreach (var item in ViewBag.Users)
+												{
+													<option value="@item.Id">@item.Name @item.Surname</option>
+												}
+											</select>
+											<span asp-validation-for="AppUserId" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="ColorId">Color:</label>
+											<select asp-for="ColorId" class="form-select" aria-label="Default select example">
+												@foreach (var item in ViewBag.Colors)
+												{
+													<option value="@item.Id">@item.Name</option>
+												}
+											</select>
+											<span asp-validation-for="ColorId" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="ActionDate">Action Date:</label>
+											<input class="form-control" asp-for="ActionDate" />
+											<span asp-validation-for="ActionDate" class="text text-danger"></span>
+										</div>
+										<div class="col-sm">
+											<label asp-for="Price">Price:</label>
+											<input class="form-control" asp-for="Price" />
+											<span asp-validation-for="Price" class="text text-danger"></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label asp-for="Description">Description:</label>
+									<textarea class="form-control" asp-for="Description"></textarea>
+									<span asp-validation-for="Description" class="text text-danger"></span>
+								</div>
+								<div class="form-group">
+									<label asp-for="@Model.FormFiles">File:</label>
+									<input multiple type="file" class="form-control" asp-for="@Model.FormFiles" />
+									<span asp-validation-for="FormFiles" class="text text-danger"></span>
+
+								</div>
+								@Html.AntiForgeryToken()
+								<button type="submit" style="width:100%; " class="btn btn-outline-dark">Create</button>
+							</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+	const input = document.querySelector("#brandInput");
+	const modelInput = document.querySelector("#modelInput");
+	let dateDropdown = document.getElementById('date-dropdown');
+	let currentYear = new Date().getFullYear();
+	let earliestYear = 2000;
+	let href = `/admin/model/GetAll`;
+	fetch(href)
+		.then(x => x.json())
+		.then(x => {
+			const elements = x;
+			for (let i = 0; i < elements.length; i++) {
+				if (elements[i].brandId == input.value) {
+					var opt = document.createElement('option');
+					opt.value = elements[i].id;
+					opt.innerHTML = elements[i].name;
+					modelInput.appendChild(opt);
+				}
+			}
+			input.addEventListener("change", () => {
+				modelInput.innerHTML = ""
+				for (let i = 0; i < elements.length; i++) {
+					if (elements[i].brandId == input.value) {
+						var opt = document.createElement('option');
+						opt.value = elements[i].id;
+						opt.innerHTML = elements[i].name;
+						modelInput.appendChild(opt);
+					}
+				}
+			})
+		});
+	while (currentYear >= earliestYear) {
+		let dateOption = document.createElement('option');
+		dateOption.text = currentYear;
+		dateOption.value = currentYear;
+		dateDropdown.add(dateOption);
+		currentYear -= 1;
+	}
+</script>

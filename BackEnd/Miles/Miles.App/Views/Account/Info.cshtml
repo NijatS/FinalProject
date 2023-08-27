@@ -62,6 +62,8 @@
                         <div class="cars-text">
                             <h2>Cars</h2>
                             <button class="button-55" role="button">Exit</button>
+                            <button class="button">Sell New Car</button>
+
                             <div class="cars">
                                 @foreach(var item in Model.Cars)
                                 {
@@ -108,6 +110,7 @@
     const loginContainer = document.querySelector(".login-container")
     const carsContainer = document.querySelector(".cars-container")
     const closeCars = document.querySelector(".button-55")
+    const sellButton = document.querySelector(".button")
     carsButton.addEventListener("click", () => {
         loginContainer.style.transform = "translateX(-1200px)";
         carsContainer.style.transform = "translateX(0px)"
