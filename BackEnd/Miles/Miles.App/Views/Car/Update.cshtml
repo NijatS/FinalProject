@@ -1,0 +1,232 @@
+﻿@model CarUpdateDto
+<link rel="stylesheet" href="~/admin/assets/css/car-update.css" />
+
+<div id="page">
+	<section class="login-area" style="height:max-content">
+<div class="container">
+	<div class="row">
+		<div class="text-center">
+			<div class="sell-container">
+				<div class="sell-text">
+					<h2>update</h2>
+				</div>
+				<div class="sell-form">
+					<form method="post" enctype="multipart/form-data">
+						<div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+						<div class="form-group">
+							<label asp-for="Vin">Vin:</label>
+							<input type="text" class="form-control" asp-for="Vin" />
+							<span asp-validation-for="Vin" class="text text-danger"></span>
+						</div>
+						<div style="display:none" class="form-group">
+							<input value="@Model.FabricationYear" class="form-control yearInput" />
+						</div>
+						<div style="display:none" class="form-group">
+							<input value="@Model.ModelId" class="form-control modelInputNone" />
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<label>Brand</label>
+									<select class="form-select" name="Brand" id="brandInput" aria-label="Default select example">
+										@foreach (var item in ViewBag.Brands)
+										{
+											<option value="@item.Id">@item.Name</option>
+										}
+									</select>
+									<span asp-validation-for="ModelId" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="BanId">Ban:</label>
+									<select asp-for="BanId" class="form-select" aria-label="Default select example">
+										<option value="0">Choose one of them</option>
+										@foreach (var item in ViewBag.Bans)
+										{
+											if (Model.BanId != null)
+											{
+												if (Model.BanId == item.Id)
+												{
+													<option selected value="@item.Id">@item.Name</option>
+													continue;
+												}
+											}
+											<option value="@item.Id">@item.Name</option>
+										}
+									</select>
+									<span asp-validation-for="BanId" class="text text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<label asp-for="ModelId">Model:</label>
+									<select asp-for="ModelId" id="modelInput" class="form-select" aria-label="Default select example">
+									</select>
+									<span asp-validation-for="ModelId" class="text text-danger"></span>
+
+								</div>
+								<div class="col-sm">
+									<label asp-for="FabricationYear">Fabrication Year:</label>
+									<select asp-for="FabricationYear" id="date-dropdown" class="form-select" aria-label="Default select example">
+									</select>
+									<span asp-validation-for="FabricationYear" class="text text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<label asp-for="FuelId">Fuel:</label>
+									<select asp-for="FuelId" class="form-select" aria-label="Default select example">
+										<option value="0">Choose one of them</option>
+										@foreach (var item in ViewBag.Fuels)
+										{
+											if (Model.FuelId != null)
+											{
+												if (Model.FuelId == item.Id)
+												{
+													<option selected value="@item.Id">@item.Name</option>
+													continue;
+												}
+											}
+											<option value="@item.Id">@item.Name</option>
+										}
+									</select>
+									<span asp-validation-for="FuelId" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="FuelCity">Fuel City:</label>
+									<input min="0" class="form-control" asp-for="FuelCity" />
+									<span asp-validation-for="FuelCity" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="FuelWay">Fuel Way:</label>
+									<input min="0" class="form-control" asp-for="FuelWay" />
+									<span asp-validation-for="FuelWay" class="text text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<label asp-for="Transmission">Transmission:</label>
+									<select asp-for="Transmission" class="form-select" aria-label="Default select example">
+										<option value="Manual">Manual</option>
+										<option value="Automatic">Automatic</option>
+										<option value="CVT">CVT</option>
+									</select>
+									<span asp-validation-for="Transmission" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="NoGears">Gears:</label>
+									<input min="1" class="form-control" asp-for="NoGears" />
+									<span asp-validation-for="NoGears" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="Odometer">Odometer:</label>
+									<input class="form-control" asp-for="Odometer" />
+									<span asp-validation-for="Odometer" class="text text-danger"></span>
+								</div>
+
+								<div class="col-sm">
+									<label asp-for="Motor">Motor:</label>
+									<input class="form-control" asp-for="Motor" />
+									<span asp-validation-for="Motor" class="text text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-sm">
+									<label asp-for="ColorId">Color:</label>
+									<select asp-for="ColorId" class="form-select" aria-label="Default select example">
+										<option value="0">Choose one of them</option>
+										@foreach (var item in ViewBag.Colors)
+										{
+											if (Model.ColorId != null)
+											{
+												if (Model.ColorId == item.Id)
+												{
+													<option selected value="@item.Id">@item.Name</option>
+													continue;
+												}
+											}
+											<option value="@item.Id">@item.Name</option>
+										}
+									</select>
+									<span asp-validation-for="ColorId" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="ActionDate">Action Date:</label>
+									<input class="form-control" asp-for="ActionDate" />
+									<span asp-validation-for="ActionDate" class="text text-danger"></span>
+								</div>
+								<div class="col-sm">
+									<label asp-for="Price">Price:</label>
+									<input class="form-control" asp-for="Price" />
+									<span asp-validation-for="Price" class="text text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label asp-for="Description">Description:</label>
+							<textarea class="form-control" asp-for="Description"></textarea>
+							<span asp-validation-for="Description" class="text text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="@Model.FormFiles">File:</label>
+							<input multiple type="file" class="form-control" asp-for="@Model.FormFiles" />
+							<span asp-validation-for="FormFiles" class="text text-danger"></span>
+
+						</div>
+						<div class="form-group">
+							<div class="row">
+								@foreach (var item in ViewBag.Images)
+								{
+									<div class="col-sm" style="display:flex;flex-direction:column;align-items: center;gap: 10px">
+										<div style="position:relative;">
+											<img style="width:200px;height:200px;" src="~/Images/Cars/@item.Image" />
+
+											<a class="delete-button removeimage" type="button" asp-action="RemoveImage" asp-controller="car" asp-route-id="@item.Id">
+												<svg class="delete-svgIcon" viewBox="0 0 448 512">
+													<path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
+												</svg>
+											</a>
+										</div>
+										@if (item.isMain)
+										{
+											<label class="switch activ">
+												<input type="checkbox">
+														<a class="setasmain" asp-action="SetAsMainImage" asp-controller="car" asp-route-id="@item.Id">
+															<span class="sliderMain"></span>
+														</a>
+											</label>
+										}
+										else
+										{
+											<label class="switch">
+												<input type="checkbox">
+												<a class="setasmain" asp-action="SetAsMainImage" asp-controller="car" asp-route-id="@item.Id">
+															<span class="sliderMain"></span>
+												</a>
+											</label>
+										}
+
+									</div>
+								}
+							</div>
+						</div>
+
+						@Html.AntiForgeryToken()
+						<button type="submit" style="width:100%;margin-bottom:20px; " class="btn btn-outline-dark">Update</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	      </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="~/JavaScript/car-update.js"></script>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Services.Interfaces;
@@ -7,6 +8,7 @@ using NuGet.Protocol;
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _service;

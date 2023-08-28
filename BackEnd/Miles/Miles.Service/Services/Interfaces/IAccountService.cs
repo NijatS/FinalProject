@@ -12,7 +12,7 @@ namespace Miles.Service.Services.Interfaces
     {
         public Task<ApiResponse> SignUp(RegisterDto dto);
         public Task<ApiResponse> VerifyEmail(string token, string mail);
-        public Task<ApiResponse> Login(LoginDto dto);
+        public Task<ApiResponse> Login(LoginDto dto, bool UserStatus);
         public Task<ApiResponse> LogOut();
         public Task<ApiResponse> ForgetPassword(string mail);
         public Task<ApiResponse> ResetPasswordGet(string mail, string token);
@@ -21,6 +21,7 @@ namespace Miles.Service.Services.Interfaces
         public Task<ApiResponse> GetUser();
         public Task<ApiResponse> Update(UpdateDto dto);
         public Task<ApiResponse> GetAllUsers();
+        public Task<ApiResponse> GetAllAdmin();
         public Task<ApiResponse> GetUserById(string id);
     }
 }

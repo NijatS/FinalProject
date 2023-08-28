@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
@@ -9,6 +10,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class ModelController : Controller
     {
         private readonly MilesAppDbContext _context;

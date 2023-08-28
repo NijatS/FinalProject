@@ -4,10 +4,12 @@ using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Bans;
 using Miles.Service.Dtos.UserPricings;
 using Miles.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BanController : Controller
     {
         private readonly MilesAppDbContext _context;

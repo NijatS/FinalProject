@@ -85,7 +85,7 @@ namespace Miles.Service.Services.Implementations
                 StatusCode = 200,
             };
         }
-        public async Task<ApiResponse> Login(LoginDto dto)
+        public async Task<ApiResponse> Login(LoginDto dto,bool UserStatus)
         {
             AppUser appUser = await _userManager.FindByEmailAsync(dto.Email);
             if (appUser is null)
@@ -96,14 +96,29 @@ namespace Miles.Service.Services.Implementations
                     Description = "Username or password is not correct"
                 };
             }
-            if (!await _userManager.IsInRoleAsync(appUser, "User"))
+            if (UserStatus)
             {
-                return new ApiResponse
+                if (!await _userManager.IsInRoleAsync(appUser, "User"))
                 {
-                    StatusCode = 400,
-                    Description = "Access Failed"
-                };
+                    return new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Description = "Access Failed"
+                    };
+                }
             }
+            else
+            {
+                if (!await _userManager.IsInRoleAsync(appUser, "Admin") && !await _userManager.IsInRoleAsync(appUser, "SuperAdmin"))
+                {
+                    return new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Description = "Access Failed"
+                    };
+                }
+            }
+          
             var result = await _signInManager.PasswordSignInAsync(appUser, dto.Password, dto.RememberMe, true);
             if (!result.Succeeded)
             {
@@ -123,7 +138,8 @@ namespace Miles.Service.Services.Implementations
             }
             return new ApiResponse
             {
-                StatusCode = 200
+                StatusCode = 200,
+                items = appUser
             };
         }
         public async Task<ApiResponse> LogOut()
@@ -322,6 +338,23 @@ namespace Miles.Service.Services.Implementations
             {
                 StatusCode = 203,
                 items = appUser
+            };
+        }
+        public async Task<ApiResponse> GetAllAdmin()
+        {
+            var users = _userManager.Users;
+            List<AppUser> admins = new List<AppUser>();
+            foreach (var user in users)
+            {
+                if (await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    admins.Add(user);
+                }
+            }
+            return new ApiResponse
+            {
+                StatusCode = 203,
+                items = admins
             };
         }
     }

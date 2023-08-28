@@ -15,7 +15,7 @@
     height: 0;
 }
 
-.slider {
+.sliderMain {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -27,7 +27,7 @@
     border-radius: 30px;
 }
 
-    .slider:before {
+    .sliderMain:before {
         position: absolute;
         content: "";
         height: 1.4em;
@@ -39,19 +39,19 @@
         transition: .4s;
     }
 
-    .slider::before {
+    .sliderMain::before {
         background-color: var(--boxAfterButtonColor,#aeaaae);
     }
 
-.slider {
+.sliderMain {
     background-color: var(--boxAfterBackColor,#313033);
 }
 
-input:focus + .slider {
+input:focus + .sliderMain {
     box-shadow: 0 0 1px var(--secondary-container);
 }
 
-.slider:before {
+ .sliderMain:before {
     transform: var(--boxAfterTranslate,translateX(0));
 }
 

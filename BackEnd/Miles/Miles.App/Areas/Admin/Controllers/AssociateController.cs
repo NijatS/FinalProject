@@ -3,10 +3,12 @@ using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Associates;
 using Miles.Service.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class AssociateController : Controller
     {
         private readonly MilesAppDbContext _context;

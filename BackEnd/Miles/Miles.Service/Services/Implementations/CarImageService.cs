@@ -42,9 +42,17 @@ namespace Miles.Service.Services.Implementations
             };
         }
 
-        public async Task<ApiResponse> GetAsync(int id)
+        public async Task<ApiResponse> GetAsync(int id, Expression<Func<CarImage, bool>>? expression)
         {
-            CarImage CarImage = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            CarImage CarImage = null;
+            if (expression is null)
+            {
+                 CarImage = await _repository.GetAsync(x => !x.IsDeleted && x.Id == id);
+            }
+            else
+            {
+                CarImage = await _repository.GetAsync(expression);
+            }
             if (CarImage is null)
             {
                 return new ApiResponse
@@ -57,6 +65,16 @@ namespace Miles.Service.Services.Implementations
             {
                 StatusCode = 200,
                 itemView = CarImage
+            };
+           
+
+        }
+        public async Task<ApiResponse> Save()
+        {
+            await _repository.SaveAsync();
+            return new ApiResponse
+            {
+                StatusCode = 203,
             };
         }
     }

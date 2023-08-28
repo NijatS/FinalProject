@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Data.Context;
@@ -10,6 +11,7 @@ using System.Text.Json;
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
         private readonly MilesAppDbContext _context;

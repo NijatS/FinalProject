@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Data.Context;
@@ -11,6 +12,7 @@ using System.Text.Json;
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CarController : Controller
     {
         private readonly MilesAppDbContext _context;
@@ -164,7 +166,7 @@ namespace Miles.App.Areas.Admin.Controllers
         }
 		public async Task<IActionResult> SetAsMainImage(int id)
 		{
-            var result =await _carImageService.GetAsync(id);
+            var result =await _carImageService.GetAsync(id,null);
 			CarImage carImage = (CarImage)result.itemView;
 
 			if (carImage == null)
@@ -173,10 +175,13 @@ namespace Miles.App.Areas.Admin.Controllers
 			}
 
 			carImage.isMain = true;
-			CarImage? carImage1 = await _context.CarImages
-						.Where(x => x.isMain && x.CarId == carImage.CarId).FirstOrDefaultAsync();
-			carImage1.isMain = false;
-			await _context.SaveChangesAsync();
+			result = await _carImageService.GetAsync(id, x => x.isMain && x.CarId == carImage.CarId);
+			CarImage? carImage1 = (CarImage)result.itemView;
+			if (carImage1 is not null)
+            {
+                carImage1.isMain = false;
+            }
+			await _carImageService.Save();
 			return Json(new { status = 200 });
 		}
 		public async Task<IActionResult> RemoveImage(int id)
@@ -191,7 +196,7 @@ namespace Miles.App.Areas.Admin.Controllers
 				return Json(new { status = 400, desc = "You cannot remove main image" });
 
 			carImage.IsDeleted = true;
-			await _context.SaveChangesAsync();
+			await _carImageService.Save();
 			return Json(new { status = 200 });
 		}
 	}

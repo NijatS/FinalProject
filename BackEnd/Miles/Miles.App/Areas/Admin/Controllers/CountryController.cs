@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Countries;
 using Miles.Service.Services.Interfaces;
@@ -6,6 +7,7 @@ using Miles.Service.Services.Interfaces;
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CountryController : Controller
     {
         private readonly MilesAppDbContext _context;

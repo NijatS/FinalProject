@@ -207,14 +207,16 @@
 						{
 							<label class="switch activ">
 								<input type="checkbox">
-								<span class="slider"></span>
+								<a class="setasmain" asp-action="SetAsMainImage" asp-controller="car" asp-route-id="@item.Id">
+									<span class="sliderMain"></span>
+								</a>
 							</label>
 						}
 						else{
 						<label class="switch">
 							<input type="checkbox">
 							<a class="setasmain" asp-action="SetAsMainImage" asp-controller="car" asp-route-id="@item.Id">
-							<span class="slider"></span>
+									<span class="sliderMain"></span>
 							</a>
 						</label>
 						}
@@ -225,7 +227,7 @@
 		</div>
 
 		@Html.AntiForgeryToken()
-		<button type="submit" style="width:100%; " class="btn btn-outline-dark">Update</button>
+		<button type="submit" style="width:100%;margin-bottom:20px; " class="btn btn-outline-dark">Update</button>
 	</form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

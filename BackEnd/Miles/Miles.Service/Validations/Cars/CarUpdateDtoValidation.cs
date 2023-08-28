@@ -62,9 +62,6 @@ namespace Miles.Service.Validations.Categories
             RuleFor(x => x.Description)
    .NotEmpty()
            .NotNull();
-            RuleFor(x => x.AppUserId)
-   .NotEmpty()
-           .NotNull();
             RuleFor(x => x.BanId)
 .NotEmpty()
         .NotNull();

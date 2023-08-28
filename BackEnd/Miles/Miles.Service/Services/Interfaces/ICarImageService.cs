@@ -11,7 +11,9 @@ namespace Miles.Service.Services.Interfaces
 {
     public interface ICarImageService
     {
-        public Task<ApiResponse> GetAsync(int id);
+        public Task<ApiResponse> GetAsync(int id, Expression<Func<CarImage, bool>>? expression);
         public Task<ApiResponse> GetAllAsync(int count,int page, Expression<Func<CarImage, bool>>? expression);
+        public Task<ApiResponse> Save();
+
     }
 }

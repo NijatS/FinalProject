@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Miles.Data.Context;
-using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Socials;
 using Miles.Service.Services.Interfaces;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SocialController : Controller
     {
         private readonly MilesAppDbContext _context;

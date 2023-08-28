@@ -2,7 +2,7 @@
 	const modelInput = document.querySelector("#modelInput");
 	const yearInput = document.querySelector(".yearInput")
 	const modelInputNone = document.querySelector(".modelInputNone")
-	const sliders = document.querySelectorAll(".slider");
+    const sliders = document.querySelectorAll(".sliderMain");
 	let dateDropdown = document.getElementById('date-dropdown');
 	let currentYear = new Date().getFullYear();
 	let earliestYear = 2000;
@@ -55,8 +55,8 @@
 	dateDropdown.add(dateOption);
 	currentYear -= 1;
 	}
-	sliders.forEach(slider => {
-		if (slider.parentElement.classList.contains("activ")){
+sliders.forEach(slider => {
+	if (slider.parentElement.parentElement.classList.contains("activ")) {
 		slider.style.setProperty('--boxAfterBackColor', '#3a4b39');
 	slider.style.setProperty('--boxAfterTranslate', 'translateX(1.9em)');
 	slider.style.setProperty('--boxAfterButtonColor', '#84da89');
