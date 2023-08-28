@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Miles.Core.Entities;
+using Miles.Service.Dtos.Cars;
 using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
 
@@ -25,8 +28,8 @@ namespace Miles.App.Controllers
 			_brandService = brandService;
 			_accountService = accountService;
 		}
-
-
+		[Authorize]
+		[HttpGet]
 		public async Task<IActionResult> Sell()
         {
 			var resultFuel = await _fuelService.GetAllAsync(0, 0);
@@ -34,14 +37,50 @@ namespace Miles.App.Controllers
 			var resultColor = await _colorService.GetAllAsync(0, 0);
 			var resultCountry = await _countryService.GetAllAsync(0, 0);
 			var resultBrand = await _brandService.GetAllAsync(0, 0);
-			var resultAccount = await _accountService.GetAllUsers();
-			ViewBag.Users = resultAccount.items;
 			ViewBag.Fuels = resultFuel.items;
 			ViewBag.Bans = resultBan.items;
 			ViewBag.Colors = resultColor.items;
 			ViewBag.Countries = resultCountry.items;
 			ViewBag.Brands = resultBrand.items;
 			return View();
+        }
+		[HttpPost]
+		[Authorize]
+		public async Task<IActionResult> Sell(CarPostDto dto)
+		{
+			var resultFuel = await _fuelService.GetAllAsync(0, 0);
+			var resultBan = await _banService.GetAllAsync(0, 0);
+			var resultColor = await _colorService.GetAllAsync(0, 0);
+			var resultCountry = await _countryService.GetAllAsync(0, 0);
+			var resultBrand = await _brandService.GetAllAsync(0, 0);
+			var resultAccount = await _accountService.GetUser();
+			ViewBag.Fuels = resultFuel.items;
+			ViewBag.Bans = resultBan.items;
+			ViewBag.Colors = resultColor.items;
+			ViewBag.Countries = resultCountry.items;
+			ViewBag.Brands = resultBrand.items;
+			AppUser appUser= (AppUser)resultAccount.items;
+			dto.AppUserId = appUser.Id;
+			if (!ModelState.IsValid)
+			{
+				return View(dto);
+			}
+			var result = await _service.CreateAsync(dto);
+			if (result.StatusCode == 404)
+			{
+				ModelState.AddModelError("", result.Description);
+				return View(dto);
+			}
+			return RedirectToAction("info","account");
+		}
+        public async Task<IActionResult> Remove(int id)
+        {
+            var result = await _service.RemoveAsync(id);
+            if (result.StatusCode == 404)
+            {
+                return NotFound();
+            }
+            return RedirectToAction("info", "account");
         }
     }
 }

@@ -7,6 +7,12 @@
 			<input type="text" class="form-control" asp-for="Vin" />
 			<span asp-validation-for="Vin" class="text text-danger"></span>
 		</div>
+		<div style="display:none" class="form-group">
+			<input value="@Model.FabricationYear" class="form-control yearInput" />
+		</div>
+		<div style="display:none" class="form-group">
+			<input value="@Model.ModelId" class="form-control modelInputNone" />
+		</div>
 		<div class="form-group">
 			<div class="row">
 				<div class="col-sm">
@@ -17,16 +23,40 @@
 							<option value="@item.Id">@item.Name</option>
 						}
 					</select>
+					@* <select class="form-select" name="Brand" id="brandInput" aria-label="Default select example">
+						<option value="0">Choose one of them</option>
+						@foreach (var item in ViewBag.Brands)
+						{
+							if (Model.BrandId != null)
+							{
+								if (Model.BrandId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name</option>
+									continue;
+								}
+							}
+							<option value="@item.Id">@item.Name</option>
+						}
+					</select> *@
 					<span asp-validation-for="ModelId" class="text text-danger"></span>
 				</div>
 				<div class="col-sm">
 					<label asp-for="BanId">Ban:</label>
-					<select asp-for="BanId" class="form-select" aria-label="Default select example">
+					<select class="form-select"  aria-label="Default select example">
+						<option value="0">Choose one of them</option>
 						@foreach (var item in ViewBag.Bans)
 						{
+							if (Model.BanId != null)
+							{
+								if (Model.BanId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name</option>
+									continue;
+								}
+							}
 							<option value="@item.Id">@item.Name</option>
 						}
-					</select>
+						</select>
 					<span asp-validation-for="BanId" class="text text-danger"></span>
 				</div>
 			</div>
@@ -36,10 +66,7 @@
 				<div class="col-sm">
 					<label asp-for="ModelId">Model:</label>
 					<select asp-for="ModelId" id="modelInput" class="form-select" aria-label="Default select example">
-						@* 	@foreach (var item in (IEnumerable<Model>)ViewBag.Models)
-						{
-						<option value="@item.Id">@item.Name</option>
-						} *@
+					
 					</select>
 					<span asp-validation-for="ModelId" class="text text-danger"></span>
 
@@ -57,8 +84,17 @@
 				<div class="col-sm">
 					<label asp-for="FuelId">Fuel:</label>
 					<select asp-for="FuelId" class="form-select" aria-label="Default select example">
+						<option value="0">Choose one of them</option>
 						@foreach (var item in ViewBag.Fuels)
 						{
+							if (Model.FuelId != null)
+							{
+								if (Model.FuelId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name</option>
+									continue;
+								}
+							}
 							<option value="@item.Id">@item.Name</option>
 						}
 					</select>
@@ -110,9 +146,18 @@
 				<div class="col-sm">
 					<label asp-for="AppUserId">User:</label>
 					<select asp-for="AppUserId" class="form-select" aria-label="Default select example">
+						<option value="0">Choose one of them</option>
 						@foreach (var item in ViewBag.Users)
 						{
-							<option value="@item.Id">@item.Name @item.Surname</option>
+							if (Model.AppUserId != null)
+							{
+								if (Model.AppUserId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name</option>
+									continue;
+								}
+							}
+							<option value="@item.Id">@item.Name</option>
 						}
 					</select>
 					<span asp-validation-for="AppUserId" class="text text-danger"></span>
@@ -120,8 +165,17 @@
 				<div class="col-sm">
 					<label asp-for="ColorId">Color:</label>
 					<select asp-for="ColorId" class="form-select" aria-label="Default select example">
+						<option value="0">Choose one of them</option>
 						@foreach (var item in ViewBag.Colors)
 						{
+							if (Model.ColorId != null)
+							{
+								if (Model.ColorId == item.Id)
+								{
+									<option selected value="@item.Id">@item.Name</option>
+									continue;
+								}
+							}
 							<option value="@item.Id">@item.Name</option>
 						}
 					</select>
@@ -150,6 +204,30 @@
 			<span asp-validation-for="FormFiles" class="text text-danger"></span>
 
 		</div>
+		<div class="form-group">
+			<div class="row">
+			@foreach (var item in ViewBag.Images)
+			{
+					<div class="col-sm" style="display:flex;flex-direction:column;align-items: center;gap: 10px;">
+				<img style="width:200px;height:200px;" src="~/Images/Cars/@item.Image" />
+						@if (item.isMain)
+						{
+							<label class="switch activ">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						}
+						else{
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+						}
+				</div>
+			}
+			</div>
+		</div>
+
 		@Html.AntiForgeryToken()
 		<button type="submit" style="width:100%; " class="btn btn-outline-dark">Create</button>
 	</form>
@@ -157,19 +235,35 @@
 <script>
 	const input = document.querySelector("#brandInput");
 	const modelInput = document.querySelector("#modelInput");
+	const yearInput = document.querySelector(".yearInput")
+	const modelInputNone = document.querySelector(".modelInputNone")
+	const sliders = document.querySelectorAll(".slider");
 	let dateDropdown = document.getElementById('date-dropdown');
 	let currentYear = new Date().getFullYear();
 	let earliestYear = 2000;
+	let brand = null;
 	let href = `/admin/model/GetAll`;
 	fetch(href)
 		.then(x => x.json())
 		.then(x => {
 			const elements = x;
 			for (let i = 0; i < elements.length; i++) {
+				if (elements[i].id == modelInputNone.value){
+					brand = elements[i].brandId;
+					input.querySelectorAll("option").forEach(x => {
+						if(x.value == brand){
+							x.selected = true;
+						}
+					})
+			
+				}
 				if (elements[i].brandId == input.value) {
 					var opt = document.createElement('option');
 					opt.value = elements[i].id;
 					opt.innerHTML = elements[i].name;
+					if (elements[i].id == modelInputNone.value) {
+						opt.selected = true;
+					}
 					modelInput.appendChild(opt);
 				}
 			}
@@ -184,12 +278,95 @@
 					}
 				}
 			})
-		});
+		})
 	while (currentYear >= earliestYear) {
+		
 		let dateOption = document.createElement('option');
+		if (yearInput.value == currentYear) {
+			dateOption.selected = true;
+		} 
 		dateOption.text = currentYear;
 		dateOption.value = currentYear;
 		dateDropdown.add(dateOption);
 		currentYear -= 1;
 	}
+	sliders.forEach(slider => {
+		if (slider.parentElement.classList.contains("activ")){
+			slider.style.setProperty('--boxAfterBackColor', '#3a4b39');
+			slider.style.setProperty('--boxAfterTranslate', 'translateX(1.9em)');
+			slider.style.setProperty('--boxAfterButtonColor', '#84da89');
+		}
+		
+		slider.addEventListener("click", () => {
+			sliders.forEach(x => {
+				// x.parentElement.children[0].checked = false;
+				x.style.setProperty('--boxAfterBackColor', '#313033');
+				x.style.setProperty('--boxAfterTranslate', 'translateX(0)');
+				x.style.setProperty('--boxAfterButtonColor', '#aeaaae');
+			})
+			// slider.parentElement.children[0].checked = true;
+			slider.style.setProperty('--boxAfterBackColor', '#3a4b39');
+			slider.style.setProperty('--boxAfterTranslate', 'translateX(1.9em)');
+			slider.style.setProperty('--boxAfterButtonColor', '#84da89');
+
+		})
+	})
 </script>
+<style>
+	.switch {
+		--secondary-container: #3a4b39;
+		--primary: #84da89;
+		font-size: 17px;
+		position: relative;
+		display: inline-block;
+		width: 3.7em;
+		height: 1.8em;
+	}
+
+		.switch input {
+			display: none;
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #313033;
+		transition: .2s;
+		border-radius: 30px;
+	}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 1.4em;
+			width: 1.4em;
+			border-radius: 20px;
+			left: 0.2em;
+			bottom: 0.2em;
+			background-color: #aeaaae;
+			transition: .4s;
+		}
+
+	 .slider::before {
+			background-color: var(--boxAfterButtonColor,#aeaaae);
+	}
+
+	 .slider {
+		background-color: var(--boxAfterBackColor,#313033);
+	}
+
+	input:focus + .slider {
+		box-shadow: 0 0 1px var(--secondary-container);
+	}
+
+	 .slider:before {
+		transform: var(--boxAfterTranslate,translateX(0));
+	}
+</style>

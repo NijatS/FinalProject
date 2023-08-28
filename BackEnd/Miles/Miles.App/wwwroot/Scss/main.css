@@ -4697,48 +4697,48 @@ img {
     height: 650px;
     padding-top:20px !important;
 }
-.cars-container {
+.cars-container-info {
     transition: 2s;
     padding: 37px 37px;
     background: #f5f5f5 none repeat scroll 0 0;
-    height: 450px;
+    height: 520px;
     overflow: auto;
     transform: translateX(1200px);
-    position:absolute;
-    position:relative;
+    position: absolute;
+    position: relative;
 }
-    .cars-container::-webkit-scrollbar {
-        display: none;
-    }
-    .cars-container .cars-text {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-        .cars-container .cars-text h2 {
-            color: #444;
-            font-size: 30px;
-            margin-bottom: 20px;
-            text-transform: capitalize;
-            font-weight: 700;
-        } 
-.cars-container .cars-text .cars{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    width:100%;
+.cars-container-info::-webkit-scrollbar {
+    display: none;
 }
-    .cars-container .cars-text .cars .car {
+.cars-container-info .cars-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+    .cars-container-info .cars-text h2 {
+        color: #444;
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+.cars-container-info .cars-text .cars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+    .cars-container-info .cars-text .cars .car {
         text-align: start;
-        display:flex;
-        gap:15px;
-        align-items:center;
-        margin:10px 0px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin: 10px 0px;
     }
-    .cars-container .cars-text .cars .car img{
-        width:70px;
-        height:70px;
-    }
-        .cars-container .cars-text .cars .car .info {
+        .cars-container-info .cars-text .cars .car img {
+            width: 70px;
+            height: 70px;
+        }
+        .cars-container-info .cars-text .cars .car .info {
             font-size: 12px;
             text-transform: uppercase;
             color: #222222;
@@ -4748,24 +4748,30 @@ img {
             justify-content: space-between;
             height: 70px;
         }
-        .cars-container .cars-text .cars .car .upde {
-           display:flex;
-           flex-direction:column;
-           justify-content:space-between;
-           height:70px;
-        }
-        .cars-container .cars-text .cars .car .status {
+            .cars-container-info .cars-text .cars .car .info h4 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width:162px;
+            }
+            .cars-container-info .cars-text .cars .car .upde {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 70px;
+            }
+        .cars-container-info .cars-text .cars .car .status {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 70px;
         }
-        .cars-container .cars-text .cars .car .status .buttons{
-            display: flex;
-            width:100%;
-            justify-content:space-between
-        }
-            .cars-container .cars-text .cars .car .status h4 {
+            .cars-container-info .cars-text .cars .car .status .buttons {
+                display: flex;
+                width: 100%;
+                justify-content: space-between
+            }
+            .cars-container-info .cars-text .cars .car .status h4 {
                 font-size: 12px;
                 text-transform: uppercase;
                 color: #222222;
@@ -4892,8 +4898,11 @@ img {
     position: absolute;
     top: 15px;
     left: 15px;
-}
 
+}
+    .button a {
+        color: white;
+    }
 
 .button::before {
     content: '';

@@ -58,11 +58,13 @@
                             </form>
                         </div>
                     </div>
-                    <div class="cars-container">
+                    <div class="cars-container-info">
                         <div class="cars-text">
                             <h2>Cars</h2>
                             <button class="button-55" role="button">Exit</button>
-                            <button class="button">Sell New Car</button>
+                            <button class="button" type="button" >
+                                <a asp-action="sell" asp-controller="car">Sell New Car</a>
+                                </button>
 
                             <div class="cars">
                                 @foreach(var item in Model.Cars)
@@ -108,7 +110,7 @@
 <script>
     const carsButton = document.querySelector(".carsButton");
     const loginContainer = document.querySelector(".login-container")
-    const carsContainer = document.querySelector(".cars-container")
+    const carsContainer = document.querySelector(".cars-container-info")
     const closeCars = document.querySelector(".button-55")
     const sellButton = document.querySelector(".button")
     carsButton.addEventListener("click", () => {

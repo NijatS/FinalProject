@@ -21,7 +21,8 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly ICountryService _countryService;
         private readonly IBrandService _brandService;
         private readonly IAccountService _accountService;
-		public CarController(ICarService service, MilesAppDbContext context, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService)
+        private readonly ICarImageService _carImageService;
+		public CarController(ICarService service, MilesAppDbContext context, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService)
 		{
 			_service = service;
 			_context = context;
@@ -31,6 +32,7 @@ namespace Miles.App.Areas.Admin.Controllers
 			_countryService = countryService;
 			_brandService = brandService;
 			_accountService = accountService;
+			_carImageService = carImageService;
 		}
 
 		public async Task<IActionResult> Index(int page = 1)
@@ -90,18 +92,21 @@ namespace Miles.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-			var resultFuel = await _fuelService.GetAllAsync(0, 0);
-			var resultBan = await _banService.GetAllAsync(0, 0);
-			var resultColor = await _colorService.GetAllAsync(0, 0);
-			var resultCountry = await _countryService.GetAllAsync(0, 0);
-			var resultBrand = await _brandService.GetAllAsync(0, 0);
-			ViewBag.Fuels = resultFuel.items;
-			ViewBag.Bans = resultBan.items;
-			ViewBag.Colors = resultColor.items;
-			ViewBag.Countries = resultCountry.items;
-			ViewBag.Brands = resultBrand.items;
-
-			var result = await _service.GetAsync(id);
+            var resultFuel = await _fuelService.GetAllAsync(0, 0);
+            var resultBan = await _banService.GetAllAsync(0, 0);
+            var resultColor = await _colorService.GetAllAsync(0, 0);
+            var resultCountry = await _countryService.GetAllAsync(0, 0);
+            var resultBrand = await _brandService.GetAllAsync(0, 0);
+            var resultAccount = await _accountService.GetAllUsers();
+            var resultImage = await _carImageService.GetAllAsync(0, 0,x=>x.CarId==id);
+            ViewBag.Users = resultAccount.items;
+            ViewBag.Fuels = resultFuel.items;
+            ViewBag.Bans = resultBan.items;
+            ViewBag.Colors = resultColor.items;
+            ViewBag.Countries = resultCountry.items;
+            ViewBag.Brands = resultBrand.items;
+            ViewBag.Images = resultImage.items;
+            var result = await _service.GetAsync(id);
             if (result.StatusCode == 404)
             {
                 return NotFound();
@@ -112,17 +117,19 @@ namespace Miles.App.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Update(int id,CarUpdateDto dto)
         {
-			var resultFuel = await _fuelService.GetAllAsync(0, 0);
-			var resultBan = await _banService.GetAllAsync(0, 0);
-			var resultColor = await _colorService.GetAllAsync(0, 0);
-			var resultCountry = await _countryService.GetAllAsync(0, 0);
-			var resultBrand = await _brandService.GetAllAsync(0, 0);
-			ViewBag.Fuels = resultFuel.items;
-			ViewBag.Bans = resultBan.items;
-			ViewBag.Colors = resultColor.items;
-			ViewBag.Countries = resultCountry.items;
-			ViewBag.Brands = resultBrand.items;
-			if (!ModelState.IsValid)
+            var resultFuel = await _fuelService.GetAllAsync(0, 0);
+            var resultBan = await _banService.GetAllAsync(0, 0);
+            var resultColor = await _colorService.GetAllAsync(0, 0);
+            var resultCountry = await _countryService.GetAllAsync(0, 0);
+            var resultBrand = await _brandService.GetAllAsync(0, 0);
+            var resultAccount = await _accountService.GetAllUsers();
+            ViewBag.Users = resultAccount.items;
+            ViewBag.Fuels = resultFuel.items;
+            ViewBag.Bans = resultBan.items;
+            ViewBag.Colors = resultColor.items;
+            ViewBag.Countries = resultCountry.items;
+            ViewBag.Brands = resultBrand.items;
+            if (!ModelState.IsValid)
             {
                 return View(dto);
             }

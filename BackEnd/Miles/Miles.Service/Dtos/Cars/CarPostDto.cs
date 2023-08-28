@@ -23,7 +23,7 @@ namespace Miles.Service.Dtos.Cars
         public int ColorId { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
-        public string AppUserId { get; set; }
+        public string? AppUserId { get; set; }
         public int BanId { get; set; }
         public DateTime ActionDate { get; set; }
 		public List<IFormFile>? FormFiles { get; set; }
