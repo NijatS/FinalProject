@@ -98,7 +98,7 @@ namespace Miles.App.Areas.Admin.Controllers
             var resultCountry = await _countryService.GetAllAsync(0, 0);
             var resultBrand = await _brandService.GetAllAsync(0, 0);
             var resultAccount = await _accountService.GetAllUsers();
-            var resultImage = await _carImageService.GetAllAsync(0, 0,x=>x.CarId==id);
+            var resultImage = await _carImageService.GetAllAsync(0, 0,x=>x.CarId==id&& !x.IsDeleted);
             ViewBag.Users = resultAccount.items;
             ViewBag.Fuels = resultFuel.items;
             ViewBag.Bans = resultBan.items;
@@ -117,23 +117,35 @@ namespace Miles.App.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Update(int id,CarUpdateDto dto)
         {
-            var resultFuel = await _fuelService.GetAllAsync(0, 0);
-            var resultBan = await _banService.GetAllAsync(0, 0);
-            var resultColor = await _colorService.GetAllAsync(0, 0);
-            var resultCountry = await _countryService.GetAllAsync(0, 0);
-            var resultBrand = await _brandService.GetAllAsync(0, 0);
-            var resultAccount = await _accountService.GetAllUsers();
-            ViewBag.Users = resultAccount.items;
-            ViewBag.Fuels = resultFuel.items;
-            ViewBag.Bans = resultBan.items;
-            ViewBag.Colors = resultColor.items;
-            ViewBag.Countries = resultCountry.items;
-            ViewBag.Brands = resultBrand.items;
-            if (!ModelState.IsValid)
+			var resultFuel = await _fuelService.GetAllAsync(0, 0);
+			var resultBan = await _banService.GetAllAsync(0, 0);
+			var resultColor = await _colorService.GetAllAsync(0, 0);
+			var resultCountry = await _countryService.GetAllAsync(0, 0);
+			var resultBrand = await _brandService.GetAllAsync(0, 0);
+			var resultAccount = await _accountService.GetAllUsers();
+			var resultImage = await _carImageService.GetAllAsync(0, 0, x => x.CarId == id && !x.IsDeleted);
+			ViewBag.Users = resultAccount.items;
+			ViewBag.Fuels = resultFuel.items;
+			ViewBag.Bans = resultBan.items;
+			ViewBag.Colors = resultColor.items;
+			ViewBag.Countries = resultCountry.items;
+			ViewBag.Brands = resultBrand.items;
+			ViewBag.Images = resultImage.items;
+			if (!ModelState.IsValid)
             {
                 return View(dto);
             }
-            var result = await _service.UpdateAsync(id,dto);
+			if (dto.FormFiles is not null)
+            {
+                int length = ((IEnumerable<CarImage>)resultImage.items).Count() + dto.FormFiles.Count();
+				if (length > 5 || length < 3)
+				{
+					ModelState.AddModelError("FormFiles", "Min 3,Max 5 Image");
+					return View(dto);
+				}
+			}
+           
+			var result = await _service.UpdateAsync(id,dto);
             if (result.StatusCode == 400)
             {
                 ModelState.AddModelError("", result.Description);
@@ -150,5 +162,37 @@ namespace Miles.App.Areas.Admin.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
-    }
+		public async Task<IActionResult> SetAsMainImage(int id)
+		{
+            var result =await _carImageService.GetAsync(id);
+			CarImage carImage = (CarImage)result.itemView;
+
+			if (carImage == null)
+			{
+				return Json(new { status = 404 });
+			}
+
+			carImage.isMain = true;
+			CarImage? carImage1 = await _context.CarImages
+						.Where(x => x.isMain && x.CarId == carImage.CarId).FirstOrDefaultAsync();
+			carImage1.isMain = false;
+			await _context.SaveChangesAsync();
+			return Json(new { status = 200 });
+		}
+		public async Task<IActionResult> RemoveImage(int id)
+		{
+            var result = await _carImageService.GetAllAsync(0, 0, x => !x.IsDeleted && x.Id == id);
+            CarImage? carImage = ((IEnumerable<CarImage>)result.items).FirstOrDefault();
+
+			if (carImage == null)
+				return Json(new { status = 404, desc = "image not found" });
+
+			if (carImage.isMain)
+				return Json(new { status = 400, desc = "You cannot remove main image" });
+
+			carImage.IsDeleted = true;
+			await _context.SaveChangesAsync();
+			return Json(new { status = 200 });
+		}
+	}
 }

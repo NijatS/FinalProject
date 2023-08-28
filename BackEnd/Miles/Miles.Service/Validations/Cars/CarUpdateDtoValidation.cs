@@ -71,7 +71,7 @@ namespace Miles.Service.Validations.Categories
             RuleFor(x => x)
             .Custom((x, context) =>
             {
-                if (x.FormFiles?.Count >= 3 && x.FormFiles?.Count <= 5)
+                if (x.FormFiles is not null)
                 {
                     foreach (var file in x.FormFiles)
                     {
@@ -87,11 +87,6 @@ namespace Miles.Service.Validations.Categories
                             }
                         }
                     }
-                }
-                else
-                {
-                    context.AddFailure("FormFiles", "Min 3,Max 5 Image");
-
                 }
             });
         }
