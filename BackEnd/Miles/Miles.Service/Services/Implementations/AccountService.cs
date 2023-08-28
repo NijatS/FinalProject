@@ -20,7 +20,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Miles.Service.Services.Implementations
 {
-    public class AccountService:IAccountService
+    public class AccountService : IAccountService
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
@@ -85,7 +85,7 @@ namespace Miles.Service.Services.Implementations
                 StatusCode = 200,
             };
         }
-        public async Task<ApiResponse> Login(LoginDto dto,bool UserStatus)
+        public async Task<ApiResponse> Login(LoginDto dto, bool UserStatus)
         {
             AppUser appUser = await _userManager.FindByEmailAsync(dto.Email);
             if (appUser is null)
@@ -118,7 +118,7 @@ namespace Miles.Service.Services.Implementations
                     };
                 }
             }
-          
+
             var result = await _signInManager.PasswordSignInAsync(appUser, dto.Password, dto.RememberMe, true);
             if (!result.Succeeded)
             {
@@ -194,7 +194,7 @@ namespace Miles.Service.Services.Implementations
             return new ApiResponse
             {
                 StatusCode = 200,
-                items= dto
+                items = dto
             };
         }
         public async Task<ApiResponse> ResetPasswordPost(ResetPasswordDto dto)
@@ -212,7 +212,7 @@ namespace Miles.Service.Services.Implementations
                ResetPasswordAsync(user, dto.Token, dto.Password);
             if (!result.Succeeded)
             {
-                foreach(var error in result.Errors)
+                foreach (var error in result.Errors)
                 {
                     errors += error.Description;
                 }
@@ -265,9 +265,13 @@ namespace Miles.Service.Services.Implementations
                 items = user
             };
         }
-        public async Task<ApiResponse> Update(UpdateDto dto)
+        public async Task<ApiResponse> Update(UpdateDto dto,AppUser? updated)
         {
             var user = await _userManager.FindByNameAsync(_http.HttpContext.User.Identity.Name);
+            if(updated is not null)
+            {
+                user = updated;
+            }
             if (user is null)
             {
                 return new ApiResponse
@@ -275,7 +279,7 @@ namespace Miles.Service.Services.Implementations
                     StatusCode = 404
                 };
             }
-            if(dto.file is not null)
+            if (dto.file is not null)
             {
                 user.Image = dto.file.CreateImage(_evn.WebRootPath, "Images/Users");
             }
@@ -310,7 +314,10 @@ namespace Miles.Service.Services.Implementations
                     }
                 }
             }
-            await _signInManager.SignInAsync(user, true);
+            if (updated is null)
+            {
+                await _signInManager.SignInAsync(user, true);
+            }
             return new ApiResponse
             {
                 StatusCode = 203
@@ -318,12 +325,21 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<ApiResponse> GetAllUsers()
         {
+
+            List<AppUser> users = new List<AppUser>();
+            foreach(var user in _userManager.Users)
+            {
+                if(await _userManager.IsInRoleAsync(user, "User"))
+                {
+                    users.Add(user);
+                }
+            }
             return new ApiResponse
             {
                 StatusCode = 200,
-                items = _userManager.Users
-			};
-		}
+                items = users
+            };
+        }
         public async Task<ApiResponse> GetUserById(string id)
         {
             AppUser? appUser = await _userManager.FindByIdAsync(id);
@@ -355,6 +371,39 @@ namespace Miles.Service.Services.Implementations
             {
                 StatusCode = 203,
                 items = admins
+            };
+        }
+        public async Task<ApiResponse> Create(AppUser user, string password, bool isAdmin)
+        {
+            await _userManager.CreateAsync(user, password);
+
+            if (isAdmin)
+            {
+                await _userManager.AddToRoleAsync(user, "Admin");
+
+            }
+            else
+                await _userManager.AddToRoleAsync(user, "User");
+
+            return new ApiResponse
+            {
+                StatusCode = 203,
+            };
+        }
+        public async Task<ApiResponse> Remove(string id)
+        {
+            AppUser? appUser = await _userManager.FindByIdAsync(id);
+            if (appUser is null)
+            {
+                return new ApiResponse
+                {
+                    StatusCode = 404
+                };
+            }
+            await _userManager.DeleteAsync(appUser);
+            return new ApiResponse
+            {
+                StatusCode = 203,
             };
         }
     }

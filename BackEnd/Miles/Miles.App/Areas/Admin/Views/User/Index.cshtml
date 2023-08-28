@@ -4,6 +4,7 @@
         <thead>
             <tr>
                 <th scope="col">Id</th>
+                <th scope="col">Image</th>
                 <th scope="col">Name:</th>
                 <th scope="col">UserName:</th>
                 <th scope="col">Email:</th>
@@ -16,6 +17,9 @@
             {
                     <tr>
                         <th scope="row">@item.Id</th>
+                    <th>
+                        <img style="width:50px;height:50px;border-radius:50%;" src="~/Images/Users/@item.Image" />
+                    </th>
                         <th>@item.Name</th>
                         <th>@item.UserName</th>
                         <th>@item.Email</th>
