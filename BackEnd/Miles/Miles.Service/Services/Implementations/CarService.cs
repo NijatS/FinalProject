@@ -173,6 +173,7 @@ namespace Miles.Service.Services.Implementations
 			Car.Price = dto.Price;
 			Car.AppUserId = dto.AppUserId;
             Car.BanId = dto.BanId;
+            Car.ActionDate = dto.ActionDate;
 			await _repository.SaveAsync();
 			return new ApiResponse
 			{

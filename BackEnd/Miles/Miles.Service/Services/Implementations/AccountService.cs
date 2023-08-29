@@ -251,7 +251,7 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<ApiResponse> GetUser()
         {
-            var user = await _userManager.FindByNameAsync(_http.HttpContext.User.Identity.Name);
+            var user = await _userManager.Users.Include(x=>x.Country).Where(x=>x.Name== _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
             if (user is null)
             {
                 return new ApiResponse
@@ -327,7 +327,7 @@ namespace Miles.Service.Services.Implementations
         {
 
             List<AppUser> users = new List<AppUser>();
-            foreach(var user in _userManager.Users)
+            foreach(var user in await _userManager.Users.Include(x=>x.Country).ToListAsync())
             {
                 if(await _userManager.IsInRoleAsync(user, "User"))
                 {

@@ -39,6 +39,8 @@ namespace Miles.Data.Context
         public DbSet<Model> Models { get; set; }
 		public DbSet<Car> Cars { get; set; }
         public DbSet<CarImage> CarImages { get; set; }
+        public DbSet<Bid> Bids { get; set; }
+
         public MilesAppDbContext(DbContextOptions<MilesAppDbContext> options) : base(options)
         {
         }
@@ -68,6 +70,7 @@ namespace Miles.Data.Context
 			modelBuilder.ApplyConfiguration(new BanConfiguration());
 			modelBuilder.ApplyConfiguration(new CarConfiguration());
             modelBuilder.ApplyConfiguration(new CarImageConfiguration());
+            modelBuilder.ApplyConfiguration(new BidConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

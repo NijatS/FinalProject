@@ -226,6 +226,16 @@ namespace Miles.App.Controllers
             }
             return RedirectToAction(nameof(Info));
         }
+        public async Task<IActionResult> GetUser()
+        {
+            var result = await _service.GetUser();
+            if( result.StatusCode != 203)
+            {
+                return Json(null);
+            }
+            AppUser user = (AppUser) result.items;
+            return Json(user);
+        }
         //public async Task<IActionResult> AddRole()
         //{
         //    IdentityRole role = new IdentityRole

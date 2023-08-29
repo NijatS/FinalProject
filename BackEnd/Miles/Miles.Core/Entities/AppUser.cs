@@ -18,5 +18,7 @@ namespace Miles.Core.Entities
         public UserPricing UserPricing { get; set; }
         public List<Comment>? Comments { get; set; }
         public List<Car> Cars { get; set; }
+        public List<Bid> Bids { get; set; }
+
     }
 }
