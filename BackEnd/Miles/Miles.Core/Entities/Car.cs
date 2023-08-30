@@ -26,6 +26,10 @@ namespace Miles.Core.Entities
         public double Price { get; set; }
         public string Description { get; set; }
         public string AppUserId { get; set; }
+        public string WinnerId { get; set; }
+        public int StatusId { get; set; }
+        public Status Status { get; set; }
+        public DateTime WinDate { get; set; }
         public int BanId { get; set; }
         public Ban Ban { get; set; }
         public AppUser AppUser { get; set; }

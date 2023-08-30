@@ -2,6 +2,7 @@
 using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Miles.Core.Entities;
+using Miles.Service.Dtos.Bids;
 using Miles.Service.Dtos.Comments;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Implementations;
@@ -23,8 +24,9 @@ namespace Miles.App.Controllers
 		private readonly IBanService _banService;
         private readonly IAccountService _accountService;
         private readonly ICommentService _commentService;
+        private readonly IBidService _bidService;
 
-        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService)
+        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService)
         {
             _carService = carService;
             _brandService = brandService;
@@ -33,6 +35,7 @@ namespace Miles.App.Controllers
             _banService = banService;
             _accountService = accountService;
             _commentService = commentService;
+            _bidService = bidService;
         }
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
@@ -162,6 +165,16 @@ namespace Miles.App.Controllers
            var result = await _carService.GetAllAsync(0, 0, x => !x.IsDeleted && (x.Model.Name.Trim().ToLower() +" " + x.Model.Brand.Name.Trim().ToLower()).Contains(search.Trim().ToLower()) || (x.Model.Brand.Name.Trim().ToLower() + " " + x.Model.Name.Trim().ToLower()).Contains(search.Trim().ToLower()));
            IEnumerable<Car> Cars = (IEnumerable<Car>)result.items;
            return Json(Cars);
+        }
+        public async Task<IActionResult> PostBid(BidPostDto dto)
+        {
+            var result = await _bidService.CreateAsync(dto);
+            return Json("Ok");
+        }
+        public async Task<IActionResult> GetHighBid(int carId)
+        {
+            var result = await _bidService.GetAsync(x => !x.IsDeleted && x.CarId ==carId);
+            return Json(result.items);
         }
     }
 }

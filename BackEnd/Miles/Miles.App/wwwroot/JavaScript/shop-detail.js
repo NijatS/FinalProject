@@ -7,13 +7,13 @@ const increaseBtn = document.querySelector(".nav-next");
 const sections = document.querySelectorAll(".tabs>ul li");
 const infos = document.querySelectorAll(".info");
 const enquiry = document.querySelector(".enquiry");
-const TIME_LIMIT = 100;
+const TIME_LIMIT = 10;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
+const WARNING_THRESHOLD = 6;
+const ALERT_THRESHOLD = 3;
 const COLOR_CODES = {
     info: {
         color: "green",
@@ -33,6 +33,7 @@ const time = document.querySelector(
 );
 let flag = null;
 let country = null;
+let userid = null;
 const bidButton = document.querySelector("#bidButton");
 const circle = document.querySelector(".circle");
 circle.innerHTML = `<div class="base-timer">
@@ -56,8 +57,8 @@ circle.innerHTML = `<div class="base-timer">
     timeLeft
 )}</span>
 <div id = "base-timer-div">
-<span id="base-timer-flag"><img src='/Images/Countries/${flag}'></span>
-<span id="base-timer-country">${country}</span>
+<span id="base-timer-flag"><img src='/Images/Countries/unflag.webp'></span>
+<span id="base-timer-country">Noone</span>
 <span id="base-timer-bid">$22,000</span>
 <span id="base-timer-word">Bid</span>
 </div>
@@ -71,15 +72,18 @@ circle.innerHTML = `<div class="base-timer">
 </div>`;
 
 let i = 0;
-
+let k = 0;
 document.querySelector(".auction").style.display = "none";
 setInterval(timeCalculate, 1000);
+
+setInterval(Check, 100);
 const decreaseBit = document.querySelector(".buttons button:first-child");
 const increaseBit = document.querySelector(".buttons button:last-child");
 sImages[0].style.opacity = "1";
 infos[0].style.display = "block";
 sections[0].style.color = "inherit";
 sections[0].style.borderBottom = "2px solid #f4c23d";
+let carId = document.querySelector(".number span").textContent;
 
 for (let i = 0; i < sImages.length; i++) {
     sImages[i].addEventListener("click", () => {
@@ -179,15 +183,11 @@ increaseBit.addEventListener("click", () => {
     increase();
 });
 bidButton.addEventListener("click", () => {
-    let href = `/account/GetUser`;
-    fetch(href)
-        .then(x => x.json())
-        .then(x => {
-            if (x != null) {
-                flag = x.country.flagImage;
-                country = x.country.name;
-            }
-        });
+    if (k == 0) {
+        startTimer();
+        k++;
+    }
+   
     document.querySelector("#base-timer-bid").textContent =
         document.querySelector(".bid input").value;
     increase();
@@ -200,13 +200,65 @@ bidButton.addEventListener("click", () => {
         .classList.add(`${remainingPathColor}`);
     format();
     playClick();
+    let count = document.querySelector("#base-timer-bid").textContent.split("$")[1];
+
+    let href = `/account/GetUser`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            if (x != null) {
+                flag = x.country.flagImage;
+                country = x.country.name;
+                userid = x.id
+                href = `/shop/PostBid?AppUserId=${userid}&CarId=${carId}&Count=${count}`;
+
+                fetch(href)
+                    .then(x => x.json())
+                    .then(x => {
+                        if (x != null) {
+                            flag = x.country.flagImage;
+                            country = x.country.name;
+                        }
+                    });
+            }
+        });
+   
 });
+function Check() {
+    let href = `/shop/GetHighBid?carId=${carId}`;
+
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            if (x != null) {
+                if (parseFloat(x.count) > parseFloat(document.querySelector("#base-timer-bid").textContent.split("$")[1].replace(",", ""))) {
+                    flag = x.appUser.country.flagImage;
+                    country = x.appUser.country.name;
+                    document.querySelector("#base-timer-bid").textContent = "$" + x.count.toLocaleString("en-US");
+                    document.querySelector(".bid input").value = "$" + (x.count + 500).toLocaleString("en-US");
+                    document.querySelector(".base-timer__path-remaining ").style.transition =
+                        "none";
+                    timePassed = -1;
+                    timeLeft = TIME_LIMIT;
+                    document
+                        .getElementById("base-timer-path-remaining")
+                        .classList.add(`${remainingPathColor}`);
+                    format();
+                }
+            }
+            
+            
+        });
+}
 function timeCalculate() {
     if (timeforAuction.textContent.split(":")[1] === "0D 00H 00min 00sec") {
+     
         i++;
-        console.log(flag);
-        document.querySelector("#base-timer-flag img").src = `/Images/Countries/${flag}`;
-        document.querySelector("#base-timer-country").textContent = country;
+        if (flag != null && country != null) {
+            document.querySelector("#base-timer-flag img").src = `/Images/Countries/${flag}`;
+            document.querySelector("#base-timer-country").textContent = country;
+        }
+  
         document.querySelector(".auction").style.display = "flex";
         enquiry.children[0].querySelector("h4").textContent = "Live Auction";
         enquiry.style.margin = "0";
@@ -216,7 +268,6 @@ function timeCalculate() {
         enquiry.parentElement.style.alignSelf = "flex-start";
         enquiry.parentElement.style.gap = "30px";
         if (i == 1) {
-            startTimer();
             document.querySelector(".bid input").value =
                 "$" +
                 (
@@ -241,15 +292,23 @@ function onTimesUp() {
     clearInterval(timerInterval);
     document.querySelector("#base-timer-div").style.display = "none";
     document.querySelector(".bid").style.display = "none";
-    if (true) {
-        document.querySelector("#win").style.display = "flex";
-        document.getElementById("base-timer-path-remaining").style.color = "green";
-        document.querySelector(".base-timer__circle").style.fill = "green";
-    } else {
-        document.querySelector("#sold-on").style.display = "flex";
-        document.getElementById("base-timer-path-remaining").style.color = "blue";
-        document.querySelector(".base-timer__circle").style.fill = "blue";
-    }
+    let href = `/shop/GetHighBid?carId=${carId}`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            if (x != null) {
+                if (x.appUserId == userid) {
+                    document.querySelector("#win").style.display = "flex";
+                    document.getElementById("base-timer-path-remaining").style.color = "green";
+                    document.querySelector(".base-timer__circle").style.fill = "green";
+                } else {
+                    document.querySelector("#sold-on").style.display = "flex";
+                    document.getElementById("base-timer-path-remaining").style.color = "blue";
+                    document.querySelector(".base-timer__circle").style.fill = "blue";
+                }
+            }
+        });
+   
     let myAudio = document.querySelector("#audioWin");
     myAudio.play();
 }
