@@ -7,13 +7,15 @@ const increaseBtn = document.querySelector(".nav-next");
 const sections = document.querySelectorAll(".tabs>ul li");
 const infos = document.querySelectorAll(".info");
 const enquiry = document.querySelector(".enquiry");
-const TIME_LIMIT = 10;
+const TIME_LIMIT = 8;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 6;
 const ALERT_THRESHOLD = 3;
+
+
 const COLOR_CODES = {
     info: {
         color: "green",
@@ -73,10 +75,11 @@ circle.innerHTML = `<div class="base-timer">
 
 let i = 0;
 let k = 0;
+let j = 0;
 document.querySelector(".auction").style.display = "none";
+const checkInterval = setInterval(Check, 100);
 setInterval(timeCalculate, 1000);
 
-setInterval(Check, 100);
 const decreaseBit = document.querySelector(".buttons button:first-child");
 const increaseBit = document.querySelector(".buttons button:last-child");
 sImages[0].style.opacity = "1";
@@ -184,17 +187,33 @@ increaseBit.addEventListener("click", () => {
 });
 bidButton.addEventListener("click", () => {
     if (k == 0) {
-        startTimer();
         k++;
     }
-   
+    let href = `/shop/GetAuction?CarId=${carId}`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            if (x != null) {
+                href = `/shop/PostAuction?status=false&CarId=${carId}`;
+                fetch(href)
+                    .then(x => x.json())
+                    .then(x => {
+
+                    });
+            }
+            else {
+                href = `/shop/PostAuction?status=true&CarId=${carId}`;
+                fetch(href)
+            }
+        });
+  
     document.querySelector("#base-timer-bid").textContent =
         document.querySelector(".bid input").value;
     increase();
     document.querySelector(".base-timer__path-remaining ").style.transition =
         "none";
-    timePassed = -1;
-    timeLeft = TIME_LIMIT;
+    //timePassed = -1;
+    //timeLeft = TIME_LIMIT;
     document
         .getElementById("base-timer-path-remaining")
         .classList.add(`${remainingPathColor}`);
@@ -202,7 +221,7 @@ bidButton.addEventListener("click", () => {
     playClick();
     let count = document.querySelector("#base-timer-bid").textContent.split("$")[1];
 
-    let href = `/account/GetUser`;
+    href = `/account/GetUser`;
     fetch(href)
         .then(x => x.json())
         .then(x => {
@@ -218,6 +237,7 @@ bidButton.addEventListener("click", () => {
                         if (x != null) {
                             flag = x.country.flagImage;
                             country = x.country.name;
+                          
                         }
                     });
             }
@@ -226,7 +246,6 @@ bidButton.addEventListener("click", () => {
 });
 function Check() {
     let href = `/shop/GetHighBid?carId=${carId}`;
-
     fetch(href)
         .then(x => x.json())
         .then(x => {
@@ -246,8 +265,37 @@ function Check() {
                     format();
                 }
             }
-            
-            
+        });
+    href = `/shop/GetAuction?CarId=${carId}`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            if (x != null) {
+                const t1 = new Date(x.auctionEnd);
+                const t2 = new Date();
+                if (t1 > t2) {
+                    const diff = Math.max(t1, t2) - Math.min(t1, t2);
+                    //let second = Math.floor(diff / 1000 % 60);
+                    let second = diff / 1000 % 60;
+                    console.log(second)
+                    timePassed = 9 - second;
+                    timeLeft = TIME_LIMIT - timePassed;
+                    setCircleDasharray();
+                    setRemainingPathColor(timeLeft);
+                    if (timeLeft == 0) {
+                        onTimesUp();
+                    }
+                }
+                else {
+                    setCircleDasharray();
+                    document.querySelector(".base-timer__path-remaining ").style.transition =
+                        "none";
+           
+                    //timePassed = -1
+                    //timeLeft = 0
+                    onTimesUp();
+                }
+            }
         });
 }
 function timeCalculate() {
@@ -282,14 +330,12 @@ function timeCalculate() {
     }
 }
 
-
-
 function calculateTimeFraction() {
     const rawTimeFraction = timeLeft / TIME_LIMIT;
     return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
 }
 function onTimesUp() {
-    clearInterval(timerInterval);
+    clearInterval(checkInterval);
     document.querySelector("#base-timer-div").style.display = "none";
     document.querySelector(".bid").style.display = "none";
     let href = `/shop/GetHighBid?carId=${carId}`;
@@ -297,6 +343,19 @@ function onTimesUp() {
         .then(x => x.json())
         .then(x => {
             if (x != null) {
+                href = `/car/GetCar?carId=${carId}`;
+                fetch(href)
+                    .then(x => x.json())
+                    .then(x => {
+                        console.log(x)
+                        if (x.winnerId === "null" && j === 0 && x.statusId ==2) {
+                            j++;
+                            href = `/shop/SellCar?carId=${carId}`;
+                            fetch(href)
+                        }
+                    }
+                    );
+                
                 if (x.appUserId == userid) {
                     document.querySelector("#win").style.display = "flex";
                     document.getElementById("base-timer-path-remaining").style.color = "green";
@@ -309,8 +368,8 @@ function onTimesUp() {
             }
         });
    
-    let myAudio = document.querySelector("#audioWin");
-    myAudio.play();
+    //let myAudio = document.querySelector("#audioWin");
+    //myAudio.play();
 }
 function setCircleDasharray() {
     const circleDasharray = `${(
@@ -348,19 +407,19 @@ function formatTime(time) {
 
     return `${minutes}:${seconds}`;
 }
-function startTimer() {
-    timerInterval = setInterval(() => {
-        timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
-        document.getElementById("base-timer-label").innerHTML =
-            formatTime(timeLeft);
-        setCircleDasharray();
-        setRemainingPathColor(timeLeft);
-        if (timeLeft === 0) {
-            onTimesUp();
-        }
-    }, 1000);
-}
+//function startTimer() {
+//    timerInterval = setInterval(() => {
+//        ////timePassed += 1;
+//        //timeLeft = TIME_LIMIT - timePassed;
+//        //document.getElementById("base-timer-label").innerHTML =
+//        //    formatTime(timeLeft);
+//        //setCircleDasharray();
+//        //setRemainingPathColor(timeLeft);
+//        //if (timeLeft === 0) {
+//        //    onTimesUp();
+//        //}
+//    }, 1000);
+//}
 function playClick() {
     let myAudio = document.querySelector("#audio");
     myAudio.play();

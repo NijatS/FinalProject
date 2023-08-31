@@ -183,5 +183,40 @@ namespace Miles.App.Controllers
             }
             return RedirectToAction("info", "account");
         }
+        public async Task<IActionResult> GetCar(int carId)
+        {
+            var result = await _service.GetAsync(carId);
+            if (result.StatusCode == 404)
+            {
+                return NotFound();
+            }
+            Car car =(Car)result.itemView;
+            return Json(car);
+        }
+        public async Task<IActionResult> SellCar(int carId,string userId,bool status)
+        {
+            var result = await _service.GetAsync(carId);
+            if (result.StatusCode == 404)
+            {
+                return NotFound();
+            }
+            CarUpdateDto dto = (CarUpdateDto)result.items;
+            if(dto.AppUserId != userId)
+            {
+                return NotFound();
+
+            }
+            if (status)
+            {
+                dto.StatusId = 3;
+
+            }
+            else
+            {
+                dto.StatusId = 5;
+            }
+            await _service.UpdateAsync(carId, dto);
+            return RedirectToAction("info", "account");
+        }
     }
 }

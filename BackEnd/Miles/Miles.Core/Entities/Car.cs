@@ -26,7 +26,7 @@ namespace Miles.Core.Entities
         public double Price { get; set; }
         public string Description { get; set; }
         public string AppUserId { get; set; }
-        public string WinnerId { get; set; }
+        public string? WinnerId { get; set; }
         public int StatusId { get; set; }
         public Status Status { get; set; }
         public DateTime WinDate { get; set; }
@@ -34,6 +34,8 @@ namespace Miles.Core.Entities
         public Ban Ban { get; set; }
         public AppUser AppUser { get; set; }
         public DateTime ActionDate { get; set; }
+        public double AuctionWinPrice { get; set; }
         public List<CarImage> CarImages { get; set; }
+        public List<Auction> Auctions { get; set; }
 	}
 }

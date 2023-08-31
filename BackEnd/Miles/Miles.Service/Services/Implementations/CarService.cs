@@ -45,6 +45,8 @@ namespace Miles.Service.Services.Implementations
         {
             int i = 0;
             Car Car = _mapper.Map<Car>(dto);
+            Car.StatusId = 1;
+            Car.WinnerId = "null";
             foreach (var item in dto.FormFiles)
             {
                 CarImage carImage = new CarImage
@@ -71,11 +73,11 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Car> Cars = new List<Car>();
             if (expression is null)
             {
-               Cars = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "Fuel","Ban","Model","CarImages","AppUser");
+               Cars = await _repository.GetAllAsync(x => !x.IsDeleted, count, page, "Fuel","Ban","Model","CarImages","AppUser","Status");
             }
             else
             {
-               Cars = await _repository.GetAllAsync(expression, count, page, "Fuel", "Ban", "Model", "CarImages", "AppUser");
+               Cars = await _repository.GetAllAsync(expression, count, page, "Fuel", "Ban", "Model", "CarImages", "AppUser", "Status");
             
             }
             foreach (var Car in Cars)
@@ -174,6 +176,13 @@ namespace Miles.Service.Services.Implementations
 			Car.AppUserId = dto.AppUserId;
             Car.BanId = dto.BanId;
             Car.ActionDate = dto.ActionDate;
+            if (dto.AuctionWinPrice != null)
+            {
+                Car.WinDate = dto.WinDate;
+                Car.AuctionWinPrice = dto.AuctionWinPrice;
+                Car.WinnerId = dto.WinnerId;
+                Car.StatusId = dto.StatusId;
+            }
 			await _repository.SaveAsync();
 			return new ApiResponse
 			{

@@ -3,12 +3,14 @@ using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Bids;
+using Miles.Service.Dtos.Cars;
 using Miles.Service.Dtos.Comments;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
 using System;
+using System.Collections.Generic;
 using System.Composition;
 using System.Linq.Expressions;
 using System.Text.RegularExpressions;
@@ -25,8 +27,9 @@ namespace Miles.App.Controllers
         private readonly IAccountService _accountService;
         private readonly ICommentService _commentService;
         private readonly IBidService _bidService;
+        private readonly IAuctionService _auctionService;
 
-        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService)
+        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService, IAuctionService auctionService)
         {
             _carService = carService;
             _brandService = brandService;
@@ -36,6 +39,7 @@ namespace Miles.App.Controllers
             _accountService = accountService;
             _commentService = commentService;
             _bidService = bidService;
+            _auctionService = auctionService;
         }
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
@@ -171,10 +175,47 @@ namespace Miles.App.Controllers
             var result = await _bidService.CreateAsync(dto);
             return Json("Ok");
         }
+        public async Task<IActionResult> PostAuction(bool status,int CarId)
+        {
+            Auction auction = new Auction { 
+                CarId = CarId
+            };
+
+            if (status)
+            {
+                var result = await _auctionService.CreateAsync(auction);
+            }
+            else
+            {
+                var result = await _auctionService.GetAllAsync(0,0,x=>x.CarId== auction.CarId);
+                int id = ((IEnumerable<Auction>)result.items).FirstOrDefault().Id;
+                result = await _auctionService.UpdateAsync(id,auction);
+            }
+            return Json("Ok");
+        }
+        public async Task<IActionResult> GetAuction(int carId)
+        {
+            var result = await _auctionService.GetAllAsync(0, 0, x => x.CarId == carId && !x.IsDeleted);
+            Auction auction = ((IEnumerable<Auction>)result.items).FirstOrDefault();
+            return Json(auction);
+        }
         public async Task<IActionResult> GetHighBid(int carId)
         {
             var result = await _bidService.GetAsync(x => !x.IsDeleted && x.CarId ==carId);
             return Json(result.items);
+        }
+        public async Task<IActionResult> SellCar(int carId)
+        {
+            var result =await _carService.GetAsync(carId);
+            CarUpdateDto dto = (CarUpdateDto)result.items;
+            result = await _bidService.GetAsync(x => !x.IsDeleted && x.CarId ==carId);
+            Bid bid = (Bid)result.items;
+            dto.AuctionWinPrice = bid.Count;
+            dto.WinDate = DateTime.Now;
+            dto.StatusId = 4;
+            dto.WinnerId = bid.AppUserId;
+            result = await _carService.UpdateAsync(carId, dto);
+            return Json("Ok");
         }
     }
 }

@@ -45,7 +45,7 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
-            IEnumerable<Status> Statuss = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            IEnumerable<Status> Statuss = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Cars");
             return new ApiResponse
             {
                 items = Statuss,
@@ -95,15 +95,18 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> UpdateAsync(int id, StatusUpdateDto dto)
         {
-            if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
-            {
-                return new ApiResponse
-                {
-                    StatusCode = 400,
-                    Description = $"{dto.Name} Already exists"
-                };
-            }
             Status Status = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            if (dto.Name != Status.Name)
+            {
+                if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
+                {
+                    return new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Description = $"{dto.Name} Already exists"
+                    };
+                }
+            }
             if (Status is null)
             {
                 return new ApiResponse

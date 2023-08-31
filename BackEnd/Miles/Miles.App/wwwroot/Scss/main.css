@@ -2759,7 +2759,6 @@ img {
   top: 12px;
   visibility: hidden;
   display: inline-block;
-  background-image: url(../../images/ajax-loader.gif);
   width: 16px;
   height: 16px;
   border: none;
@@ -2847,7 +2846,6 @@ img {
   top: 12px;
   visibility: hidden;
   display: inline-block;
-  background-image: url(../../images/ajax-loader.gif);
   width: 16px;
   height: 16px;
   border: none;
@@ -4598,7 +4596,7 @@ img {
   color: #ec1c23;
   font-size: 14px;
   margin-top: 40px;
-  padding: 8px 36px;
+  padding: 10px 10px;
   text-transform: uppercase;
   transition: all 0.5s ease 0s;
   display: inline-block;
@@ -4697,7 +4695,7 @@ img {
     height: 650px;
     padding-top:20px !important;
 }
-.cars-container-info {
+.cars-container-info, .winning-container-info {
     transition: 2s;
     padding: 37px 37px;
     background: #f5f5f5 none repeat scroll 0 0;
@@ -4705,79 +4703,91 @@ img {
     overflow: auto;
     transform: translateX(1200px);
     position: absolute;
-    position: relative;
 }
-.cars-container-info::-webkit-scrollbar {
-    display: none;
+.winning-container-info {
+    transform: translateX(-1200px);
+    width:100%;
 }
-.cars-container-info .cars-text {
-    text-align: center;
-    margin-bottom: 30px;
-}
-    .cars-container-info .cars-text h2 {
+.cars-container-info::-webkit-scrollbar, .winning-container-info::-webkit-scrollbar {
+        display: none;
+    }
+    .cars-container-info .cars-text, .winning-container-info .cars-text {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .cars-container-info .cars-text h2, .winning-container-info .cars-text h2 {
         color: #444;
         font-size: 30px;
         margin-bottom: 20px;
         text-transform: capitalize;
         font-weight: 700;
     }
-.cars-container-info .cars-text .cars {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-    .cars-container-info .cars-text .cars .car {
-        text-align: start;
-        display: flex;
-        gap: 15px;
-        align-items: center;
-        margin: 10px 0px;
-    }
-        .cars-container-info .cars-text .cars .car img {
-            width: 70px;
-            height: 70px;
-        }
-        .cars-container-info .cars-text .cars .car .info {
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #222222;
-            font-weight: 700;
+        .cars-container-info .cars-text .cars, .winning-container-info .cars-text .cars {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 70px;
+            gap: 10px;
+            width: 100%;
         }
-            .cars-container-info .cars-text .cars .car .info h4 {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                width:162px;
-            }
-            .cars-container-info .cars-text .cars .car .upde {
+            .cars-container-info .cars-text .cars .car, .winning-container-info .cars-text .cars .car {
+                text-align: start;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 70px;
+                gap: 15px;
+                align-items: center;
+                margin: 10px 0px;
             }
-        .cars-container-info .cars-text .cars .car .status {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 70px;
-        }
-            .cars-container-info .cars-text .cars .car .status .buttons {
-                display: flex;
-                width: 100%;
-                justify-content: space-between
-            }
-            .cars-container-info .cars-text .cars .car .status h4 {
-                font-size: 12px;
-                text-transform: uppercase;
-                color: #222222;
-                font-weight: 700;
-                display: inline-block;
-            }
+                .cars-container-info .cars-text .cars .car img, .winning-container-info .cars-text .cars .car img {
+                    width: 70px;
+                    height: 70px;
+                }
+                .cars-container-info .cars-text .cars .car .info, .winning-container-info .cars-text .cars .car .info {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #222222;
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 70px;
+                    width: 40%;
+                }
+                    .cars-container-info .cars-text .cars .car .info h4, .winning-container-info .cars-text .cars .car .info h4 {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        clear: both;
+                        display: inline-block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                .cars-container-info .cars-text .cars .car .upde, .winning-container-info .cars-text .cars .car .upde {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 70px;
+                }
+                .cars-container-info .cars-text .cars .car .status, .winning-container-info .cars-text .cars .car .status {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 70px;
+                    width:40%;
+                }
+                    .cars-container-info .cars-text .cars .car .status .buttons, .winning-container-info .cars-text .cars .car .status .buttons {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between
+                    }
+                    .cars-container-info .cars-text .cars .car .status h4, .winning-container-info .cars-text .cars .car .status h4 {
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        color: #222222;
+                        font-weight: 700;
+                        display: inline-block;
+                        clear: both;
+                        display: inline-block;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
 .button-85 {
     padding: 0 2em;
     border: none;
@@ -4869,7 +4879,7 @@ img {
     touch-action: manipulation;
     position:absolute;
     top:10px;
-    right:10px;
+    right:20px;
 }
 
     .button-55:hover {
@@ -4960,3 +4970,111 @@ img {
 .sell-container .form-group, .sell-container  button {
     margin-top: 10px;
 }
+.buttonBuy {
+    --width: 100%;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 110px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #222;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+}
+
+    .buttonBuy::before {
+        position: absolute;
+        content: attr(data-tooltip);
+        width: var(--tooltip-width);
+        height: var(--tooltip-height);
+        background-color: #555;
+        font-size: 0.9rem;
+        color: #fff;
+        border-radius: .25em;
+        line-height: var(--tooltip-height);
+        bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+        left: calc(50% - var(--tooltip-width) / 2);
+    }
+.buttonBuy::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #555;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+    .buttonBuy::after, .buttonBuy::before {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+    }
+
+    .buttonBuy .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttonBuy .button-wrapper, .text, .icon {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        color: #fff;
+    }
+
+    .buttonBuy .text {
+        top: 0
+    }
+
+    .buttonBuy .text, .icon {
+        transition: top 0.5s;
+    }
+
+.buttonBuy .icon {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonBuy .icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+    .buttonBuy:hover {
+        background: #222;
+    }
+
+        .buttonBuy:hover .text {
+            top: -100%;
+        }
+
+        .buttonBuy:hover .icon {
+            top: 0;
+        }
+
+        .buttonBuy:hover:before, .buttonBuy:hover:after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .buttonBuy:hover:after {
+            bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+        }
+
+        .buttonBuy:hover:before {
+            bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+        }

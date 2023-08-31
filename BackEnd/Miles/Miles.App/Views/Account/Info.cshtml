@@ -29,6 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center info-section">
+                  
                     <div class="login-container">
                         <div class="login-text">
                             <h2>info</h2>
@@ -46,13 +47,16 @@
                                 <label asp-for="AppUser.UserPricing"></label>
                                 <input asp-for="AppUser.UserPricingId" disabled placeholder="UserPricingId" />
                                 <div class="button-box" style="display:flex;justify-content:space-between">
-                                    <button type="button" class="default-btn" style="width:48%">
+                                    <button type="button" class="default-btn" style="width:32%">
                                         <a asp-controller="account" asp-action="update" style="color: #ec1c23;">
                                             Update
                                         </a>
                                     </button>
-                                    <button type="button" class="default-btn carsButton" style="width:48%">
+                                    <button type="button" class="default-btn carsButton" style="width:32%">
                                         My Cars
+                                    </button>
+                                    <button type="button" class="default-btn auctionButton" style="width:32%">
+                                       Auction Cars
                                     </button>
                                 </div>
                             </form>
@@ -81,11 +85,11 @@
                                             <p>Auction Date : @item.ActionDate.ToShortDateString() </p>
                                         </div>
                                         <div class="status">
-                                            <h4>Status : Gozluyur </h4>
+                                            <h4>Status : @item.Status.Name </h4>
                                             <p>Auction Winner : Soltanov Nijat</p>
                                             <div class="buttons">
-                                                <button class="button-85" role="button">Sell</button>
-                                                <button class="button-85" role="button">Cancel</button>
+                                                <a asp-action="SellCar" asp-controller="car" asp-route-carId="@item.Id" asp-route-userId="@Model.AppUser.Id" asp-route-status="true" class="button-85" role="button">Sell</a>
+                                                <a asp-action="SellCar" asp-controller="car" asp-route-carId="@item.Id" asp-route-userId="@Model.AppUser.Id" asp-route-status="false" class="button-85" role="button">Cancel</a>
                                             </div>
                                         </div>
                                         <div class="upde">
@@ -102,6 +106,48 @@
                             </div>
                         </div>
                     </div>
+                    <div class="winning-container-info">
+                        <div class="cars-text">
+                            <h2>Winning</h2>
+                            <button class="button-55" role="button">Exit</button>
+                            <div class="cars">
+                                  @foreach (var item in Model.Cars)
+                                {
+                                <div class="car">
+                                @foreach (var photo in item.CarImages.Where(x => x.isMain && !x.IsDeleted))
+                                {
+                                <img src="~/Images/Cars/@photo.Image" />
+
+                                }
+                                <div class="info">
+                                <h4>@item.Model.Brand.Name @item.Model.Name @item.FabricationYear</h4>
+                                <p>Win Price : $@item.AuctionWinPrice.ToString("#,##0")</p>
+                                <p>Win Date : @item.WinDate.ToShortDateString() </p>
+                                </div>
+                                <div class="status">
+                                <h4>Status : @item.Status.Name </h4>
+                                <p>Auction Winner : Soltanov Nijat</p>
+                                <div class="buttons">
+                                                @if(item.StatusId == 3)
+                                                {
+                                                    <div data-tooltip="Price:$@item.AuctionWinPrice.ToString("#,##0")" class="buttonBuy">
+                                                        <div class="button-wrapper">
+                                                            <div class="text">Go Payment</div>
+                                                            <span class="icon">
+                                                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                }
+                                </div>
+                                </div>
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,9 +155,12 @@
 </div>
 <script>
     const carsButton = document.querySelector(".carsButton");
+    const auctionButton = document.querySelector(".auctionButton");
     const loginContainer = document.querySelector(".login-container")
     const carsContainer = document.querySelector(".cars-container-info")
-    const closeCars = document.querySelector(".button-55")
+    const winningContainer = document.querySelector(".winning-container-info")
+    const closeCars = document.querySelector(".cars-container-info .button-55")
+    const closeWinning = document.querySelector(".winning-container-info .button-55")
     const sellButton = document.querySelector(".button")
     carsButton.addEventListener("click", () => {
         loginContainer.style.transform = "translateX(-1200px)";
@@ -120,5 +169,13 @@
     closeCars.addEventListener("click", () => {
         loginContainer.style.transform = "translateX(0px)";
         carsContainer.style.transform = "translateX(1200px)"
+    })
+    auctionButton.addEventListener("click", () => {
+        loginContainer.style.transform = "translateX(1200px)";
+        winningContainer.style.transform = "translateX(0px)"
+    })
+    closeWinning.addEventListener("click", () => {
+        loginContainer.style.transform = "translateX(0px)";
+        winningContainer.style.transform = "translateX(-1200px)"
     })
 </script>

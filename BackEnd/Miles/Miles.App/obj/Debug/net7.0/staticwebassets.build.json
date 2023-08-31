@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kCb8cqD4C6kHb9sdmXPh5f/1HoxDmD7erScY0JB6z0Q=",
+  "Hash": "zqmXmnEosqn8E3KRV5PaMpiVVC/H6L8Uhx6FEIan6TQ=",
   "Source": "Miles.App",
   "BasePath": "_content/Miles.App",
   "Mode": "Default",
@@ -1003,23 +1003,6 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\faces\\face9.jpg"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\favicon.ico",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "admin/assets/images/favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\favicon.ico"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\favicon.png",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -1037,23 +1020,6 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo-mini.svg",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "admin/assets/images/logo-mini.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\logo-mini.svg"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo.svg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -1069,6 +1035,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\logo.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo-mini.svg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "admin/assets/images/logo-mini.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\images\\logo-mini.svg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\.DS_Store",
@@ -1462,23 +1445,6 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\lock-screen.html"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login-2.html",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "admin/assets/pages/samples/login-2.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\login-2.html"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login.html",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -1496,12 +1462,12 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\login.html"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register-2.html",
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login-2.html",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
       "BasePath": "_content/Miles.App",
-      "RelativePath": "admin/assets/pages/samples/register-2.html",
+      "RelativePath": "admin/assets/pages/samples/login-2.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1510,7 +1476,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\register-2.html"
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\login-2.html"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register.html",
@@ -1528,6 +1494,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\register.html"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register-2.html",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "admin/assets/pages/samples/register-2.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\pages\\samples\\register-2.html"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\tables\\.DS_Store",
@@ -1700,6 +1683,23 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\vendors\\chart.js\\Chart.min.js"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "admin/assets/vendors/datatables.net/jquery.dataTables.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -1732,23 +1732,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
-    },
-    {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "admin/assets/vendors/datatables.net/jquery.dataTables.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css",
@@ -2839,6 +2822,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\0c5ec224-a2dc-4af9-8f16-b1a9edad6460photo_3_2023-08-24_11-01-47.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1e61ee7a-7624-4400-9913-0d63111ff351photo_1_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/1e61ee7a-7624-4400-9913-0d63111ff351photo_1_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\1e61ee7a-7624-4400-9913-0d63111ff351photo_1_2023-08-24_11-01-47.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1f5834b8-ef41-47dc-9cb0-48e410e087a4photo_3_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/1f5834b8-ef41-47dc-9cb0-48e410e087a4photo_3_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\1f5834b8-ef41-47dc-9cb0-48e410e087a4photo_3_2023-08-24_11-01-47.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\203baeeb-592c-4f70-bd61-c81c29e18e0ecruze2.jpeg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -2890,6 +2907,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\233d55a1-cd77-425c-91fa-2e17533843fbphoto_2023-08-24_11-03-04.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\2426e775-0949-4774-994c-13a2f1542fb0photo_1_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/2426e775-0949-4774-994c-13a2f1542fb0photo_1_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\2426e775-0949-4774-994c-13a2f1542fb0photo_1_2023-08-24_11-01-47.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\28db1d64-49f9-4276-ad8b-dc6b16147f75mers1.jpg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -2905,6 +2939,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\28db1d64-49f9-4276-ad8b-dc6b16147f75mers1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\3b35ff56-aa48-40a5-af6d-d7a1a28c12b0photo_3_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/3b35ff56-aa48-40a5-af6d-d7a1a28c12b0photo_3_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\3b35ff56-aa48-40a5-af6d-d7a1a28c12b0photo_3_2023-08-24_11-01-47.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4a7e6c4b-f6dd-4044-ba0d-bd1dd9e27c98sedan.webp",
@@ -2992,6 +3043,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\59d652ea-5226-44b8-ab45-7b5f8d713f90photo_3_2023-08-24_11-01-47.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\65a0d707-233f-445b-9bc3-10b39f927152cruze.jpeg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -3026,6 +3094,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\67f4829b-a8f1-4613-82e3-a8ae23e8e032honda.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\732b10a3-431a-4d2d-91bf-d3d88211650fphoto_1_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/732b10a3-431a-4d2d-91bf-d3d88211650fphoto_1_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\732b10a3-431a-4d2d-91bf-d3d88211650fphoto_1_2023-08-24_11-01-47.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\73bec832-5f44-491f-8dfd-75f7955d99d4IMG_8338.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/73bec832-5f44-491f-8dfd-75f7955d99d4IMG_8338.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\73bec832-5f44-491f-8dfd-75f7955d99d4IMG_8338.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\79dc46b2-4201-44e3-9a41-5d7dcd25d83aphoto_1_2023-08-24_11-01-47.jpg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -3043,6 +3145,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\79dc46b2-4201-44e3-9a41-5d7dcd25d83aphoto_1_2023-08-24_11-01-47.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\7ba6af4f-7bcf-4800-99e8-71f377d9e65cphoto_3_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/7ba6af4f-7bcf-4800-99e8-71f377d9e65cphoto_3_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\7ba6af4f-7bcf-4800-99e8-71f377d9e65cphoto_3_2023-08-24_11-01-47.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\86fb56a0-30fd-46c4-bf3f-06890e6a78ccphoto_2_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/86fb56a0-30fd-46c4-bf3f-06890e6a78ccphoto_2_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\86fb56a0-30fd-46c4-bf3f-06890e6a78ccphoto_2_2023-08-24_11-01-47.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\87d80796-9a1d-440e-b5dc-f1862bd2a57emers2.jpeg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -3058,6 +3194,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\87d80796-9a1d-440e-b5dc-f1862bd2a57emers2.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\8949b8d5-531b-4dab-ab5a-5c945779f266IMG_8338.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/8949b8d5-531b-4dab-ab5a-5c945779f266IMG_8338.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\8949b8d5-531b-4dab-ab5a-5c945779f266IMG_8338.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\947f5f66-d378-4fae-823e-c0f9cbfe9dbaIMG_8338.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/947f5f66-d378-4fae-823e-c0f9cbfe9dbaIMG_8338.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\947f5f66-d378-4fae-823e-c0f9cbfe9dbaIMG_8338.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\95f9b76c-bae9-4b62-ba3e-800d705f28a4alaska.jpg",
@@ -3111,6 +3281,40 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\9b05b79e-d66c-4580-a0f5-7e46d9da26c9photo_2_2023-08-24_11-01-47.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9bc9d9fe-20f8-49b5-a765-07a8f528f377photo_2_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/9bc9d9fe-20f8-49b5-a765-07a8f528f377photo_2_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\9bc9d9fe-20f8-49b5-a765-07a8f528f377photo_2_2023-08-24_11-01-47.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\aac6d7d8-97c5-4485-bc1b-99054cc8c0dbphoto_1_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/aac6d7d8-97c5-4485-bc1b-99054cc8c0dbphoto_1_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\aac6d7d8-97c5-4485-bc1b-99054cc8c0dbphoto_1_2023-08-24_11-01-47.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ab3c4236-a5ae-4469-9723-d7c9185d8d78mers1.jpg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -3143,6 +3347,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\b1d34adb-a423-4b05-a620-17689d3d0ffaphoto_2_2023-08-24_11-01-47.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\b7ef497d-32fe-4ad1-838e-5e9fe8c01a8dphoto_3_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/b7ef497d-32fe-4ad1-838e-5e9fe8c01a8dphoto_3_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\b7ef497d-32fe-4ad1-838e-5e9fe8c01a8dphoto_3_2023-08-24_11-01-47.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\bb633d75-3297-490c-b238-dfeebcad6843cruze.jpeg",
@@ -3213,6 +3434,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\cae18f37-810f-4500-9bcf-98bef6968610cruze3.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\da4753ac-7ea8-470d-b71d-3d059bdfa6adIMG_8338.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/da4753ac-7ea8-470d-b71d-3d059bdfa6adIMG_8338.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\da4753ac-7ea8-470d-b71d-3d059bdfa6adIMG_8338.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\da6459ee-6a78-4042-adfb-5aa0f3b26443mers2.jpeg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -3228,6 +3466,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Cars\\da6459ee-6a78-4042-adfb-5aa0f3b26443mers2.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e7c6007f-a052-4b83-a8e4-c7ab24d3e022photo_2_2023-08-24_11-01-47.jpg",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Cars/e7c6007f-a052-4b83-a8e4-c7ab24d3e022photo_2_2023-08-24_11-01-47.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Cars\\e7c6007f-a052-4b83-a8e4-c7ab24d3e022photo_2_2023-08-24_11-01-47.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e9c5bc47-b007-441b-b93a-d3a7edd5435aphoto_1_2023-08-24_11-01-47.jpg",
@@ -3519,23 +3774,6 @@
       "OriginalItemSpec": "wwwroot\\Images\\Document_files\\home.js.download"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo_white.png",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Images/Document_files/logo_white.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Document_files\\logo_white.png"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo.png",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -3551,6 +3789,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Document_files\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo_white.png",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Images/Document_files/logo_white.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Document_files\\logo_white.png"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\main.css",
@@ -4556,23 +4811,6 @@
       "OriginalItemSpec": "wwwroot\\Scss\\pages\\_about.scss"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog-detail.scss",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Scss/pages/_blog-detail.scss",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Scss\\pages\\_blog-detail.scss"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog.scss",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -4588,6 +4826,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Scss\\pages\\_blog.scss"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog-detail.scss",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Scss/pages/_blog-detail.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Scss\\pages\\_blog-detail.scss"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_contact.scss",
@@ -4658,23 +4913,6 @@
       "OriginalItemSpec": "wwwroot\\Scss\\pages\\_service.scss"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop-detail.scss",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Scss/pages/_shop-detail.scss",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Scss\\pages\\_shop-detail.scss"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop.scss",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -4690,6 +4928,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Scss\\pages\\_shop.scss"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop-detail.scss",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Scss/pages/_shop-detail.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Scss\\pages\\_shop-detail.scss"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_colors.scss",

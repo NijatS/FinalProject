@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Miles.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,11 @@ namespace Miles.Service.Dtos.Cars
         public string Description { get; set; }
         public string? AppUserId { get; set; }
         public int BanId { get; set; }
-		public DateTime ActionDate { get; set; }
+        public double AuctionWinPrice { get; set; }
+        public string? WinnerId { get; set; }
+        public int StatusId { get; set; }
+        public DateTime WinDate { get; set; }
+        public DateTime ActionDate { get; set; }
 		public List<IFormFile>? FormFiles { get; set; }
     }
 }

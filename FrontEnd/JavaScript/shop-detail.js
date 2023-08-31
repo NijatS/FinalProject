@@ -162,8 +162,8 @@ function timeCalculate() {
 }
 const enquiry = document.querySelector(".enquiry");
 const circle = document.querySelector(".circle");
-const TIME_LIMIT = 20;
-let timePassed = 10;
+const TIME_LIMIT = 10;
+let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 
