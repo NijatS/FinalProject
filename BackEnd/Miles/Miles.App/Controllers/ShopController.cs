@@ -28,8 +28,9 @@ namespace Miles.App.Controllers
         private readonly ICommentService _commentService;
         private readonly IBidService _bidService;
         private readonly IAuctionService _auctionService;
+        private readonly IEmailService _emailService;
 
-        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService, IAuctionService auctionService)
+        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService, IAuctionService auctionService, IEmailService emailService)
         {
             _carService = carService;
             _brandService = brandService;
@@ -40,6 +41,7 @@ namespace Miles.App.Controllers
             _commentService = commentService;
             _bidService = bidService;
             _auctionService = auctionService;
+            _emailService = emailService;
         }
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
@@ -215,6 +217,17 @@ namespace Miles.App.Controllers
             dto.StatusId = 4;
             dto.WinnerId = bid.AppUserId;
             result = await _carService.UpdateAsync(carId, dto);
+            if (result.StatusCode == 200)
+            {
+                 result = await _accountService.GetUserById(dto.WinnerId);
+                AppUser winner =(AppUser)result.items;
+                await _emailService.SendMail("nicatsoltanli03@gmail.com", winner.Email,
+                    "Auction Winner", "Congratulation.You Win " +dto.Vin +" Car.Please wait owner Report.", null, winner.Name + " " + winner.Surname);
+                result = await _accountService.GetUserById(dto.AppUserId);
+                AppUser owner = (AppUser)result.items;
+                await _emailService.SendMail("nicatsoltanli03@gmail.com", owner.Email,
+                    "About Auction", "Your " + dto.Vin + " Car auction ended.Please look at results", null, owner.Name + " " + owner.Surname);
+            }
             return Json("Ok");
         }
     }

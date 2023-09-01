@@ -87,6 +87,8 @@ namespace Miles.App.Controllers
             InfoVM info = (InfoVM)result.items;
             result = await _carService.GetAllAsync(0, 0, x => x.AppUserId == info.AppUser.Id && !x.IsDeleted);
             info.Cars = (IEnumerable<Car>)result.items;
+            result = await _carService.GetAllAsync(0,0,x=>x.WinnerId==info.AppUser.Id && !x.IsDeleted);
+            info.AuctionCars = (IEnumerable<Car>)result.items;
             return View(info);
 
         }

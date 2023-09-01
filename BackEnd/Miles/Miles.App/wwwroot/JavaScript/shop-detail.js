@@ -347,7 +347,6 @@ function onTimesUp() {
                 fetch(href)
                     .then(x => x.json())
                     .then(x => {
-                        console.log(x)
                         if (x.winnerId === "null" && j === 0 && x.statusId ==2) {
                             j++;
                             href = `/shop/SellCar?carId=${carId}`;

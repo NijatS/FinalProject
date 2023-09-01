@@ -4703,7 +4703,9 @@ img {
     overflow: auto;
     transform: translateX(1200px);
     position: absolute;
+    width: 100%;
 }
+
 .winning-container-info {
     transform: translateX(-1200px);
     width:100%;
@@ -5024,7 +5026,7 @@ img {
         justify-content: center;
     }
 
-    .buttonBuy .button-wrapper, .text, .icon {
+    .buttonBuy .button-wrapper, .buttonBuy .text, .buttonBuy .icon {
         overflow: hidden;
         position: absolute;
         width: 100%;
@@ -5037,7 +5039,7 @@ img {
         top: 0
     }
 
-    .buttonBuy .text, .icon {
+    .buttonBuy .text, .buttonBuy .icon {
         transition: top 0.5s;
     }
 
@@ -5078,3 +5080,6 @@ img {
         .buttonBuy:hover:before {
             bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
         }
+.default-btn{
+    width:100%;
+}

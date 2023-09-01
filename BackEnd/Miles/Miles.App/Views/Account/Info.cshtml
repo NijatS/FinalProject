@@ -111,7 +111,7 @@
                             <h2>Winning</h2>
                             <button class="button-55" role="button">Exit</button>
                             <div class="cars">
-                                  @foreach (var item in Model.Cars)
+                                  @foreach (var item in Model.AuctionCars)
                                 {
                                 <div class="car">
                                 @foreach (var photo in item.CarImages.Where(x => x.isMain && !x.IsDeleted))
@@ -127,7 +127,7 @@
                                 <div class="status">
                                 <h4>Status : @item.Status.Name </h4>
                                 <p>Auction Winner : Soltanov Nijat</p>
-                                <div class="buttons">
+                                <a  class="buttons">
                                                 @if(item.StatusId == 3)
                                                 {
                                                     <div data-tooltip="Price:$@item.AuctionWinPrice.ToString("#,##0")" class="buttonBuy">
@@ -141,7 +141,7 @@
                                                         </div>
                                                     </div>
                                                 }
-                                </div>
+                                </a>
                                 </div>
                                 </div>
                                 }

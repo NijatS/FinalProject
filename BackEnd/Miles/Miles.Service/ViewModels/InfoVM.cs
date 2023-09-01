@@ -10,6 +10,7 @@ namespace Miles.Service.ViewModels
     public class InfoVM
     {
         public IEnumerable<Car> Cars { get; set; }
+        public IEnumerable<Car> AuctionCars { get; set; }
         public AppUser AppUser { get; set; }
     }
 }

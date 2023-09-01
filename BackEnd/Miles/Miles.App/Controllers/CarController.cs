@@ -18,9 +18,9 @@ namespace Miles.App.Controllers
 		private readonly IBrandService _brandService;
 		private readonly IAccountService _accountService;
         private readonly ICarImageService _carImageService;
+        private readonly IEmailService _emailService;
 
-
-        public CarController(ICarService service, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService)
+        public CarController(ICarService service, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService, IEmailService emailService)
         {
             _service = service;
             _fuelService = fuelService;
@@ -30,6 +30,7 @@ namespace Miles.App.Controllers
             _brandService = brandService;
             _accountService = accountService;
             _carImageService = carImageService;
+            _emailService = emailService;
         }
         [Authorize]
 		[HttpGet]
@@ -206,13 +207,19 @@ namespace Miles.App.Controllers
                 return NotFound();
 
             }
+            result = await _accountService.GetUserById(dto.WinnerId);
+            AppUser winner = (AppUser)result.items;
             if (status)
             {
+                await _emailService.SendMail("nicatsoltanli03@gmail.com", winner.Email,
+                    "Owner Report", "Congratulation.You Win " + dto.Vin + " Car.", null, winner.Name + " " + winner.Surname);
                 dto.StatusId = 3;
 
             }
             else
             {
+                await _emailService.SendMail("nicatsoltanli03@gmail.com", winner.Email,
+                    "Owner Report", "Unfortunately." + dto.Vin + " Owner canceled auction result", null, winner.Name + " " + winner.Surname);
                 dto.StatusId = 5;
             }
             await _service.UpdateAsync(carId, dto);
