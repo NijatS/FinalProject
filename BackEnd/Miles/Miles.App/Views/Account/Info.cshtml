@@ -88,18 +88,21 @@
                                             <h4>Status : @item.Status.Name </h4>
                                             <p>Auction Winner : Soltanov Nijat</p>
                                             <div class="buttons">
+                                                @if (item.StatusId == 4)
+                                                {
                                                 <a asp-action="SellCar" asp-controller="car" asp-route-carId="@item.Id" asp-route-userId="@Model.AppUser.Id" asp-route-status="true" class="button-85" role="button">Sell</a>
                                                 <a asp-action="SellCar" asp-controller="car" asp-route-carId="@item.Id" asp-route-userId="@Model.AppUser.Id" asp-route-status="false" class="button-85" role="button">Cancel</a>
+                                                }
                                             </div>
                                         </div>
                                         <div class="upde">
-                                            <a asp-action="update" asp-controller="car" asp-route-id="@item.Id">
-                                                <i class="fas fa-edit "></i>
-                                            </a>
-                                            <a onclick="if(!confirm('Are you sure?')){return false;}" class=" delete-item" 
-                                              asp-action="remove" asp-controller="car" asp-route-id="@item.Id">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
+                                                <a asp-action="update" asp-controller="car" asp-route-id="@item.Id">
+                                                    <i class="fas fa-edit "></i>
+                                                </a>
+                                                <a onclick="if(!confirm('Are you sure?')){return false;}" class=" delete-item" 
+                                                asp-action="remove" asp-controller="car" asp-route-id="@item.Id">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
                                         </div>
                                     </div>
                                 }
@@ -128,7 +131,7 @@
                                 <h4>Status : @item.Status.Name </h4>
                                 <p>Auction Winner : Soltanov Nijat</p>
                                 <a  class="buttons">
-                                                @if(item.StatusId == 3)
+                                                @if(item.StatusId == 6)
                                                 {
                                                     <div data-tooltip="Price:$@item.AuctionWinPrice.ToString("#,##0")" class="buttonBuy">
                                                         <div class="button-wrapper">

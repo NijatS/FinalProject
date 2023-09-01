@@ -19,8 +19,8 @@ namespace Miles.App.Controllers
 		private readonly IAccountService _accountService;
         private readonly ICarImageService _carImageService;
         private readonly IEmailService _emailService;
-
-        public CarController(ICarService service, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService, IEmailService emailService)
+        private readonly IModelService _modelService;
+        public CarController(ICarService service, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService, IEmailService emailService, IModelService modelService)
         {
             _service = service;
             _fuelService = fuelService;
@@ -31,6 +31,7 @@ namespace Miles.App.Controllers
             _accountService = accountService;
             _carImageService = carImageService;
             _emailService = emailService;
+            _modelService = modelService;
         }
         [Authorize]
 		[HttpGet]
@@ -213,7 +214,7 @@ namespace Miles.App.Controllers
             {
                 await _emailService.SendMail("nicatsoltanli03@gmail.com", winner.Email,
                     "Owner Report", "Congratulation.You Win " + dto.Vin + " Car.", null, winner.Name + " " + winner.Surname);
-                dto.StatusId = 3;
+                dto.StatusId = 6;
 
             }
             else
@@ -224,6 +225,11 @@ namespace Miles.App.Controllers
             }
             await _service.UpdateAsync(carId, dto);
             return RedirectToAction("info", "account");
+        }
+        public async Task<IActionResult> GetAllModel()
+        {
+            var result = await _modelService.GetAllAsync(0, 0);
+            return Json(result.items);
         }
     }
 }

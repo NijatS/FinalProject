@@ -28,8 +28,9 @@ namespace Miles.Service.Services.Implementations
 		private readonly IHttpContextAccessor _http;
         private readonly IAccountService _accountService;
         private readonly ICarImageService _carImageService;
+        private readonly IMessageRepository _messageRepository;
 
-        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService, ICarImageService carImageService)
+        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService, ICarImageService carImageService, IMessageRepository messageRepository)
         {
             _repository = repository;
             _mapper = mapper;
@@ -38,6 +39,7 @@ namespace Miles.Service.Services.Implementations
             _blogRepository = blogRepository;
             _accountService = accountService;
             _carImageService = carImageService;
+            _messageRepository = messageRepository;
         }
 
         public async Task<ApiResponse> CreateAsync(SettingPostDto dto)
@@ -159,8 +161,9 @@ namespace Miles.Service.Services.Implementations
                 Setting = await _repository
                          .GetAsync(x => !x.IsDeleted, "Socials"),
                 Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0,"Comments").Result.ToListAsync(),
-                CarImages =(IEnumerable<CarImage>)result.items
-                
+                CarImages =(IEnumerable<CarImage>)result.items,
+                Messages = await _messageRepository.GetAllAsync(x => !x.IsDeleted && x.Address != "For dealer", 0, 0).Result.ToListAsync(),
+
             };
             if (_http.HttpContext.User.Identity.IsAuthenticated)
             {

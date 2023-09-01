@@ -25,9 +25,14 @@ namespace Miles.App.Areas.Admin.Controllers
             _evn = evn;
             _countryService = countryService;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
-            var result = await _service.GetAllAdmin();
+            var result = await _service.GetAllAdmin(0, 0);
+            int TotalCount = ((IEnumerable<AppUser>)result.items).Count();
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
+            ViewBag.CurrentPage = page;
+            int count = 5;
+            result = await _service.GetAllUsers(count, page);
             List<AppUser> admins = (List<AppUser>)result.items;
             return View(admins);
         }
@@ -64,7 +69,7 @@ namespace Miles.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(string id)
         {
             var resultCountry = await _countryService.GetAllAsync(0, 0);
-            var result = await _service.GetAllAdmin();
+            var result = await _service.GetAllAdmin(0,0);
             ViewBag.Countries = resultCountry.items;
             List<AppUser> admins = (List<AppUser>)result.items;
 

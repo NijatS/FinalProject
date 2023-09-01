@@ -22,8 +22,8 @@ namespace Miles.Service.Services.Interfaces
         public Task<ApiResponse> GetUser();
         public Task<ApiResponse> Create(AppUser user, string password, bool isAdmin);
         public Task<ApiResponse> Update(UpdateDto dto, AppUser? updated);
-        public Task<ApiResponse> GetAllUsers();
-        public Task<ApiResponse> GetAllAdmin();
+        public Task<ApiResponse> GetAllUsers(int count, int page);
+        public Task<ApiResponse> GetAllAdmin(int count, int page);
         public Task<ApiResponse> GetUserById(string id);
         public Task<ApiResponse> Remove(string id);
 

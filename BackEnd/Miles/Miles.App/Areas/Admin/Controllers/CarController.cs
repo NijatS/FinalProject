@@ -54,7 +54,7 @@ namespace Miles.App.Areas.Admin.Controllers
             var resultColor = await _colorService.GetAllAsync(0, 0);
             var resultCountry = await _countryService.GetAllAsync(0, 0);
 			var resultBrand = await _brandService.GetAllAsync(0, 0);
-			var resultAccount = await _accountService.GetAllUsers();
+			var resultAccount = await _accountService.GetAllUsers(0, 0);
 			ViewBag.Users = resultAccount.items;
 			ViewBag.Fuels = resultFuel.items;
             ViewBag.Bans = resultBan.items;
@@ -72,7 +72,7 @@ namespace Miles.App.Areas.Admin.Controllers
 			var resultColor = await _colorService.GetAllAsync(0, 0);
 			var resultCountry = await _countryService.GetAllAsync(0, 0);
 			var resultBrand = await _brandService.GetAllAsync(0, 0);
-			var resultAccount = await _accountService.GetAllUsers();
+			var resultAccount = await _accountService.GetAllUsers(0,0);
 			ViewBag.Users = resultAccount.items;
 			ViewBag.Fuels = resultFuel.items;
 			ViewBag.Bans = resultBan.items;
@@ -99,7 +99,7 @@ namespace Miles.App.Areas.Admin.Controllers
             var resultColor = await _colorService.GetAllAsync(0, 0);
             var resultCountry = await _countryService.GetAllAsync(0, 0);
             var resultBrand = await _brandService.GetAllAsync(0, 0);
-            var resultAccount = await _accountService.GetAllUsers();
+            var resultAccount = await _accountService.GetAllUsers(0,0);
             var resultImage = await _carImageService.GetAllAsync(0, 0,x=>x.CarId==id&& !x.IsDeleted);
             ViewBag.Users = resultAccount.items;
             ViewBag.Fuels = resultFuel.items;
@@ -124,7 +124,7 @@ namespace Miles.App.Areas.Admin.Controllers
 			var resultColor = await _colorService.GetAllAsync(0, 0);
 			var resultCountry = await _countryService.GetAllAsync(0, 0);
 			var resultBrand = await _brandService.GetAllAsync(0, 0);
-			var resultAccount = await _accountService.GetAllUsers();
+			var resultAccount = await _accountService.GetAllUsers(0, 0);
 			var resultImage = await _carImageService.GetAllAsync(0, 0, x => x.CarId == id && !x.IsDeleted);
 			ViewBag.Users = resultAccount.items;
 			ViewBag.Fuels = resultFuel.items;

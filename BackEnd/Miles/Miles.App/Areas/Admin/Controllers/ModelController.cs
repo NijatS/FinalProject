@@ -32,11 +32,6 @@ namespace Miles.App.Areas.Admin.Controllers
            var result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
-		public async Task<IActionResult> GetAll()
-		{
-			var result = await _service.GetAllAsync(0, 0);
-			return Json(result.items);
-		}
 		[HttpGet]
         public async Task<IActionResult> Create()
         {

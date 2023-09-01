@@ -17,17 +17,20 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IAccountService _service;
         private readonly IWebHostEnvironment _evn;
         private readonly ICountryService _countryService;
- 
-
         public UserController(IAccountService service, IWebHostEnvironment evn, ICountryService countryService)
         {
             _service = service;
             _evn = evn;
             _countryService = countryService;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
-            var result = await _service.GetAllUsers();
+            var result = await _service.GetAllUsers(0,0);
+            int TotalCount = ((IEnumerable<AppUser>)result.items).Count();
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
+            ViewBag.CurrentPage = page;
+            int count = 5;
+            result = await _service.GetAllUsers(count,page);
             List<AppUser> users = (List<AppUser>)result.items;
             return View(users);
         }

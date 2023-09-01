@@ -7,7 +7,7 @@
 	let currentYear = new Date().getFullYear();
 	let earliestYear = 2000;
 	let brand = null;
-	let href = `/admin/model/GetAll`;
+let href = `/car/GetAllModel`;
 	fetch(href)
 		.then(x => x.json())
 		.then(x => {

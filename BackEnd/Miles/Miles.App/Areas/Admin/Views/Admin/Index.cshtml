@@ -32,6 +32,21 @@
             }
         </tbody>
     </table>
+    <ul class="pagination">
+        <li><a class=" page-link" asp-controller="admin" asp-action="index" asp-route-page="1">«</a></li>
+        @for (int i = 1; i <= ViewBag.TotalPage; i++)
+        {
+            @if (i == ViewBag.CurrentPage)
+            {
+                <li class="page-item active"><a class=" page-link" asp-controller="admin" asp-action="index" asp-route-page="@i">@i</a></li>
+            }
+            else
+            {
+                <li class="page-item"><a class=" page-link" asp-controller="admin" asp-action="index" asp-route-page="@i">@i</a></li>
+            }
+        }
+        <li><a class="page-link" asp-controller="admin" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+    </ul>
     <div>
         <a asp-controller="admin" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%" a>
             <div style="width:100%; " class="btn btn-outline-success">Create Admin </div></a>

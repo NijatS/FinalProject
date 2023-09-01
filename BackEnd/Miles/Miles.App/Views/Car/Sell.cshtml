@@ -161,7 +161,8 @@
 	let dateDropdown = document.getElementById('date-dropdown');
 	let currentYear = new Date().getFullYear();
 	let earliestYear = 2000;
-	let href = `/admin/model/GetAll`;
+	let href = `/car/GetAllModel`;
+
 	fetch(href)
 		.then(x => x.json())
 		.then(x => {

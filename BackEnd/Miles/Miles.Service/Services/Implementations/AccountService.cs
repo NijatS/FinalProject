@@ -323,15 +323,28 @@ namespace Miles.Service.Services.Implementations
                 StatusCode = 203
             };
         }
-        public async Task<ApiResponse> GetAllUsers()
+        public async Task<ApiResponse> GetAllUsers(int count,int page)
         {
 
             List<AppUser> users = new List<AppUser>();
-            foreach(var user in await _userManager.Users.Include(x=>x.Country).ToListAsync())
+            if (count != 0 && page != 0)
             {
-                if(await _userManager.IsInRoleAsync(user, "User"))
+                foreach (var user in await _userManager.Users.Include(x => x.Country).Skip((page - 1) * count).Take(count).ToListAsync())
                 {
-                    users.Add(user);
+                    if (await _userManager.IsInRoleAsync(user, "User"))
+                    {
+                        users.Add(user);
+                    }
+                }
+            }
+            else
+            {
+                foreach (var user in await _userManager.Users.Include(x => x.Country).ToListAsync())
+                {
+                    if (await _userManager.IsInRoleAsync(user, "User"))
+                    {
+                        users.Add(user);
+                    }
                 }
             }
             return new ApiResponse
@@ -356,9 +369,18 @@ namespace Miles.Service.Services.Implementations
                 items = appUser
             };
         }
-        public async Task<ApiResponse> GetAllAdmin()
+        public async Task<ApiResponse> GetAllAdmin(int count, int page)
         {
-            var users = _userManager.Users;
+            var users = new List<AppUser>();
+            if (count != 0)
+            {
+                users = await _userManager.Users.Skip((page - 1) * count).Take(count).ToListAsync();
+            }
+            else
+            {
+                users = await _userManager.Users.ToListAsync();
+
+            }
             List<AppUser> admins = new List<AppUser>();
             foreach (var user in users)
             {

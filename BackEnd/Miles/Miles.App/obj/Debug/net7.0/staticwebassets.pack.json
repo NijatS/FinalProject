@@ -465,6 +465,10 @@
       "PackagePath": "staticwebassets\\Images\\Sliders\\042c7a2c-3da4-44ec-9665-cd40f755e0e2download.jpg"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg"
     },
@@ -1043,6 +1047,10 @@
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\off-canvas.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\off-canvas.js"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\sidebar.js",
+      "PackagePath": "staticwebassets\\admin\\assets\\js\\sidebar.js"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\tabs.js",

@@ -4892,7 +4892,7 @@ img {
     .button-55:focus {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
     }
-.button {
+.cars-text .button {
     position: relative;
     width: 120px;
     height: 40px;
@@ -4910,13 +4910,12 @@ img {
     position: absolute;
     top: 15px;
     left: 15px;
-
 }
-    .button a {
-        color: white;
-    }
+.cars-text .button a {
+    color: white;
+}
 
-.button::before {
+.cars-text .button::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -4932,25 +4931,25 @@ img {
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.button::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
-    transform: translate3d(0, 0, 0) scale(0.95);
-    filter: blur(20px);
-}
+    .cars-text .button::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+        transform: translate3d(0, 0, 0) scale(0.95);
+        filter: blur(20px);
+    }
 
-.button:hover::after {
-    filter: blur(30px);
-}
+    .cars-text .button:hover::after {
+        filter: blur(30px);
+    }
 
-    .button:hover::before {
+    .cars-text .button:hover::before {
         transform: rotate(-180deg);
     }
 
-    .button:active::before {
+    .cars-text .button:active::before {
         scale: 0.7;
     }
 .sell-container {
