@@ -43,7 +43,10 @@
                                 </div>
                                 <div>
                                     <span class="text text-danger" asp-validation-for="Password"></span>
+                                    <div id="passwordInput">
                                     <input asp-for="Password" type="password" placeholder="Password" />
+                                    <i id="passwordShow" class="fa fa-eye" aria-hidden="true"></i>
+                                    </div>
                                 </div>
 
                                 <div class="button-box">
@@ -64,3 +67,4 @@
         </div>
     </section>
 </div>
+<script src="~/JavaScript/login.js"></script>

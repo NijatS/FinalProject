@@ -1005,7 +1005,7 @@ img {
 }
 
 .section {
-  padding: 70px 0;
+  padding: 70px 0 !important;
 }
 
 .slider img:first-child {
@@ -5082,3 +5082,23 @@ img {
 .default-btn{
     width:100%;
 }
+#passwordInput {
+    position:relative
+}
+#passwordShow {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+    transform: translateY(-50%);
+}
+.sample-slider {
+    width: 70%;
+}
+
+    .sample-slider img {
+        width: 80%;
+    }
+
+    .sample-slider .swiper-wrapper {
+        transition-timing-function: linear;
+    }

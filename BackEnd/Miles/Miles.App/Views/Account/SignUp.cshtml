@@ -31,7 +31,7 @@
                 <div class="col-md-6 text-center">
                     <div class="register-container">
                         <div class="register-text">
-                            <h2>regitser</h2>
+                            <h2>register</h2>
                             <span>Please register using account detail bellow.</span>
                         </div>
                         <div class="register-form">
@@ -54,9 +54,8 @@
                                 <input asp-for="file"
                                        placeholder="Photo"  style="height:max-content;padding:0;"/>
                                 <div class="form-group">
-                                    <label asp-for="CountryId">Country</label>
                                     <select asp-for="CountryId" class="form-select" aria-label="Default select example">
-                                        <option selected value="0">Select one of them</option>
+                                        <option selected value="0">Select one of Countries</option>
                                         @foreach (var item in ViewBag.Countries)
                                         {
                                             <option value="@item.Id" style="background-image:url(~/Images/Countries/@item.FlagImage);">@item.Name</option>
@@ -64,14 +63,9 @@
                                     </select>
                                     <span asp-validation-for="CountryId" class="text text-danger"></span>
                                 </div>
-                             @*    <select name="">
-                                    <option value="0">Select of them</option>
-                                    <option value="">Buyer</option>
-                                    <option value="">Seller</option>
-                                </select> *@
                                 <div class="button-box">
                                     <div class="register-toggle-btn">
-                                        <a href="#">Forgot Password?</a>
+                                        <a asp-action ="forgetpassword" asp-controller="account">Forgot Password?</a>
                                     </div>
                                     <button type="submit" class="default-btn">
                                         Register

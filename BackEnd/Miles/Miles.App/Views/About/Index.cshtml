@@ -173,32 +173,16 @@
             </div>
         </div>
     </section>
-    <section class="clients section">
-        <div class="kc-row-container">
-            <div class="kc-wrap-columns">
-                <div class="client-column col-sm-12">
-                    <div>
-                        <div class="brands">
-                            <div class="carusel-outher">
-                                <div class="carusel">
-                                    @foreach (var item in Model.Associates)
-                                    {
-                                        <div class="carusel-item">
-                                            <div class="item">
-                                                <img src="~/Images/Associates/@item.Image"
-                                                     style="width:100%;height:100%;"
-                                                     alt="" />
-                                            </div>
-                                        </div>
-                                    }
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="swiper sample-slider section">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model.Associates)
+            {
+                <div class="swiper-slide"><img src="./Images/Associates/@item.Image" style="height:150px"></div>
+            }
+
         </div>
-    </section>
+    </div>
 </div>
 <script src="~/JavaScript/about.js"></script>
-@* <script src="~/JavaScript/home.js"></script> *@
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="~/JavaScript/swipper.js"></script>
