@@ -41,7 +41,7 @@ namespace Miles.App.Controllers
             _commentService = commentService;
             _bidService = bidService;
             _auctionService = auctionService;
-            _emailService = emailService;
+            _emailService = emailService;      
         }
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
@@ -230,5 +230,6 @@ namespace Miles.App.Controllers
             }
             return Json("Ok");
         }
+      
     }
 }

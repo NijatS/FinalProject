@@ -19,6 +19,6 @@ namespace Miles.Core.Entities
         public List<Comment>? Comments { get; set; }
         public List<Car> Cars { get; set; }
         public List<Bid> Bids { get; set; }
-
+        public List<Book> Book { get; set; }
     }
 }

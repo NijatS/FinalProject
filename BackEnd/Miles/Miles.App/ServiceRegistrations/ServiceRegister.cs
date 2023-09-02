@@ -42,8 +42,10 @@ namespace Miles.App.ServiceRegistrations
 			services.AddScoped<ICategoryService, CategoryService>();
 			services.AddScoped<ITagRepository, TagRepository>();
 			services.AddScoped<ITagService, TagService>();
-			services.AddScoped<IBlogRepository, BlogRepository>();
-			services.AddScoped<IBlogService, BlogService>();
+			services.AddScoped<IBookRepository, BookRepository>();
+			services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<IColorRepository, ColorRepository>();
             services.AddScoped<IColorService, ColorService>();
             services.AddScoped<IMessageRepository, MessageRepository>();
@@ -98,7 +100,8 @@ namespace Miles.App.ServiceRegistrations
             services.AddScoped<IAboutSkillService, AboutSkillService>();
 			services.AddScoped<IRepository<BlogCategory>, Repository<BlogCategory>>();
 			services.AddScoped<IRepository<BlogTag>, Repository<BlogTag>>();
-			services.AddHttpContextAccessor();
+            services.AddTransient<IBraintreeService, BraintreeService>();   
+            services.AddHttpContextAccessor();
 
 			services.AddControllers().AddJsonOptions(x =>
 							x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);

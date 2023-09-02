@@ -44,6 +44,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Braintree": {
+              "target": "Package",
+              "version": "[5.19.0, )"
+            },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.7.1, )"
@@ -273,6 +277,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Braintree": {
+              "target": "Package",
+              "version": "[5.19.0, )"
             },
             "FluentValidation": {
               "target": "Package",

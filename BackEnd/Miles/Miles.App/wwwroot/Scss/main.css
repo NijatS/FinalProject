@@ -4726,8 +4726,8 @@ img {
     }
         .cars-container-info .cars-text .cars, .winning-container-info .cars-text .cars {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
             width: 100%;
         }
             .cars-container-info .cars-text .cars .car, .winning-container-info .cars-text .cars .car {
@@ -4749,8 +4749,9 @@ img {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    height: 70px;
+                    height: 80px;
                     width: 40%;
+                    
                 }
                     .cars-container-info .cars-text .cars .car .info h4, .winning-container-info .cars-text .cars .car .info h4 {
                         overflow: hidden;
@@ -4765,14 +4766,16 @@ img {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    height: 70px;
+                    height: 80px;
+                }
+                .cars-container-info .cars-text .cars .car .status {
+                    width: 40%;
                 }
                 .cars-container-info .cars-text .cars .car .status, .winning-container-info .cars-text .cars .car .status {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    height: 70px;
-                    width:40%;
+                    height: 80px;
                 }
                     .cars-container-info .cars-text .cars .car .status .buttons, .winning-container-info .cars-text .cars .car .status .buttons {
                         display: flex;
@@ -4790,6 +4793,20 @@ img {
                         overflow: hidden;
                         white-space: nowrap;
                     }
+@media screen and (max-width: 510px) {
+    .cars-container-info .cars-text .cars .car .info, .winning-container-info .cars-text .cars .car .info,
+    .cars-container-info .cars-text .cars .car .status, .winning-container-info .cars-text .cars .car .status {
+        font-size: 10px;
+        height: 100px;
+        width: 20%;
+    }
+    .cars-container-info .cars-text .cars .car, .winning-container-info .cars-text .cars .car{
+        justify-content:center
+    }
+        .cars-container-info .cars-text .cars .car .info p, .winning-container-info .cars-text .cars .car .info p {
+          font-size:10px;
+        }
+}
 .button-85 {
     padding: 0 2em;
     border: none;

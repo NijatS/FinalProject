@@ -681,6 +681,10 @@
       "PackagePath": "staticwebassets\\JavaScript\\swipper.js"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\test.js",
+      "PackagePath": "staticwebassets\\JavaScript\\test.js"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_reset.scss",
       "PackagePath": "staticwebassets\\Scss\\base\\_reset.scss"
     },
