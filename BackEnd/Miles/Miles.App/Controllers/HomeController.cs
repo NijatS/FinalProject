@@ -4,9 +4,13 @@ using Miles.Core.Entities;
 using Miles.Service.Dtos.Subscribes;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
+using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using System.Text;
 using System.Text.RegularExpressions;
-
+using static System.Net.Mime.MediaTypeNames;
+using static System.Net.WebRequestMethods;
 namespace Miles.App.Controllers
 {
     public class HomeController : Controller
@@ -62,6 +66,37 @@ namespace Miles.App.Controllers
             }
             TempData["Verify"] = "Added succesfully";
             return RedirectToAction(nameof(Index));
+        }
+
+        private static HttpClient Http = new HttpClient();
+
+        public async Task<IActionResult> SendMessageBot(string message)
+        {
+            Http = new HttpClient();
+            string response = null;
+
+            // Replace [INSERT_YOUR_OWN_API_KEY] with a valid OpenAI API key
+            var apiKey = "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";
+            Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+
+            // JSON content for the API call
+            var jsonContent = new
+            {
+                prompt = message,
+                model = "text-davinci-003",
+                max_tokens = 1000
+            };
+
+            // Make the API call
+            var responseContent = await Http.PostAsync("https://api.openai.com/v1/completions", new StringContent(JsonConvert.SerializeObject(jsonContent), Encoding.UTF8, "application/json"));
+
+            // Read the response as a string
+            var resContext = await responseContent.Content.ReadAsStringAsync();
+
+            // Deserialize the response into a dynamic object
+            var data = JsonConvert.DeserializeObject<dynamic>(resContext);
+            response = data.choices[0].text.ToString();
+            return Json(response);
         }
     }
 }

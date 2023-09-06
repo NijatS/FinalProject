@@ -1,6 +1,7 @@
 ﻿@model ServiceVM
 @{
     string userId = null;
+    int i = 0;
     if (User.Identity.IsAuthenticated)
     {
        userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
@@ -74,48 +75,48 @@
                             <div class="facts-column-inner">
                                 <div>
                                     <div class="fact-item">
-                                        <i class="fa fa-thumbs-o-up"></i>
+                                        <i class="fa fa-user"></i>
                                         <div>
                                             <span class="fact-count artim"
-                                                  aria-valuenow="25150"></span>
+                                                  aria-valuenow="@Model.AppUsers.Count()"></span>
                                         </div>
-                                        <span class="fact-mean">Lines of code</span>
+                                        <span class="fact-mean">Users in the Site</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="facts-column-inner">
                                 <div>
                                     <div class="fact-item">
-                                        <i class="fa fa-thumbs-o-up"></i>
+                                        <i class="fa fa-car"></i>
                                         <div>
                                             <span class="fact-count"
-                                                  aria-valuenow="35150"></span>
+                                                  aria-valuenow="@Model.Cars.Where(x=>!x.IsDeleted && x.StatusId==2)?.Count()"></span>
                                         </div>
-                                        <span class="fact-mean">Lines of code</span>
+                                        <span class="fact-mean">Cars in Auction</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="facts-column-inner">
                                 <div>
                                     <div class="fact-item">
-                                        <i class="fa fa-thumbs-o-up"></i>
+                                        <i class="fa fa-usd"></i>
                                         <div>
                                             <span class="fact-count"
-                                                  aria-valuenow="15150"></span>
+                                                  aria-valuenow="@Model.Cars.Where(x=>!x.IsDeleted && x.StatusId==3)?.Count()"></span>
                                         </div>
-                                        <span class="fact-mean">Lines of code</span>
+                                        <span class="fact-mean">The Winning Cars</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="facts-column-inner">
                                 <div>
                                     <div class="fact-item">
-                                        <i class="fa fa-thumbs-o-up"></i>
+                                        <i class="fa fa-gavel"></i>
                                         <div>
                                             <span class="fact-count"
-                                                  aria-valuenow="30150"></span>
+                                                  aria-valuenow="@Model.Bids.Where(x=>!x.IsDeleted)?.Count()"></span>
                                         </div>
-                                        <span class="fact-mean">Lines of code</span>
+                                        <span class="fact-mean">Bids in Auction</span>
                                     </div>
                                 </div>
                             </div>
@@ -176,10 +177,21 @@
                                                 }
                                         </ul>
                                         <div class="signup-button">
-                                                @if (User.Identity.IsAuthenticated)
+                                                @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
                                                 {
+                                                    if (i == 0){
+                                                        <a asp-action="info" asp-controller="account">Default</a>
+                                                    }
+                                                    else
+                                                    {
                                                     <a asp-action="UpdateUser" asp-controller="payment" asp-route-pricingId="@item.Id" asp-route-amount="@item.Price"
-                                                       asp-route-userId="@userId">Update User</a>
+                                                        asp-route-userId="@userId">Update User</a>
+                                                    }
+                                                    i++;
+                                                }
+                                                else if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+                                                {
+                                                    <a asp-action="index" asp-controller="service">For User</a>
                                                 }
                                                 else
                                                 {

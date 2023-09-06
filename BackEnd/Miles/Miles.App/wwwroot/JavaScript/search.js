@@ -1,21 +1,21 @@
 ﻿const searchInput = document.querySelector(".blog-search-field");
-const container = document.querySelector(".searchValue");
+const containers = document.querySelector(".searchValue");
 if (searchInput.value == "") {
-    container.style.display = "none";
+    containers.style.display = "none";
 }
 searchInput.addEventListener("input", (e) => {
     e.preventDefault();
     if (searchInput.value == "") {
-        container.style.display = "none";
+        containers.style.display = "none";
         return;
     }
     let href = `/shop/search?search=${searchInput.value}`;
     fetch(href)
         .then(x => x.json())
         .then(x => {
-            container.innerHTML = ""
+            containers.innerHTML = ""
             if (x.length !=0){
-              container.style.display = "block";
+              containers.style.display = "block";
             }
             x.forEach(item => {
                 let price = item.price.toLocaleString('en-US');
@@ -32,7 +32,7 @@ searchInput.addEventListener("input", (e) => {
                                                          <p>${price} </p>
                                                     </a>
                                  </div>`;
-                    container.innerHTML += view;
+                    containers.innerHTML += view;
             })
         })
 })

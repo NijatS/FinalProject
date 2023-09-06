@@ -11,6 +11,9 @@ namespace Miles.Service.ViewModels
     {
         public IEnumerable<TextWhy> Why { get; set; }
         public IEnumerable<UserPricing> UserPricings { get; set; }
+        public IEnumerable<Bid> Bids { get; set; }
+        public IEnumerable<Car> Cars { get; set; }
+        public IEnumerable<AppUser> AppUsers { get; set; }
         public Setting Setting { get; set; }
     }
 }

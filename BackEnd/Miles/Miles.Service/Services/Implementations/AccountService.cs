@@ -1,6 +1,4 @@
-﻿using Azure.Core;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -230,8 +228,11 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<ApiResponse> Info()
         {
-            string username = _http.HttpContext.User.Identity.Name;
-            AppUser appUser = await _userManager.FindByNameAsync(username);
+            AppUser appUser = await _userManager.Users.
+    Include(x => x.Country).
+    Include(x => x.UserPricing).
+    Include(x => x.Cars)
+    .Where(x => x.Name == _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
             if (!await _userManager.IsInRoleAsync(appUser, "User"))
             {
                 return new ApiResponse
@@ -240,6 +241,7 @@ namespace Miles.Service.Services.Implementations
                     Description = "You cannot see Admin Info"
                 };
             }
+            
             InfoVM infoVM = new InfoVM
             {
                 AppUser = appUser

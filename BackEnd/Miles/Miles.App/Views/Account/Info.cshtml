@@ -45,7 +45,7 @@
                                 <label asp-for="AppUser.Email"></label>
                                 <input asp-for="AppUser.Email" disabled placeholder="Email" />
                                 <label asp-for="AppUser.UserPricing"></label>
-                                <input asp-for="AppUser.UserPricingId" disabled placeholder="UserPricingId" />
+                                <input asp-for="AppUser.UserPricing.Name" disabled placeholder="UserPricingId" />
                                 <div class="button-box" style="display:flex;justify-content:space-between">
                                     <button type="button" class="default-btn" style="width:32%">
                                         <a asp-controller="account" asp-action="update" style="color: #ec1c23;">
@@ -71,7 +71,7 @@
                                 </button>
 
                             <div class="cars">
-                                @foreach(var item in Model.Cars)
+                                @foreach(var item in Model.Cars.Where(x=>x.StatusId!=3))
                                 {
                                     <div class="car">
                                         @foreach(var photo in item.CarImages.Where(x=>x.isMain && !x.IsDeleted))

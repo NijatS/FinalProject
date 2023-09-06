@@ -23,12 +23,12 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="~/Scss/main.css" />
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
                />
     @* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> *@
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/Scss/main.css" />
     <title>Document</title>
 </head>
 <body>
@@ -331,6 +331,32 @@
                     </div>
                 </div>
                 <a href="#" class="to-top-button"><i class="fa fa-angle-up"></i></a>
+                <div id="body">
+
+                    <div id="chat-circle" class="btn btn-raised">
+                        <div id="chat-overlay"></div>
+                        <i class="material-icons">speaker_phone</i>
+                    </div>
+
+                    <div class="chat-box">
+                        <div class="chat-box-header">
+                            MilesBot
+                            <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+                        </div>
+                        <div class="chat-box-body">
+                            <div class="chat-box-overlay">
+                            </div>
+                            <div class="chat-logs">
+                            </div><!--chat-log -->
+                        </div>
+                        <div class="chat-input">
+                            <form>
+                                <input type="text" id="chat-input" name="message" placeholder="Send a message..." />
+                                <button  class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -412,5 +438,6 @@
     </nav>
 </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="~/JavaScript/sidebar.js"></script>
 <script src="~/JavaScript/search.js"></script>
