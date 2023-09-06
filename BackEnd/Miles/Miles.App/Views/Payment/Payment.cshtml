@@ -6,7 +6,8 @@
 
 <div class="wrapper" style="margin-bottom:20px;">
     <div class="checkout container">
-        <form id="payment-form" method="post" asp-controller="Payment" asp-action="Create" asp-route-amount="@Model.Price" asp-route-carId="@Model.CarId">
+        <form id="payment-form" method="post" asp-controller="Payment" asp-action="Create" asp-route-amount="@Model.Price" asp-route-carId="@Model.CarId"
+              asp-route-bookId="@Model.Id" asp-route-userId="@Model.AppUserId">
             @Html.HiddenFor(n => n.Id)
             <div class="card">
                 <div class="card-body">

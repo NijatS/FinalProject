@@ -10,5 +10,6 @@ namespace Miles.Service.ViewModels
     public class BookPurchaseVM : Book
     {
         public string Nonce { get; set; }
+        public int PricingId { get; set; }
     }
 }

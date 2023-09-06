@@ -761,6 +761,10 @@
       "PackagePath": "staticwebassets\\Scss\\utils\\_variables.scss"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\carBuying.html",
+      "PackagePath": "staticwebassets\\Templates\\carBuying.html"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\email.html",
       "PackagePath": "staticwebassets\\Templates\\email.html"
     },

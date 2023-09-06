@@ -1,4 +1,12 @@
 ﻿@model ServiceVM
+@{
+    string userId = null;
+    if (User.Identity.IsAuthenticated)
+    {
+       userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+    }
+}
 <div class="page-heading">
     <div class="container">
         <div class="row">
@@ -168,7 +176,15 @@
                                                 }
                                         </ul>
                                         <div class="signup-button">
-                                            <a asp-action="signup" asp-controller="account">Sign Up</a>
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <a asp-action="UpdateUser" asp-controller="payment" asp-route-pricingId="@item.Id" asp-route-amount="@item.Price"
+                                                       asp-route-userId="@userId">Update User</a>
+                                                }
+                                                else
+                                                {
+                                                <a asp-action="signup" asp-controller="account">Sign Up</a>
+                                                }
                                         </div>
                                     </div>
                                 </div>

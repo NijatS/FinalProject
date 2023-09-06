@@ -1,0 +1,119 @@
+﻿
+<div class="container">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @media (max-width: 767px) {
+            .invoice-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <div class="row gutters">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card" style="background: #272e48; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 0; margin-bottom: 1rem;">
+                <div class="card-body p-0">
+                    <div class="invoice-container" style="padding: 1rem;">
+                        <div class="invoice-header">
+                            <!-- Row start -->
+                            <div class="row gutters">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                    <div class="custom-actions-btns mb-5" style="margin: auto; display: flex; justify-content: flex-end;">
+                                        <button onclick="window.open('file.doc')" class="btn btn-primary" style="margin: 0.3rem 0 0.3rem 0.3rem;">
+                                            <i class="icon-download"></i> Download
+                                        </button>
+                                        <button onclick="window.print();return false" class="btn btn-secondary" style="margin: 0.3rem 0 0.3rem 0.3rem;">
+                                            <i class="icon-printer"></i> Print
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                            <!-- Row start -->
+                            <div class="row gutters">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                    <a href="index.html" class="invoice-logo" style="margin: 0.8rem 0 0 0; display: inline-block; font-size: 1.6rem; font-weight: 700; color: #bcd0f7;"> Miles.com </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <address class="text-right" style="font-size: 0.8rem; color: #8a99b5; margin: 0;">
+                                        Azerbaijan,Baku,Zabrat City.<br>
+                                    </address>
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                            <!-- Row start -->
+                            <div class="row gutters">
+                                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                                    <div class="invoice-details" style="margin: 1rem 0 0 0; padding: 1rem; line-height: 180%; background: #1a233a;">
+                                        <address style="font-size: 0.8rem; color: #8a99b5; margin: 0;">
+                                            {{User}}<br>
+                                            From Miles administrator
+                                        </address>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                                    <div class="invoice-details" style="margin: 1rem 0 0 0; padding: 1rem; line-height: 180%; background: #1a233a;">
+                                        <div class="invoice-num" style="text-align: right; font-size: 0.8rem; color: white;">
+                                            <div>Invoice - #{{Id}}</div>
+                                            <div>{{Date}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                        </div>
+
+                        <div class="invoice-body" style="padding: 1rem 0 0 0;">
+                            <!-- Row start -->
+                            <div class="row gutters">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="table-responsive">
+                                        <table class="table custom-table m-0" style="border: 1px solid #2b3958; background: #1a243a; color: #bcd0f7; font-size: 0.75rem; width: 100%; text-align: center;">
+                                            <thead style="background: #2f71c1;">
+                                                <tr>
+                                                    <th style="border: 0; color: #ffffff;">Car</th>
+                                                    <th style="border: 0; color: #ffffff;">Product ID</th>
+                                                    <th style="border: 0; color: #ffffff;">Year</th>
+                                                    <th style="border: 0; color: #ffffff;">Auction Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border: 1px solid #2e3d5f;">
+                                                        {{CarName}}
+                                                    </td>
+                                                    <td style="border: 1px solid #2e3d5f;">#{{CarId}}</td>
+                                                    <td style="border: 1px solid #2e3d5f;">{{CarYear}}</td>
+                                                    <td style="border: 1px solid #2e3d5f;">${{CarPrice}}</td>
+                                                </tr>
+
+                                                <tr style="background-color: #1a243a;" bgcolor="#1a243a">
+                                                    <td style="border: 1px solid #2e3d5f;">&nbsp;</td>
+                                                    <td colspan="2" style="border: 1px solid #2e3d5f;">
+
+                                                        <h5 class="text-success" style="color: #c0d64a;">
+                                                            <strong>Grand Total</strong>
+                                                        </h5>
+                                                    </td>
+                                                    <td style="border: 1px solid #2e3d5f;">
+
+                                                        <h5 class="text-success" style="color: #c0d64a;">
+                                                            <strong>${{CarPrice}}</strong>
+                                                        </h5>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row end -->
+                        </div>
+
+                        <div class="invoice-footer" style="text-align: center; font-size: 0.7rem; margin: 5px 0 0 0;">Thank you for choosing Us.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

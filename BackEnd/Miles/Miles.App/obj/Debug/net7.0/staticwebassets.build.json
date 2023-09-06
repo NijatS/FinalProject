@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0wi7hTxXC4qCziU35uGOKUXG4z/aqtP9nxPxojmohs0=",
+  "Hash": "Ln2tpG3oaDm+VRBvChEmQMHhgkshCk87UGBzX9oUyRI=",
   "Source": "Miles.App",
   "BasePath": "_content/Miles.App",
   "Mode": "Default",
@@ -5081,6 +5081,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Scss\\utils\\_variables.scss"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\carBuying.html",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Templates/carBuying.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Templates\\carBuying.html"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\email.html",

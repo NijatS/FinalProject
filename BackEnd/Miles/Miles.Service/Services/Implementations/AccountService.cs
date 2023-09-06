@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -251,7 +252,11 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<ApiResponse> GetUser()
         {
-            var user = await _userManager.Users.Include(x=>x.Country).Where(x=>x.Name== _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
+            var user = await _userManager.Users.
+                Include(x=>x.Country).
+                Include(x=>x.UserPricing).
+                Include(x=>x.Cars)
+                .Where(x=>x.Name== _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
             if (user is null)
             {
                 return new ApiResponse
@@ -283,10 +288,15 @@ namespace Miles.Service.Services.Implementations
             {
                 user.Image = dto.file.CreateImage(_evn.WebRootPath, "Images/Users");
             }
-            user.Name = dto.Name;
-            user.Email = dto.Email;
-            user.Surname = dto.Surname;
-            user.UserName = dto.UserName;
+         
+            if(dto.UserName is not null)
+            {
+                user.Name = dto.Name;
+                user.Email = dto.Email;
+                user.Surname = dto.Surname;
+                user.UserName = dto.UserName;
+            }
+            user.UserPricingId = dto.UserPricingId;
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
             {

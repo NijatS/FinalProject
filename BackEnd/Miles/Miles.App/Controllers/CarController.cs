@@ -37,7 +37,18 @@ namespace Miles.App.Controllers
 		[HttpGet]
 		public async Task<IActionResult> Sell()
         {
-			var resultFuel = await _fuelService.GetAllAsync(0, 0);
+            var result = await _accountService.GetUser();
+            AppUser user =(AppUser) result.items;
+            if (user.UserPricingId == 1)
+            {
+                if (user.Cars.Count() >= 1)
+                {
+                    TempData["Email"] = "Please update User.Selling Car limit 1";
+                    return RedirectToAction("index", "home");
+
+                }
+            }
+            var resultFuel = await _fuelService.GetAllAsync(0, 0);
 			var resultBan = await _banService.GetAllAsync(0, 0);
 			var resultColor = await _colorService.GetAllAsync(0, 0);
 			var resultCountry = await _countryService.GetAllAsync(0, 0);

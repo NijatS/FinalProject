@@ -24,5 +24,7 @@ namespace Miles.Service.Dtos.Accounts
         public int CountryId { get; set; }
         public IFormFile? file { get; set; }
         public string? Image { get; set; }
+
+        public int UserPricingId { get; set; }
     }
 }
