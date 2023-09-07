@@ -945,17 +945,19 @@ footer .fcol .gallery .gallery-item img {
 }
 
 .to-top-button {
-  background-color: #f4c23d !important;
-  position: fixed;
-  z-index: 77;
-  font-size: 18px;
-  text-align: center;
-  background: #181818;
-  color: #fff !important;
-  overflow: hidden;
-  display: inline-block;
-  visibility: visible;
-  opacity: 1;
+    background-color: #f4c23d !important;
+    position: fixed;
+    z-index: 77;
+    font-size: 18px;
+    text-align: center;
+    background: #181818;
+    color: #fff !important;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+    display: none;
+    transition: all 2s ease 0s;
 }
 @media (max-width: 991px) {
   .to-top-button {
@@ -971,7 +973,7 @@ footer .fcol .gallery .gallery-item img {
     width: 60px;
     line-height: 60px;
     right: 30px;
-    bottom: 60px;
+    bottom: 150px;
   }
 }
 
@@ -3715,7 +3717,7 @@ img {
 }
 @media screen and (max-width: 860px) {
   .car-detail .col-md-8 .product .images figure .sliders .viewport .slides li {
-    width: 100vw;
+    width: 95vw;
   }
 }
 .car-detail .col-md-8 .product .images figure .sliders .viewport .slides li div {
@@ -5128,8 +5130,8 @@ img {
     }
 #chat-circle {
     position: fixed;
-    bottom: 150px;
-    right: 25px;
+    bottom: 60px;
+    right: 20px;
     background: #5A5EB9;
     width: 80px;
     height: 80px;
@@ -5166,7 +5168,7 @@ img {
     display: none;
     background: #efefef;
     position: fixed;
-    right: 30px;
+    right: 25px;
     bottom: 50px;
     width: 350px;
     max-width: 85vw;
@@ -5347,4 +5349,7 @@ img {
 .cm-msg-button {
     clear: both;
     margin-bottom: 70px;
+}
+.winning-container-info .cars-text .cars .car{
+    width:100%;
 }

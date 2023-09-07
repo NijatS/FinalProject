@@ -1,15 +1,15 @@
-﻿const searchInput = document.querySelector(".blog-search-field");
+﻿const searchInputs = document.querySelector(".blog-search-field");
 const containers = document.querySelector(".searchValue");
-if (searchInput.value == "") {
+if (searchInputs.value == "") {
     containers.style.display = "none";
 }
-searchInput.addEventListener("input", (e) => {
+searchInputs.addEventListener("input", (e) => {
     e.preventDefault();
-    if (searchInput.value == "") {
+    if (searchInputs.value == "") {
         containers.style.display = "none";
         return;
     }
-    let href = `/shop/search?search=${searchInput.value}`;
+    let href = `/shop/search?search=${searchInputs.value}`;
     fetch(href)
         .then(x => x.json())
         .then(x => {

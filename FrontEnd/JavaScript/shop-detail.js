@@ -274,7 +274,7 @@ function formatTime(time) {
 }
 function startTimer() {
   timerInterval = setInterval(() => {
-    timePassed += 1;
+    timePassed += 0;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML =
       formatTime(timeLeft);

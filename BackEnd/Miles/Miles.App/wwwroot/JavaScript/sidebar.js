@@ -7,6 +7,15 @@ const searchBtn = document.querySelector("#search-item .fa-search");
 const closeBtn = document.querySelector("#search-item .fa-close");
 const example = document.querySelector(".example");
 let INDEX = 0;
+var user = null;
+let href = `/account/GetUser`;
+fetch(href)
+    .then(x => x.json())
+    .then(x => {
+        if (x != null) {
+            user = x;
+        }
+    })
 
 sideBarButton.addEventListener("click", (e) => {
   sidebarMenu.style.left = "0px";
@@ -62,7 +71,20 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
         var str = "";
         str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg " + type + "\">";
         str += "          <span class=\"msg-avatar\">";
-        str += "            <img src=\"https://localhost:7109/Images/Users/fbcfba13-c108-4de8-ba04-dd8372b1fa78nijat.jpg\">";
+        if (type == 'self') {
+            if (user == null) {
+                str += "            <img src=\"https://localhost:7109/Images/Users/User-avatar.svg.png\">";
+
+            }
+            else {
+                str += `            <img src=\"https://localhost:7109/Images/Users/${user.image}\">`;
+
+            }
+        }
+        else {
+            str += "            <img src=\"https://localhost:7109/Images/Users/admin.jpg\">";
+
+        }
         str += "          <\/span>";
         str += "          <div class=\"cm-msg-text\">";
         str += msg;
@@ -131,3 +153,20 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
     })
 
 //})
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector(".to-top-button").style.display = "block";
+    } else {
+        document.querySelector(".to-top-button").style.display = "none";
+    }
+}
+document.querySelector(".to-top-button").addEventListener("click", () => {
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+})

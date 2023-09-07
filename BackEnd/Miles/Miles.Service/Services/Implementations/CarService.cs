@@ -181,9 +181,13 @@ namespace Miles.Service.Services.Implementations
                 Car.WinDate = dto.WinDate;
                 Car.AuctionWinPrice = dto.AuctionWinPrice;
                 Car.WinnerId = dto.WinnerId;
-                Car.StatusId = dto.StatusId;
             }
-			await _repository.SaveAsync();
+            if (dto.StatusId != 0)
+            {
+                Car.StatusId = dto.StatusId;
+
+            }
+            await _repository.SaveAsync();
 			return new ApiResponse
 			{
 				StatusCode = 200,

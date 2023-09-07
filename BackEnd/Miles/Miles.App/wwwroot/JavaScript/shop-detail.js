@@ -36,6 +36,16 @@ const time = document.querySelector(
 let flag = null;
 let country = null;
 let userid = null;
+let winUser = null;
+href = `/account/GetUser`;
+fetch(href)
+    .then(x => x.json())
+    .then(x => {
+        if (x != null) {
+            userid = x.id;
+            winUser = x.id
+        }
+    });
 const bidButton = document.querySelector("#bidButton");
 const circle = document.querySelector(".circle");
 circle.innerHTML = `<div class="base-timer">
@@ -212,8 +222,6 @@ bidButton.addEventListener("click", () => {
     increase();
     document.querySelector(".base-timer__path-remaining ").style.transition =
         "none";
-    //timePassed = -1;
-    //timeLeft = TIME_LIMIT;
     document
         .getElementById("base-timer-path-remaining")
         .classList.add(`${remainingPathColor}`);
@@ -250,6 +258,15 @@ function Check() {
         .then(x => x.json())
         .then(x => {
             if (x != null) {
+                if (x.appUserId == winUser) {
+                    document.querySelector("#base-timer-word").textContent = "Winning!"
+                    document.querySelector("#base-timer-word").style.color = "green"
+                }
+                else {
+                    document.querySelector("#base-timer-word").textContent = "OutBid!"
+                    document.querySelector("#base-timer-word").style.color = "red"
+
+                }
                 if (parseFloat(x.count) > parseFloat(document.querySelector("#base-timer-bid").textContent.split("$")[1].replace(",", ""))) {
                     flag = x.appUser.country.flagImage;
                     country = x.appUser.country.name;
@@ -258,6 +275,7 @@ function Check() {
                     document.querySelector(".base-timer__path-remaining ").style.transition =
                         "none";
                     timePassed = -1;
+    
                     timeLeft = TIME_LIMIT;
                     document
                         .getElementById("base-timer-path-remaining")
@@ -282,6 +300,7 @@ function Check() {
                     timeLeft = TIME_LIMIT - timePassed;
                     setCircleDasharray();
                     setRemainingPathColor(timeLeft);
+               
                     if (timeLeft == 0) {
                         onTimesUp();
                     }
@@ -347,7 +366,7 @@ function onTimesUp() {
                 fetch(href)
                     .then(x => x.json())
                     .then(x => {
-                        if (x.winnerId === "null" && j === 0 && x.statusId ==2) {
+                        if (x.winnerId == null && j === 0 && x.statusId ==1) {
                             j++;
                             href = `/shop/SellCar?carId=${carId}`;
                             fetch(href)
@@ -357,18 +376,19 @@ function onTimesUp() {
                 
                 if (x.appUserId == userid) {
                     document.querySelector("#win").style.display = "flex";
-                    document.getElementById("base-timer-path-remaining").style.color = "green";
+                    document.getElementById("base-timer-path-remaining").style.cssText = "color:green !important";
                     document.querySelector(".base-timer__circle").style.fill = "green";
                 } else {
                     document.querySelector("#sold-on").style.display = "flex";
-                    document.getElementById("base-timer-path-remaining").style.color = "blue";
+                    document.getElementById("base-timer-path-remaining").style.cssText = "color:blue !important";
                     document.querySelector(".base-timer__circle").style.fill = "blue";
+                    setRemainingPathColor(10);
                 }
             }
         });
    
-    //let myAudio = document.querySelector("#audioWin");
-    //myAudio.play();
+    let myAudio = document.querySelector("#audioWin");
+    myAudio.play();
 }
 function setCircleDasharray() {
     const circleDasharray = `${(
