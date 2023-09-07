@@ -89,7 +89,6 @@ let j = 0;
 document.querySelector(".auction").style.display = "none";
 const checkInterval = setInterval(Check, 100);
 setInterval(timeCalculate, 1000);
-
 const decreaseBit = document.querySelector(".buttons button:first-child");
 const increaseBit = document.querySelector(".buttons button:last-child");
 sImages[0].style.opacity = "1";
@@ -261,11 +260,12 @@ function Check() {
                 if (x.appUserId == winUser) {
                     document.querySelector("#base-timer-word").textContent = "Winning!"
                     document.querySelector("#base-timer-word").style.color = "green"
+                   
                 }
                 else {
                     document.querySelector("#base-timer-word").textContent = "OutBid!"
                     document.querySelector("#base-timer-word").style.color = "red"
-
+              
                 }
                 if (parseFloat(x.count) > parseFloat(document.querySelector("#base-timer-bid").textContent.split("$")[1].replace(",", ""))) {
                     flag = x.appUser.country.flagImage;
@@ -274,6 +274,7 @@ function Check() {
                     document.querySelector(".bid input").value = "$" + (x.count + 500).toLocaleString("en-US");
                     document.querySelector(".base-timer__path-remaining ").style.transition =
                         "none";
+
                     timePassed = -1;
     
                     timeLeft = TIME_LIMIT;
@@ -295,7 +296,6 @@ function Check() {
                     const diff = Math.max(t1, t2) - Math.min(t1, t2);
                     //let second = Math.floor(diff / 1000 % 60);
                     let second = diff / 1000 % 60;
-                    console.log(second)
                     timePassed = 9 - second;
                     timeLeft = TIME_LIMIT - timePassed;
                     setCircleDasharray();
@@ -390,6 +390,7 @@ function onTimesUp() {
     let myAudio = document.querySelector("#audioWin");
     myAudio.play();
 }
+
 function setCircleDasharray() {
     const circleDasharray = `${(
         calculateTimeFraction() * FULL_DASH_ARRAY
@@ -440,8 +441,14 @@ function formatTime(time) {
 //    }, 1000);
 //}
 function playClick() {
-    let myAudio = document.querySelector("#audio");
-    myAudio.play();
+    if (document.querySelector("#base-timer-word").textContent == "Winning!") {
+        let winnerAuction = document.querySelector("#winnerAuction");
+        winnerAuction.play();
+    }
+    else {
+        let myAudio = document.querySelector("#audio");
+        myAudio.play();
+    }
 }
 function increase() {
     let number =

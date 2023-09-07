@@ -7,6 +7,7 @@ const searchBtn = document.querySelector("#search-item .fa-search");
 const closeBtn = document.querySelector("#search-item .fa-close");
 const example = document.querySelector(".example");
 let INDEX = 0;
+let n = 0;
 var user = null;
 let href = `/account/GetUser`;
 fetch(href)
@@ -142,7 +143,15 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
         generate_message(name, 'self');
     })
 
-    $("#chat-circle").click(function () {
+$("#chat-circle").click(function () {
+    if (n == 0) {
+        generate_message("Hello, I am MilesBot :)", 'user');
+        generate_message("How I can help you?", 'user');
+        n++;
+
+    }
+    let botSound = document.querySelector("#botSound");
+    botSound.play();
         $("#chat-circle").toggle('scale');
         $(".chat-box").toggle('scale');
     })

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FyICpUhbptqWN0udwrfVd3ltzwBvFhU8QeDfGRlyBQM=",
+  "Hash": "+76Hmwkbw5fFD13qwYjwdtlQtp4Qx1CH49x1eWJRzx4=",
   "Source": "Miles.App",
   "BasePath": "_content/Miles.App",
   "Mode": "Default",
@@ -1853,6 +1853,23 @@
       "OriginalItemSpec": "wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\botSound.wav",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Audio/botSound.wav",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Audio\\botSound.wav"
+    },
+    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\click.wav",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -1885,6 +1902,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Audio\\win.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\winnerAuction.mp3",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "Audio/winnerAuction.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Audio\\winnerAuction.mp3"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png",

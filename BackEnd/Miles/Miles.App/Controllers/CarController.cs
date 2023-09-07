@@ -43,9 +43,16 @@ namespace Miles.App.Controllers
             {
                 if (user.Cars.Count() >= 1)
                 {
-                    TempData["Email"] = "Please update User.Selling Car limit 1";
+                    TempData["Mail"] = "Please update User. Selling Car limit 1";
                     return RedirectToAction("index", "home");
-
+                }
+            }
+            else if(user.UserPricingId == 2)
+            {
+                if (user.Cars.Count() >= 10)
+                {
+                    TempData["Mail"] = "Please update User. Selling Car limit 10";
+                    return RedirectToAction("index", "home");
                 }
             }
             var resultFuel = await _fuelService.GetAllAsync(0, 0);

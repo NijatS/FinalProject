@@ -77,7 +77,7 @@ namespace Miles.App.Controllers
 			ViewBag.Bans = resultBan.items;
 			ViewBag.Colors = resultColor.items;
 			ViewBag.Brands = resultBrand.items;
-            Expression<Func<Car, bool>> expression = (x=>!x.IsDeleted);
+            Expression<Func<Car, bool>> expression = (x=>!x.IsDeleted && x.StatusId==1);
             
             if (brand is not null )
 			{

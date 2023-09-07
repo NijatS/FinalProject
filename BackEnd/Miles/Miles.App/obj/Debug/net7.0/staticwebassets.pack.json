@@ -1,12 +1,20 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\botSound.wav",
+      "PackagePath": "staticwebassets\\Audio\\botSound.wav"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\click.wav",
       "PackagePath": "staticwebassets\\Audio\\click.wav"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\win.mp3",
       "PackagePath": "staticwebassets\\Audio\\win.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\winnerAuction.mp3",
+      "PackagePath": "staticwebassets\\Audio\\winnerAuction.mp3"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png",
