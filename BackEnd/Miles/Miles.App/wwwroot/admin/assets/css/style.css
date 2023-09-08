@@ -21561,7 +21561,7 @@ code {
 }
 
 /* Dropdowns */
-.dropdown .dropdown-toggle:after {
+/*.dropdown .dropdown-toggle:after {
   border-top: 0;
   border-right: 0;
   border-left: 0;
@@ -21574,7 +21574,7 @@ code {
   line-height: .625rem;
   font-size: 1.25rem;
   margin-left: 0;
-}
+}*/
 
 .dropdown .dropdown-menu {
   margin-top: .75rem;
@@ -23186,5 +23186,19 @@ dl li {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+input[type="date"] {
+    text-align: start;
+}
 /*# sourceMappingURL=maps/style.css.map */

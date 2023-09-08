@@ -1,12 +1,9 @@
-﻿using Humanizer;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using Miles.Service.ViewModels;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Interfaces;
 using System.Text.RegularExpressions;
-using Miles.Service.Services.Implementations;
 
 namespace Miles.App.Controllers
 {

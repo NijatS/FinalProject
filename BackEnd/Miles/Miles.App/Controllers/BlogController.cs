@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Comments;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
-using System.Reflection.Metadata;
 
 namespace Miles.App.Controllers
 {

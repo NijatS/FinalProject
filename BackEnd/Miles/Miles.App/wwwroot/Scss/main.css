@@ -2671,7 +2671,7 @@ img {
 }
 #page .contact .left-contact .contact-form i {
   position: absolute;
-  z-index: 1;
+  z-index: 2 !important;
   top: 12px;
   left: 30px;
   color: #336699;

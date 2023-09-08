@@ -30,7 +30,7 @@ namespace Miles.App.Controllers
             var userPricing = await _userPricingService.GetAllAsync(0, 0);
             var resultCar = await _carService.GetAllAsync(0, 0, null);
             var resultUser = await _accountService.GetAllUsers(0,0);
-            var resultBid = await _bidService.GetAllAsync(0, 0);
+            var resultBid = await _bidService.GetAllAsync(0, 0,null);
             ServiceVM serviceVM = new ServiceVM
 			{
                 Why = (IEnumerable<TextWhy>)resultText.items,

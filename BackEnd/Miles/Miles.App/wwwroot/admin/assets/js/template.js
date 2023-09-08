@@ -96,3 +96,46 @@
 
 
 })(jQuery);
+function display() {
+    window.print();
+}
+
+document.querySelector("#amountCar").textContent ="$"+ parseFloat(document.querySelector("#amountCar").textContent.split("$")[1]).toLocaleString();
+document.querySelector("#maxBid").textContent = "$" + parseFloat(document.querySelector("#maxBid").textContent.split("$")[1]).toLocaleString();
+document.querySelector(".incomeUser").textContent = "$" + parseFloat(document.querySelector(".incomeUser").textContent.split("$")[1]).toLocaleString();
+document.querySelector(".reportBtn").addEventListener("click", () => {
+    let date = new Date(document.querySelector(".carSaleDate").value).toLocaleDateString();
+    let todate = new Date(document.querySelector(".carSaleToDate").value).toLocaleDateString();
+    if (todate == "Invalid Date" && date == "Invalid Date") {
+        todate = null
+        date = null
+    }
+    else if (todate == "Invalid Date") {
+        todate = null
+    }
+    else if (date == "Invalid Date") {
+        date = null
+    }
+  
+    href = `/admin/home/index?date=${date}&todate=${todate}`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            document.querySelector(".carsCount").textContent = x.cars.length;
+            document.querySelector(".bidsCount").textContent = x.bids.length;
+            let count = 0;
+            const array = [];
+            for (let i = 0; i < x.cars.length; i++) {
+                count = count + x.cars[i].auctionWinPrice
+            }
+            for (let i = 0; i < x.bids.length; i++) {
+                array.push(x.bids[i].count)
+            }
+            let max = Math.max(...array);
+            if (max == -Infinity) {
+                max=0
+            }
+            document.querySelector("#maxBid").textContent = "$" + parseFloat(max).toLocaleString();
+            document.querySelector("#amountCar").textContent = "$" + parseFloat(count).toLocaleString();
+        });
+})

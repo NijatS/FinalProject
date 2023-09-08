@@ -29,8 +29,10 @@ namespace Miles.Service.Services.Implementations
         private readonly IBrandRepository _brandRepository;
         private readonly IBrandService _brandService;  
         private readonly IAccountService _accountService;
+        private readonly ISubscribeService _subscribeService;
+        private readonly IEmailService _emailService;
         private readonly MilesAppDbContext _context;
-        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository, IBrandService brandService, IAccountService accountService)
+        public CarService(ICarRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, MilesAppDbContext context, IBrandRepository brandRepository, IBrandService brandService, IAccountService accountService, ISubscribeService subscribeService, IEmailService emailService)
         {
             _repository = repository;
             _mapper = mapper;
@@ -40,6 +42,8 @@ namespace Miles.Service.Services.Implementations
             _brandRepository = brandRepository;
             _brandService = brandService;
             _accountService = accountService;
+            _subscribeService = subscribeService;
+            _emailService = emailService;
         }
         public async Task<ApiResponse> CreateAsync(CarPostDto dto)
         {
@@ -62,6 +66,14 @@ namespace Miles.Service.Services.Implementations
             }
             await _repository.AddAsync(Car);
             await _repository.SaveAsync();
+            var result = await _subscribeService.GetAllAsync(0, 0);
+            IEnumerable<Subscribe> subscribes = (IEnumerable<Subscribe>)result.items;
+            result  = await GetAsync(Car.Id);
+            Car car1 = (Car)result.itemView;
+            foreach(var sub in subscribes)
+            {
+                await _emailService.SendSubMail("nicatsoltanli03@gmail.com", sub.Email, "New Auction", car1, car1.AppUser);
+            }
             return new ApiResponse
             {
                 StatusCode = 201,

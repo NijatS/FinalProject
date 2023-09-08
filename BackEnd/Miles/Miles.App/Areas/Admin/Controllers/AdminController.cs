@@ -32,7 +32,7 @@ namespace Miles.App.Areas.Admin.Controllers
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
             ViewBag.CurrentPage = page;
             int count = 5;
-            result = await _service.GetAllUsers(count, page);
+            result = await _service.GetAllAdmin(count, page);
             List<AppUser> admins = (List<AppUser>)result.items;
             return View(admins);
         }

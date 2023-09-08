@@ -390,7 +390,7 @@ namespace Miles.Service.Services.Implementations
             }
             else
             {
-                users = await _userManager.Users.ToListAsync();
+                users = await _userManager.Users.Include(x=>x.UserPricing).ToListAsync();
 
             }
             List<AppUser> admins = new List<AppUser>();

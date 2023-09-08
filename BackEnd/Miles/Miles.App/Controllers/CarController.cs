@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Cars;
-using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
 
 namespace Miles.App.Controllers

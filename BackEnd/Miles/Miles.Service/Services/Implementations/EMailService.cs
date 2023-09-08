@@ -76,5 +76,38 @@ namespace Miles.Service.Services.Implementations
 
             await smtp.SendMailAsync(mm);
         }
+        public async Task SendSubMail(string from, string to, string subject, Car car, AppUser appUser)
+        {
+            string body = string.Empty;
+            string path = Path.Combine(_env.WebRootPath, "Templates", "subEmail.html");
+            using (StreamReader SourceReader = System.IO.File.OpenText(path))
+            {
+                body = SourceReader.ReadToEnd();
+            }
+            body = body.Replace("{{Model}}", car.Model.Brand.Name + " "+car.Model.Name);
+            body = body.Replace("{{Year}}", car.FabricationYear.ToString());
+            body = body.Replace("{{Auction}}", car.ActionDate.ToString());
+            body = body.Replace("{{Motor}}", car.Motor.ToString());
+            body = body.Replace("{{CarId}}", car.Id.ToString());
+            body = body.Replace("{{Owner}}", appUser.Name + " " + appUser.Surname);
+            body = body.Replace("{{Price}}", car.Price.ToString());
+            body = body.Replace("{{Email}}", appUser.Email);
+            body = body.Replace("{{Country}}", appUser.Country.Name);
+
+            MailMessage mm = new MailMessage();
+            mm.To.Add(to);
+            mm.Subject = subject;
+            mm.Body = body;
+            mm.IsBodyHtml = true;
+            mm.From = new MailAddress(from);
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.Port = 587;
+            smtp.UseDefaultCredentials = false;
+            smtp.EnableSsl = true;
+            smtp.Credentials = new System.Net.NetworkCredential(from, "gmaagjxgczxovsrw");
+
+            await smtp.SendMailAsync(mm);
+        }
     }
 }

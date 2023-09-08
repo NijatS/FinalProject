@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Miles.Core.Entities;
 using Miles.Core.Repositories;
-using Miles.Data.Repositories;
-using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.UserPricings;
 using Miles.Service.Responses;
 using Miles.Service.Services.Interfaces;

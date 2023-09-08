@@ -37,9 +37,13 @@ namespace Miles.Service.Services.Implementations
             };
         }
 
-        public async Task<ApiResponse> GetAllAsync(int count,int page)
+        public async Task<ApiResponse> GetAllAsync(int count,int page, Expression<Func<Bid, bool>>? expression)
         {
             IEnumerable<Bid> Bids = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
+            if (expression != null)
+            {
+                Bids = await _repository.GetAllAsync(expression, count, page);
+            }
             return new ApiResponse
             {
                 items = Bids,
