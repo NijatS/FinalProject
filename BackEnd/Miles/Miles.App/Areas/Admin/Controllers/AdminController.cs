@@ -7,6 +7,7 @@ using Miles.Data.Context;
 using Miles.Service.Dtos.Accounts;
 using Miles.Service.Extensions;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -17,13 +18,14 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IAccountService _service;
         private readonly IWebHostEnvironment _evn;
         private readonly ICountryService _countryService;
- 
+        private readonly ILogger<AdminController> _logger;
 
-        public AdminController(IAccountService service, IWebHostEnvironment evn, ICountryService countryService)
+        public AdminController(IAccountService service, IWebHostEnvironment evn, ICountryService countryService, ILogger<AdminController> logger)
         {
             _service = service;
             _evn = evn;
             _countryService = countryService;
+            _logger = logger;
         }
         public async Task<IActionResult> Index(int page =1)
         {
@@ -64,6 +66,7 @@ namespace Miles.App.Areas.Admin.Controllers
             };
             Admin.Image = dto.file.CreateImage(_evn.WebRootPath, "Images/Users");
             await _service.Create(Admin, dto.Password, true);
+            _logger.LogInformation("Admin Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Update(string id)
@@ -108,6 +111,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Admin Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
 
         }
@@ -122,8 +126,8 @@ namespace Miles.App.Areas.Admin.Controllers
                 }
                 ModelState.AddModelError("", result.Description);
                 return RedirectToAction(nameof(Index));
-
             }
+            _logger.LogInformation("Admin Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

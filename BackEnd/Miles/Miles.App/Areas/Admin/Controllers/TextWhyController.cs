@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.TextWhies;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,11 +13,12 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly MilesAppDbContext _context;
         private readonly ITextWhyService _service;
-
-        public TextWhyController(MilesAppDbContext context, ITextWhyService service)
+        private readonly ILogger<TextWhyController> _logger;
+        public TextWhyController(MilesAppDbContext context, ITextWhyService service, ILogger<TextWhyController> logger)
         {
             _context = context;
             _service = service;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -48,6 +50,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("TextWhy Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -73,6 +76,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("TextWhy Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -82,6 +86,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("TextWhy Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

@@ -1,0 +1,1128 @@
+2023-09-09 12:00:17.414 +04:00 [INF] User profile is available. Using 'C:\Users\Nijat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-09 12:00:18.013 +04:00 [INF] Now listening on: https://localhost:7109
+2023-09-09 12:00:18.015 +04:00 [INF] Now listening on: http://localhost:5161
+2023-09-09 12:00:18.018 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-09 12:00:18.021 +04:00 [INF] Hosting environment: Development
+2023-09-09 12:00:18.021 +04:00 [INF] Content root path: C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App
+2023-09-09 12:00:18.721 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:00:19.206 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:00:19.270 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:00:21.895 +04:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:00:21.984 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:00:22.031 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:00:22.033 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:00:22.099 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:00:22.465 +04:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:00:22.667 +04:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:00:22.807 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:00:22.913 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:00:23.276 +04:00 [INF] Executed ViewResult - view Index executed in 1292.9286ms.
+2023-09-09 12:00:23.283 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 4010.9776ms
+2023-09-09 12:00:23.284 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:00:23.288 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 4522.5939 ms
+2023-09-09 12:00:23.340 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 4623.8691ms
+2023-09-09 12:00:23.408 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:00:23.408 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:00:23.417 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 8.7925ms
+2023-09-09 12:00:23.431 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.2278ms
+2023-09-09 12:00:25.633 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/create - -
+2023-09-09 12:00:25.668 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:00:25.675 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:00:25.683 +04:00 [INF] Executing ViewResult, running view Create.
+2023-09-09 12:00:25.795 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:00:25.799 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:00:25.803 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:00:25.808 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:00:25.824 +04:00 [INF] Executed ViewResult - view Create executed in 142.1674ms.
+2023-09-09 12:00:25.825 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 148.1084ms
+2023-09-09 12:00:25.826 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:00:25.827 +04:00 [INF] HTTP GET /admin/Fuel/create responded 200 in 191.9877 ms
+2023-09-09 12:00:25.834 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/create - - - 200 - text/html;+charset=utf-8 201.2916ms
+2023-09-09 12:00:25.858 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:00:25.858 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:00:25.862 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 3.5541ms
+2023-09-09 12:00:25.867 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.8559ms
+2023-09-09 12:00:27.510 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryuToa4LYuNPyZZSGU 450
+2023-09-09 12:00:27.540 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:00:27.550 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Miles.Service.Dtos.Fuels.FuelPostDto) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:00:27.720 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Fuels] AS [f]
+WHERE LOWER(LTRIM(RTRIM([f].[Name]))) = @__ToLower_0
+2023-09-09 12:00:27.722 +04:00 [INF] Executing ViewResult, running view Create.
+2023-09-09 12:00:27.739 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:00:27.743 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:00:27.747 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:00:27.751 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:00:27.763 +04:00 [INF] Executed ViewResult - view Create executed in 41.6688ms.
+2023-09-09 12:00:27.764 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 213.0373ms
+2023-09-09 12:00:27.765 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:00:27.765 +04:00 [INF] HTTP POST /admin/Fuel/create responded 200 in 252.8599 ms
+2023-09-09 12:00:27.772 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryuToa4LYuNPyZZSGU 450 - 200 - text/html;+charset=utf-8 261.2322ms
+2023-09-09 12:00:27.789 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:00:27.789 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:00:27.791 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 2.0866ms
+2023-09-09 12:00:27.799 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.8989ms
+2023-09-09 12:00:29.805 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryEZzs67Mdm82Ulvzb 451
+2023-09-09 12:00:29.807 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:00:29.808 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Miles.Service.Dtos.Fuels.FuelPostDto) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:00:29.820 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Fuels] AS [f]
+WHERE LOWER(LTRIM(RTRIM([f].[Name]))) = @__ToLower_0
+2023-09-09 12:00:30.057 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 40), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Fuels] ([IsDeleted], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id], INSERTED.[CreatedAt]
+VALUES (@p0, @p1, @p2);
+2023-09-09 12:00:30.100 +04:00 [INF] Fuel Created
+2023-09-09 12:00:30.105 +04:00 [INF] Executing RedirectResult, redirecting to /admin/Fuel/Index.
+2023-09-09 12:00:30.106 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 297.583ms
+2023-09-09 12:00:30.107 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:00:30.108 +04:00 [INF] HTTP POST /admin/Fuel/create responded 302 in 301.2687 ms
+2023-09-09 12:00:30.108 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryEZzs67Mdm82Ulvzb 451 - 302 0 - 303.4499ms
+2023-09-09 12:00:30.115 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:00:30.117 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:00:30.118 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:00:30.122 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:00:30.124 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:00:30.128 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:00:30.132 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:00:30.135 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:00:30.138 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:00:30.141 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:00:30.149 +04:00 [INF] Executed ViewResult - view Index executed in 25.5187ms.
+2023-09-09 12:00:30.150 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 31.1328ms
+2023-09-09 12:00:30.150 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:00:30.151 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 34.1515 ms
+2023-09-09 12:00:30.158 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 42.4445ms
+2023-09-09 12:00:30.183 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:00:30.183 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:00:30.184 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.4125ms
+2023-09-09 12:00:30.190 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 6.9362ms
+2023-09-09 12:30:01.368 +04:00 [INF] User profile is available. Using 'C:\Users\Nijat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-09 12:30:01.587 +04:00 [INF] Now listening on: https://localhost:7109
+2023-09-09 12:30:01.588 +04:00 [INF] Now listening on: http://localhost:5161
+2023-09-09 12:30:01.589 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-09 12:30:01.589 +04:00 [INF] Hosting environment: Development
+2023-09-09 12:30:01.590 +04:00 [INF] Content root path: C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App
+2023-09-09 12:30:01.730 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:30:03.048 +04:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-09-09 12:30:03.212 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-09-09 12:30:03.243 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-09-09 12:30:03.260 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-09-09 12:30:03.288 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-09-09 12:30:03.300 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:30:03.318 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:30:03.468 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:30:03.516 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:30:03.542 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:30:03.543 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:30:03.553 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:30:03.699 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:30:03.797 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:30:03.883 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:30:03.943 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:30:04.120 +04:00 [INF] Executed ViewResult - view Index executed in 605.9964ms.
+2023-09-09 12:30:04.125 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 805.8811ms
+2023-09-09 12:30:04.126 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:30:04.130 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 2381.2345 ms
+2023-09-09 12:30:04.171 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 2443.2062ms
+2023-09-09 12:30:04.240 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:30:04.240 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:30:04.244 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 4.3137ms
+2023-09-09 12:30:04.253 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.1255ms
+2023-09-09 12:30:16.455 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/create - -
+2023-09-09 12:30:16.466 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:30:16.469 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:30:16.473 +04:00 [INF] Executing ViewResult, running view Create.
+2023-09-09 12:30:16.563 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:30:16.566 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:30:16.569 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:30:16.572 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:30:16.581 +04:00 [INF] Executed ViewResult - view Create executed in 109.3573ms.
+2023-09-09 12:30:16.582 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 112.2685ms
+2023-09-09 12:30:16.583 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:30:16.583 +04:00 [INF] HTTP GET /admin/Fuel/create responded 200 in 126.7179 ms
+2023-09-09 12:30:16.587 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/create - - - 200 - text/html;+charset=utf-8 132.4529ms
+2023-09-09 12:30:16.598 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:30:16.598 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:30:16.600 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.4205ms
+2023-09-09 12:30:16.603 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.5194ms
+2023-09-09 12:30:19.246 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryPxwK5GDrxJGXR8T8 448
+2023-09-09 12:30:19.262 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:30:19.265 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Miles.Service.Dtos.Fuels.FuelPostDto) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:30:19.296 +04:00 [INF] Executing ViewResult, running view Create.
+2023-09-09 12:30:19.321 +04:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:30:19.328 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:30:19.331 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:30:19.335 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:30:19.343 +04:00 [INF] Executed ViewResult - view Create executed in 47.2961ms.
+2023-09-09 12:30:19.344 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 77.7299ms
+2023-09-09 12:30:19.344 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:30:19.344 +04:00 [INF] HTTP POST /admin/Fuel/create responded 200 in 97.0880 ms
+2023-09-09 12:30:19.347 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryPxwK5GDrxJGXR8T8 448 - 200 - text/html;+charset=utf-8 101.7611ms
+2023-09-09 12:30:19.359 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:30:19.359 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:30:19.360 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.1509ms
+2023-09-09 12:30:19.364 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.9134ms
+2023-09-09 12:30:20.634 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundary97LdJZtQ25DwaQ5c 449
+2023-09-09 12:30:20.636 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:30:20.636 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Miles.Service.Dtos.Fuels.FuelPostDto) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:30:20.649 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToLower_0='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Fuels] AS [f]
+WHERE LOWER(LTRIM(RTRIM([f].[Name]))) = @__ToLower_0
+2023-09-09 12:30:20.748 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 40), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Fuels] ([IsDeleted], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id], INSERTED.[CreatedAt]
+VALUES (@p0, @p1, @p2);
+2023-09-09 12:30:20.767 +04:00 [INF] Fuel Created by 5e61e93f-660f-424e-9700-66d020e60b95
+2023-09-09 12:30:20.769 +04:00 [INF] Executing RedirectResult, redirecting to /admin/Fuel/Index.
+2023-09-09 12:30:20.770 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 133.0164ms
+2023-09-09 12:30:20.770 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:30:20.771 +04:00 [INF] HTTP POST /admin/Fuel/create responded 302 in 135.4711 ms
+2023-09-09 12:30:20.771 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundary97LdJZtQ25DwaQ5c 449 - 302 0 - 137.1613ms
+2023-09-09 12:30:20.778 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:30:20.779 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:30:20.779 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:30:20.783 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:30:20.784 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:30:20.787 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:30:20.793 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:30:20.798 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:30:20.802 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:30:20.805 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:30:20.810 +04:00 [INF] Executed ViewResult - view Index executed in 25.3747ms.
+2023-09-09 12:30:20.810 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 30.1526ms
+2023-09-09 12:30:20.810 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:30:20.811 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 31.9210 ms
+2023-09-09 12:30:20.815 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 37.4307ms
+2023-09-09 12:30:20.829 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:30:20.829 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:30:20.830 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.2108ms
+2023-09-09 12:30:20.833 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.0520ms
+2023-09-09 12:44:09.604 +04:00 [INF] User profile is available. Using 'C:\Users\Nijat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-09 12:44:11.160 +04:00 [INF] Now listening on: https://localhost:7109
+2023-09-09 12:44:11.161 +04:00 [INF] Now listening on: http://localhost:5161
+2023-09-09 12:44:11.162 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-09 12:44:11.162 +04:00 [INF] Hosting environment: Development
+2023-09-09 12:44:11.163 +04:00 [INF] Content root path: C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App
+2023-09-09 12:44:11.970 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:44:12.378 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:44:12.400 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:44:13.941 +04:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:44:14.000 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:44:14.031 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:44:14.032 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:44:14.087 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:44:14.330 +04:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:44:14.431 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:44:14.502 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:44:14.560 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:44:14.888 +04:00 [INF] Executed ViewResult - view Index executed in 888.1536ms.
+2023-09-09 12:44:14.893 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 2491.0279ms
+2023-09-09 12:44:14.893 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:44:14.897 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 2895.4475 ms
+2023-09-09 12:44:14.941 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 2972.8171ms
+2023-09-09 12:44:15.025 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:44:15.025 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:44:15.031 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 6.1951ms
+2023-09-09 12:44:15.043 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.4893ms
+2023-09-09 12:46:54.513 +04:00 [INF] User profile is available. Using 'C:\Users\Nijat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-09 12:46:54.947 +04:00 [INF] Now listening on: https://localhost:7109
+2023-09-09 12:46:54.950 +04:00 [INF] Now listening on: http://localhost:5161
+2023-09-09 12:46:54.952 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-09 12:46:54.954 +04:00 [INF] Hosting environment: Development
+2023-09-09 12:46:54.954 +04:00 [INF] Content root path: C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App
+2023-09-09 12:46:55.362 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:46:55.764 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:46:55.800 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:46:57.758 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:46:57.849 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:46:57.931 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:46:57.933 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:46:58.002 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:46:58.394 +04:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:46:58.633 +04:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:46:58.810 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:46:58.934 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:46:59.432 +04:00 [INF] Executed ViewResult - view Index executed in 1585.1804ms.
+2023-09-09 12:46:59.441 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 3602.2823ms
+2023-09-09 12:46:59.443 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:46:59.449 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 4058.7640 ms
+2023-09-09 12:46:59.545 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 4185.6464ms
+2023-09-09 12:46:59.610 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:46:59.611 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/assets/js/template.js - -
+2023-09-09 12:46:59.629 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 18.4435ms
+2023-09-09 12:46:59.634 +04:00 [INF] The file /admin/assets/js/template.js was not modified
+2023-09-09 12:46:59.650 +04:00 [INF] HTTP GET /admin/assets/js/template.js responded 304 in 25.4277 ms
+2023-09-09 12:46:59.655 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/assets/js/template.js - - - 304 - text/javascript 43.8807ms
+2023-09-09 12:46:59.685 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:46:59.715 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.6530ms
+2023-09-09 12:52:28.517 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/create - -
+2023-09-09 12:52:28.529 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:52:28.532 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create() on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:52:28.535 +04:00 [INF] Executing ViewResult, running view Create.
+2023-09-09 12:52:28.610 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:52:28.621 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:52:28.626 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:52:28.633 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:52:28.642 +04:00 [INF] Executed ViewResult - view Create executed in 108.0396ms.
+2023-09-09 12:52:28.644 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 110.3709ms
+2023-09-09 12:52:28.644 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:52:28.645 +04:00 [INF] HTTP GET /admin/Fuel/create responded 200 in 126.2822 ms
+2023-09-09 12:52:28.649 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/create - - - 200 - text/html;+charset=utf-8 132.4253ms
+2023-09-09 12:52:28.662 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:52:28.663 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:52:28.664 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.8398ms
+2023-09-09 12:52:28.669 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.5441ms
+2023-09-09 12:52:29.996 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryu6PS6Ys8oeKTD9St 450
+2023-09-09 12:52:30.011 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:52:30.017 +04:00 [INF] Route matched with {area = "Admin", action = "Create", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Miles.Service.Dtos.Fuels.FuelPostDto) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:52:30.102 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_0='?' (Size = 40)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Fuels] AS [f]
+WHERE LOWER(LTRIM(RTRIM([f].[Name]))) = @__ToLower_0
+2023-09-09 12:52:30.195 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 40), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Fuels] ([IsDeleted], [Name], [UpdatedAt])
+OUTPUT INSERTED.[Id], INSERTED.[CreatedAt]
+VALUES (@p0, @p1, @p2);
+2023-09-09 12:52:30.214 +04:00 [INF] Fuel Created by 5e61e93f-660f-424e-9700-66d020e60b95
+2023-09-09 12:52:30.217 +04:00 [INF] Executing RedirectResult, redirecting to /admin/Fuel/Index.
+2023-09-09 12:52:30.217 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App) in 199.2745ms
+2023-09-09 12:52:30.218 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Create (Miles.App)'
+2023-09-09 12:52:30.218 +04:00 [INF] HTTP POST /admin/Fuel/create responded 302 in 220.4330 ms
+2023-09-09 12:52:30.218 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7109/admin/Fuel/create multipart/form-data;+boundary=----WebKitFormBoundaryu6PS6Ys8oeKTD9St 450 - 302 0 - 222.1503ms
+2023-09-09 12:52:30.222 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:52:30.223 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:52:30.223 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:52:30.228 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:52:30.229 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:52:30.232 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:52:30.238 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:52:30.240 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:52:30.243 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:52:30.246 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:52:30.251 +04:00 [INF] Executed ViewResult - view Index executed in 21.8428ms.
+2023-09-09 12:52:30.251 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 27.2709ms
+2023-09-09 12:52:30.252 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:52:30.252 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 29.5313 ms
+2023-09-09 12:52:30.255 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 33.4785ms
+2023-09-09 12:52:30.268 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:52:30.269 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.2940ms
+2023-09-09 12:52:30.272 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:52:30.276 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.9491ms
+2023-09-09 12:55:17.622 +04:00 [INF] User profile is available. Using 'C:\Users\Nijat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-09 12:55:17.894 +04:00 [INF] Now listening on: https://localhost:7109
+2023-09-09 12:55:17.894 +04:00 [INF] Now listening on: http://localhost:5161
+2023-09-09 12:55:17.896 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-09 12:55:17.896 +04:00 [INF] Hosting environment: Development
+2023-09-09 12:55:17.896 +04:00 [INF] Content root path: C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App
+2023-09-09 12:55:17.988 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Fuel/Index - -
+2023-09-09 12:55:18.208 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:55:18.229 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Fuel"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.FuelController (Miles.App).
+2023-09-09 12:55:19.373 +04:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Categories] AS [c]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:55:19.431 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:55:19.461 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:55:19.462 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:55:19.503 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt]
+FROM [Fuels] AS [f]
+WHERE [f].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:55:19.776 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:55:19.883 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:55:19.950 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:55:20.013 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:55:20.299 +04:00 [INF] Executed ViewResult - view Index executed in 867.4043ms.
+2023-09-09 12:55:20.304 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App) in 2073.945ms
+2023-09-09 12:55:20.305 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.FuelController.Index (Miles.App)'
+2023-09-09 12:55:20.308 +04:00 [INF] HTTP GET /admin/Fuel/Index responded 200 in 2298.5222 ms
+2023-09-09 12:55:20.344 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Fuel/Index - - - 200 - text/html;+charset=utf-8 2357.0666ms
+2023-09-09 12:55:20.360 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:55:20.365 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:55:20.366 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 5.7854ms
+2023-09-09 12:55:20.380 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 14.7386ms
+2023-09-09 12:59:03.786 +04:00 [INF] User profile is available. Using 'C:\Users\Nijat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-09-09 12:59:03.988 +04:00 [INF] Now listening on: https://localhost:7109
+2023-09-09 12:59:03.989 +04:00 [INF] Now listening on: http://localhost:5161
+2023-09-09 12:59:03.991 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-09 12:59:03.991 +04:00 [INF] Hosting environment: Development
+2023-09-09 12:59:03.992 +04:00 [INF] Content root path: C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App
+2023-09-09 12:59:04.317 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - -
+2023-09-09 12:59:04.469 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/ - -
+2023-09-09 12:59:04.517 +04:00 [INF] Executing endpoint 'Miles.App.Controllers.HomeController.Index (Miles.App)'
+2023-09-09 12:59:04.517 +04:00 [INF] Executing endpoint 'Miles.App.Controllers.HomeController.Index (Miles.App)'
+2023-09-09 12:59:04.532 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Miles.App.Controllers.HomeController (Miles.App).
+2023-09-09 12:59:04.532 +04:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Miles.App.Controllers.HomeController (Miles.App).
+2023-09-09 12:59:05.570 +04:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActionDate], [c].[AppUserId], [c].[AuctionWinPrice], [c].[BanId], [c].[ColorId], [c].[CreatedAt], [c].[Description], [c].[FabricationYear], [c].[FuelCity], [c].[FuelId], [c].[FuelWay], [c].[IsDeleted], [c].[ModelId], [c].[Motor], [c].[NoGears], [c].[Odometer], [c].[Price], [c].[StatusId], [c].[Transmission], [c].[UpdatedAt], [c].[Vin], [c].[WinDate], [c].[WinnerId], [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt], [b].[Id], [b].[CreatedAt], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt], [m].[Id], [m].[BrandId], [m].[CreatedAt], [m].[IsDeleted], [m].[Name], [m].[UpdatedAt], [a].[Id], [s].[Id], [c0].[Id], [c0].[CarId], [c0].[CreatedAt], [c0].[Image], [c0].[ImageUrl], [c0].[IsDeleted], [c0].[UpdatedAt], [c0].[isMain], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [s].[CreatedAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt]
+FROM [Cars] AS [c]
+INNER JOIN [Fuels] AS [f] ON [c].[FuelId] = [f].[Id]
+INNER JOIN [Bans] AS [b] ON [c].[BanId] = [b].[Id]
+INNER JOIN [Models] AS [m] ON [c].[ModelId] = [m].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [c].[AppUserId] = [a].[Id]
+INNER JOIN [Statuses] AS [s] ON [c].[StatusId] = [s].[Id]
+LEFT JOIN [CarImages] AS [c0] ON [c].[Id] = [c0].[CarId]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [c].[Id], [f].[Id], [b].[Id], [m].[Id], [a].[Id], [s].[Id]
+2023-09-09 12:59:05.570 +04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActionDate], [c].[AppUserId], [c].[AuctionWinPrice], [c].[BanId], [c].[ColorId], [c].[CreatedAt], [c].[Description], [c].[FabricationYear], [c].[FuelCity], [c].[FuelId], [c].[FuelWay], [c].[IsDeleted], [c].[ModelId], [c].[Motor], [c].[NoGears], [c].[Odometer], [c].[Price], [c].[StatusId], [c].[Transmission], [c].[UpdatedAt], [c].[Vin], [c].[WinDate], [c].[WinnerId], [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt], [b].[Id], [b].[CreatedAt], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt], [m].[Id], [m].[BrandId], [m].[CreatedAt], [m].[IsDeleted], [m].[Name], [m].[UpdatedAt], [a].[Id], [s].[Id], [c0].[Id], [c0].[CarId], [c0].[CreatedAt], [c0].[Image], [c0].[ImageUrl], [c0].[IsDeleted], [c0].[UpdatedAt], [c0].[isMain], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [s].[CreatedAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt]
+FROM [Cars] AS [c]
+INNER JOIN [Fuels] AS [f] ON [c].[FuelId] = [f].[Id]
+INNER JOIN [Bans] AS [b] ON [c].[BanId] = [b].[Id]
+INNER JOIN [Models] AS [m] ON [c].[ModelId] = [m].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [c].[AppUserId] = [a].[Id]
+INNER JOIN [Statuses] AS [s] ON [c].[StatusId] = [s].[Id]
+LEFT JOIN [CarImages] AS [c0] ON [c].[Id] = [c0].[CarId]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [c].[Id], [f].[Id], [b].[Id], [m].[Id], [a].[Id], [s].[Id]
+2023-09-09 12:59:05.832 +04:00 [INF] Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreatedAt], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt]
+FROM [Brands] AS [b]
+WHERE [b].[IsDeleted] = CAST(0 AS bit) AND [b].[Id] = @__id_0
+2023-09-09 12:59:05.832 +04:00 [INF] Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreatedAt], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt]
+FROM [Brands] AS [b]
+WHERE [b].[IsDeleted] = CAST(0 AS bit) AND [b].[Id] = @__id_0
+2023-09-09 12:59:05.870 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreatedAt], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt]
+FROM [Brands] AS [b]
+WHERE [b].[IsDeleted] = CAST(0 AS bit) AND [b].[Id] = @__id_0
+2023-09-09 12:59:05.870 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreatedAt], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt]
+FROM [Brands] AS [b]
+WHERE [b].[IsDeleted] = CAST(0 AS bit) AND [b].[Id] = @__id_0
+2023-09-09 12:59:05.872 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreatedAt], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt]
+FROM [Brands] AS [b]
+WHERE [b].[IsDeleted] = CAST(0 AS bit) AND [b].[Id] = @__id_0
+2023-09-09 12:59:05.872 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreatedAt], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt]
+FROM [Brands] AS [b]
+WHERE [b].[IsDeleted] = CAST(0 AS bit) AND [b].[Id] = @__id_0
+2023-09-09 12:59:05.906 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:59:05.906 +04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:59:05.970 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:59:05.970 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:59:06.024 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:59:06.024 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:59:06.068 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:59:06.068 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:59:06.105 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:59:06.105 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:59:06.135 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[Image], [s].[ImageUrl], [s].[IsDeleted], [s].[UpdatedAt]
+FROM [Sliders] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.135 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[Image], [s].[ImageUrl], [s].[IsDeleted], [s].[UpdatedAt]
+FROM [Sliders] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.153 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[Image], [s].[ImageUrl], [s].[IsDeleted], [s].[UpdatedAt]
+FROM [Sliders] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.153 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[CreatedAt], [s].[Image], [s].[ImageUrl], [s].[IsDeleted], [s].[UpdatedAt]
+FROM [Sliders] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.178 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Icon], [t].[IsDeleted], [t].[SettingId], [t].[Text], [t].[Title], [t].[UpdatedAt]
+FROM [TextWhies] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.178 +04:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Icon], [t].[IsDeleted], [t].[SettingId], [t].[Text], [t].[Title], [t].[UpdatedAt]
+FROM [TextWhies] AS [t]
+WHERE [t].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.199 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActionDate], [c].[AppUserId], [c].[AuctionWinPrice], [c].[BanId], [c].[ColorId], [c].[CreatedAt], [c].[Description], [c].[FabricationYear], [c].[FuelCity], [c].[FuelId], [c].[FuelWay], [c].[IsDeleted], [c].[ModelId], [c].[Motor], [c].[NoGears], [c].[Odometer], [c].[Price], [c].[StatusId], [c].[Transmission], [c].[UpdatedAt], [c].[Vin], [c].[WinDate], [c].[WinnerId], [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt], [b].[Id], [b].[CreatedAt], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt], [m].[Id], [m].[BrandId], [m].[CreatedAt], [m].[IsDeleted], [m].[Name], [m].[UpdatedAt], [a].[Id], [s].[Id], [c0].[Id], [c0].[CarId], [c0].[CreatedAt], [c0].[Image], [c0].[ImageUrl], [c0].[IsDeleted], [c0].[UpdatedAt], [c0].[isMain], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [s].[CreatedAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt]
+FROM [Cars] AS [c]
+INNER JOIN [Fuels] AS [f] ON [c].[FuelId] = [f].[Id]
+INNER JOIN [Bans] AS [b] ON [c].[BanId] = [b].[Id]
+INNER JOIN [Models] AS [m] ON [c].[ModelId] = [m].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [c].[AppUserId] = [a].[Id]
+INNER JOIN [Statuses] AS [s] ON [c].[StatusId] = [s].[Id]
+LEFT JOIN [CarImages] AS [c0] ON [c].[Id] = [c0].[CarId]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [c].[Id], [f].[Id], [b].[Id], [m].[Id], [a].[Id], [s].[Id]
+2023-09-09 12:59:06.199 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActionDate], [c].[AppUserId], [c].[AuctionWinPrice], [c].[BanId], [c].[ColorId], [c].[CreatedAt], [c].[Description], [c].[FabricationYear], [c].[FuelCity], [c].[FuelId], [c].[FuelWay], [c].[IsDeleted], [c].[ModelId], [c].[Motor], [c].[NoGears], [c].[Odometer], [c].[Price], [c].[StatusId], [c].[Transmission], [c].[UpdatedAt], [c].[Vin], [c].[WinDate], [c].[WinnerId], [f].[Id], [f].[CreatedAt], [f].[IsDeleted], [f].[Name], [f].[UpdatedAt], [b].[Id], [b].[CreatedAt], [b].[IsDeleted], [b].[Name], [b].[UpdatedAt], [m].[Id], [m].[BrandId], [m].[CreatedAt], [m].[IsDeleted], [m].[Name], [m].[UpdatedAt], [a].[Id], [s].[Id], [c0].[Id], [c0].[CarId], [c0].[CreatedAt], [c0].[Image], [c0].[ImageUrl], [c0].[IsDeleted], [c0].[UpdatedAt], [c0].[isMain], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [s].[CreatedAt], [s].[IsDeleted], [s].[Name], [s].[UpdatedAt]
+FROM [Cars] AS [c]
+INNER JOIN [Fuels] AS [f] ON [c].[FuelId] = [f].[Id]
+INNER JOIN [Bans] AS [b] ON [c].[BanId] = [b].[Id]
+INNER JOIN [Models] AS [m] ON [c].[ModelId] = [m].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [c].[AppUserId] = [a].[Id]
+INNER JOIN [Statuses] AS [s] ON [c].[StatusId] = [s].[Id]
+LEFT JOIN [CarImages] AS [c0] ON [c].[Id] = [c0].[CarId]
+WHERE [c].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [c].[Id], [f].[Id], [b].[Id], [m].[Id], [a].[Id], [s].[Id]
+2023-09-09 12:59:06.217 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-09-09 12:59:06.226 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [b0].[Id], [b0].[BlogId], [b0].[CategoryId], [b0].[CreatedAt], [b0].[IsDeleted], [b0].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [BlogCategories] AS [b0] ON [b].[Id] = [b0].[BlogId]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id], [b0].[Id]
+2023-09-09 12:59:06.226 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [b0].[Id], [b0].[BlogId], [b0].[CategoryId], [b0].[CreatedAt], [b0].[IsDeleted], [b0].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [BlogCategories] AS [b0] ON [b].[Id] = [b0].[BlogId]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id], [b0].[Id]
+2023-09-09 12:59:06.244 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [b0].[Id], [b0].[BlogId], [b0].[CategoryId], [b0].[CreatedAt], [b0].[IsDeleted], [b0].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [BlogCategories] AS [b0] ON [b].[Id] = [b0].[BlogId]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id], [b0].[Id]
+2023-09-09 12:59:06.244 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [b0].[Id], [b0].[BlogId], [b0].[CategoryId], [b0].[CreatedAt], [b0].[IsDeleted], [b0].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [BlogCategories] AS [b0] ON [b].[Id] = [b0].[BlogId]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id], [b0].[Id]
+2023-09-09 12:59:06.261 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedAt], [a].[Image], [a].[ImageUrl], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt]
+FROM [Associates] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.261 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedAt], [a].[Image], [a].[ImageUrl], [a].[IsDeleted], [a].[Name], [a].[UpdatedAt]
+FROM [Associates] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.292 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:59:06.292 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:59:06.295 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:59:06.295 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:59:06.297 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:59:06.297 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:59:06.299 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:59:06.299 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:59:06.358 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CarId], [c].[CreatedAt], [c].[Image], [c].[ImageUrl], [c].[IsDeleted], [c].[UpdatedAt], [c].[isMain]
+FROM [CarImages] AS [c]
+WHERE [c].[isMain] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.358 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CarId], [c].[CreatedAt], [c].[Image], [c].[ImageUrl], [c].[IsDeleted], [c].[UpdatedAt], [c].[isMain]
+FROM [CarImages] AS [c]
+WHERE [c].[isMain] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:06.442 +04:00 [INF] Executed ViewResult - view Index executed in 339.0346ms.
+2023-09-09 12:59:06.442 +04:00 [INF] Executed ViewResult - view Index executed in 339.0396ms.
+2023-09-09 12:59:06.446 +04:00 [INF] Executed action Miles.App.Controllers.HomeController.Index (Miles.App) in 1911.6333ms
+2023-09-09 12:59:06.446 +04:00 [INF] Executed action Miles.App.Controllers.HomeController.Index (Miles.App) in 1912.0015ms
+2023-09-09 12:59:06.446 +04:00 [INF] Executed endpoint 'Miles.App.Controllers.HomeController.Index (Miles.App)'
+2023-09-09 12:59:06.446 +04:00 [INF] Executed endpoint 'Miles.App.Controllers.HomeController.Index (Miles.App)'
+2023-09-09 12:59:06.449 +04:00 [INF] HTTP GET / responded 200 in 1976.7357 ms
+2023-09-09 12:59:06.449 +04:00 [INF] HTTP GET / responded 200 in 2113.4781 ms
+2023-09-09 12:59:06.482 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - - - 200 - text/html;+charset=utf-8 2012.3768ms
+2023-09-09 12:59:06.482 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/ - - - 200 - text/html;+charset=utf-8 2166.4100ms
+2023-09-09 12:59:06.500 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:59:06.500 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:59:06.500 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/Images/Cars/5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg - -
+2023-09-09 12:59:06.506 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 6.6358ms
+2023-09-09 12:59:06.507 +04:00 [INF] The file /Images/Cars/5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg was not modified
+2023-09-09 12:59:06.509 +04:00 [INF] HTTP GET /Images/Cars/5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg responded 304 in 7.3892 ms
+2023-09-09 12:59:06.509 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/Images/Cars/5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg - - - 304 - image/jpeg 9.6098ms
+2023-09-09 12:59:06.532 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.4626ms
+2023-09-09 12:59:07.127 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/account/GetUser - -
+2023-09-09 12:59:07.158 +04:00 [INF] Executing endpoint 'Miles.App.Controllers.AccountController.GetUser (Miles.App)'
+2023-09-09 12:59:07.165 +04:00 [INF] Route matched with {action = "GetUser", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUser() on controller Miles.App.Controllers.AccountController (Miles.App).
+2023-09-09 12:59:07.270 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:59:07.276 +04:00 [INF] Executing JsonResult, writing value of type 'Miles.Core.Entities.AppUser'.
+2023-09-09 12:59:07.362 +04:00 [INF] Executed action Miles.App.Controllers.AccountController.GetUser (Miles.App) in 196.4589ms
+2023-09-09 12:59:07.363 +04:00 [INF] Executed endpoint 'Miles.App.Controllers.AccountController.GetUser (Miles.App)'
+2023-09-09 12:59:07.364 +04:00 [INF] HTTP GET /account/GetUser responded 200 in 235.6661 ms
+2023-09-09 12:59:07.365 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/account/GetUser - - - 0 - application/json;+charset=utf-8 238.5151ms
+2023-09-09 12:59:08.849 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/admin/Setting/Index - -
+2023-09-09 12:59:08.858 +04:00 [INF] Executing endpoint 'Miles.App.Areas.Admin.Controllers.SettingController.Index (Miles.App)'
+2023-09-09 12:59:08.869 +04:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Setting"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32) on controller Miles.App.Areas.Admin.Controllers.SettingController (Miles.App).
+2023-09-09 12:59:08.924 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Settings] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+2023-09-09 12:59:08.952 +04:00 [INF] Executing ViewResult, running view Index.
+2023-09-09 12:59:08.958 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:59:08.959 +04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-09-09 12:59:08.966 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+FROM [Settings] AS [s]
+WHERE [s].[IsDeleted] = CAST(0 AS bit)
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-09 12:59:08.971 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[CreatedAt], [t].[Email], [t].[IsDeleted], [t].[Logo], [t].[LogoUrl], [t].[Phone1], [t].[Phone2], [t].[PhotoWhy], [t].[PhotoWhyUrl], [t].[UpdatedAt], [s0].[Id], [s0].[CreatedAt], [s0].[Icon], [s0].[IsDeleted], [s0].[Link], [s0].[SettingId], [s0].[StaffId], [s0].[UpdatedAt]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address], [s].[CreatedAt], [s].[Email], [s].[IsDeleted], [s].[Logo], [s].[LogoUrl], [s].[Phone1], [s].[Phone2], [s].[PhotoWhy], [s].[PhotoWhyUrl], [s].[UpdatedAt]
+    FROM [Settings] AS [s]
+    WHERE [s].[IsDeleted] = CAST(0 AS bit)
+) AS [t]
+LEFT JOIN [Socials] AS [s0] ON [t].[Id] = [s0].[SettingId]
+ORDER BY [t].[Id]
+2023-09-09 12:59:08.973 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Author], [b].[AuthorImage], [b].[Comment], [b].[CreatedAt], [b].[Description], [b].[Image], [b].[ImageUrl], [b].[IsDeleted], [b].[Title], [b].[UpdatedAt], [c].[Id], [c].[AppUserId], [c].[BlogId], [c].[CarID], [c].[CreatedAt], [c].[IsDeleted], [c].[Subject], [c].[Text], [c].[UpdatedAt]
+FROM [Blogs] AS [b]
+LEFT JOIN [Comments] AS [c] ON [b].[Id] = [c].[BlogId]
+WHERE [b].[IsDeleted] = CAST(0 AS bit)
+ORDER BY [b].[Id]
+2023-09-09 12:59:08.975 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Address], [m].[CreatedAt], [m].[Email], [m].[FirstName], [m].[IsDeleted], [m].[Phone], [m].[Text], [m].[UpdatedAt]
+FROM [Messages] AS [m]
+WHERE [m].[IsDeleted] = CAST(0 AS bit) AND [m].[Address] <> N'For dealer'
+2023-09-09 12:59:08.977 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@___http_HttpContext_User_Identity_Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[CountryId], [t].[Email], [t].[EmailConfirmed], [t].[Image], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[Name], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[Surname], [t].[TwoFactorEnabled], [t].[UserName], [t].[UserPricingId], [t].[Id0], [t].[CreatedAt], [t].[FlagImage], [t].[FlagUrl], [t].[IsDeleted], [t].[Name0], [t].[UpdatedAt], [t].[Id1], [t].[CreatedAt0], [t].[IsDeleted0], [t].[Name1], [t].[Price], [t].[UpdatedAt0], [c0].[Id], [c0].[ActionDate], [c0].[AppUserId], [c0].[AuctionWinPrice], [c0].[BanId], [c0].[ColorId], [c0].[CreatedAt], [c0].[Description], [c0].[FabricationYear], [c0].[FuelCity], [c0].[FuelId], [c0].[FuelWay], [c0].[IsDeleted], [c0].[ModelId], [c0].[Motor], [c0].[NoGears], [c0].[Odometer], [c0].[Price], [c0].[StatusId], [c0].[Transmission], [c0].[UpdatedAt], [c0].[Vin], [c0].[WinDate], [c0].[WinnerId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CountryId], [a].[Email], [a].[EmailConfirmed], [a].[Image], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Surname], [a].[TwoFactorEnabled], [a].[UserName], [a].[UserPricingId], [c].[Id] AS [Id0], [c].[CreatedAt], [c].[FlagImage], [c].[FlagUrl], [c].[IsDeleted], [c].[Name] AS [Name0], [c].[UpdatedAt], [u].[Id] AS [Id1], [u].[CreatedAt] AS [CreatedAt0], [u].[IsDeleted] AS [IsDeleted0], [u].[Name] AS [Name1], [u].[Price], [u].[UpdatedAt] AS [UpdatedAt0]
+    FROM [AspNetUsers] AS [a]
+    INNER JOIN [Countries] AS [c] ON [a].[CountryId] = [c].[Id]
+    INNER JOIN [UserPricings] AS [u] ON [a].[UserPricingId] = [u].[Id]
+    WHERE [a].[Name] = @___http_HttpContext_User_Identity_Name_0
+) AS [t]
+LEFT JOIN [Cars] AS [c0] ON [t].[Id] = [c0].[AppUserId]
+ORDER BY [t].[Id], [t].[Id0], [t].[Id1]
+2023-09-09 12:59:09.019 +04:00 [INF] Executed ViewResult - view Index executed in 66.6881ms.
+2023-09-09 12:59:09.019 +04:00 [INF] Executed action Miles.App.Areas.Admin.Controllers.SettingController.Index (Miles.App) in 149.9209ms
+2023-09-09 12:59:09.020 +04:00 [INF] Executed endpoint 'Miles.App.Areas.Admin.Controllers.SettingController.Index (Miles.App)'
+2023-09-09 12:59:09.020 +04:00 [INF] HTTP GET /admin/Setting/Index responded 200 in 169.0807 ms
+2023-09-09 12:59:09.023 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/admin/Setting/Index - - - 200 - text/html;+charset=utf-8 173.6116ms
+2023-09-09 12:59:09.048 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - -
+2023-09-09 12:59:09.050 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 1.2984ms
+2023-09-09 12:59:09.051 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - -
+2023-09-09 12:59:09.056 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.9598ms

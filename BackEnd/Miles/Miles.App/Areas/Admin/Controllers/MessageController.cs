@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,11 +13,12 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly IMessageService _service;
         private readonly MilesAppDbContext _context;
-
-        public MessageController(IMessageService service, MilesAppDbContext context)
+        private readonly ILogger<MessageController> _logger;
+        public MessageController(IMessageService service, MilesAppDbContext context, ILogger<MessageController> logger)
         {
             _service = service;
             _context = context;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -46,6 +48,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Message Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

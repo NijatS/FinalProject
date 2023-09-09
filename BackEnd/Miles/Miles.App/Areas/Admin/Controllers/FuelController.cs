@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Fuels;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,11 +13,12 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly MilesAppDbContext _context;
         private readonly IFuelService _service;
-
-        public FuelController(MilesAppDbContext context, IFuelService service)
+        private readonly ILogger<FuelController> _logger;
+        public FuelController(MilesAppDbContext context, IFuelService service, ILogger<FuelController> logger)
         {
             _context = context;
             _service = service;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -47,6 +49,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Fuel Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -71,6 +74,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Fuel Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -80,6 +84,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Fuel Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

@@ -5,6 +5,7 @@ using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Models;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Miles.App.Areas.Admin.Controllers
@@ -16,14 +17,16 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly MilesAppDbContext _context;
         private readonly IModelService _service;
         private readonly IBrandService _brandService;
-		public ModelController(IModelService service, IBrandService brandService, MilesAppDbContext context)
-		{
-			_service = service;
-			_brandService = brandService;
-			_context = context;
-		}
+        private readonly ILogger<ModelController> _logger;
+        public ModelController(IModelService service, IBrandService brandService, MilesAppDbContext context, ILogger<ModelController> logger)
+        {
+            _service = service;
+            _brandService = brandService;
+            _context = context;
+            _logger = logger;
+        }
 
-		public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1)
         {
             int TotalCount = _context.Models.Where(x => !x.IsDeleted).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
@@ -56,6 +59,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Model Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -86,6 +90,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Model Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -95,6 +100,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Model Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

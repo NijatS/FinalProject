@@ -3,6 +3,7 @@ using Miles.Data.Context;
 using Miles.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Miles.Service.Dtos.Statuses;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,11 +13,12 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly MilesAppDbContext _context;
         private readonly IStatusService _service;
-
-        public StatusController(MilesAppDbContext context, IStatusService service)
+        private readonly ILogger<StatusController> _logger;
+        public StatusController(MilesAppDbContext context, IStatusService service, ILogger<StatusController> logger)
         {
             _context = context;
             _service = service;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -47,6 +49,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Status Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -71,6 +74,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Status Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -80,6 +84,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Status Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

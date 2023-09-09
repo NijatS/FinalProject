@@ -12,12 +12,17 @@ using System.Text.Json.Serialization;
 using Miles.Core.Entities.BaseEntities;
 using Miles.Core.Entities;
 using Miles.App.ServiceRegistrations;
+using Serilog;
+using Serilog.Events;
+using Serilog.Formatting.Json;
+using Serilog.Sinks.MSSqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Register(builder.Configuration);
 builder.Services.AddRazorPages();
+builder.Host.UseSerilog();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +33,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 
+
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

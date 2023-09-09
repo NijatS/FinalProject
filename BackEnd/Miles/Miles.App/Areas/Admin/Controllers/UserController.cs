@@ -7,6 +7,7 @@ using Miles.Data.Context;
 using Miles.Service.Dtos.Accounts;
 using Miles.Service.Extensions;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -17,11 +18,13 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IAccountService _service;
         private readonly IWebHostEnvironment _evn;
         private readonly ICountryService _countryService;
-        public UserController(IAccountService service, IWebHostEnvironment evn, ICountryService countryService)
+        private readonly ILogger<UserController> _logger;
+        public UserController(IAccountService service, IWebHostEnvironment evn, ICountryService countryService, ILogger<UserController> logger)
         {
             _service = service;
             _evn = evn;
             _countryService = countryService;
+            _logger = logger;
         }
         public async Task<IActionResult> Index(int page =1)
         {
@@ -48,6 +51,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
 
             }
+            _logger.LogInformation("User Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

@@ -4,6 +4,7 @@ using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Services.Interfaces;
 using NuGet.Protocol;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -13,11 +14,13 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly ICategoryService _service;
         private readonly MilesAppDbContext _context;
+        private readonly ILogger<CategoryController> _logger;
 
-        public CategoryController(ICategoryService service, MilesAppDbContext context)
+        public CategoryController(ICategoryService service, MilesAppDbContext context, ILogger<CategoryController> logger)
         {
             _service = service;
             _context = context;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -48,6 +51,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Category Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -72,6 +76,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Category Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -81,6 +86,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Category Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Blogs;
 using Miles.Service.Services.Interfaces;
 using NuGet.Protocol;
+using System.Security.Claims;
 using System.Text.Json;
 
 namespace Miles.App.Areas.Admin.Controllers
@@ -18,13 +20,15 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IBlogService _service;
         private readonly ICategoryService _categoryService;
         private readonly ITagService _tagService;
+        private readonly ILogger<BlogController> _logger;
 
-        public BlogController(IBlogService service, MilesAppDbContext context, ICategoryService categoryService, ITagService tagService)
+        public BlogController(IBlogService service, MilesAppDbContext context, ICategoryService categoryService, ITagService tagService, ILogger<BlogController> logger)
         {
             _service = service;
             _context = context;
             _categoryService = categoryService;
             _tagService = tagService;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -41,7 +45,6 @@ namespace Miles.App.Areas.Admin.Controllers
         {
             ViewBag.Categories = await _context.Categories.Where(x=>!x.IsDeleted).ToListAsync();
 			ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
-			//ViewBag.Tags = await _tagService.GetAllAsync(0, 0);
 			return View();
         }
         [HttpPost]
@@ -60,6 +63,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Blog Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -91,6 +95,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Blog Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -100,6 +105,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Blog Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

@@ -17,6 +17,7 @@ using Miles.Data.Context;
 using System.Linq.Expressions;
 using Microsoft.Extensions.Hosting;
 using Miles.Service.Helpers;
+using Microsoft.Extensions.Logging;
 
 namespace Miles.Service.Services.Implementations
 {

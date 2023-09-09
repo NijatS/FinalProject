@@ -7,6 +7,7 @@ using Miles.Service.Dtos.Cars;
 using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
 using NuGet.Protocol;
+using System.Security.Claims;
 using System.Text.Json;
 
 namespace Miles.App.Areas.Admin.Controllers
@@ -24,20 +25,22 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IBrandService _brandService;
         private readonly IAccountService _accountService;
         private readonly ICarImageService _carImageService;
-		public CarController(ICarService service, MilesAppDbContext context, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService)
-		{
-			_service = service;
-			_context = context;
-			_fuelService = fuelService;
-			_banService = banService;
-			_colorService = colorService;
-			_countryService = countryService;
-			_brandService = brandService;
-			_accountService = accountService;
-			_carImageService = carImageService;
-		}
+        private readonly ILogger<CarController> _logger;
+        public CarController(ICarService service, MilesAppDbContext context, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService, ILogger<CarController> logger)
+        {
+            _service = service;
+            _context = context;
+            _fuelService = fuelService;
+            _banService = banService;
+            _colorService = colorService;
+            _countryService = countryService;
+            _brandService = brandService;
+            _accountService = accountService;
+            _carImageService = carImageService;
+            _logger = logger;
+        }
 
-		public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1)
         {
             int TotalCount = _context.Cars.Where(x => !x.IsDeleted).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
@@ -89,6 +92,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Car Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -153,6 +157,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Car Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -162,6 +167,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Car Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
 		public async Task<IActionResult> SetAsMainImage(int id)
@@ -182,7 +188,8 @@ namespace Miles.App.Areas.Admin.Controllers
                 carImage1.isMain = false;
             }
 			await _carImageService.Save();
-			return Json(new { status = 200 });
+            _logger.LogInformation("Car Main Image Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
+            return Json(new { status = 200 });
 		}
 		public async Task<IActionResult> RemoveImage(int id)
 		{
@@ -197,7 +204,8 @@ namespace Miles.App.Areas.Admin.Controllers
 
 			carImage.IsDeleted = true;
 			await _carImageService.Save();
-			return Json(new { status = 200 });
+            _logger.LogInformation("Car Image Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
+            return Json(new { status = 200 });
 		}
 	}
 }

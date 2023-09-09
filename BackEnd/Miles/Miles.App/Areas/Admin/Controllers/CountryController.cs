@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Countries;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,11 +13,13 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly MilesAppDbContext _context;
         private readonly ICountryService _service;
+        private readonly ILogger<CountryController> _logger;
 
-        public CountryController(MilesAppDbContext context, ICountryService service)
+        public CountryController(MilesAppDbContext context, ICountryService service, ILogger<CountryController> logger)
         {
             _context = context;
             _service = service;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -47,6 +50,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Country Created by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -71,6 +75,7 @@ namespace Miles.App.Areas.Admin.Controllers
                 ModelState.AddModelError("", result.Description);
                 return View(dto);
             }
+            _logger.LogInformation("Country Updated by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Remove(int id)
@@ -80,6 +85,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Country Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }

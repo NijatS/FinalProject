@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Subscribes;
 using Miles.Service.Services.Interfaces;
+using System.Security.Claims;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,11 +13,12 @@ namespace Miles.App.Areas.Admin.Controllers
     {
         private readonly ISubscribeService _service;
         private readonly MilesAppDbContext _context;
-
-        public SubscribeController(ISubscribeService service, MilesAppDbContext context)
+        private readonly ILogger<SubscribeController> _logger;
+        public SubscribeController(ISubscribeService service, MilesAppDbContext context, ILogger<SubscribeController> logger)
         {
             _service = service;
             _context = context;
+            _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -37,6 +39,7 @@ namespace Miles.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation("Subscribe Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
         }
     }
