@@ -24,7 +24,8 @@ namespace Miles.App.Controllers
 
         public async Task<IActionResult> Index()
         {
-           var aboutTextResult = await _aboutTextService.GetAsync(null);
+            ViewBag.IsDataLoading = true;
+            var aboutTextResult = await _aboutTextService.GetAsync(null);
             var aboutSkillResult = await _aboutSkillService.GetAllAsync(0,0);
             var staffResult = await _staffService.GetAllAsync(0, 0);
             var resultAssociate = await _associateService.GetAllAsync(0, 0);
@@ -38,6 +39,7 @@ namespace Miles.App.Controllers
                 Associates = (IEnumerable<Associate>)resultAssociate.items,
                 Comments = (IEnumerable<Comment>)commentResult.items,
             };
+            ViewBag.IsDataLoading = false;
             return View(aboutVM);
         }
     }

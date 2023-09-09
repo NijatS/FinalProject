@@ -6,9 +6,10 @@
                 <th scope="col">Id</th>
                 <th scope="col">Name:</th>
                 <th scope="col">Position:</th>
-                <th scope="col">Photo:</th>
-                <th scope="col">Update</th>
-                <th scope="col">Delete</th>
+                <th scope="col" class="text-center">Photo:</th>
+                <th scope="col" class="text-center">Show && Add Social</th>
+                <th scope="col" class="text-center">Update</th>
+                <th scope="col" class="text-center">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -18,13 +19,21 @@
                     <th scope="row">@item.Id</th>
                     <th>@item.FullName</th>
                     <th>@item.Position.Name</th>
-                    <th><img style="width:100px;height:100px" src="~/Images/Staffs/@item.Image" /></th>
-                    <td>
+                    <th class="text-center"><img style="width:100px;height:100px;border-radius:50%" src="~/Images/Staffs/@item.Image" /></th>
+                    <td class="text-center" >
+                        <a asp-controller="Staff" asp-action="social"  asp-route-id="@item.Id" style="margin-right: 25px;text-decoration:none">
+                            <i class="fa-solid fa-eye text text-secondary"></i>
+                        </a>
+                        <a asp-controller="Social" asp-action="create" >
+                            <i class="fa-solid fa-share-nodes text text-warning"></i>
+                        </a>
+                    </td>
+                    <td class="text-center">
                         <a asp-controller="Staff" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>
                         </a>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <a onclick="if(!confirm('Are you sure?')){return false;}"
                            asp-controller="Staff" asp-action="remove" asp-route-id="@item.Id"
                            class=" delete-item"><i class="fas fa-trash text text-danger"></i></a>

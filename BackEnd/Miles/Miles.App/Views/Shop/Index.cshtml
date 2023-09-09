@@ -167,6 +167,7 @@
         </div>
     </div>
 </section>
+<script src="~/JavaScript/spinner.js"></script>
 <script>
     const input = document.querySelector("#brandInput");
     const modelInput = document.querySelector("#modelInput");
@@ -174,7 +175,7 @@
     const dateDropdown1 = document.querySelector("#date-dropdown1");
     let currentYear = new Date().getFullYear();
     let earliestYear = 2000;
-    let href = `/admin/model/GetAll`;
+     href = `/Car/GetAllModel`;
     fetch(href)
         .then(x => x.json())
         .then(x => {

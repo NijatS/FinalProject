@@ -16,11 +16,13 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IStaffService _service;
         private readonly IPositionService _positionService;
         private readonly ILogger<StaffController> _logger;
-        public StaffController(IStaffService service, ILogger<StaffController> logger, IPositionService positionService)
+        private readonly ISocialService _socialService;
+        public StaffController(IStaffService service, ILogger<StaffController> logger, IPositionService positionService, ISocialService socialService)
         {
             _service = service;
             _logger = logger;
             _positionService = positionService;
+            _socialService = socialService;
         }
 
         public async Task<IActionResult> Index(int page = 1)
@@ -100,6 +102,12 @@ namespace Miles.App.Areas.Admin.Controllers
             }
             _logger.LogInformation("Staff Removed by " + User.FindFirstValue(ClaimTypes.NameIdentifier));
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> Social(int id)
+        {
+            var result = await _socialService.GetAllAsync(0, 0);
+            IEnumerable<Social> socials =((IEnumerable<Social>)result.items).Where(x=>!x.IsDeleted && x.StaffId==id);
+            return View(socials);
         }
     }
 }

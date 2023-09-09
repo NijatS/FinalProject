@@ -25,7 +25,8 @@ namespace Miles.App.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var result = await _settingService.GetSetting();
+			ViewBag.IsDataLoading = true;
+			var result = await _settingService.GetSetting();
             var resultText = await _textWhyService.GetAllAsync(0, 0);
             var userPricing = await _userPricingService.GetAllAsync(0, 0);
             var resultCar = await _carService.GetAllAsync(0, 0, null);
@@ -40,8 +41,8 @@ namespace Miles.App.Controllers
                 AppUsers = (IEnumerable<AppUser>)resultUser.items,
                 Bids =(IEnumerable<Bid>)resultBid.items,
         };
-
-            return View(serviceVM);
+			ViewBag.IsDataLoading = false;
+			return View(serviceVM);
 			
 		}
 	}

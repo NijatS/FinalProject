@@ -1,4 +1,5 @@
 ﻿@model HomeVM
+@using System.Text.Json
 @{
     int i = 0;
 }
@@ -40,6 +41,7 @@
         i++;
     }
 </div>
+
 <div id="page">
     <div class="seeAll"></div>
     <section class="see-row">
@@ -223,7 +225,8 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="~/JavaScript/home.js"></script>
+<script src="~/JavaScript/spinner.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="~/JavaScript/swipper.js"></script>
-

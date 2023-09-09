@@ -45,6 +45,7 @@ namespace Miles.App.Controllers
         }
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
+            ViewBag.IsDataLoading = true;
             var resultCar = await _carService.GetAllAsync(0, 0,null);
             IEnumerable<Car> Cars = (IEnumerable<Car>)resultCar.items;
             if (sort is not null && sort != 0)
@@ -130,10 +131,12 @@ namespace Miles.App.Controllers
                 Cars = (IEnumerable<Car>)resultCar.items;
             }
             TotalCount = Cars.Count();
+            ViewBag.IsDataLoading = false;
             return View(Cars);
         }
         public async Task<IActionResult> Detail(int id)
         {
+            ViewBag.IsDataLoading = true;
             var resultCar = await _carService.GetAsync(id);
             var resultCars = await _carService.GetAllAsync(0 ,0,x=> x.Id != id);
             var resultComment = await _commentService.GetAllAsync(0,0,x=>x.CarID == id && !x.IsDeleted);
@@ -143,6 +146,7 @@ namespace Miles.App.Controllers
                 Cars = (IEnumerable<Car>)resultCars.items,
                 Comments = (IEnumerable<Comment>)resultComment.items,
             };
+            ViewBag.IsDataLoading = false;
             return View(shopVM);
         }
         private Expression<Func<Car, bool>> CombineFilters(Expression<Func<Car, bool>> filter1, Expression<Func<Car, bool>> filter2)

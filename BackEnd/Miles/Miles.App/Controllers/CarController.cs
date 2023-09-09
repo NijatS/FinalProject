@@ -35,6 +35,7 @@ namespace Miles.App.Controllers
 		[HttpGet]
 		public async Task<IActionResult> Sell()
         {
+            ViewBag.IsDataLoading = true;
             var result = await _accountService.GetUser();
             AppUser user =(AppUser) result.items;
             if (user.UserPricingId == 1)
@@ -63,7 +64,8 @@ namespace Miles.App.Controllers
 			ViewBag.Colors = resultColor.items;
 			ViewBag.Countries = resultCountry.items;
 			ViewBag.Brands = resultBrand.items;
-			return View();
+            ViewBag.IsDataLoading = false;
+            return View();
         }
 		[HttpPost]
 		[Authorize]
@@ -97,6 +99,7 @@ namespace Miles.App.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
+            ViewBag.IsDataLoading = true;
             var resultFuel = await _fuelService.GetAllAsync(0, 0);
             var resultBan = await _banService.GetAllAsync(0, 0);
             var resultColor = await _colorService.GetAllAsync(0, 0);
@@ -114,6 +117,7 @@ namespace Miles.App.Controllers
             {
                 return NotFound();
             }
+            ViewBag.IsDataLoading = false;
             return View(result.items);
         }
         [HttpPost]

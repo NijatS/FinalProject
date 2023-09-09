@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VUtTL5z+32Nn4K+p2zAbsR4i7e7q38ialRsBVXt2TJY=",
+  "Hash": "4LwLKui1b7vcN3qKOVT2SgZkR0jdemrsFutwLTeH9FQ=",
   "Source": "Miles.App",
   "BasePath": "_content/Miles.App",
   "Mode": "Default",
@@ -5115,6 +5115,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JavaScript\\sidebar.js"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\spinner.js",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "JavaScript/spinner.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JavaScript\\spinner.js"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\swipper.js",

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Social>
+<div class="container">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Staff Name:</th>
+                <th scope="col">Name:</th>
+                <th scope="col">Link:</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                    <tr>
+                    <th scope="row">@item.Id</th>
+                    @if (item.StaffId == null)
+                    {
+                        <th scope="row">Setting</th>
+                    }
+                    else
+                    {
+                        <th scope="row">@item.Staff?.FullName</th>
+                    }
+                        <th>@item.Icon</th>
+                    <th>@item.Link</th>
+                        <td><a asp-controller="social" asp-action="update" asp-route-id="@item.Id" >
+                            <i class="fas fa-edit text text-primary"></i></a></td>
+                        <td><a onclick="if(!confirm('Are you sure?')){return false;}"
+                           asp-controller="social" asp-action="remove" asp-route-id="@item.Id"
+                            class=" delete-item" ><i class="fas fa-trash text text-danger"></i></a></td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a asp-controller="Staff" asp-action="index" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%" a>
+            <div style="width:100%; " class="btn btn-outline-danger">Go Back</div></a>
+    </div>
+</div>

@@ -26,6 +26,7 @@ namespace Miles.App.Controllers
 
         public async Task<IActionResult> Index(int? id,string? search = null, int page =1)
         {
+            ViewBag.IsDataLoading = true;
             var result = await _blogService.GetAllAsync(0, 0,null);
             IEnumerable<Blog> Blogs = (IEnumerable<Blog>)result.items;
             int TotalCount = Blogs.Count();
@@ -48,15 +49,17 @@ namespace Miles.App.Controllers
                 blogVM.Blogs = (IEnumerable<Blog>)result.items;
                 if (blogVM.Blogs is null)
                 {
+                    ViewBag.IsDataLoading = false;
                     return View(null);
                 }
+                ViewBag.IsDataLoading = false;
                 return View(blogVM);
             }
             if (id == null)
             {
                 result = await _blogService.GetAllAsync(3,page,null);
                 blogVM.Blogs = (IEnumerable<Blog>)result.items;
-         
+            ViewBag.IsDataLoading = false;
                 return View(blogVM);
             }
             else
@@ -66,11 +69,14 @@ namespace Miles.App.Controllers
                 ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 3);
                 result = await _blogService.GetAllAsync(3, page, x => !x.IsDeleted && x.BlogCategories.Any(x => x.Category.Id == id));
                 blogVM.Blogs = (IEnumerable<Blog>)result.items;
+                ViewBag.IsDataLoading = false;
                 return View(blogVM);
             }
+
         }
         public async Task<IActionResult> Detail(int id)
         {
+            ViewBag.IsDataLoading = true;
             var resultCategory = await _categoryService.GetAllAsync(0, 0);
             var resultTag = await _tagService.GetAllAsync(0, 0);
             var resultBlog = await _blogService.GetAllAsync(0, 0,null);
@@ -88,6 +94,7 @@ namespace Miles.App.Controllers
                 return NotFound();
             }
             blogVM.Blog = (Blog)result.itemView;
+            ViewBag.IsDataLoading = false;
             return View(blogVM);
         }
         public async Task<IActionResult> Search(string search, int page = 1)

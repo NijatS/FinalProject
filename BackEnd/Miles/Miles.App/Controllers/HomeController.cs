@@ -34,6 +34,7 @@ namespace Miles.App.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            ViewBag.IsDataLoading = true;
             var resultSlide = await _sliderService.GetAllAsync(0, 0);
             var resultBlog = await _blogService.GetAllAsync(0, 0, null);
             var resultText = await _textWhyService.GetAllAsync(0, 0);
@@ -48,6 +49,7 @@ namespace Miles.App.Controllers
                 Setting = _settingService.GetSetting().Result.Setting,
                 Cars = (IEnumerable<Car>)resultCar.items,
             };
+            ViewBag.IsDataLoading = false;
             return View(homeVM);
         }
         [HttpPost]

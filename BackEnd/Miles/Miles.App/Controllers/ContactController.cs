@@ -24,11 +24,13 @@ namespace Miles.App.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.IsDataLoading = true;
             var result =await _settingService.GetSetting();
             ContactVM contactVM = new ContactVM()
             {
                 Setting = result.Setting,
             };
+            ViewBag.IsDataLoading = false;
             return View(contactVM);
         }
         [HttpPost]

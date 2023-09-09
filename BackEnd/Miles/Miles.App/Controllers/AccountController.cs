@@ -238,24 +238,6 @@ namespace Miles.App.Controllers
             AppUser user = (AppUser) result.items;
             return Json(user);
         }
-        //public async Task<IActionResult> AddRole()
-        //{
-        //    IdentityRole role = new IdentityRole
-        //    {
-        //        Name = "User"
-        //    };
-        //    IdentityRole role1 = new IdentityRole
-        //    {
-        //        Name = "Admin"
-        //    };
-        //    IdentityRole role2 = new IdentityRole
-        //    {
-        //        Name = "SuperAdmin"
-        //    };
-        //   await _roleManager.CreateAsync(role);
-        //   await _roleManager.CreateAsync(role1);
-        //    await _roleManager.CreateAsync(role2);
-        //    return RedirectToAction("index", "home");
-        //}
+ 
     }
 }
