@@ -16,7 +16,6 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class CarController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly ICarService _service;
         private readonly IFuelService _fuelService;
         private readonly IBanService _banService;
@@ -26,10 +25,9 @@ namespace Miles.App.Areas.Admin.Controllers
         private readonly IAccountService _accountService;
         private readonly ICarImageService _carImageService;
         private readonly ILogger<CarController> _logger;
-        public CarController(ICarService service, MilesAppDbContext context, IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService, ILogger<CarController> logger)
+        public CarController(ICarService service,IFuelService fuelService, IBanService banService, IColorService colorService, ICountryService countryService, IBrandService brandService, IAccountService accountService, ICarImageService carImageService, ILogger<CarController> logger)
         {
             _service = service;
-            _context = context;
             _fuelService = fuelService;
             _banService = banService;
             _colorService = colorService;
@@ -42,11 +40,12 @@ namespace Miles.App.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Cars.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0,x=>!x.IsDeleted);
+            int TotalCount = ((IEnumerable<Car>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             ViewBag.CurrentPage = page;
             int count = 4;
-            var result = await _service.GetAllAsync(count,page, null);
+             result = await _service.GetAllAsync(count,page, null);
             return View(result.items);
         }
         [HttpGet]

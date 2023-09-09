@@ -5,6 +5,7 @@ using Miles.Service.Dtos.Associates;
 using Miles.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Miles.Core.Entities;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,24 +13,23 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class AssociateController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IAssociateService _service;
         private readonly ILogger<AssociateController> _logger;
 
-        public AssociateController(MilesAppDbContext context, IAssociateService service, ILogger<AssociateController> logger)
+        public AssociateController( IAssociateService service, ILogger<AssociateController> logger)
         {
-            _context = context;
             _service = service;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Associates.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Associate>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
         [HttpGet]

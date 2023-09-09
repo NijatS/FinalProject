@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Messages;
 using Miles.Service.Services.Interfaces;
@@ -12,22 +13,21 @@ namespace Miles.App.Areas.Admin.Controllers
     public class MessageController : Controller
     {
         private readonly IMessageService _service;
-        private readonly MilesAppDbContext _context;
         private readonly ILogger<MessageController> _logger;
-        public MessageController(IMessageService service, MilesAppDbContext context, ILogger<MessageController> logger)
+        public MessageController(IMessageService service, ILogger<MessageController> logger)
         {
             _service = service;
-            _context = context;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Messages.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Message>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
    

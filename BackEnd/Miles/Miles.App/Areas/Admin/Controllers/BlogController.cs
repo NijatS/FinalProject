@@ -16,16 +16,14 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IBlogService _service;
         private readonly ICategoryService _categoryService;
         private readonly ITagService _tagService;
         private readonly ILogger<BlogController> _logger;
 
-        public BlogController(IBlogService service, MilesAppDbContext context, ICategoryService categoryService, ITagService tagService, ILogger<BlogController> logger)
+        public BlogController(IBlogService service, ICategoryService categoryService, ITagService tagService, ILogger<BlogController> logger)
         {
             _service = service;
-            _context = context;
             _categoryService = categoryService;
             _tagService = tagService;
             _logger = logger;
@@ -33,31 +31,36 @@ namespace Miles.App.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Blogs.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0,x=>!x.IsDeleted);
+            int TotalCount = ((IEnumerable<Blog>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             ViewBag.CurrentPage = page;
             int count = 4;
-            var result = await _service.GetAllAsync(count,page, null);
+            result = await _service.GetAllAsync(count,page, null);
             return View(result.items);
         }
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Categories = await _context.Categories.Where(x=>!x.IsDeleted).ToListAsync();
-			ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
-			return View();
+            var result = await _categoryService.GetAllAsync(0, 0);
+            ViewBag.Categories =(IEnumerable<Category>)result.items;
+            result = await _tagService.GetAllAsync(0, 0);
+            ViewBag.Tags =  (IEnumerable<Tag>)result.items;
+            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BlogPostDto dto)
         {
-			ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
-			ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
+            var result = await _categoryService.GetAllAsync(0, 0);
+            ViewBag.Categories = (IEnumerable<Category>)result.items;
+            result = await _tagService.GetAllAsync(0, 0);
+            ViewBag.Tags = (IEnumerable<Tag>)result.items;
             if (!ModelState.IsValid)
             {
                 return View(dto);
             }
-            var result = await _service.CreateAsync(dto);
+             result = await _service.CreateAsync(dto);
             if (result.StatusCode == 404)
             {
                 ModelState.AddModelError("", result.Description);
@@ -69,10 +72,12 @@ namespace Miles.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-			ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
-			ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
-			
-            var result = await _service.GetAsync(id);
+            var result = await _categoryService.GetAllAsync(0, 0);
+            ViewBag.Categories = (IEnumerable<Category>)result.items;
+            result = await _tagService.GetAllAsync(0, 0);
+            ViewBag.Tags = (IEnumerable<Tag>)result.items;
+
+            result = await _service.GetAsync(id);
             if (result.StatusCode == 404)
             {
                 return NotFound();
@@ -83,13 +88,15 @@ namespace Miles.App.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Update(int id,BlogUpdateDto dto)
         {
-			ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
-			ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
+            var result = await _categoryService.GetAllAsync(0, 0);
+            ViewBag.Categories = (IEnumerable<Category>)result.items;
+            result = await _tagService.GetAllAsync(0, 0);
+            ViewBag.Tags = (IEnumerable<Tag>)result.items;
             if (!ModelState.IsValid)
             {
                 return View(dto);
             }
-            var result = await _service.UpdateAsync(id,dto);
+             result = await _service.UpdateAsync(id,dto);
             if (result.StatusCode == 400)
             {
                 ModelState.AddModelError("", result.Description);
@@ -100,7 +107,11 @@ namespace Miles.App.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Remove(int id)
         {
-            var result = await _service.RemoveAsync(id);
+            var result = await _categoryService.GetAllAsync(0, 0);
+            ViewBag.Categories = (IEnumerable<Category>)result.items;
+            result = await _tagService.GetAllAsync(0, 0);
+            ViewBag.Tags = (IEnumerable<Tag>)result.items;
+            result = await _service.RemoveAsync(id);
             if(result.StatusCode == 404)
             {
                 return NotFound();

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.UserPricings;
 using Miles.Service.Services.Interfaces;
@@ -11,23 +12,22 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class UserPricingController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IUserPricingService _service;
         private readonly ILogger<UserPricingController> _logger;
-        public UserPricingController(MilesAppDbContext context, IUserPricingService service, ILogger<UserPricingController> logger)
+        public UserPricingController( IUserPricingService service, ILogger<UserPricingController> logger)
         {
-            _context = context;
             _service = service;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.UserPricings.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<UserPricing>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count, page);
+            result = await _service.GetAllAsync(count, page);
             return View(result.items);
         }
         [HttpGet]

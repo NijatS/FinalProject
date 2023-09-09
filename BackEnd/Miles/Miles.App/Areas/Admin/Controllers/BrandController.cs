@@ -5,6 +5,7 @@ using Miles.Service.Dtos.Brands;
 using Miles.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Miles.Core.Entities;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,24 +13,23 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class BrandController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IBrandService _service;
         private readonly ILogger<BrandController> _logger;
 
-        public BrandController(MilesAppDbContext context, IBrandService service, ILogger<BrandController> logger)
+        public BrandController( IBrandService service, ILogger<BrandController> logger)
         {
-            _context = context;
             _service = service;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Brands.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Brand>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             ViewBag.CurrentPage = page;
             int count = 4;
-            var result = await _service.GetAllAsync(count,page);
+             result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
         [HttpGet]

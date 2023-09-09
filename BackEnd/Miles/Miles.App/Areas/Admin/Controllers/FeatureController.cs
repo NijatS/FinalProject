@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Features;
@@ -13,43 +14,46 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class FeatureController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IFeatureService _service;
+        private readonly IUserPricingService _userPricingService;
         private readonly ILogger<FeatureController> _logger;
 
-        public FeatureController(MilesAppDbContext context, IFeatureService service, ILogger<FeatureController> logger)
+        public FeatureController(IFeatureService service, ILogger<FeatureController> logger, IUserPricingService userPricingService)
         {
-            _context = context;
             _service = service;
             _logger = logger;
+            _userPricingService = userPricingService;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Features.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Feature>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-			ViewBag.UserPricings = await _context.UserPricings.Where(x => !x.IsDeleted).ToListAsync();
+            var result = await _userPricingService.GetAllAsync(0,0);
+			ViewBag.UserPricings = result.items;
 			return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(FeaturePostDto dto)
         {
-			ViewBag.UserPricings = await _context.UserPricings.Where(x => !x.IsDeleted).ToListAsync();
+            var result = await _userPricingService.GetAllAsync(0, 0);
+            ViewBag.UserPricings = result.items;
 
-			if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(dto);
             }
-            var result = await _service.CreateAsync(dto);
+            result = await _service.CreateAsync(dto);
             if (result.StatusCode == 400)
             {
                 ModelState.AddModelError("", result.Description);
@@ -62,9 +66,10 @@ namespace Miles.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-			ViewBag.UserPricings = await _context.UserPricings.Where(x => !x.IsDeleted).ToListAsync();
+            var result = await _userPricingService.GetAllAsync(0, 0);
+            ViewBag.UserPricings = result.items;
 
-			var result = await _service.GetAsync(id);
+             result = await _service.GetAsync(id);
             if (result.StatusCode == 404)
             {
                 return NotFound();
@@ -73,13 +78,14 @@ namespace Miles.App.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Update(int id,FeatureUpdateDto dto)
         {
-			ViewBag.UserPricings = await _context.UserPricings.Where(x => !x.IsDeleted).ToListAsync();
+            var result = await _userPricingService.GetAllAsync(0, 0);
+            ViewBag.UserPricings = result.items;
 
-			if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(dto);
             }
-            var result = await _service.UpdateAsync(id,dto);
+            result = await _service.UpdateAsync(id,dto);
             if (result.StatusCode == 400)
             {
                 ModelState.AddModelError("", result.Description);

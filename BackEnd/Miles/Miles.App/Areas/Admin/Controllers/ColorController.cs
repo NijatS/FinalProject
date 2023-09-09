@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Colors;
@@ -13,24 +14,23 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class ColorController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IColorService _service;
         private readonly ILogger<ColorController> _logger;
 
-        public ColorController(MilesAppDbContext context, IColorService service, ILogger<ColorController> logger)
+        public ColorController( IColorService service, ILogger<ColorController> logger)
         {
-            _context = context;
             _service = service;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Categories.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Color>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count, page);
+            result = await _service.GetAllAsync(count, page);
             return View(result.items);
         }
         [HttpGet]

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Dtos.Settings;
@@ -12,22 +13,21 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class SettingController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly ISettingService _service;
         private readonly ILogger<SettingController> _logger;
-        public SettingController(MilesAppDbContext context, ISettingService service, ILogger<SettingController> logger)
+        public SettingController(ISettingService service, ILogger<SettingController> logger)
         {
-            _context = context;
             _service = service;
             _logger = logger;
         }
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Settings.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Setting>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
         [HttpGet]

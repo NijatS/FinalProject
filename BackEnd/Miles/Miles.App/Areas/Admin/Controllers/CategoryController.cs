@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Miles.Core.Entities;
 using Miles.Data.Context;
 using Miles.Service.Dtos.Categories;
 using Miles.Service.Services.Interfaces;
@@ -13,23 +14,22 @@ namespace Miles.App.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly ICategoryService _service;
-        private readonly MilesAppDbContext _context;
         private readonly ILogger<CategoryController> _logger;
 
-        public CategoryController(ICategoryService service, MilesAppDbContext context, ILogger<CategoryController> logger)
+        public CategoryController(ICategoryService service, ILogger<CategoryController> logger)
         {
             _service = service;
-            _context = context;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Categories.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Category>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
         [HttpGet]

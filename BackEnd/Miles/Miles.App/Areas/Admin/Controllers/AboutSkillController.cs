@@ -5,6 +5,7 @@ using Miles.Service.Dtos.AboutSkills;
 using Miles.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Miles.Core.Entities;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -12,24 +13,23 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class AboutSkillController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IAboutSkillService _service;
         private readonly ILogger<AboutSkillController> _logger;
 
-        public AboutSkillController(MilesAppDbContext context, IAboutSkillService service, ILogger<AboutSkillController> logger)
+        public AboutSkillController(IAboutSkillService service, ILogger<AboutSkillController> logger)
         {
-            _context = context;
             _service = service;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.AboutSkills.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<AboutSkill>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-            var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
         [HttpGet]

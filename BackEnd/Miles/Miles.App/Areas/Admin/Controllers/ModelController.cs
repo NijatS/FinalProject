@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Miles.Data.Context;
-using Miles.Service.Dtos.Categories;
+using Miles.Core.Entities;
 using Miles.Service.Dtos.Models;
 using Miles.Service.Services.Interfaces;
 using System.Security.Claims;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Miles.App.Areas.Admin.Controllers
 {
@@ -14,25 +11,24 @@ namespace Miles.App.Areas.Admin.Controllers
     [Authorize(Roles = "Admin,SuperAdmin")]
     public class ModelController : Controller
     {
-        private readonly MilesAppDbContext _context;
         private readonly IModelService _service;
         private readonly IBrandService _brandService;
         private readonly ILogger<ModelController> _logger;
-        public ModelController(IModelService service, IBrandService brandService, MilesAppDbContext context, ILogger<ModelController> logger)
+        public ModelController(IModelService service, IBrandService brandService, ILogger<ModelController> logger)
         {
             _service = service;
             _brandService = brandService;
-            _context = context;
             _logger = logger;
         }
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            int TotalCount = _context.Models.Where(x => !x.IsDeleted).Count();
+            var result = await _service.GetAllAsync(0, 0);
+            int TotalCount = ((IEnumerable<Model>)result.items).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
             ViewBag.CurrentPage = page;
             int count = 8;
-           var result = await _service.GetAllAsync(count,page);
+            result = await _service.GetAllAsync(count,page);
             return View(result.items);
         }
 		[HttpGet]
