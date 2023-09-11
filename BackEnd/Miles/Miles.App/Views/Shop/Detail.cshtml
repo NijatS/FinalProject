@@ -46,48 +46,29 @@
                                     <span>$@Model.Car.Price.ToString("#,##0")</span>
                                 </p>
                             </div>
-                            <div class="images">
-                                <figure>
-                                    <div class="sliders">
-                                        <div class="viewport">
-                                            <ul class="slides">
-                                                    @foreach (var item in @Model.Car.CarImages.Where(x=>!x.IsDeleted))
-                                                    {
-                                                    <li>
-                                                        <div>
-                                                            <a href="">
-                                                                <img src="~/Images/Cars/@item.Image" alt="" />
-                                                            </a>
-                                                            <img src="~/Images/Cars/@item.Image" alt="" />
-                                                        </div>
-                                                    </li>
-                                                    }
-                                            </ul>
-                                        </div>
-                                        <ol>
-                                            @foreach (var item in @Model.Car.CarImages.Where(x => !x.IsDeleted))
-                                                    {
-                                            <li>
-                                                    <img src="~/Images/Cars/@item.Image"
-                                                     draggable="false" />
-                                            </li>
-                                                    }
-                                        </ol>
-                                        <ul class="direction-nav">
-                                            <li>
-                                                <a class="nav-prev"
-                                                   onclick="return false;"
-                                                   href="#">Previous</a>
-                                            </li>
-                                            <li>
-                                                <a class="nav-next"
-                                                   onclick="return false;"
-                                                   href="#">Next</a>
-                                            </li>
-                                        </ul>
+                            <div class="gallery">
+                                <div class="swiper-container gallery-slider">
+                                    <div class="swiper-wrapper">
+                                               @foreach (var item in @Model.Car.CarImages.Where(x=>!x.IsDeleted))
+                                        {
+                                            <div class="swiper-slide"><img src="~/Images/Cars/@item.Image" alt=""></div>
+
+                                        }
                                     </div>
-                                </figure>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                                <div class="swiper-container gallery-thumbs">
+                                    <div class="swiper-wrapper">
+                                        @foreach (var item in @Model.Car.CarImages.Where(x => !x.IsDeleted))
+                                        {
+                                            <div class="swiper-slide"><img src="~/Images/Cars/@item.Image" alt=""></div>
+
+                                        }
+                                    </div>
+                                </div>
                             </div>
+                               
                         </div>
                         <div class="tabs">
                             <ul>
@@ -405,5 +386,7 @@
         </div>
     </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 <script src="~/JavaScript/shop-detail.js"></script>
 <script src="~/JavaScript/spinner.js"></script>

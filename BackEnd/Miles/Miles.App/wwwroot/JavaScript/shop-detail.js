@@ -1,9 +1,9 @@
-﻿const sImages = document.querySelectorAll(".sliders >ol img");
-const lImages = document.querySelectorAll(".viewport a>img");
-const slideContainer = document.querySelector(".slides");
-const slideElements = document.querySelectorAll(".slides>li");
-const decreaseBtn = document.querySelector(".nav-prev");
-const increaseBtn = document.querySelector(".nav-next");
+﻿//const sImages = document.querySelectorAll(".sliders >ol img");
+//const lImages = document.querySelectorAll(".viewport a>img");
+//const slideContainer = document.querySelector(".slides");
+//const slideElements = document.querySelectorAll(".slides>li");
+//const decreaseBtn = document.querySelector(".nav-prev");
+//const increaseBtn = document.querySelector(".nav-next");
 const sections = document.querySelectorAll(".tabs>ul li");
 const infos = document.querySelectorAll(".info");
 const enquiry = document.querySelector(".enquiry");
@@ -91,68 +91,68 @@ const checkInterval = setInterval(Check, 100);
 setInterval(timeCalculate, 1000);
 const decreaseBit = document.querySelector(".buttons button:first-child");
 const increaseBit = document.querySelector(".buttons button:last-child");
-sImages[0].style.opacity = "1";
+//sImages[0].style.opacity = "1";
 infos[0].style.display = "block";
 sections[0].style.color = "inherit";
 sections[0].style.borderBottom = "2px solid #f4c23d";
 let carId = document.querySelector(".number span").textContent;
 
-for (let i = 0; i < sImages.length; i++) {
-    sImages[i].addEventListener("click", () => {
-        style = getComputedStyle(slideElements[0]);
-        size = style.width;
-        size = parseInt(size, 10);
-        slideContainer.style.transform = `translate3d(-${size * i}px, 0px, 0px)`;
-        sImages.forEach((imageBlur) => {
-            imageBlur.style.opacity = "0.5";
-        });
-        sImages[i].style.opacity = "1";
-        lImages.forEach((image1) => {
-            if (sImages[i].getAttribute("src") == image1.getAttribute("src")) {
-            }
-        });
-    });
-}
-decreaseBtn.addEventListener("click", () => {
-    for (let i = 0; i < sImages.length; i++) {
-        if (sImages[i].style.opacity == "1") {
-            style = getComputedStyle(slideElements[0]);
-            size = style.width;
-            size = parseInt(size, 10);
-            sImages[i].style.opacity = "0.5";
-            if (i == 0) {
-                sImages[sImages.length - 1].style.opacity = "1";
-                let value = size * (sImages.length - 1);
-                slideContainer.style.transform = `translate3d(-${value}px, 0px, 0px)`;
-            } else {
-                sImages[i - 1].style.opacity = "1";
-                slideContainer.style.transform = `translate3d(-${size * (i - 1)
-                    }px, 0px, 0px)`;
-            }
-            break;
-        }
-    }
-});
-increaseBtn.addEventListener("click", () => {
-    for (let i = 0; i < sImages.length; i++) {
-        if (sImages[i].style.opacity == "1") {
-            style = getComputedStyle(slideElements[0]);
-            size = style.width;
-            size = parseInt(size, 10);
-            sImages[i].style.opacity = "0.5";
-            if (i == sImages.length - 1) {
-                sImages[0].style.opacity = "1";
-                let value = size * (i - sImages.length + 1);
-                slideContainer.style.transform = `translate3d(${value}px, 0px, 0px)`;
-            } else {
-                sImages[i + 1].style.opacity = "1";
-                slideContainer.style.transform = `translate3d(-${size * (i + 1)
-                    }px, 0px, 0px)`;
-            }
-            break;
-        }
-    }
-});
+//for (let i = 0; i < sImages.length; i++) {
+//    sImages[i].addEventListener("click", () => {
+//        style = getComputedStyle(slideElements[0]);
+//        size = style.width;
+//        size = parseInt(size, 10);
+//        slideContainer.style.transform = `translate3d(-${size * i}px, 0px, 0px)`;
+//        sImages.forEach((imageBlur) => {
+//            imageBlur.style.opacity = "0.5";
+//        });
+//        sImages[i].style.opacity = "1";
+//        lImages.forEach((image1) => {
+//            if (sImages[i].getAttribute("src") == image1.getAttribute("src")) {
+//            }
+//        });
+//    });
+//}
+//decreaseBtn.addEventListener("click", () => {
+//    for (let i = 0; i < sImages.length; i++) {
+//        if (sImages[i].style.opacity == "1") {
+//            style = getComputedStyle(slideElements[0]);
+//            size = style.width;
+//            size = parseInt(size, 10);
+//            sImages[i].style.opacity = "0.5";
+//            if (i == 0) {
+//                sImages[sImages.length - 1].style.opacity = "1";
+//                let value = size * (sImages.length - 1);
+//                slideContainer.style.transform = `translate3d(-${value}px, 0px, 0px)`;
+//            } else {
+//                sImages[i - 1].style.opacity = "1";
+//                slideContainer.style.transform = `translate3d(-${size * (i - 1)
+//                    }px, 0px, 0px)`;
+//            }
+//            break;
+//        }
+//    }
+//});
+//increaseBtn.addEventListener("click", () => {
+//    for (let i = 0; i < sImages.length; i++) {
+//        if (sImages[i].style.opacity == "1") {
+//            style = getComputedStyle(slideElements[0]);
+//            size = style.width;
+//            size = parseInt(size, 10);
+//            sImages[i].style.opacity = "0.5";
+//            if (i == sImages.length - 1) {
+//                sImages[0].style.opacity = "1";
+//                let value = size * (i - sImages.length + 1);
+//                slideContainer.style.transform = `translate3d(${value}px, 0px, 0px)`;
+//            } else {
+//                sImages[i + 1].style.opacity = "1";
+//                slideContainer.style.transform = `translate3d(-${size * (i + 1)
+//                    }px, 0px, 0px)`;
+//            }
+//            break;
+//        }
+//    }
+//});
 sections.forEach((section) => {
     section.addEventListener("click", () => {
         sections.forEach((sectionAll) => {
@@ -575,3 +575,24 @@ document.querySelector(".carCommentBtn").addEventListener("click", (e) => {
             }
         })
 })
+var slider = new Swiper('.gallery-slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+    loopedSlides: 6,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+var thumbs = new Swiper('.gallery-thumbs', {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+});
+slider.controller.control = thumbs;
+thumbs.controller.control = slider;
