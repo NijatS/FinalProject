@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4LwLKui1b7vcN3qKOVT2SgZkR0jdemrsFutwLTeH9FQ=",
+  "Hash": "speun/LAoUuEs9yqVt1bF8HrnQ6FMRquitPCvNfwqe4=",
   "Source": "Miles.App",
   "BasePath": "_content/Miles.App",
   "Mode": "Default",
@@ -4199,23 +4199,6 @@
       "OriginalItemSpec": "wwwroot\\Images\\header.jpg"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\logo.png",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Images/logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\logo.png"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.heic",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -4607,23 +4590,6 @@
       "OriginalItemSpec": "wwwroot\\Images\\Users\\0b7d3a07-772c-4fa5-b79c-ea96d64e766dIMG_8338.jpg"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\151a8d6d-c6bf-4eed-af29-5ff7f4009637IMG_2950.jpg",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Images/Users/151a8d6d-c6bf-4eed-af29-5ff7f4009637IMG_2950.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Users\\151a8d6d-c6bf-4eed-af29-5ff7f4009637IMG_2950.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1c4e0ae5-3936-4c4d-9270-03d402edeb10nijat.jpg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -4673,23 +4639,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Users\\2e792e1b-1faa-4351-819e-c715b7758995IMG_2950.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\30e6348d-1525-4f54-b968-7255d8cada55IMG_2950.jpg",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Images/Users/30e6348d-1525-4f54-b968-7255d8cada55IMG_2950.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Users\\30e6348d-1525-4f54-b968-7255d8cada55IMG_2950.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\35a818d5-a2d8-44cb-b7d9-86a201ce9a0anijat.jpg",
@@ -4811,23 +4760,6 @@
       "OriginalItemSpec": "wwwroot\\Images\\Users\\b9a1b44c-455b-4b96-9b89-5c5991d75d80car3.avif"
     },
     {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\bcfee8ce-9560-47e0-a68a-dc241a8e343bIMG_2950.jpg",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Images/Users/bcfee8ce-9560-47e0-a68a-dc241a8e343bIMG_2950.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Users\\bcfee8ce-9560-47e0-a68a-dc241a8e343bIMG_2950.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\c52c137c-8b04-4219-bf19-5c2cbaa80bf7car2.jpeg",
       "SourceId": "Miles.App",
       "SourceType": "Discovered",
@@ -4860,23 +4792,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Users\\cc61093c-3b65-4135-ae9a-1f27a65ddf4cnijat.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\cfad3cd0-480c-443a-964c-13c98ce39cd6IMG_2950.jpg",
-      "SourceId": "Miles.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
-      "BasePath": "_content/Miles.App",
-      "RelativePath": "Images/Users/cfad3cd0-480c-443a-964c-13c98ce39cd6IMG_2950.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Users\\cfad3cd0-480c-443a-964c-13c98ce39cd6IMG_2950.jpg"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\d3b63036-e762-4e66-b9be-3469232af19davatar.png",
@@ -4996,6 +4911,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JavaScript\\about.js"
+    },
+    {
+      "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\blog-detail.js",
+      "SourceId": "Miles.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\",
+      "BasePath": "_content/Miles.App",
+      "RelativePath": "JavaScript/blog-detail.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JavaScript\\blog-detail.js"
     },
     {
       "Identity": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\car-update.js",

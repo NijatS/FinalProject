@@ -5365,7 +5365,6 @@ img {
     background-color: white;
     width: 100vw;
     height: 100vh;
-    transition:2s;
 }
 .car__body {
     -webkit-animation: shake 0.2s ease-in-out infinite alternate;

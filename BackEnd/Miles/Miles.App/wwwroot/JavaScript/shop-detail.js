@@ -523,3 +523,43 @@ function humanDiff(t1) {
 }
 const t1 = new Date(auctionDate.textContent);
 const interval = setInterval(humanDiff, 1000, t1);
+
+document.querySelector(".carCommentBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    let subject = document.querySelector(".subjectComment").value;
+    let text = document.querySelector(".textComment").value;
+    let carId = document.querySelector(".carComment").value;
+    let href = `/blog/PostComment?text=${text}&subject=${subject}&blogId=0&carId=${carId}`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+            if (x.statusCode == 200) {
+                var currentDate = new Date();
+                currentDate = currentDate.toLocaleDateString('en-US');
+                let comment = ` <div class="comment">
+                            <img src="/Images/Users/${x.comment.appUser.image}"/>
+                            <div >
+                                <div class="comment-info">
+                                        <h4>${x.comment.appUser.name} ${x.comment.appUser.surname}</h4>
+                                        <span>${currentDate}</span>
+                                </div>
+                                <span>${x.comment.subject}</span>
+                                    <span>${x.comment.text}</span>
+                            </div>
+                        </div>`;
+                document.querySelector(".empty").innerHTML += comment;
+                document.querySelector(".subjectComment").value = "";
+                document.querySelector(".textComment").value = "";
+            }
+            else if (x.statusCode == 404) {
+                location.replace("/account/Login");
+            }
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${x.desc}`,
+                })
+            }
+        })
+})

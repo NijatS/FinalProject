@@ -85,19 +85,19 @@
                 <div class="leave-comment">
                     <div>
                         <h2>Leave a comment</h2>
-                        <form method="post" asp-action="PostComment" asp-controller="Blog" class="leave-comment-form row">
+                        <form  class="leave-comment-form row">
                             <div class="col-md-6">
-                                <input type="text" name="blogId" hidden value="@Model.Blog.Id"/>
+                                <input type="text" name="blogId" class="blogComment" hidden value="@Model.Blog.Id"/>
                             </div>
                             <div class="col-md-12">
-                                <input type="text" name="subject" placeholder="Subject" />
+                                <input type="text" name="subject" class="subjectComment" placeholder="Subject" />
                             </div>
                             <div class="col-md-12">
-                                <textarea name="text" placeholder="Your message here..."></textarea>
+                                <textarea name="text" class="textComment" placeholder="Your message here..."></textarea>
                             </div>
                             <div class="col-md-12">
                                 <div class="button">
-                                    <button type="submit">Post Comment</button>
+                                    <button  id="commentBtn">Post Comment</button>
                                     <span></span>
                                     <i class="fa fa-paper-plane"></i>
                                 </div>
@@ -109,7 +109,7 @@
                     <div class="empty" style="height:max-content">
                         <h2>Comments</h2>
                         @foreach(var item in Model.Comments.Where(x=>x.BlogId==Model.Blog.Id && !x.IsDeleted)){
-                            <div class="comment">
+                        <div class="comment">
                             <img src="~/Images/Users/@item.AppUser.Image"/>
                             <div >
                                 <div class="comment-info">
@@ -172,3 +172,4 @@
     </div>
 </section>
 <script src="~/JavaScript/spinner.js"></script>
+<script src="~/JavaScript/blog-detail.js"></script>

@@ -207,7 +207,7 @@
                                     {
                                         <h3>Be the first to review “@Model.Car.Model.Brand.Name @Model.Car.Model.Name”</h3>
                                     }
-                                        <form method="post" asp-action="PostComment" asp-controller="Blog">
+                                        <form >
                                             <p>
                                                 <span id="email-notes">
                                                     Your email address will not be published.
@@ -219,6 +219,7 @@
                                                        style="display:none;"
                                                        name="carID"
                                                        value="@Model.Car.Id"
+                                                       class="carComment"
                                                        aria-required="true" />
                                             </p>
                                             <p>
@@ -226,6 +227,7 @@
                                                        type="text"
                                                        name="subject"
                                                        size="30"
+                                                       class="subjectComment"
                                                        aria-required="true" />
                                             </p>
                                             <p>
@@ -233,10 +235,11 @@
                                                           cols="45"
                                                           name ="text"
                                                           rows="8"
+                                                          class="textComment"
                                                           aria-required="true"></textarea>
                                             </p>
                                             <p>
-                                                <button type="submit">Submit</button>
+                                                <button class="carCommentBtn">Submit</button>
                                             </p>
                                         </form>
                                     </div>

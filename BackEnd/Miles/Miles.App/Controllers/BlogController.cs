@@ -108,20 +108,36 @@ namespace Miles.App.Controllers
             IEnumerable<Blog> blogs = (IEnumerable<Blog>)result.items;
             return Json(blogs);
         }
-        [HttpPost]
-        [Authorize(Roles ="User")]
-        public async Task<IActionResult> PostComment(CommentPostDto dto)
+        public async Task<IActionResult> PostComment(string text,string subject,int blogId,int carId)
         {
             var result = await _accountService.GetUser();
             AppUser appUser = (AppUser)result.items;
-            dto.AppUserId = appUser.Id;
-            dto.AppUser = appUser;
+            if(appUser is null)
+            {
+                return Json(new { StatusCode = 404, Desc = "User not found" });
+            }
+            CommentPostDto dto = new CommentPostDto {
+                 AppUserId = appUser.Id,
+                 AppUser = appUser,
+                 Subject = subject,
+                 Text  = text
+              };
+            if(carId == 0)
+            {
+                dto.CarID =  null;
+                dto.BlogId = blogId;
+            }
+            else
+            {
+                dto.CarID = carId;
+                dto.BlogId = null;
+            }
             if (!ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                return Json(new { StatusCode = 400, Desc = "Please fill all columns" });
             }
             await _commentService.CreateAsync(dto);
-            return Redirect(Request.Headers["Referer"].ToString());
+            return Json(new {StatusCode=200,Comment=dto});
         }
     }
 }
