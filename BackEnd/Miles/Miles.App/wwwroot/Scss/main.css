@@ -5476,13 +5476,16 @@ img {
     width: 100%;
     height: auto;
     margin: 0 0 10px 0;
-    overflow:hidden
+    overflow:hidden;
+        position:relative
 }
-
-    .gallery-slider .swiper-slide {
-        width: auto;
-        height: 400px;
-    }
+.gallery-thumbs img{
+    cursor:pointer
+}
+.gallery-slider .swiper-slide {
+    width: auto;
+    height: 400px;
+}
 
         .gallery-slider .swiper-slide img {
             display: block;
@@ -5513,6 +5516,30 @@ img {
         width: auto;
         height: 100%;
     }
-.swiper-button-prev::after, .swiper-button-next::after{
-
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-family: "FontAwesome";
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    line-height: 32px;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #336699;
+    transition: all 0.3s ease-in-out;
+}
+.swiper-button-prev::after {
+    content: "\f104";
+}
+.swiper-button-next::after {
+    content: "\f105";
 }

@@ -146,9 +146,9 @@ namespace Miles.App.Controllers
             if (dto.FormFiles is not null)
             {
                 int length = ((IEnumerable<CarImage>)resultImage.items).Count() + dto.FormFiles.Count();
-                if (length > 5 || length < 3)
+                if (length > 10 || length < 3)
                 {
-                    ModelState.AddModelError("FormFiles", "Min 3,Max 5 Image");
+                    ModelState.AddModelError("FormFiles", "Min 3,Max 10 Image");
                     return View(dto);
                 }
             }
