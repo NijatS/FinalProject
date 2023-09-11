@@ -215,6 +215,18 @@ namespace Miles.App.Controllers
             Car car =(Car)result.itemView;
             return Json(car);
         }
+        public async Task<IActionResult> AuctionCar(int carId)
+        {
+            var result = await _service.GetAsync(carId);
+            if (result.StatusCode == 404)
+            {
+                return NotFound();
+            }
+            CarUpdateDto dto = (CarUpdateDto)result.items;
+            dto.StatusId = 2;
+            await _service.UpdateAsync(carId, dto);
+            return Json("Ok");
+        }
         public async Task<IActionResult> SellCar(int carId,string userId,bool status)
         {
             var result = await _service.GetAsync(carId);

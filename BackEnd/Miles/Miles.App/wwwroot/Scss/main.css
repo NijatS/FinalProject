@@ -4732,7 +4732,6 @@ img {
     }
         .cars-container-info .cars-text .cars, .winning-container-info .cars-text .cars {
             display: flex;
-            justify-content: space-evenly;
             flex-wrap: wrap;
             width: 100%;
         }
@@ -4742,6 +4741,7 @@ img {
                 gap: 15px;
                 align-items: center;
                 margin: 10px 0px;
+                width: 100%;
             }
                 .cars-container-info .cars-text .cars .car img, .winning-container-info .cars-text .cars .car img {
                     width: 70px;

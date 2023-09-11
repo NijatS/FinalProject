@@ -319,13 +319,13 @@ function Check() {
 }
 function timeCalculate() {
     if (timeforAuction.textContent.split(":")[1] === "0D 00H 00min 00sec") {
-     
+
         i++;
         if (flag != null && country != null) {
             document.querySelector("#base-timer-flag img").src = `/Images/Countries/${flag}`;
             document.querySelector("#base-timer-country").textContent = country;
         }
-  
+
         document.querySelector(".auction").style.display = "flex";
         enquiry.children[0].querySelector("h4").textContent = "Live Auction";
         enquiry.style.margin = "0";
@@ -345,10 +345,20 @@ function timeCalculate() {
                             .replace(",", "")
                     ) + 500
                 ).toLocaleString("en-US");
+            href = `/car/GetCar?carId=${carId}`;
+            fetch(href)
+                .then(x => x.json())
+                .then(x => {
+                    console.log(x)
+                    if (x.statusId == 1) {
+                        let href = `/car/AuctionCar?carId=${carId}`;
+                        fetch(href)
+                        console.log("a")
+                    }
+                })
         }
     }
 }
-
 function calculateTimeFraction() {
     const rawTimeFraction = timeLeft / TIME_LIMIT;
     return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
@@ -366,7 +376,9 @@ function onTimesUp() {
                 fetch(href)
                     .then(x => x.json())
                     .then(x => {
-                        if (x.winnerId == null && j === 0 && x.statusId ==1) {
+                        console.log(x)
+                        console.log(j)
+                        if (x.winnerId == "null" && j === 0 && x.statusId == 2) {
                             j++;
                             href = `/shop/SellCar?carId=${carId}`;
                             fetch(href)
