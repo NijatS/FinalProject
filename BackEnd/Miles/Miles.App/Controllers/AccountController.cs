@@ -238,6 +238,22 @@ namespace Miles.App.Controllers
             AppUser user = (AppUser) result.items;
             return Json(user);
         }
- 
+        public async Task<IActionResult> GetOnlyUser()
+        {
+            var result = await _service.GetUser();
+            if (result.StatusCode != 203)
+            {
+                return Json(null);
+            }
+            AppUser user = (AppUser)result.itemView;
+            if(user != null)
+            {
+                return Json(user);
+            }
+            else
+            {
+                return Json(null);
+            }
+        }
     }
 }

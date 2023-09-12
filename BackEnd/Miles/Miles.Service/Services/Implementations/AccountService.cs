@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
-using Miles.Data.Context;
 using Miles.Service.Dtos.Accounts;
 using Miles.Service.Extensions;
 using Miles.Service.Responses;
@@ -15,7 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Miles.Service.Services.Implementations
 {
@@ -92,7 +89,7 @@ namespace Miles.Service.Services.Implementations
                 return new ApiResponse
                 {
                     StatusCode = 404,
-                    Description = "Username or password is not correct"
+                    Description = "Email or password is not correct"
                 };
             }
             if (UserStatus)
@@ -258,7 +255,7 @@ namespace Miles.Service.Services.Implementations
                 Include(x=>x.Country).
                 Include(x=>x.UserPricing).
                 Include(x=>x.Cars)
-                .Where(x=>x.Name== _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
+                .Where(x=>x.Name==_http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
             if (user is null)
             {
                 return new ApiResponse
@@ -266,11 +263,25 @@ namespace Miles.Service.Services.Implementations
                     StatusCode = 404
                 };
             }
-            return new ApiResponse
+            if (await _userManager.IsInRoleAsync(user, "User"))
             {
-                StatusCode = 203,
-                items = user
-            };
+                return new ApiResponse
+                {
+                    StatusCode = 203,
+                    items = user,
+                    itemView=user
+                };
+            }
+            else
+            {
+                return new ApiResponse
+                {
+                    StatusCode = 203,
+                    items = user,
+                    itemView=null
+                };
+            }
+          
         }
         public async Task<ApiResponse> Update(UpdateDto dto,AppUser? updated)
         {

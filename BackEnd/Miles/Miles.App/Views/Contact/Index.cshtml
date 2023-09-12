@@ -1,4 +1,8 @@
 ﻿@model ContactVM
+@section Title
+    {
+    Contact
+}
 @if (!string.IsNullOrWhiteSpace((string)TempData["Message"]))
 {
     <div style="display:none;" id="messageFormat">

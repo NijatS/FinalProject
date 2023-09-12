@@ -155,7 +155,7 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<SettingVM> GetSetting()
         {
-            var result = await _carImageService.GetAllAsync(0, 0, x => x.isMain && !x.IsDeleted);
+            var result = await _carImageService.GetAllAsync(0, 0, x => x.isMain && !x.IsDeleted && x.Car.StatusId==1 || x.Car.StatusId==2);
             SettingVM settingVM = new SettingVM
             {
                 Setting = await _repository

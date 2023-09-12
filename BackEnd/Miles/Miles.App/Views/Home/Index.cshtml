@@ -3,6 +3,10 @@
 @{
     int i = 0;
 }
+@section Title
+{
+  Home
+}
 @if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
 {
     <div style="display:none;" id="verifyEmail">
@@ -182,7 +186,7 @@
                                 </div>
                             </div>
                             <div class="right-data col-md-6">
-                                @foreach(var item in Model.Blogs.Skip(0).OrderByDescending(x => x.CreatedAt).Take(2))
+                                @foreach (var item in Model.Blogs.OrderByDescending(x => x.CreatedAt).Skip(1).Take(2))
                                 {
                                     <div class="blog-item">
                                         <div class="up-content">

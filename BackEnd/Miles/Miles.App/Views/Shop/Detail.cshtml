@@ -1,4 +1,8 @@
 ﻿@model ShopVM
+@section Title
+    {
+    @Model.Car.Model.Brand.Name @Model.Car.Model.Name @Model.Car.FabricationYear
+}
 @if (!string.IsNullOrWhiteSpace((string)TempData["Message"]))
 {
     <div style="display:none;" id="messageFormat">

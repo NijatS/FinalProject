@@ -5466,7 +5466,7 @@ img {
         stroke-dashoffset: -22;
     }
 }
-.gallery {
+.product .gallery {
     width: 100%;
     max-width: 620px;
     margin: 40px auto;

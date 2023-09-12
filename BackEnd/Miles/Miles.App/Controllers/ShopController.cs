@@ -137,6 +137,10 @@ namespace Miles.App.Controllers
         public async Task<IActionResult> Detail(int id)
         {
             ViewBag.IsDataLoading = true;
+            if(id==0)
+            {
+                return NotFound();
+            }
             var resultCar = await _carService.GetAsync(id);
             var resultCars = await _carService.GetAllAsync(0 ,0,x=> x.Id != id);
             var resultComment = await _commentService.GetAllAsync(0,0,x=>x.CarID == id && !x.IsDeleted);
@@ -146,6 +150,10 @@ namespace Miles.App.Controllers
                 Cars = (IEnumerable<Car>)resultCars.items,
                 Comments = (IEnumerable<Comment>)resultComment.items,
             };
+            if(shopVM.Car.StatusId !=1 && shopVM.Car.StatusId != 2)
+            {
+                return NotFound();
+            }
             ViewBag.IsDataLoading = false;
             return View(shopVM);
         }
@@ -173,7 +181,7 @@ namespace Miles.App.Controllers
         public async Task<IActionResult> Search(string search)
         {
            var result = await _carService.GetAllAsync(0, 0, x => !x.IsDeleted && (x.Model.Name.Trim().ToLower() +" " + x.Model.Brand.Name.Trim().ToLower()).Contains(search.Trim().ToLower()) || (x.Model.Brand.Name.Trim().ToLower() + " " + x.Model.Name.Trim().ToLower()).Contains(search.Trim().ToLower()));
-           IEnumerable<Car> Cars = (IEnumerable<Car>)result.items;
+           IEnumerable<Car> Cars = ((IEnumerable<Car>)result.items).Where(x=>x.StatusId==1 || x.StatusId==2);
            return Json(Cars);
         }
         public async Task<IActionResult> PostBid(BidPostDto dto)
