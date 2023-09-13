@@ -42,9 +42,9 @@ namespace Miles.App.Areas.Admin.Controllers
         {
             var result = await _service.GetAllAsync(0, 0,x=>!x.IsDeleted);
             int TotalCount = ((IEnumerable<Car>)result.items).Count();
-            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
             ViewBag.CurrentPage = page;
-            int count = 4;
+            int count = 5;
              result = await _service.GetAllAsync(count,page, null);
             return View(result.items);
         }

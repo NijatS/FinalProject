@@ -57,7 +57,7 @@ namespace Miles.App.Controllers
             }
             if (!ModelState.IsValid)
             {
-               TempData["Message"] = "Please fill all inputs qaqa";
+               TempData["Message"] = "Please fill all inputs";
                 return Redirect(Request.Headers["Referer"].ToString());
             }
             result = await _service.CreateAsync(dto);

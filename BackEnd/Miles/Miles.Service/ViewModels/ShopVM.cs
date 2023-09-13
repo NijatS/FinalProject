@@ -12,5 +12,6 @@ namespace Miles.Service.ViewModels
         public Car Car { get; set; }
         public IEnumerable<Car> Cars { get; set; }
         public IEnumerable<Comment> Comments { get; set; }  
+        public Country Country { get; set; }
     }
 }

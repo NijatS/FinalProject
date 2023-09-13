@@ -29,8 +29,9 @@ namespace Miles.App.Controllers
         private readonly IBidService _bidService;
         private readonly IAuctionService _auctionService;
         private readonly IEmailService _emailService;
+        private readonly ICountryService _countryService;
 
-        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService, IAuctionService auctionService, IEmailService emailService)
+        public ShopController(ICarService carService, IBrandService brandService, IColorService colorService, IFuelService fuelService, IBanService banService, IAccountService accountService, ICommentService commentService, IBidService bidService, IAuctionService auctionService, IEmailService emailService, ICountryService countryService)
         {
             _carService = carService;
             _brandService = brandService;
@@ -41,7 +42,8 @@ namespace Miles.App.Controllers
             _commentService = commentService;
             _bidService = bidService;
             _auctionService = auctionService;
-            _emailService = emailService;      
+            _emailService = emailService;
+            _countryService = countryService;
         }
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
@@ -150,7 +152,9 @@ namespace Miles.App.Controllers
                 Cars = (IEnumerable<Car>)resultCars.items,
                 Comments = (IEnumerable<Comment>)resultComment.items,
             };
-            if(shopVM.Car.StatusId !=1 && shopVM.Car.StatusId != 2)
+            var resultCountry = await _countryService.GetAsync(shopVM.Car.AppUser.CountryId);
+            shopVM.Country =(Country)resultCountry.itemView;
+            if (shopVM.Car.StatusId !=1 && shopVM.Car.StatusId != 2)
             {
                 return NotFound();
             }

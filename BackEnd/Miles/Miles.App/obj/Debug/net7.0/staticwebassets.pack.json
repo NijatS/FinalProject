@@ -569,6 +569,10 @@
       "PackagePath": "staticwebassets\\Images\\Document_files\\main.css"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\13d50036-972e-43b1-9140-4cbed4a6f12amercedes-amg-cls-63_1.webp",
+      "PackagePath": "staticwebassets\\Images\\Settings\\13d50036-972e-43b1-9140-4cbed4a6f12amercedes-amg-cls-63_1.webp"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png",
       "PackagePath": "staticwebassets\\Images\\Settings\\16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png"
     },
@@ -583,6 +587,10 @@
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\9ed748d3-1c95-4528-90ea-58eb72371548images (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\9ed748d3-1c95-4528-90ea-58eb72371548images (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\a04f743f-dfb3-431b-9b3b-e78ccfe1f1afseo-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Settings\\a04f743f-dfb3-431b-9b3b-e78ccfe1f1afseo-logo.jpg"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\mLogo.jpg",
@@ -605,12 +613,20 @@
       "PackagePath": "staticwebassets\\Images\\Sliders\\33aa1208-a400-4ad3-bc9e-b7cd7aa5305dphoto_2_2023-08-24_11-01-47.jpg"
     },
     {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\4b25d063-4feb-4622-bfdb-50b2b11d5e902020-lexus-lx570-sport-1-1564416151.jpg",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\4b25d063-4feb-4622-bfdb-50b2b11d5e902020-lexus-lx570-sport-1-1564416151.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5db79db9-2c45-41a6-94d0-b0b0fc0fde6e01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp",
+      "PackagePath": "staticwebassets\\Images\\Sliders\\5db79db9-2c45-41a6-94d0-b0b0fc0fde6e01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp"
     },
     {
       "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\7d8c587b-2777-40a8-9431-e5ce01c1d31cIMG_8338.jpg",

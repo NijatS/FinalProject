@@ -51,11 +51,9 @@
                                 <label asp-for="AppUser.UserPricing"></label>
                                 <input asp-for="AppUser.UserPricing.Name" disabled placeholder="UserPricingId" />
                                 <div class="button-box" style="display:flex;justify-content:space-between">
-                                    <button type="button" class="default-btn" style="width:32%">
-                                        <a asp-controller="account" asp-action="update" style="color: #ec1c23;">
+                                        <a asp-controller="account" asp-action="update" class="default-btn updBtn" style="width:32%" style="color: #ec1c23;">
                                             Update
                                         </a>
-                                    </button>
                                     <button type="button" class="default-btn carsButton" style="width:32%">
                                         My Cars
                                     </button>

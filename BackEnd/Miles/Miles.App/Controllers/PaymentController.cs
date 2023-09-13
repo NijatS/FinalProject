@@ -1,4 +1,5 @@
 ﻿using Braintree;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Accounts;
@@ -30,11 +31,19 @@ namespace Miles.App.Controllers
         {
             return View();
         }
+        [Authorize]
         public async Task<IActionResult> UpdateUser(double amount,int pricingId,string userId)
         {
             var gateway = _braintreeService.GetGateway();
             var clientToken = gateway.ClientToken.Generate();
             ViewBag.ClientToken = clientToken;
+            var result = await _accountService.GetUser();
+            AppUser user = (AppUser)result.items;
+            if(user.UserPricingId == pricingId)
+            {
+                TempData["Mail"] = "Your package is also this";
+                return RedirectToAction("index","home");
+            }
             var data = new BookPurchaseVM
             {
                 PricingId = pricingId,

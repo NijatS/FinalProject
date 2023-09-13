@@ -308,8 +308,12 @@ namespace Miles.Service.Services.Implementations
                 user.Email = dto.Email;
                 user.Surname = dto.Surname;
                 user.UserName = dto.UserName;
+                user.CountryId = dto.CountryId;
             }
-            user.UserPricingId = dto.UserPricingId;
+            else
+            {
+                user.UserPricingId = dto.UserPricingId;
+            }
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
             {

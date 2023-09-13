@@ -1,0 +1,17 @@
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Service.deps.json
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Service.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Service.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Core.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Data.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Data.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\bin\Release\net7.0\Miles.Core.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.csproj.AssemblyReference.cache
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.AssemblyInfoInputs.cache
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.AssemblyInfo.cs
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.csproj.CoreCompileInputs.cache
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.csproj.CopyComplete
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\refint\Miles.Service.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\Miles.Service.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\obj\Release\net7.0\ref\Miles.Service.dll

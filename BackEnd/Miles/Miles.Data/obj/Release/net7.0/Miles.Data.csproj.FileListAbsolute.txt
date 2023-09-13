@@ -1,0 +1,15 @@
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\bin\Release\net7.0\Miles.Data.deps.json
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\bin\Release\net7.0\Miles.Data.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\bin\Release\net7.0\Miles.Data.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\bin\Release\net7.0\Miles.Core.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\bin\Release\net7.0\Miles.Core.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.csproj.AssemblyReference.cache
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.AssemblyInfoInputs.cache
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.AssemblyInfo.cs
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.csproj.CoreCompileInputs.cache
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.csproj.CopyComplete
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\refint\Miles.Data.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\Miles.Data.pdb
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Data\obj\Release\net7.0\ref\Miles.Data.dll
