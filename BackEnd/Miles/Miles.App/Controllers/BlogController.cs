@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Comments;
+using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
+using System.Reflection;
 
 namespace Miles.App.Controllers
 {
@@ -14,14 +16,18 @@ namespace Miles.App.Controllers
         private readonly ITagService _tagService;
         private readonly IAccountService _accountService;
         private readonly ICommentService _commentService;
+        private readonly ICarService _carService;
+        private readonly IEmailService _emailService;
 
-        public BlogController(IBlogService blogService, ICategoryService categoryService, ITagService tagService, IAccountService accountService, ICommentService commentService)
+        public BlogController(IBlogService blogService, ICategoryService categoryService, ITagService tagService, IAccountService accountService, ICommentService commentService, ICarService carService, IEmailService emailService)
         {
             _blogService = blogService;
             _categoryService = categoryService;
             _tagService = tagService;
             _accountService = accountService;
             _commentService = commentService;
+            _carService = carService;
+            _emailService = emailService;
         }
 
         public async Task<IActionResult> Index(int? id,string? search = null, int page =1)
@@ -99,12 +105,7 @@ namespace Miles.App.Controllers
         }
         public async Task<IActionResult> Search(string search, int page = 1)
         {
-            var result = await _blogService.GetAllAsync(0, 0, x => !x.IsDeleted && x.Title.Trim().ToLower().Contains(search.Trim().ToLower()));
-            IEnumerable<Blog> Blogs = (IEnumerable<Blog>)result.items;
-            int TotalCount = Blogs.Count();
-            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 3);
-            ViewBag.CurrentPage = page;
-            result = await _blogService.GetAllAsync(3, page, x => !x.IsDeleted && x.Title.Trim().ToLower().Contains(search.Trim().ToLower()));
+            var result = await _blogService.GetAllAsync(page*3, 1, x => !x.IsDeleted && x.Title.Trim().ToLower().Contains(search.Trim().ToLower()));
             IEnumerable<Blog> blogs = (IEnumerable<Blog>)result.items;
             return Json(blogs);
         }
@@ -135,6 +136,13 @@ namespace Miles.App.Controllers
             if (!ModelState.IsValid)
             {
                 return Json(new { StatusCode = 400, Desc = "Please fill all columns" });
+            }
+            if (carId != 0)
+            {
+                result = await _carService.GetAsync(carId);
+                Car car = (Car)result.itemView;
+                await _emailService.SendMail("nicatsoltanli03@gmail.com", car.AppUser.Email,
+                   "New Comment", "You have 1 new comment on your Car ", null, car.AppUser.Name + " " + car.AppUser.Surname);
             }
             await _commentService.CreateAsync(dto);
             return Json(new {StatusCode=200,Comment=dto});

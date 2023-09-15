@@ -1,16 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Subscribes;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
 using System.Text;
-using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Net.WebRequestMethods;
 namespace Miles.App.Controllers
 {
     public class HomeController : Controller
@@ -39,7 +33,7 @@ namespace Miles.App.Controllers
             var resultBlog = await _blogService.GetAllAsync(0, 0, null);
             var resultText = await _textWhyService.GetAllAsync(0, 0);
             var resultAssociate = await _associateService.GetAllAsync(0, 0);
-            var resultCar = await _carService.GetAllAsync(0, 0,null);
+            var resultCar = await _carService.GetAllAsync(0, 0,x=>x.StatusId==1 || x.StatusId==2 && !x.IsDeleted);
             HomeVM homeVM = new HomeVM
             {
                 Sliders = (IEnumerable<Slider>)resultSlide.items,

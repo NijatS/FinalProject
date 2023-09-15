@@ -1,19 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.Scripting;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Bids;
 using Miles.Service.Dtos.Cars;
 using Miles.Service.Dtos.Comments;
-using Miles.Service.Dtos.Messages;
-using Miles.Service.Services.Implementations;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Composition;
 using System.Linq.Expressions;
-using System.Text.RegularExpressions;
 
 namespace Miles.App.Controllers
 {

@@ -7,7 +7,6 @@ using Miles.Service.Dtos.Cars;
 using Miles.Service.Responses;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
-using System.Net;
 
 namespace Miles.App.Controllers
 {

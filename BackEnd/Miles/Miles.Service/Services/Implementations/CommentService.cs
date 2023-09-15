@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Braintree;
 using Microsoft.EntityFrameworkCore;
 using Miles.Core.Entities;
 using Miles.Core.Repositories;
@@ -19,6 +20,7 @@ namespace Miles.Service.Services.Implementations
     {
         private readonly ICommentRepository _repository;
         private readonly IMapper _mapper;
+    
 
         public CommentService(ICommentRepository repository, IMapper mapper)
         {

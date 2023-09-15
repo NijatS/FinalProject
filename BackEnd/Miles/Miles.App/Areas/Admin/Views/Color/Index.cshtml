@@ -5,6 +5,7 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name:</th>
+                <th scope="col">Color:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -15,6 +16,7 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
+                    <th><div style="width:70px;height:70px;background-color:@item.Name.ToLower();border-radius:50%;"></div></th>
                     <td>
                         <a asp-controller="Color" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

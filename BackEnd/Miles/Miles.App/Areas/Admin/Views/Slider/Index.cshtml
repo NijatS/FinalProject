@@ -5,6 +5,7 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Photo:</th>
+                <th scope="col">Created Date:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -15,6 +16,7 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th><img style="width:100px;height:100px" src="~/Images/Sliders/@item.Image" /></th>
+                    <th>@item.CreatedAt</th>
                     <td>
                         <a asp-controller="Slider" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

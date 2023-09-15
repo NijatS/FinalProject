@@ -25,6 +25,12 @@
         @TempData["Mail"]
     </div>
 }
+@if (!string.IsNullOrWhiteSpace((string)TempData["AdminInfo"]))
+{
+    <div style="display:none;" id="adminInfo">
+        @TempData["AdminInfo"]
+    </div>
+}
 <div class="slider">
     @foreach(var item in Model.Sliders)
     {

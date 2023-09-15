@@ -6,6 +6,7 @@ const clientColumn = document.querySelector(".client-column");
 const verifyEmail = document.querySelector("#verifyEmail");
 const successVerify = document.querySelector("#successVerify");
 const emailRegister = document.querySelector("#emailRegister");
+const adminInfo = document.querySelector("#adminInfo");
 let currentImg = 0;
 let i = 0;
 let j = 0;
@@ -89,6 +90,16 @@ if (successVerify != undefined) {
             'You clicked the button!',
             'success'
         )
+    }
+}
+if (adminInfo != undefined) {
+    const message = adminInfo.innerHTML;
+    if (message != "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `${message}`,
+        })
     }
 }
 if (emailRegister != undefined) {

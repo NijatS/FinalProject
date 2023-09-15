@@ -119,10 +119,10 @@
 				</div>
 				<div class="col-sm">
 					<label asp-for="ColorId">Color:</label>
-					<select asp-for="ColorId" class="form-select" aria-label="Default select example">
+					<select asp-for="ColorId" id="colors" class="form-select" aria-label="Default select example">
 						@foreach (var item in ViewBag.Colors)
 						{
-							<option value="@item.Id">@item.Name</option>
+												<option value="@item.Id" style="color:@item.Name">&#11044; @item.Name</option>
 						}
 					</select>
 					<span asp-validation-for="ColorId" class="text text-danger"></span>

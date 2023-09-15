@@ -107,8 +107,8 @@ namespace Miles.Service.Services.Implementations
         {
            
             Associate Associate = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
-			if (dto.Name != Associate.Name)
-			{
+			if (dto.Name.ToLower() != Associate.Name.ToLower())
+            {
 				if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
 				{
 					return new ApiResponse

@@ -133,12 +133,26 @@
     const submit = document.querySelector(".SearchButton");
     const searchInput = document.querySelector(".searchInput")
     const container = document.querySelector(".blog_container")
+    const imgs = document.querySelectorAll(".blog-page .blog-item a img")
+    let page = 1;
     searchInput.addEventListener("input", (e) => {
         e.preventDefault();
         if (searchInput.value == "") {
             location.reload();
         }
-        let href = `/blog/search?search=${searchInput.value}`;
+        fetchSearch(page);
+    })
+  
+    imgs.forEach(img => {
+        img.addEventListener("mouseover", () => {
+            img.parentElement.parentElement.querySelector("h2").style.color = "#f4c23d"
+        })
+        img.addEventListener("mouseout", () => {
+            img.parentElement.parentElement.querySelector("h2").style.color = "#222222"
+        })
+    })
+    function fetchSearch(page) {
+        let href = `/blog/search?search=${searchInput.value}&page=${page}`;
         fetch(href)
             .then(x => x.json())
             .then(x => {
@@ -146,37 +160,45 @@
                 x.forEach(item => {
                     let text = JSON.stringify(item.description).substring(0, 250);
                     let date = new Date(`${item.createdAt}`);
-                    console.log(date);
                     let view = `<div class="blog-item">
-                        <a asp-action="detail" asp-controller="blog" asp-route-id="${item.id}">
-                            <img style="height:400px" src="/Images/Blogs/${item.image}" alt="" />
-                        </a>
-                        <div class="content">
-                            <div class="info">
-                                <ul>
-                                             <li>${date.toLocaleDateString()}</li>
-                                    <li>
-                                        Posted by
-                                            <a asp-action="detail" asp-controller="blog" asp-route-id="${item.id}">${item.author}</a>
-                                    </li>
-                                </ul>
-                                <div class="title">
-                                        <a asp-action ="detail" asp-controller="blog" asp-route-id="${item.id}">
-                                                <h2>${item.title}</h2>
-                                    </a>
+                                        <a href="/blog/detail/${item.id}">
+                                    <img style="height:400px" src="/Images/Blogs/${item.image}" alt="" />
+                                </a>
+                                <div class="content">
+                                    <div class="info">
+                                        <ul>
+                                                     <li>${date.toLocaleDateString()}</li>
+                                            <li>
+                                                Posted by
+                                                        <a href="/blog/detail/${item.id}">${item.author}</a>
+                                            </li>
+                                        </ul>
+                                        <div class="title">
+                                                    <a href="/blog/detail/${item.id}">
+                                                        <h2>${item.title}</h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                           ${text}...
+                                        </p>
+                                                <a href="/blog/detail/${item.id}">READ MORE</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="text">
-                                <p>
-                                   ${text}...
-                                </p>
-                                    <a asp-action="detail" asp-controller="blog" asp-route-id="${item.Id}">READ MORE</a>
-                            </div>
-                        </div>
-                    </div>`;
+                            </div>`;
                     container.innerHTML += view;
                 })
+                let text = ` <a style="cursor:pointer;" class="more">READ MORE</a>`
+                container.innerHTML += text;
+                const more = document.querySelector(".blog_container .more");
+                more.addEventListener("click", () => {
+                    console.log(page)
+                    page++;
+                    fetchSearch(page);
+
+                })
             })
-    })
+    }
 </script>
 <script src="~/JavaScript/spinner.js"></script>

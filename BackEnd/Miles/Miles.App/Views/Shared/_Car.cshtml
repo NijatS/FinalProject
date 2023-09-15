@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Car>
-@foreach (var item in Model.Where(x=>x.StatusId==1))
+@foreach (var item in Model)
 {
     <div class="car-card col-md-15 col-sm-6">
         <a asp-action="detail" asp-controller="shop" asp-route-id="@item.Id">

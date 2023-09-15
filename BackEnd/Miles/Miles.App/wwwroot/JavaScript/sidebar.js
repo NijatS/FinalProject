@@ -100,18 +100,6 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
     }
 
     function generate_button_message(msg, buttons) {
-        /* Buttons should be object array 
-          [
-            {
-              name: 'Existing User',
-              value: 'existing'
-            },
-            {
-              name: 'New User',
-              value: 'new'
-            }
-          ]
-        */
         INDEX++;
         var btn_obj = buttons.map(function (button) {
             return "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\"" + button.value + "\">" + button.name + "<\/a><\/li>";

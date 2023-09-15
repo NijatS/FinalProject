@@ -151,11 +151,11 @@
 											{
 												if (Model.ColorId == item.Id)
 												{
-													<option selected value="@item.Id">@item.Name</option>
+															<option selected value="@item.Id" style="color:@item.Name">&#11044; @item.Name</option>
 													continue;
 												}
 											}
-											<option value="@item.Id">@item.Name</option>
+													<option value="@item.Id" style="color:@item.Name">&#11044; @item.Name</option>
 										}
 									</select>
 									<span asp-validation-for="ColorId" class="text text-danger"></span>

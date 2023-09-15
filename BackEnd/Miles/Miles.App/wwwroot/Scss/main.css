@@ -1649,8 +1649,11 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (max-width: 992px) {
-  .blogs .kc-row-container .blog-column .data .left-data {
+    .blogs .kc-row-container .blog-column .data .left-data:hover > div .video-content .inner-content .title h2 {
+        color: #f4c23d;
+    }
+    @media (max-width: 992px) {
+        .blogs .kc-row-container .blog-column .data .left-data {
     width: 100%;
   }
 }
@@ -1701,9 +1704,11 @@ img {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
+  transition:1s;
 }
-@media (max-width: 601px) {
-  .blogs .kc-row-container .blog-column .data .left-data > div .video-content .inner-content .title h2 {
+
+    @media (max-width: 601px) {
+        .blogs .kc-row-container .blog-column .data .left-data > div .video-content .inner-content .title h2 {
     word-wrap: break-word;
   }
 }
@@ -1736,10 +1741,13 @@ img {
 .blogs .kc-row-container .blog-column .data .right-data .blog-item {
   margin-top: 40px;
 }
-.blogs .kc-row-container .blog-column .data .right-data .blog-item .up-content {
-  border-left: 4px solid #f4c23d;
-  padding-left: 15px;
-}
+    .blogs .kc-row-container .blog-column .data .right-data .blog-item:hover h2 {
+        color: #f4c23d;
+    }
+    .blogs .kc-row-container .blog-column .data .right-data .blog-item .up-content {
+        border-left: 4px solid #f4c23d;
+        padding-left: 15px;
+    }
 .blogs .kc-row-container .blog-column .data .right-data .blog-item .up-content ul {
   padding: 0;
   margin: 0;
@@ -1771,15 +1779,19 @@ img {
   text-transform: uppercase;
   color: #222222;
   font-weight: 700;
+  transition:1s;
 }
-.blogs .kc-row-container .blog-column .data .right-data .blog-item .text-content {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  line-height: 22px;
-  color: #888888;
-}
+    .blogs .kc-row-container .blog-column .data .right-data .blog-item .up-content .title a h2:hover {
+        color: #f4c23d;
+    }
+    .blogs .kc-row-container .blog-column .data .right-data .blog-item .text-content {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        line-height: 22px;
+        color: #888888;
+    }
 .blogs .kc-row-container .blog-column .data .right-data .blog-item a {
   font-size: 11px;
   color: #336699;
@@ -2986,7 +2998,7 @@ img {
   transition:0.5s;
 }
     .blog-page .blog-item .content .info .title a h2:hover {
-        color: #f4c23d;
+        color: #f4c23d !important;
     }
     @media (max-width: 601px) {
         .blog-page .blog-item .content .info .title a h2 {

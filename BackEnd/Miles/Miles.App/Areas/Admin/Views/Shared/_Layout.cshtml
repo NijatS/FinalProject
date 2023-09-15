@@ -32,7 +32,7 @@
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
                     <a class="navbar-brand brand-logo" asp-action="index" asp-controller="home"><img src="~/Images/Settings/16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png" alt="logo" /></a>
-                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/Images/Settings/16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" asp-action="index" asp-controller="home"><img src="~/Images/Settings/16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
@@ -47,9 +47,12 @@
                                     <i class="mdi mdi-magnify"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">
+                            <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">  
+                        </div>
+                        <div class="searchValue" style="/* display: none; */">
                         </div>
                     </li>
+                     
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown me-1">

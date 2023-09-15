@@ -140,7 +140,7 @@
                                     <div class="user-carusel">
                                         <div class="user-carusel-outer">
                                             <div class="user-carusel-container">
-                                                @foreach(var item in Model.Comments.Where(x => !x.IsDeleted).Take(3))
+                                                @foreach(var item in Model.Comments.Where(x => !x.IsDeleted).OrderByDescending(x=>x.CreatedAt).Take(3))
                                                 {
                                                     <div class="user-carusel-item">
                                                         <div class="text-center col-md-8">

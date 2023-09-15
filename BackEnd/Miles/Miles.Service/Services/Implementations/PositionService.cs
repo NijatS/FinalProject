@@ -99,7 +99,7 @@ namespace Miles.Service.Services.Implementations
         {
            
             Position Position = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
-            if (dto.Name != Position.Name)
+            if (dto.Name.ToLower() != Position.Name.ToLower())
             {
                 if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
                 {

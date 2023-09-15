@@ -76,19 +76,19 @@
                        }
                         </ul>
                         <ul class="pagination">
-                            <li><a class=" page-link" asp-controller="car" asp-action="index" asp-route-page="1">«</a></li>
+                            <li><a class=" page-link" asp-controller="shop" asp-action="index" asp-route-page="1">«</a></li>
                             @for (int j = 1; j <= ViewBag.TotalPage; j++)
                             {
                                 @if (j == ViewBag.CurrentPage)
                                 {
-                                    <li class="page-item active"><a class=" page-link" asp-controller="car" asp-action="index" asp-route-page="@j">@j</a></li>
+                                    <li class="page-item active"><a class=" page-link" asp-controller="shop" asp-action="index" asp-route-page="@j">@j</a></li>
                                 }
                                 else
                                 {
-                                    <li class="page-item"><a class=" page-link" asp-controller="car" asp-action="index" asp-route-page="@j">@j</a></li>
+                                    <li class="page-item"><a class=" page-link" asp-controller="shop" asp-action="index" asp-route-page="@j">@j</a></li>
                                 }
                             }
-                            <li><a class="page-link" asp-controller="car" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+                            <li><a class="page-link" asp-controller="shop" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
                         </ul>
                     </div>
                 </div>
