@@ -36,10 +36,6 @@
 				<div class="col-sm">
 					<label asp-for="ModelId">Model:</label>
 					<select asp-for="ModelId" id="modelInput" class="form-select" aria-label="Default select example">
-						@* 	@foreach (var item in (IEnumerable<Model>)ViewBag.Models)
-						{
-						<option value="@item.Id">@item.Name</option>
-						} *@
 					</select>
 					<span asp-validation-for="ModelId" class="text text-danger"></span>
 		

@@ -17,27 +17,29 @@ namespace Miles.App.Controllers
         private readonly ICarService _carService;
         private readonly IEmailService _emailService;
         private readonly IAccountService _accountService;
-
-        public PaymentController(IBraintreeService braintreeService, IBookService bookService, ICarService carService, IEmailService emailService, IAccountService accountService)
+        private readonly IUserPricingService _userPricingService;
+        public PaymentController(IBraintreeService braintreeService, IBookService bookService, ICarService carService, IEmailService emailService, IAccountService accountService, IUserPricingService userPricingService)
         {
             _braintreeService = braintreeService;
             _bookService = bookService;
             _carService = carService;
             _emailService = emailService;
             _accountService = accountService;
+            _userPricingService = userPricingService;
         }
         public async Task<IActionResult> Success()
         {
             return View();
         }
         [Authorize]
-        public async Task<IActionResult> UpdateUser(double amount,int pricingId,string userId)
+        public async Task<IActionResult> UpdateUser(int pricingId,string userId)
         {
             var gateway = _braintreeService.GetGateway();
             var clientToken = gateway.ClientToken.Generate();
             ViewBag.ClientToken = clientToken;
             var result = await _accountService.GetUser();
             AppUser user = (AppUser)result.items;
+            result = await _userPricingService.GetAsync(pricingId);
             if(user.UserPricingId == pricingId)
             {
                 TempData["Mail"] = "Your package is also this";
@@ -49,7 +51,7 @@ namespace Miles.App.Controllers
                 AppUserId = userId,
                 Description = "Hellow man",
                 Title = "This is title",
-                Price = amount,
+                Price = ((UserPricing)result.itemView).Price,
                 Nonce = ""
             };
             return View(data);

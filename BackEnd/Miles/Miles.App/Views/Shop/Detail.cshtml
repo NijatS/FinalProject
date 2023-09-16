@@ -269,7 +269,14 @@
                             <li><span>Fuel Type:</span>@Model.Car.Fuel.Name</li>
                             <li><span>No. of Gears:</span>@Model.Car.NoGears</li>
                             <li><span>Transmission:</span>@Model.Car.Transmission</li>
-                            <li><span>Color:</span>@Model.Car.Color.Name</li>
+                            @if(Model.Car.Color.Name != "White")
+                            {
+                                <li style="color:@Model.Car.Color.Name"><span>Color:</span>&#11044; @Model.Car.Color.Name</li>
+                            }
+                            else
+                            {
+                                    <li><span>Color:</span>@Model.Car.Color.Name</li>
+                            }
                             <li><span>Fuel Economy:</span>@Model.Car.FuelCity l/City - @Model.Car.FuelWay l/hwy</li>
                             <li><span>Motor:</span>@Model.Car.Motor</li>
                             <li>
@@ -354,7 +361,7 @@
                     <div class="subhead">
                         <h4>Contact the Seller</h4>
                         <div class="number">
-                            <h6>(+994)70-613-90-13</h6>
+                            <h6>Email : @Model.Car.AppUser.Email</h6>
                             CAR CODE:
                             <span>@Model.Car.Id</span>
                         </div>

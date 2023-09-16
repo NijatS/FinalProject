@@ -1466,7 +1466,7 @@ img {
   margin-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
- 
+  position:relative
 }
     .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card img:hover {
     }
@@ -3429,9 +3429,20 @@ img {
   width: 22.05%;
   transition:2s;
 }
-    .shop-page .col-md-9 .products .product:hover {
-        box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    .shop-page .col-md-9 .products .product i, .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card> i{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 30px;
+        color: #f4c23d;
+        font-weight: 900;
     }
+        .feature-listing .kc-row-container .feature-column .cars .cars-container .car-card > i{
+            left:20px;
+        }
+        .shop-page .col-md-9 .products .product:hover {
+            box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+        }
     @media only screen and (min-width: 768px) {
         .shop-page .col-md-9 .products .product {
     width: 30.8% !important;

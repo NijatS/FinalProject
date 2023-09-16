@@ -2,6 +2,10 @@
 @foreach (var item in Model)
 {
     <div class="car-card col-md-15 col-sm-6">
+        @if (item.StatusId == 2)
+        {
+            <i class="fa fa-gavel"></i>
+        }
         <a asp-action="detail" asp-controller="shop" asp-route-id="@item.Id">
             @foreach (var photo in item.CarImages)
             {

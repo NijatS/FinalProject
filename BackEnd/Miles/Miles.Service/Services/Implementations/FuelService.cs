@@ -50,7 +50,7 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Fuel> Fuels = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
             return new ApiResponse
             {
-                items = Fuels,
+                items = Fuels.OrderBy(x => x.Name),
                 StatusCode = 200
             };
         }
@@ -97,15 +97,19 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> UpdateAsync(int id, FuelUpdateDto dto)
         {
-            if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
-            {
-                return new ApiResponse
-                {
-                    StatusCode = 400,
-                    Description = $"{dto.Name} Already exists"
-                };
-            }
+          
             Fuel Fuel = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            if (Fuel.Name.ToLower() != dto.Name.ToLower())
+            {
+                if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
+                {
+                    return new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Description = $"{dto.Name} Already exists"
+                    };
+                }
+            }
             if (Fuel is null)
             {
                 return new ApiResponse

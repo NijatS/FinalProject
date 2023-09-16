@@ -43,8 +43,9 @@ namespace Miles.App.Controllers
         public async Task<IActionResult> Index(string? brand,int? sort,int? model,double? minprice,double? maxprice,int? minyear,int? maxyear,int? color,int? ban,int? fuel, int page = 1)
         {
             ViewBag.IsDataLoading = true;
-            var resultCar = await _carService.GetAllAsync(0, 0, x => !x.IsDeleted && x.StatusId == 1 || x.StatusId == 2);
+            var resultCar = await _carService.GetAllAsync(0, 0, x =>(!x.IsDeleted && x.StatusId == 1) || (!x.IsDeleted && x.StatusId == 2));
             IEnumerable<Car> Cars = (IEnumerable<Car>)resultCar.items;
+            int count = 6;
             if (sort is not null && sort != 0)
             {
                 if (sort == 1)
@@ -139,7 +140,7 @@ namespace Miles.App.Controllers
                 return NotFound();
             }
             var resultCar = await _carService.GetAsync(id);
-            var resultCars = await _carService.GetAllAsync(0 ,0,x=> x.Id != id);
+            var resultCars = await _carService.GetAllAsync(0 ,0, x => (x.StatusId == 2 && !x.IsDeleted && x.Id != id) || (x.StatusId == 1 && !x.IsDeleted && x.Id != id));
             var resultComment = await _commentService.GetAllAsync(0,0,x=>x.CarID == id && !x.IsDeleted);
             ShopVM shopVM = new ShopVM()
             {

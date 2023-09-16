@@ -48,7 +48,7 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Ban> Bans = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Cars");
             return new ApiResponse
             {
-                items = Bans,
+                items = Bans.OrderBy(x => x.Name),
                 StatusCode = 200
             };
         }
@@ -95,15 +95,19 @@ namespace Miles.Service.Services.Implementations
 
         public async Task<ApiResponse> UpdateAsync(int id, BanUpdateDto dto)
         {
-            if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
-            {
-                return new ApiResponse
-                {
-                    StatusCode = 400,
-                    Description = $"{dto.Name} Already exists"
-                };
-            }
+           
             Ban Ban = await _repository.GetAsync(x => x.Id == id && !x.IsDeleted);
+            if (Ban.Name.ToLower() != dto.Name.ToLower())
+            {
+                if (await _repository.isExsist(x => x.Name.Trim().ToLower() == dto.Name.Trim().ToLower()))
+                {
+                    return new ApiResponse
+                    {
+                        StatusCode = 400,
+                        Description = $"{dto.Name} Already exists"
+                    };
+                }
+            }
             if (Ban is null)
             {
                 return new ApiResponse

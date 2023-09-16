@@ -58,7 +58,7 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Brand> Brands = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
             return new ApiResponse
             {
-                items = Brands,
+                items = Brands.OrderBy(x=>x.Name),
                 StatusCode = 200
             };
         }

@@ -42,7 +42,7 @@ namespace Miles.Service.Services.Implementations
             IEnumerable<Model> Models = await _repository.GetAllAsync(x => !x.IsDeleted,count,page,"Brand");
             return new ApiResponse
             {
-                items = Models,
+                items = Models.OrderBy(x => x.Name),
                 StatusCode = 200
             };
         }
