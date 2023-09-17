@@ -16,6 +16,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Miles.Service.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
+using Telegram.Bot.Exceptions;
+using Telegram.Bot.Polling;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot;
+using ApiResponse = Miles.Service.Responses.ApiResponse;
+using Telegram.Bot.Types;
+using Message = Telegram.Bot.Types.Message;
 
 namespace Miles.Service.Services.Implementations
 {
@@ -29,8 +37,9 @@ namespace Miles.Service.Services.Implementations
         private readonly IAccountService _accountService;
         private readonly ICarImageService _carImageService;
         private readonly IMessageRepository _messageRepository;
+        private readonly ICarService _carService;
 
-        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService, ICarImageService carImageService, IMessageRepository messageRepository)
+        public SettingService(ISettingRepository repository, IMapper mapper, IWebHostEnvironment evn, IHttpContextAccessor http, IBlogRepository blogRepository, IAccountService accountService, ICarImageService carImageService, IMessageRepository messageRepository, ICarService carService)
         {
             _repository = repository;
             _mapper = mapper;
@@ -40,6 +49,7 @@ namespace Miles.Service.Services.Implementations
             _accountService = accountService;
             _carImageService = carImageService;
             _messageRepository = messageRepository;
+            _carService = carService;
         }
 
         public async Task<ApiResponse> CreateAsync(SettingPostDto dto)
@@ -59,7 +69,6 @@ namespace Miles.Service.Services.Implementations
                 items = Setting
             };
         }
-
         public async Task<ApiResponse> GetAllAsync(int count,int page)
         {
             IEnumerable<Setting> Settings = await _repository.GetAllAsync(x => !x.IsDeleted,count,page);
@@ -69,7 +78,6 @@ namespace Miles.Service.Services.Implementations
                 StatusCode = 200
             };
         }
-
         public async Task<ApiResponse> GetAsync(int? id)
         {
             Setting Setting = new Setting();
@@ -97,7 +105,6 @@ namespace Miles.Service.Services.Implementations
                 items = dto
             };
         }
-
         public async Task<ApiResponse> RemoveAsync(int id)
         {
             Setting Setting = await _repository.GetAsync(x => x.Id == id);
@@ -155,12 +162,12 @@ namespace Miles.Service.Services.Implementations
         }
         public async Task<SettingVM> GetSetting()
         {
-            var result = await _carImageService.GetAllAsync(0, 0, x =>  x.Car.StatusId==1 || x.Car.StatusId==2 && x.isMain && !x.IsDeleted);
+            var result = await _carImageService.GetAllAsync(0, 0, x => ( x.Car.StatusId==1 && x.isMain && !x.IsDeleted) || (x.Car.StatusId==2 && x.isMain && !x.IsDeleted));
             SettingVM settingVM = new SettingVM
             {
                 Setting = await _repository
                          .GetAsync(x => !x.IsDeleted, "Socials"),
-                Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0,"Comments").Result.ToListAsync(),
+                Blogs = await _blogRepository.GetAllAsync(x => !x.IsDeleted, 0, 0,"Comments").Result.OrderByDescending(x=>x.CreatedAt).ToListAsync(),
                 CarImages =(IEnumerable<CarImage>)result.items,
                 Messages = await _messageRepository.GetAllAsync(x => !x.IsDeleted && x.Address != "For dealer", 0, 0).Result.ToListAsync(),
 

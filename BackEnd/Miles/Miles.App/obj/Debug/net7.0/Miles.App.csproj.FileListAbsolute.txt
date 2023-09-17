@@ -106,6 +106,7 @@ C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\n
 C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\System.Windows.Extensions.dll
 C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\System.Xml.XPath.XmlDocument.dll
+C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\Telegram.Bot.dll
 C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\af\Humanizer.resources.dll
 C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\ar\Humanizer.resources.dll
 C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.App\bin\Debug\net7.0\az\Humanizer.resources.dll

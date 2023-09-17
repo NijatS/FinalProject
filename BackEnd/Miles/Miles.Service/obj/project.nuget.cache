@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KhzRwV3lLVY0nAYAV/QMfXtTK1RXjL1hzmZkEsdrdwlh2/mcdARjKWueQr3qXQs9SShcjdaj/64sLuBbwtaKgA==",
+  "dgSpecHash": "/OMp2xP84fx1bUlwjdXaYVGEmDlnNvn+s7UeV9dbuL3fe6EORHE3+r1N4c57j0lnkqQHUaCMX9PgLqk84HP6cA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Service\\Miles.Service.csproj",
   "expectedPackageFiles": [
@@ -93,7 +93,8 @@
     "C:\\Users\\Nijat\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\Nijat\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Nijat\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Nijat\\.nuget\\packages\\telegram.bot\\19.0.0\\telegram.bot.19.0.0.nupkg.sha512"
   ],
   "logs": []
 }

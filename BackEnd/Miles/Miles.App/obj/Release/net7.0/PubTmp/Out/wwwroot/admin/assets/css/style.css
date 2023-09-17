@@ -23202,3 +23202,60 @@ input[type="date"] {
     text-align: start;
 }
 /*# sourceMappingURL=maps/style.css.map */
+.searchValue {
+    height: 200px;
+    margin-top: 10px;
+    background-color: white;
+    overflow-y: auto;
+    padding: 0 5px;
+    position: absolute;
+    top: 55px;
+    display: none;
+
+}
+    .searchValue::before {
+        content: "";
+        background-image: url("https://img.freepik.com/premium-vector/sports-car-line-vector-icon-white-background_572070-436.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.08;
+    }
+.searchItem {
+    width: 100%;
+    height: 60px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content:space-around
+}
+    .searchItem img {
+        height: 60px;
+        width: 60px;
+    }
+    .searchItem a {
+        color: #222222;
+        text-decoration: none;
+        display:flex;
+        flex-direction:column;
+        justify-content:center
+    }
+    .searchItem h4 {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #222222;
+        font-weight: 700;
+        display: inline-block;
+    }
+    .searchItem p {
+        font-size: 15px;
+        line-height: 22px;
+        color: #888888;
+        text-align: center;
+    }

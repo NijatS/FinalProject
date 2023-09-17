@@ -16,11 +16,14 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
 using Serilog.Sinks.MSSqlServer;
+using Telegram.Bot;
+using Miles.Service.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Register(builder.Configuration);
+builder.Services.SendMessage();
 builder.Services.AddRazorPages();
 builder.Host.UseSerilog();
 var app = builder.Build();
