@@ -88,7 +88,7 @@
                                         </div>
                                         <div class="status">
                                             <h4>Status : @item.Status.Name </h4>
-                                            <p>Auction Winner : Soltanov Nijat</p>
+                                            <p>Winner Price :  $@item.AuctionWinPrice.ToString("#,##0")</p>
                                             <div class="buttons">
                                                 @if (item.StatusId == 4)
                                                 {
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="status">
                                 <h4>Status : @item.Status.Name </h4>
-                                <p>Auction Winner : Soltanov Nijat</p>
+                                <p>Auction Winner : You</p>
                                             <a asp-action="payment" asp-controller="payment" asp-route-amount="@item.AuctionWinPrice" asp-route-carId="@item.Id"
                                             asp-route-userId="@item.WinnerId"
                                             class="buttons">

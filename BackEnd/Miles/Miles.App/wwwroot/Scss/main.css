@@ -4860,6 +4860,7 @@ img {
                 }
                 .cars-container-info .cars-text .cars .car .status {
                     width: 40%;
+                    overflow:hidden
                 }
                 .cars-container-info .cars-text .cars .car .status, .winning-container-info .cars-text .cars .car .status {
                     display: flex;
@@ -4888,11 +4889,17 @@ img {
     .cars-container-info .cars-text .cars .car .status, .winning-container-info .cars-text .cars .car .status {
         font-size: 10px;
         height: 100px;
-        width: 20%;
+        width:max-content
     }
-    .cars-container-info .cars-text .cars .car, .winning-container-info .cars-text .cars .car{
-        justify-content:center
+    .cars-container-info .cars-text .cars .car .info, .winning-container-info .cars-text .cars .car .info {
+        max-width: 20%;
+        overflow-x: scroll;
+        text-wrap: nowrap;
     }
+        .cars-container-info .cars-text .cars .car, .winning-container-info .cars-text .cars .car {
+            justify-content: center;
+            overflow-x: scroll;
+        }
         .cars-container-info .cars-text .cars .car .info p, .winning-container-info .cars-text .cars .car .info p {
           font-size:10px;
         }
