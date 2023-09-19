@@ -64,7 +64,7 @@ namespace Miles.App.Areas.Admin.Controllers
         public async Task<IActionResult> LogOut()
         {
             var result = await _service.LogOut();
-            return RedirectToAction("index", "admin");
+            return RedirectToAction("index", "home");
         }
         [Authorize]
         public async Task<IActionResult> Update()

@@ -15,6 +15,9 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using Message = Telegram.Bot.Types.Message;
 using System.Runtime.ConstrainedExecution;
+using System.Collections;
+using System.Speech.Recognition;
+using System.Speech.Synthesis;
 
 namespace Miles.Service.Extensions
 {
@@ -106,6 +109,48 @@ namespace Miles.Service.Extensions
 
                     }
 
+                }
+            }
+            else if (message.Text.ToLower().Trim() is "/blog")
+            {
+                string text = null;
+                using (SqlConnection conn = new SqlConnection())
+                {
+                    conn.ConnectionString = "Server=DESKTOP-NIJAT;Database=MilesApp;Trusted_Connection=True;Encrypt=False;MultipleActiveResultSets=true";
+                    try
+                    {
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT Id,Title,Author,Image,Description FROM Blogs Where IsDeleted=0";
+                        cmd.Connection = conn;
+                        conn.Open();
+                        SqlDataReader sdr = cmd.ExecuteReader();
+                        while (sdr.Read())
+                        {
+                            int id = (int)sdr["Id"];
+                            string title = sdr.GetValue(1).ToString();
+                            string author = sdr.GetValue(2).ToString();
+                            string image = sdr.GetValue(3).ToString();
+                            string desc = sdr.GetValue(4).ToString().Substring(0,100);
+                            text = "Id: " + id.ToString() + "   \nTitle: " + title+
+                                "\nAuthor: " + author + "\nText: " + desc+"...";
+                            //await botClient.SendPhotoAsync(
+                            //chatId: chatId,
+                            //  photo: InputFile.FromUri("http://nijats-001-site1.btempurl.com/Images/Blogs/" + image),
+                            //   parseMode: ParseMode.Html);
+
+                            message = await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: text,
+                            cancellationToken: cancellationToken);
+                        }
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Can not open connection !");
+
+                    }
                 }
             }
             else if (message.Text.ToLower().Trim() is "/address")

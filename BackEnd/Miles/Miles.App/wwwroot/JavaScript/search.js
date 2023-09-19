@@ -9,13 +9,16 @@ searchInputs.addEventListener("input", (e) => {
         containers.style.display = "none";
         return;
     }
+    search();
+})
+function search() {
     let href = `/shop/search?search=${searchInputs.value}`;
     fetch(href)
         .then(x => x.json())
         .then(x => {
             containers.innerHTML = ""
-            if (x.length !=0){
-              containers.style.display = "block";
+            if (x.length != 0) {
+                containers.style.display = "block";
             }
             x.forEach(item => {
                 let price = item.price.toLocaleString('en-US');
@@ -32,7 +35,7 @@ searchInputs.addEventListener("input", (e) => {
                                                          <p>${price} </p>
                                                     </a>
                                  </div>`;
-                    containers.innerHTML += view;
+                containers.innerHTML += view;
             })
         })
-})
+}

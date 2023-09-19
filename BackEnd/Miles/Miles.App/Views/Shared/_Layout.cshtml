@@ -149,6 +149,8 @@
                                             </form>
                                             <p>
                                                 <a href="#" class="hideLink">
+                                                    <button class="chat-speech-site" id="chat-speech-site"><i class="fa fa-microphone"></i></button>
+
                                                     <i class="fa fa-close"></i>
                                                 </a>
                                             </p>
@@ -367,6 +369,7 @@
                         <div class="chat-input">
                             <form>
                                 <input type="text" id="chat-input" name="message" placeholder="Send a message..." />
+                                <button class="chat-speech" id="chat-speech"><i class="fa fa-microphone"></i></button>
                                 <button  class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
                             </form>
                         </div>
@@ -397,11 +400,11 @@
 
                             }
                         </li>
-                        <li class="searchNavbar">
+                       @*  <li class="searchNavbar">
                             <input type="text" placeholder="Search..." />
                             <i class="fa fa-search"></i>
-                        </li>
-                        <li>
+                        </li> *@
+                        <li style="margin-top:40px;">
                             <i class="fa fa-home"></i>
                             <a title="Home" asp-action="index" asp-controller="home">Home</a>
                         </li>

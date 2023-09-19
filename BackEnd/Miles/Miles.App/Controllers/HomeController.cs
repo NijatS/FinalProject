@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure;
+using Microsoft.AspNetCore.Mvc;
 using Miles.Core.Entities;
 using Miles.Service.Dtos.Subscribes;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
 using Newtonsoft.Json;
+using System.Speech.Synthesis;
 using System.Text;
+
 namespace Miles.App.Controllers
 {
     public class HomeController : Controller
@@ -16,7 +19,8 @@ namespace Miles.App.Controllers
         private readonly IAssociateService _associateService;
         private readonly ISubscribeService _subscribeService;
         private readonly ICarService _carService;
-        public HomeController(ISliderService sliderService, IBlogService blogService, ITextWhyService textWhyService, ISettingService settingService, IAssociateService associateService, ISubscribeService subscribeService, ICarService carService)
+        private readonly IAccountService _accountService;
+        public HomeController(ISliderService sliderService, IBlogService blogService, ITextWhyService textWhyService, ISettingService settingService, IAssociateService associateService, ISubscribeService subscribeService, ICarService carService, IAccountService accountService)
         {
             _sliderService = sliderService;
             _blogService = blogService;
@@ -25,6 +29,7 @@ namespace Miles.App.Controllers
             _associateService = associateService;
             _subscribeService = subscribeService;
             _carService = carService;
+            _accountService = accountService;
         }
         public async Task<IActionResult> Index()
         {
@@ -68,31 +73,55 @@ namespace Miles.App.Controllers
 
         public async Task<IActionResult> SendMessageBot(string message)
         {
-            Http = new HttpClient();
-            string response = null;
-
-            // Replace [INSERT_YOUR_OWN_API_KEY] with a valid OpenAI API key
-            var apiKey = "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";
-            Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
-
-            // JSON content for the API call
-            var jsonContent = new
+            AppUser user = (AppUser)(await _accountService.GetUser()).items;
+            SpeechSynthesizer sythesizer = new SpeechSynthesizer();
+            if (user is not null)
             {
-                prompt = message,
-                model = "text-davinci-003",
-                max_tokens = 1000
-            };
+                if (user.UserPricingId == 1)
+                {
+                    string response = "Only Premium and Super users can use this Bot";
+                    sythesizer.Speak(response);
+                    return Json(response);
+                }
+                else
+                {
+                    Http = new HttpClient();
+                    string response = null;
+                    // Replace [INSERT_YOUR_OWN_API_KEY] with a valid OpenAI API key
+                    var apiKey = "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";
+                    Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
 
-            // Make the API call
-            var responseContent = await Http.PostAsync("https://api.openai.com/v1/completions", new StringContent(JsonConvert.SerializeObject(jsonContent), Encoding.UTF8, "application/json"));
+                    // JSON content for the API call
+                    var jsonContent = new
+                    {
+                        prompt = message,
+                        model = "text-davinci-003",
+                        max_tokens = 1000
+                    };
 
-            // Read the response as a string
-            var resContext = await responseContent.Content.ReadAsStringAsync();
+                    // Make the API call
+                    var responseContent = await Http.PostAsync("https://api.openai.com/v1/completions", new StringContent(JsonConvert.SerializeObject(jsonContent), Encoding.UTF8, "application/json"));
 
-            // Deserialize the response into a dynamic object
-            var data = JsonConvert.DeserializeObject<dynamic>(resContext);
-            response = data.choices[0].text.ToString();
-            return Json(response);
+                    // Read the response as a string
+                    var resContext = await responseContent.Content.ReadAsStringAsync();
+
+                    // Deserialize the response into a dynamic object
+                    var data = JsonConvert.DeserializeObject<dynamic>(resContext);
+                    response = data.choices[0].text.ToString();
+                    return Json(response);
+                }
+            }
+            else
+            {
+                string response = "Please Register for using Bot.";
+                sythesizer.Speak(response);
+                return Json(response);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> Search(string searchText)
+        {
+            return View("Index");
         }
     }
 }

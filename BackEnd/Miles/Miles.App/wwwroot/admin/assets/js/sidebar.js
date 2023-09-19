@@ -77,7 +77,7 @@ searchInputs.addEventListener("input", (e) => {
                                                     </a>
                                                       <a href="/shop/detail/${item.id}">
                                                         <h4>Price</h4>
-                                                         <p>$1${price} </p>
+                                                         <p>$${price} </p>
                                                     </a>
 
                                  </div>`;

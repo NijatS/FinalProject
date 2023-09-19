@@ -5355,8 +5355,23 @@ img {
     width: 35px;
     height: 35px;
 }
-
-
+.chat-speech , .chat-speech-site{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 45px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 50%;
+    color: #5A5EB9;
+    font-size: 22px;
+}
+.chat-speech-site {
+    right: 20px;
+    font-size: 12px;
+    color: black;
+}
 .chat-logs {
     padding: 15px;
     height: 370px;
@@ -5626,4 +5641,7 @@ img {
 }
 .swiper-button-next::after {
     content: "\f105";
+}
+.color{
+    color:red !important
 }

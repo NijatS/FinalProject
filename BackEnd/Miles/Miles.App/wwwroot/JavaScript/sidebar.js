@@ -134,7 +134,7 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
 $("#chat-circle").click(function () {
     if (n == 0) {
         generate_message("Hello, I am MilesBot :)", 'user');
-        generate_message("How I can help you?", 'user');
+        generate_message("How can I help you?", 'user');
         n++;
 
     }
@@ -167,3 +167,48 @@ document.querySelector(".to-top-button").addEventListener("click", () => {
         behavior: 'smooth'
     });
 })
+const microphone = document.querySelector("#chat-speech")
+const microphoneSite = document.querySelector("#chat-speech-site")
+microphone.addEventListener("click",(e) => {
+    e.preventDefault();
+    microphone.classList.toggle("color");
+    startSpeechRecognition()
+})
+microphoneSite.addEventListener("click", (e) => {
+    e.preventDefault();
+    microphoneSite.classList.toggle("color");
+    startSpeechRecognitionSite()
+})
+function startSpeechRecognition() {
+    var recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
+    recognition.start();
+    recognition.onresult = function (event) {
+        var speechResult = event.results[0][0].transcript;
+        document.getElementById('chat-input').value = speechResult;
+        recognition.stop();
+        microphone.classList.remove("color");
+    }
+    if (microphone.classList.contains("color")) {
+    
+       setTimeout(function() {
+    microphone.classList.remove("color")
+    }, 5000)
+    }
+}
+function startSpeechRecognitionSite() {
+    var recognition = new window.webkitSpeechRecognition() || new window.SpeechRecognition();
+    recognition.start();
+    recognition.onresult = function (event) {
+        var speechResult = event.results[0][0].transcript;
+        document.querySelector('.blog-search-field').value = speechResult;
+        search();
+        recognition.stop();
+        microphoneSite.classList.remove("color");
+    }
+    if (microphoneSite.classList.contains("color")) {
+
+        setTimeout(function () {
+            microphoneSite.classList.remove("color")
+        }, 5000)
+    }
+}

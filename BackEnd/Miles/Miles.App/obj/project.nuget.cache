@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l2zthAmgaT7chnd6Jge7QexAJzO+4q+PnyFddEZHw0ZGnBOPl8ceJEMShpTfFRJ3cw3UVy5cPpHp8BKXwhSDaQ==",
+  "dgSpecHash": "H3p1g8nDzTqjC1yXxCHUNL6KPYKpb1c3dvN4ILOhFAVdHWAGgHB1MsBQMF5KpQJZyZzozAQy5n7HSMEMu4PHYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\Miles.App.csproj",
   "expectedPackageFiles": [
@@ -260,6 +260,7 @@
     "C:\\Users\\Nijat\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.security.principal\\4.0.1\\system.security.principal.4.0.1.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nijat\\.nuget\\packages\\system.speech\\7.0.0\\system.speech.7.0.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
