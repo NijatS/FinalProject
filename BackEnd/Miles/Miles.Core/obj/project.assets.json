@@ -773,11 +773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj",
+      "projectUniqueName": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj",
       "projectName": "Miles.Core",
-      "projectPath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj",
+      "projectPath": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj",
       "packagesPath": "C:\\Users\\Nijat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Core\\obj\\",
+      "outputPath": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nijat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -827,7 +827,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

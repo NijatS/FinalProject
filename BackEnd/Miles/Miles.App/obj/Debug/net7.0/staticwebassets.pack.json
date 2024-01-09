@@ -1,1547 +1,1599 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\botSound.wav",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\botSound.wav",
       "PackagePath": "staticwebassets\\Audio\\botSound.wav"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\click.wav",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\click.wav",
       "PackagePath": "staticwebassets\\Audio\\click.wav"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\win.mp3",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\win.mp3",
       "PackagePath": "staticwebassets\\Audio\\win.mp3"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\winnerAuction.mp3",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Audio\\winnerAuction.mp3",
       "PackagePath": "staticwebassets\\Audio\\winnerAuction.mp3"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\02e9bd55-24a7-4067-b695-e56b33d39761opel.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\063ce013-68f8-4514-b775-3d8049e81ae7toyota.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\063ce013-68f8-4514-b775-3d8049e81ae7toyota.jpg",
       "PackagePath": "staticwebassets\\Images\\Associates\\063ce013-68f8-4514-b775-3d8049e81ae7toyota.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\19ce2018-170d-400e-93bf-95af220ff28aVolkswagen.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\19ce2018-170d-400e-93bf-95af220ff28aVolkswagen.webp",
       "PackagePath": "staticwebassets\\Images\\Associates\\19ce2018-170d-400e-93bf-95af220ff28aVolkswagen.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\3371798b-7477-4717-8582-2d6ee2780eb3renault.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\3371798b-7477-4717-8582-2d6ee2780eb3renault.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\3371798b-7477-4717-8582-2d6ee2780eb3renault.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\3a295237-3727-411d-9c7f-9544236bd270lada.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\3a295237-3727-411d-9c7f-9544236bd270lada.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\3a295237-3727-411d-9c7f-9544236bd270lada.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\4134ecab-a8ed-4cf8-a464-c6670053a664code.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\4134ecab-a8ed-4cf8-a464-c6670053a664code.webp",
       "PackagePath": "staticwebassets\\Images\\Associates\\4134ecab-a8ed-4cf8-a464-c6670053a664code.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\6c898f1b-d5f7-4f1c-ad36-9741e41f010baudi.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\6c898f1b-d5f7-4f1c-ad36-9741e41f010baudi.webp",
       "PackagePath": "staticwebassets\\Images\\Associates\\6c898f1b-d5f7-4f1c-ad36-9741e41f010baudi.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\6df4171c-ab34-4d82-aa95-3d7006327b11images (1).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\6df4171c-ab34-4d82-aa95-3d7006327b11images (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Associates\\6df4171c-ab34-4d82-aa95-3d7006327b11images (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\78821df3-e8a8-4e87-8ed3-016d59345ae6download.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\78821df3-e8a8-4e87-8ed3-016d59345ae6download.jpg",
       "PackagePath": "staticwebassets\\Images\\Associates\\78821df3-e8a8-4e87-8ed3-016d59345ae6download.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8d5adcf7-00e5-4b99-886d-0e23099b7c1alexus.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8d5adcf7-00e5-4b99-886d-0e23099b7c1alexus.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\8d5adcf7-00e5-4b99-886d-0e23099b7c1alexus.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8e559e03-6c03-4099-b11e-f51f84ec10behyundai.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8e559e03-6c03-4099-b11e-f51f84ec10behyundai.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\8e559e03-6c03-4099-b11e-f51f84ec10behyundai.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8ec9f15e-7f7f-4f85-9676-9782978f5473Volkswagen.svg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\8ec9f15e-7f7f-4f85-9676-9782978f5473Volkswagen.svg",
       "PackagePath": "staticwebassets\\Images\\Associates\\8ec9f15e-7f7f-4f85-9676-9782978f5473Volkswagen.svg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\96ab6d0e-5c55-4db1-b32c-2d43b97fa3f0mitsubishi.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\96ab6d0e-5c55-4db1-b32c-2d43b97fa3f0mitsubishi.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\96ab6d0e-5c55-4db1-b32c-2d43b97fa3f0mitsubishi.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\a3db4c4c-d5d5-484d-a4be-18d5a26ddd04toyota.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\a3db4c4c-d5d5-484d-a4be-18d5a26ddd04toyota.webp",
       "PackagePath": "staticwebassets\\Images\\Associates\\a3db4c4c-d5d5-484d-a4be-18d5a26ddd04toyota.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\b90f4add-3f37-4d22-86fc-a0914b7d8b5cmitsubishi.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\b90f4add-3f37-4d22-86fc-a0914b7d8b5cmitsubishi.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\b90f4add-3f37-4d22-86fc-a0914b7d8b5cmitsubishi.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\c18ec833-10a4-47f6-9c76-21f748b3d0a1mers.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\c18ec833-10a4-47f6-9c76-21f748b3d0a1mers.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\c18ec833-10a4-47f6-9c76-21f748b3d0a1mers.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\cbd2bb70-7b86-4218-9095-db7108c24a49toyota.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\cbd2bb70-7b86-4218-9095-db7108c24a49toyota.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\cbd2bb70-7b86-4218-9095-db7108c24a49toyota.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\dab5fcac-8ebf-4f0e-b0eb-408220befee3chevy.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\dab5fcac-8ebf-4f0e-b0eb-408220befee3chevy.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\dab5fcac-8ebf-4f0e-b0eb-408220befee3chevy.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ddc972a8-7545-4ef0-8a65-f150a80dd295bmw.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ddc972a8-7545-4ef0-8a65-f150a80dd295bmw.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\ddc972a8-7545-4ef0-8a65-f150a80dd295bmw.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ed289dd7-71c2-4ec7-bea9-f3a4d7d1db72cadillac.svg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ed289dd7-71c2-4ec7-bea9-f3a4d7d1db72cadillac.svg",
       "PackagePath": "staticwebassets\\Images\\Associates\\ed289dd7-71c2-4ec7-bea9-f3a4d7d1db72cadillac.svg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ef79e36b-0f15-495f-9be5-4c1f0b108824land-rover.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\ef79e36b-0f15-495f-9be5-4c1f0b108824land-rover.png",
       "PackagePath": "staticwebassets\\Images\\Associates\\ef79e36b-0f15-495f-9be5-4c1f0b108824land-rover.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\f4e0069e-3158-4224-a28c-baa972bff31ftoyota.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Associates\\f4e0069e-3158-4224-a28c-baa972bff31ftoyota.webp",
       "PackagePath": "staticwebassets\\Images\\Associates\\f4e0069e-3158-4224-a28c-baa972bff31ftoyota.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\0983b816-11b0-4977-a545-f1b97bdb4e80car.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\0983b816-11b0-4977-a545-f1b97bdb4e80car.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\0983b816-11b0-4977-a545-f1b97bdb4e80car.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\0ac3d93a-003a-40bd-a9c6-85e0ae2c95c8download (1).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\0ac3d93a-003a-40bd-a9c6-85e0ae2c95c8download (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\0ac3d93a-003a-40bd-a9c6-85e0ae2c95c8download (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\242e3741-bc18-46d8-bf87-d894f3be686cdownload.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\242e3741-bc18-46d8-bf87-d894f3be686cdownload.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\242e3741-bc18-46d8-bf87-d894f3be686cdownload.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\32d35770-2554-4f68-96b1-5790b5c2e4c4honda.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\32d35770-2554-4f68-96b1-5790b5c2e4c4honda.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\32d35770-2554-4f68-96b1-5790b5c2e4c4honda.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\37eb9fef-0816-4aa3-bb74-d9458d28e449photo.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\37eb9fef-0816-4aa3-bb74-d9458d28e449photo.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\37eb9fef-0816-4aa3-bb74-d9458d28e449photo.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\53410ef2-a128-4a3e-b83b-2eda66d5eec2kia.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\53410ef2-a128-4a3e-b83b-2eda66d5eec2kia.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\53410ef2-a128-4a3e-b83b-2eda66d5eec2kia.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\68186cd9-e39c-4745-9cdd-bd22a7f07ef0alaska.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\68186cd9-e39c-4745-9cdd-bd22a7f07ef0alaska.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\68186cd9-e39c-4745-9cdd-bd22a7f07ef0alaska.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\81636557-dbb8-4217-83bd-7c98959c8538toyota.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\81636557-dbb8-4217-83bd-7c98959c8538toyota.jpeg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\81636557-dbb8-4217-83bd-7c98959c8538toyota.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\95095139-cb9e-4cb4-82e9-2146d8ca4d02download.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\95095139-cb9e-4cb4-82e9-2146d8ca4d02download.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\95095139-cb9e-4cb4-82e9-2146d8ca4d02download.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\9a535256-fa2d-43c7-8e92-a4d4df757430download.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\9a535256-fa2d-43c7-8e92-a4d4df757430download.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\9a535256-fa2d-43c7-8e92-a4d4df757430download.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\1ad633d5-e9dc-4f94-8a29-5fe8502674b4images (1).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\1ad633d5-e9dc-4f94-8a29-5fe8502674b4images (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\1ad633d5-e9dc-4f94-8a29-5fe8502674b4images (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\3417e718-e508-4707-ac44-a025d86fd27dimages (1).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\3417e718-e508-4707-ac44-a025d86fd27dimages (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\3417e718-e508-4707-ac44-a025d86fd27dimages (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\47aeb771-56e1-476d-9094-ce5dcc2580b9download.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\47aeb771-56e1-476d-9094-ce5dcc2580b9download.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\47aeb771-56e1-476d-9094-ce5dcc2580b9download.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\78bffd7f-9355-43da-b833-a14d46a6de07images (2).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\78bffd7f-9355-43da-b833-a14d46a6de07images (2).jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\78bffd7f-9355-43da-b833-a14d46a6de07images (2).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\7bcd8de6-fe20-4406-8a8e-957d221d0355photo.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\7bcd8de6-fe20-4406-8a8e-957d221d0355photo.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\7bcd8de6-fe20-4406-8a8e-957d221d0355photo.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\874fde1a-0c4e-4e6a-a1d4-dbc33b05daa2avatar.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\874fde1a-0c4e-4e6a-a1d4-dbc33b05daa2avatar.png",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\874fde1a-0c4e-4e6a-a1d4-dbc33b05daa2avatar.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\87ea0652-1e4e-4896-9e66-c43801369811nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\87ea0652-1e4e-4896-9e66-c43801369811nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\87ea0652-1e4e-4896-9e66-c43801369811nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\b6c87405-e688-46b9-bd02-03e8ee18aa57nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\b6c87405-e688-46b9-bd02-03e8ee18aa57nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\b6c87405-e688-46b9-bd02-03e8ee18aa57nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\c2a2d0ad-4400-4267-b604-40265c460145images (2).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\c2a2d0ad-4400-4267-b604-40265c460145images (2).jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\c2a2d0ad-4400-4267-b604-40265c460145images (2).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\c99a528e-22e8-4379-a4b6-767e26ee4fe1IMG_5237.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\c99a528e-22e8-4379-a4b6-767e26ee4fe1IMG_5237.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\c99a528e-22e8-4379-a4b6-767e26ee4fe1IMG_5237.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\dd9f6db3-64aa-4442-8ec9-23eed566369fnijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\dd9f6db3-64aa-4442-8ec9-23eed566369fnijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\dd9f6db3-64aa-4442-8ec9-23eed566369fnijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\fc9137a6-03e3-4bd7-a1b6-6d452975f57bIMG_8387.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\Authors\\fc9137a6-03e3-4bd7-a1b6-6d452975f57bIMG_8387.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\Authors\\fc9137a6-03e3-4bd7-a1b6-6d452975f57bIMG_8387.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\ad576a9c-2650-4f1a-8b6b-5bb5f8b55476images.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\ad576a9c-2650-4f1a-8b6b-5bb5f8b55476images.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\ad576a9c-2650-4f1a-8b6b-5bb5f8b55476images.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\b231a791-3ba9-49ff-b2de-48f9056a84872023_kia_niro_4dr-suv_sx-touring_fq_oem_1_1280.avif",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\b231a791-3ba9-49ff-b2de-48f9056a84872023_kia_niro_4dr-suv_sx-touring_fq_oem_1_1280.avif",
       "PackagePath": "staticwebassets\\Images\\Blogs\\b231a791-3ba9-49ff-b2de-48f9056a84872023_kia_niro_4dr-suv_sx-touring_fq_oem_1_1280.avif"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\ecfb2574-1c87-471b-a4fb-9f43bacbec2eLamborghini_Miura_Concept.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\ecfb2574-1c87-471b-a4fb-9f43bacbec2eLamborghini_Miura_Concept.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\ecfb2574-1c87-471b-a4fb-9f43bacbec2eLamborghini_Miura_Concept.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\f2855a53-390c-46ab-a4fc-e9a47fb4a52ehonda.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Blogs\\f2855a53-390c-46ab-a4fc-e9a47fb4a52ehonda.jpg",
       "PackagePath": "staticwebassets\\Images\\Blogs\\f2855a53-390c-46ab-a4fc-e9a47fb4a52ehonda.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\069dc472-aa8d-4b2d-a3dc-e1c9b4c593a9lada.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\069dc472-aa8d-4b2d-a3dc-e1c9b4c593a9lada.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\069dc472-aa8d-4b2d-a3dc-e1c9b4c593a9lada.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\21b21d70-d7d7-48c9-9722-8df74db1e542bmw.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\21b21d70-d7d7-48c9-9722-8df74db1e542bmw.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\21b21d70-d7d7-48c9-9722-8df74db1e542bmw.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\30f29c6f-9e28-4d9a-999b-e0393cb6a4f1land-rover.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\30f29c6f-9e28-4d9a-999b-e0393cb6a4f1land-rover.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\30f29c6f-9e28-4d9a-999b-e0393cb6a4f1land-rover.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\33cc7e31-8997-4df0-b4f5-689b8fe32f26mers.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\33cc7e31-8997-4df0-b4f5-689b8fe32f26mers.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\33cc7e31-8997-4df0-b4f5-689b8fe32f26mers.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\3aeff695-c653-463c-a661-01e431afe536hyundai.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\3aeff695-c653-463c-a661-01e431afe536hyundai.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\3aeff695-c653-463c-a661-01e431afe536hyundai.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\432e572c-6bc1-4d9a-91a6-916cf2c6c411download.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\432e572c-6bc1-4d9a-91a6-916cf2c6c411download.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\432e572c-6bc1-4d9a-91a6-916cf2c6c411download.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\533afa82-9b87-4a89-ab50-4bdb20f6c5bcmers.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\533afa82-9b87-4a89-ab50-4bdb20f6c5bcmers.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\533afa82-9b87-4a89-ab50-4bdb20f6c5bcmers.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\71f2f4cb-a85d-432c-8087-10a57a153662geely.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\71f2f4cb-a85d-432c-8087-10a57a153662geely.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\71f2f4cb-a85d-432c-8087-10a57a153662geely.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\74f38bba-a919-4086-a627-da77d1be3795chevy.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\74f38bba-a919-4086-a627-da77d1be3795chevy.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\74f38bba-a919-4086-a627-da77d1be3795chevy.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\8118bd35-3770-41bc-892c-3a391adad61cVolkswagen.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\8118bd35-3770-41bc-892c-3a391adad61cVolkswagen.webp",
       "PackagePath": "staticwebassets\\Images\\Brands\\8118bd35-3770-41bc-892c-3a391adad61cVolkswagen.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\94d61c2d-d67f-44d5-bac7-f767c98a36ffhyundai.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\94d61c2d-d67f-44d5-bac7-f767c98a36ffhyundai.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\94d61c2d-d67f-44d5-bac7-f767c98a36ffhyundai.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\a0a1ba87-f693-493e-ba06-76b6ab778e9dopel.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\a0a1ba87-f693-493e-ba06-76b6ab778e9dopel.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\a0a1ba87-f693-493e-ba06-76b6ab778e9dopel.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\b189cd8d-e2db-4b2c-887b-3ff0d69f5cd6honda.svg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\b189cd8d-e2db-4b2c-887b-3ff0d69f5cd6honda.svg",
       "PackagePath": "staticwebassets\\Images\\Brands\\b189cd8d-e2db-4b2c-887b-3ff0d69f5cd6honda.svg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\c20a950d-c013-471d-8050-ff713bfedec4kia.svg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\c20a950d-c013-471d-8050-ff713bfedec4kia.svg",
       "PackagePath": "staticwebassets\\Images\\Brands\\c20a950d-c013-471d-8050-ff713bfedec4kia.svg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\c865cbc6-5a9f-4987-b7b5-a2c0513f68fcaudi.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\c865cbc6-5a9f-4987-b7b5-a2c0513f68fcaudi.webp",
       "PackagePath": "staticwebassets\\Images\\Brands\\c865cbc6-5a9f-4987-b7b5-a2c0513f68fcaudi.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e352c50d-b6f7-458c-8897-e280694b8fcevolvo.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e352c50d-b6f7-458c-8897-e280694b8fcevolvo.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\e352c50d-b6f7-458c-8897-e280694b8fcevolvo.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e4f45c0c-7434-499b-a0d3-4752b2b0dcf4toyota.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e4f45c0c-7434-499b-a0d3-4752b2b0dcf4toyota.jpg",
       "PackagePath": "staticwebassets\\Images\\Brands\\e4f45c0c-7434-499b-a0d3-4752b2b0dcf4toyota.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e51d5bcc-6cf8-4e17-9dfd-a7418bf8e6balexus.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e51d5bcc-6cf8-4e17-9dfd-a7418bf8e6balexus.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\e51d5bcc-6cf8-4e17-9dfd-a7418bf8e6balexus.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e8672dd5-63a1-427b-8f9c-055cab776c15bmw.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Brands\\e8672dd5-63a1-427b-8f9c-055cab776c15bmw.png",
       "PackagePath": "staticwebassets\\Images\\Brands\\e8672dd5-63a1-427b-8f9c-055cab776c15bmw.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\025338b0-2018-463f-9ce6-eed7e0154a9aIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\025338b0-2018-463f-9ce6-eed7e0154a9aIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\025338b0-2018-463f-9ce6-eed7e0154a9aIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\094ad1df-0d33-49d1-9d84-3b10972709d7photo_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\094ad1df-0d33-49d1-9d84-3b10972709d7photo_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\094ad1df-0d33-49d1-9d84-3b10972709d7photo_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0c16494c-6fc8-4201-8470-da0f2b4d485b3VQXr8CZk42BDu01Z7I5n2gA-MQ-1920.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0c16494c-6fc8-4201-8470-da0f2b4d485b3VQXr8CZk42BDu01Z7I5n2gA-MQ-1920.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\0c16494c-6fc8-4201-8470-da0f2b4d485b3VQXr8CZk42BDu01Z7I5n2gA-MQ-1920.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0c5ec224-a2dc-4af9-8f16-b1a9edad6460photo_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0c5ec224-a2dc-4af9-8f16-b1a9edad6460photo_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\0c5ec224-a2dc-4af9-8f16-b1a9edad6460photo_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0d3c74fa-ca7d-48d1-8468-5f3e8a694b72mers3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0d3c74fa-ca7d-48d1-8468-5f3e8a694b72mers3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\0d3c74fa-ca7d-48d1-8468-5f3e8a694b72mers3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\135c55c4-1505-49b8-8dde-3610af411fd2cruze.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0d7b2fdf-3413-4bea-a6c1-f06b6d0e67e960a66d518df9fd50e1014a5d57b976a6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\0d7b2fdf-3413-4bea-a6c1-f06b6d0e67e960a66d518df9fd50e1014a5d57b976a6.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\0e6c76ba-a389-4724-bd04-1cbe21f00a42tibataqnvv7eknyqkuh8hhxz.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\0e6c76ba-a389-4724-bd04-1cbe21f00a42tibataqnvv7eknyqkuh8hhxz.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\135c55c4-1505-49b8-8dde-3610af411fd2cruze.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\135c55c4-1505-49b8-8dde-3610af411fd2cruze.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\17da7795-2ab5-4337-a72e-ca10f501693bmercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1440b702-427d-4ea1-9280-71cec99dd829653f868e95fb8d22feb7e3e982d2ce67.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\1440b702-427d-4ea1-9280-71cec99dd829653f868e95fb8d22feb7e3e982d2ce67.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\17da7795-2ab5-4337-a72e-ca10f501693bmercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\17da7795-2ab5-4337-a72e-ca10f501693bmercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1e61ee7a-7624-4400-9913-0d63111ff351photo_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1e61ee7a-7624-4400-9913-0d63111ff351photo_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\1e61ee7a-7624-4400-9913-0d63111ff351photo_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1f5834b8-ef41-47dc-9cb0-48e410e087a4photo_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\1f5834b8-ef41-47dc-9cb0-48e410e087a4photo_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\1f5834b8-ef41-47dc-9cb0-48e410e087a4photo_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\203baeeb-592c-4f70-bd61-c81c29e18e0ecruze2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\203baeeb-592c-4f70-bd61-c81c29e18e0ecruze2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\203baeeb-592c-4f70-bd61-c81c29e18e0ecruze2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\21a2b043-a2be-4eea-966a-0a95b680d150photo_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\21a2b043-a2be-4eea-966a-0a95b680d150photo_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\21a2b043-a2be-4eea-966a-0a95b680d150photo_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\233d55a1-cd77-425c-91fa-2e17533843fbphoto_2023-08-24_11-03-04.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\233d55a1-cd77-425c-91fa-2e17533843fbphoto_2023-08-24_11-03-04.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\233d55a1-cd77-425c-91fa-2e17533843fbphoto_2023-08-24_11-03-04.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\2426e775-0949-4774-994c-13a2f1542fb0photo_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\2426e775-0949-4774-994c-13a2f1542fb0photo_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\2426e775-0949-4774-994c-13a2f1542fb0photo_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\245bcf6b-e38d-4f27-80d4-6ef29bddadd6maxresdefault.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\245bcf6b-e38d-4f27-80d4-6ef29bddadd6maxresdefault.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\245bcf6b-e38d-4f27-80d4-6ef29bddadd6maxresdefault.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\26596eae-8ff2-488b-ae25-a528c5e77103mers1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\26596eae-8ff2-488b-ae25-a528c5e77103mers1.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\26596eae-8ff2-488b-ae25-a528c5e77103mers1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\28db1d64-49f9-4276-ad8b-dc6b16147f75mers1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\27346cc3-93b1-4d56-a090-f6195cf36171x5_111063111044l.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\27346cc3-93b1-4d56-a090-f6195cf36171x5_111063111044l.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\28058961-725e-4a0b-8013-4859961cf597images.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\28058961-725e-4a0b-8013-4859961cf597images.jpeg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\28db1d64-49f9-4276-ad8b-dc6b16147f75mers1.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\28db1d64-49f9-4276-ad8b-dc6b16147f75mers1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\29cc71ab-c6b5-4fec-8a12-ace241a19e82mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\29cc71ab-c6b5-4fec-8a12-ace241a19e82mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\29cc71ab-c6b5-4fec-8a12-ace241a19e82mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\36d482cb-ed69-4e5c-8b56-b3d9eab69386mers4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\2f185c8b-e21e-4940-8ec3-bc5406ce7541IMG_9497.JPG",
+      "PackagePath": "staticwebassets\\Images\\Cars\\2f185c8b-e21e-4940-8ec3-bc5406ce7541IMG_9497.JPG"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\32fb17e3-d3f7-4957-8c63-0d5f41eee147download (2).jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\32fb17e3-d3f7-4957-8c63-0d5f41eee147download (2).jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\36d482cb-ed69-4e5c-8b56-b3d9eab69386mers4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\36d482cb-ed69-4e5c-8b56-b3d9eab69386mers4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\3b1e18a6-dd18-4978-9843-611109f2a75cPhoto19-08-2020_162432_1200x1200.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\3b1e18a6-dd18-4978-9843-611109f2a75cPhoto19-08-2020_162432_1200x1200.webp",
       "PackagePath": "staticwebassets\\Images\\Cars\\3b1e18a6-dd18-4978-9843-611109f2a75cPhoto19-08-2020_162432_1200x1200.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\3b35ff56-aa48-40a5-af6d-d7a1a28c12b0photo_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\3b35ff56-aa48-40a5-af6d-d7a1a28c12b0photo_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\3b35ff56-aa48-40a5-af6d-d7a1a28c12b0photo_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\48f48af3-e1ff-4118-9998-951fac153c0bmers3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\44ae494b-ccd5-413b-94c5-c8eb4aa7ac39mercedes-benz-e-63-amg-s-w212-c413620062016193219_6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\44ae494b-ccd5-413b-94c5-c8eb4aa7ac39mercedes-benz-e-63-amg-s-w212-c413620062016193219_6.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\48f48af3-e1ff-4118-9998-951fac153c0bmers3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\48f48af3-e1ff-4118-9998-951fac153c0bmers3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4a7e6c4b-f6dd-4044-ba0d-bd1dd9e27c98sedan.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4a7e6c4b-f6dd-4044-ba0d-bd1dd9e27c98sedan.webp",
       "PackagePath": "staticwebassets\\Images\\Cars\\4a7e6c4b-f6dd-4044-ba0d-bd1dd9e27c98sedan.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4be57c79-a6c1-468b-bc46-b0fd7760939dmers4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4be57c79-a6c1-468b-bc46-b0fd7760939dmers4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\4be57c79-a6c1-468b-bc46-b0fd7760939dmers4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4d0dceea-f46b-4b66-b54b-3e3a90f40b35IMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4d0dceea-f46b-4b66-b54b-3e3a90f40b35IMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\4d0dceea-f46b-4b66-b54b-3e3a90f40b35IMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\51e092ba-01f9-4ae1-bd3f-2c171ff920f9mercedes-benz-e-63-amg-s-w212-c413620062016193219_6.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\4e3c5477-9d92-4540-96bb-cee092cc0bc42020-lexus-lx570-sport-1-1564416151.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\4e3c5477-9d92-4540-96bb-cee092cc0bc42020-lexus-lx570-sport-1-1564416151.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\51e092ba-01f9-4ae1-bd3f-2c171ff920f9mercedes-benz-e-63-amg-s-w212-c413620062016193219_6.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\51e092ba-01f9-4ae1-bd3f-2c171ff920f9mercedes-benz-e-63-amg-s-w212-c413620062016193219_6.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\53103ae0-a5d0-423f-9695-e274713d8a972019-Lexus-LX570-S-SUV-white-Matt-Campbell-1001x565p-(5).webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\53103ae0-a5d0-423f-9695-e274713d8a972019-Lexus-LX570-S-SUV-white-Matt-Campbell-1001x565p-(5).webp",
       "PackagePath": "staticwebassets\\Images\\Cars\\53103ae0-a5d0-423f-9695-e274713d8a972019-Lexus-LX570-S-SUV-white-Matt-Campbell-1001x565p-(5).webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5327857f-6ab3-4789-b763-cf5cd61c0b68download.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5327857f-6ab3-4789-b763-cf5cd61c0b68download.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\5327857f-6ab3-4789-b763-cf5cd61c0b68download.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\54899f27-6196-4757-816f-6ce77730b11fphoto_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\54899f27-6196-4757-816f-6ce77730b11fphoto_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\54899f27-6196-4757-816f-6ce77730b11fphoto_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\56974d60-629c-4b62-80a1-1a09e02edd0aIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\56974d60-629c-4b62-80a1-1a09e02edd0aIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\56974d60-629c-4b62-80a1-1a09e02edd0aIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5890a070-de47-43ab-ace4-9a54046e0086cruze2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5890a070-de47-43ab-ace4-9a54046e0086cruze2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\5890a070-de47-43ab-ace4-9a54046e0086cruze2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\59d652ea-5226-44b8-ab45-7b5f8d713f90photo_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\59d652ea-5226-44b8-ab45-7b5f8d713f90photo_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\59d652ea-5226-44b8-ab45-7b5f8d713f90photo_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5b287691-fab1-4b06-b7af-0ba66bdf27f6mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5b287691-fab1-4b06-b7af-0ba66bdf27f6mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\5b287691-fab1-4b06-b7af-0ba66bdf27f6mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\5fad4380-a11f-4bfa-8ba9-4f5a19e1553dphoto_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\65a0d707-233f-445b-9bc3-10b39f927152cruze.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\65a0d707-233f-445b-9bc3-10b39f927152cruze.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\65a0d707-233f-445b-9bc3-10b39f927152cruze.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\66cd06fe-4991-4fe5-a3c8-d417374c2942mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\66cd06fe-4991-4fe5-a3c8-d417374c2942mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\66cd06fe-4991-4fe5-a3c8-d417374c2942mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\67f4829b-a8f1-4613-82e3-a8ae23e8e032honda.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\67f4829b-a8f1-4613-82e3-a8ae23e8e032honda.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\67f4829b-a8f1-4613-82e3-a8ae23e8e032honda.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\69b47f8d-9578-4572-8c66-e3dc92523ec701-toyota-prius-black.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\69b47f8d-9578-4572-8c66-e3dc92523ec701-toyota-prius-black.webp",
       "PackagePath": "staticwebassets\\Images\\Cars\\69b47f8d-9578-4572-8c66-e3dc92523ec701-toyota-prius-black.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\6e601aed-4dea-45fc-8124-d7bb7d58897801-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\6cc3ce88-ae90-4a12-a1c3-f069e5128d36images (1).jpeg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\6cc3ce88-ae90-4a12-a1c3-f069e5128d36images (1).jpeg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\6d699912-d8d1-4c77-87f4-ec1b9f575dd82012-mercedes-benz-cls-350-blueefficiency-04.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\6d699912-d8d1-4c77-87f4-ec1b9f575dd82012-mercedes-benz-cls-350-blueefficiency-04.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\6d7c05f9-2ac6-48c2-b7cf-096a81f57012Mercedes-Benz-CLS-350-CDI-arkadan-gornum.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\6d7c05f9-2ac6-48c2-b7cf-096a81f57012Mercedes-Benz-CLS-350-CDI-arkadan-gornum.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\6e601aed-4dea-45fc-8124-d7bb7d58897801-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp",
       "PackagePath": "staticwebassets\\Images\\Cars\\6e601aed-4dea-45fc-8124-d7bb7d58897801-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\70f1031e-a9f5-41b1-bf11-96a0fcd97ddbmers3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\70f1031e-a9f5-41b1-bf11-96a0fcd97ddbmers3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\70f1031e-a9f5-41b1-bf11-96a0fcd97ddbmers3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\732b10a3-431a-4d2d-91bf-d3d88211650fphoto_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\72ad8f93-58a6-4ded-9f9c-5986e88dbbcfmax-makarov-urbanbny-m5e39-387.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\72ad8f93-58a6-4ded-9f9c-5986e88dbbcfmax-makarov-urbanbny-m5e39-387.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\732b10a3-431a-4d2d-91bf-d3d88211650fphoto_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\732b10a3-431a-4d2d-91bf-d3d88211650fphoto_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\73bec832-5f44-491f-8dfd-75f7955d99d4IMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\73bec832-5f44-491f-8dfd-75f7955d99d4IMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\73bec832-5f44-491f-8dfd-75f7955d99d4IMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\79dc46b2-4201-44e3-9a41-5d7dcd25d83aphoto_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\79dc46b2-4201-44e3-9a41-5d7dcd25d83aphoto_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\79dc46b2-4201-44e3-9a41-5d7dcd25d83aphoto_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\7ba6af4f-7bcf-4800-99e8-71f377d9e65cphoto_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\7ba6af4f-7bcf-4800-99e8-71f377d9e65cphoto_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\7ba6af4f-7bcf-4800-99e8-71f377d9e65cphoto_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\7df52004-5e82-4ceb-a815-7792a084e5b2download.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\7d6d9d9d-2152-4c94-8a4e-7daf1c66958b01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp",
+      "PackagePath": "staticwebassets\\Images\\Cars\\7d6d9d9d-2152-4c94-8a4e-7daf1c66958b01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\7df52004-5e82-4ceb-a815-7792a084e5b2download.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\7df52004-5e82-4ceb-a815-7792a084e5b2download.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\86fb56a0-30fd-46c4-bf3f-06890e6a78ccphoto_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\86fb56a0-30fd-46c4-bf3f-06890e6a78ccphoto_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\86fb56a0-30fd-46c4-bf3f-06890e6a78ccphoto_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\87d80796-9a1d-440e-b5dc-f1862bd2a57emers2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\87d80796-9a1d-440e-b5dc-f1862bd2a57emers2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\87d80796-9a1d-440e-b5dc-f1862bd2a57emers2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\8949b8d5-531b-4dab-ab5a-5c945779f266IMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\8949b8d5-531b-4dab-ab5a-5c945779f266IMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\8949b8d5-531b-4dab-ab5a-5c945779f266IMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\8c57de16-4916-48ba-a665-5a7d83e73548photo_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\896740db-072c-4961-9592-8b794cea44b42019-Lexus-LX570-S-SUV-white-Matt-Campbell-1001x565p-(5).webp",
+      "PackagePath": "staticwebassets\\Images\\Cars\\896740db-072c-4961-9592-8b794cea44b42019-Lexus-LX570-S-SUV-white-Matt-Campbell-1001x565p-(5).webp"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\8c57de16-4916-48ba-a665-5a7d83e73548photo_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\8c57de16-4916-48ba-a665-5a7d83e73548photo_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\947f5f66-d378-4fae-823e-c0f9cbfe9dbaIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\947f5f66-d378-4fae-823e-c0f9cbfe9dbaIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\947f5f66-d378-4fae-823e-c0f9cbfe9dbaIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\95f9b76c-bae9-4b62-ba3e-800d705f28a4alaska.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\95f9b76c-bae9-4b62-ba3e-800d705f28a4alaska.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\95f9b76c-bae9-4b62-ba3e-800d705f28a4alaska.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\99fa59f3-ea8b-436a-842e-2cd8e7ac28e4cruze3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\99fa59f3-ea8b-436a-842e-2cd8e7ac28e4cruze3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\99fa59f3-ea8b-436a-842e-2cd8e7ac28e4cruze3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9b05b79e-d66c-4580-a0f5-7e46d9da26c9photo_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9b05b79e-d66c-4580-a0f5-7e46d9da26c9photo_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\9b05b79e-d66c-4580-a0f5-7e46d9da26c9photo_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9ba1cecc-8e7b-4d08-83f8-3c2e1066914cmers4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9ba1cecc-8e7b-4d08-83f8-3c2e1066914cmers4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\9ba1cecc-8e7b-4d08-83f8-3c2e1066914cmers4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9bc9d9fe-20f8-49b5-a765-07a8f528f377photo_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9bc9d9fe-20f8-49b5-a765-07a8f528f377photo_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\9bc9d9fe-20f8-49b5-a765-07a8f528f377photo_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9e9d88c1-09bc-4451-800f-e3e5a0c30a25Screenshot_20220714-224116_Instagram.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9e9d88c1-09bc-4451-800f-e3e5a0c30a25Screenshot_20220714-224116_Instagram.webp",
       "PackagePath": "staticwebassets\\Images\\Cars\\9e9d88c1-09bc-4451-800f-e3e5a0c30a25Screenshot_20220714-224116_Instagram.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\a08a6954-7729-4266-9dd5-071c6c6c8c2216927048295934664e4a03d36824.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9f5bf8ea-605f-4511-87fe-e3367417fbe5mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\9f5bf8ea-605f-4511-87fe-e3367417fbe5mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\9ffe15c5-1e79-4bda-80b4-888b42ebc41bmers4.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\9ffe15c5-1e79-4bda-80b4-888b42ebc41bmers4.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\a08a6954-7729-4266-9dd5-071c6c6c8c2216927048295934664e4a03d36824.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\a08a6954-7729-4266-9dd5-071c6c6c8c2216927048295934664e4a03d36824.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\aac6d7d8-97c5-4485-bc1b-99054cc8c0dbphoto_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\aac6d7d8-97c5-4485-bc1b-99054cc8c0dbphoto_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\aac6d7d8-97c5-4485-bc1b-99054cc8c0dbphoto_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ab3c4236-a5ae-4469-9723-d7c9185d8d78mers1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ab3c4236-a5ae-4469-9723-d7c9185d8d78mers1.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\ab3c4236-a5ae-4469-9723-d7c9185d8d78mers1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\b1d34adb-a423-4b05-a620-17689d3d0ffaphoto_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\b1d34adb-a423-4b05-a620-17689d3d0ffaphoto_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\b1d34adb-a423-4b05-a620-17689d3d0ffaphoto_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\b7ef497d-32fe-4ad1-838e-5e9fe8c01a8dphoto_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\b7ef497d-32fe-4ad1-838e-5e9fe8c01a8dphoto_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\b7ef497d-32fe-4ad1-838e-5e9fe8c01a8dphoto_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\bb633d75-3297-490c-b238-dfeebcad6843cruze.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\bb633d75-3297-490c-b238-dfeebcad6843cruze.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\bb633d75-3297-490c-b238-dfeebcad6843cruze.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\be2d7d68-7d1c-4d11-92fd-3118f4aa37ccmers3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\bc21b33e-cf9d-4a57-bbdc-4358c1a13712download.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\bc21b33e-cf9d-4a57-bbdc-4358c1a13712download.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\be2d7d68-7d1c-4d11-92fd-3118f4aa37ccmers3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\be2d7d68-7d1c-4d11-92fd-3118f4aa37ccmers3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c47f5d12-ce44-41fc-9b2d-1ddbfd378cf7photo_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\bf3a71c8-118c-4a56-a27a-06ae331e124fmers1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\bf3a71c8-118c-4a56-a27a-06ae331e124fmers1.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c0345948-8ebf-44d0-87a6-4017b73fe051download (1).jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c0345948-8ebf-44d0-87a6-4017b73fe051download (1).jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c47f5d12-ce44-41fc-9b2d-1ddbfd378cf7photo_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\c47f5d12-ce44-41fc-9b2d-1ddbfd378cf7photo_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c77140df-bd98-42c2-a8f8-7b5106913c22cruze4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c6f3b7b6-8941-4bf1-8cdf-c07269931452mGR0348_1024x1024.webp",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c6f3b7b6-8941-4bf1-8cdf-c07269931452mGR0348_1024x1024.webp"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c714d853-e60a-4217-a077-2cb6bbe65b32maxresdefault.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\c714d853-e60a-4217-a077-2cb6bbe65b32maxresdefault.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c77140df-bd98-42c2-a8f8-7b5106913c22cruze4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\c77140df-bd98-42c2-a8f8-7b5106913c22cruze4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c776d835-6eb5-4409-8090-b7eb67a766c7mers2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\c776d835-6eb5-4409-8090-b7eb67a766c7mers2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\c776d835-6eb5-4409-8090-b7eb67a766c7mers2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cae18f37-810f-4500-9bcf-98bef6968610cruze3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cae18f37-810f-4500-9bcf-98bef6968610cruze3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\cae18f37-810f-4500-9bcf-98bef6968610cruze3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cb35d8d2-8d85-4ae3-a041-4a9f8de6e1e1dpd_2.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cb35d8d2-8d85-4ae3-a041-4a9f8de6e1e1dpd_2.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\cb35d8d2-8d85-4ae3-a041-4a9f8de6e1e1dpd_2.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ccfd125a-8ebf-48a8-b071-478402168b58IMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ccfd125a-8ebf-48a8-b071-478402168b58IMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\ccfd125a-8ebf-48a8-b071-478402168b58IMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cebd5ff5-a814-4dec-9d2e-9926d53d69fd2020-lexus-lx570-sport-1-1564416151.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cebd5ff5-a814-4dec-9d2e-9926d53d69fd2020-lexus-lx570-sport-1-1564416151.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\cebd5ff5-a814-4dec-9d2e-9926d53d69fd2020-lexus-lx570-sport-1-1564416151.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\d67a47ea-ea8b-4d68-8cd4-669330063133mers2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\cf174372-bcbc-4a5c-bab8-99e279e5af92IMG_1675-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Cars\\cf174372-bcbc-4a5c-bab8-99e279e5af92IMG_1675-2.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\d67a47ea-ea8b-4d68-8cd4-669330063133mers2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\d67a47ea-ea8b-4d68-8cd4-669330063133mers2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\d9e368eb-35e4-439c-aede-81b09b1fcd59mers1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\d7a673ad-e210-4e5a-9e84-e9d2369e8e45Screenshot_20220714-224116_Instagram.webp",
+      "PackagePath": "staticwebassets\\Images\\Cars\\d7a673ad-e210-4e5a-9e84-e9d2369e8e45Screenshot_20220714-224116_Instagram.webp"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\d9e368eb-35e4-439c-aede-81b09b1fcd59mers1.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\d9e368eb-35e4-439c-aede-81b09b1fcd59mers1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\da4753ac-7ea8-470d-b71d-3d059bdfa6adIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\da4753ac-7ea8-470d-b71d-3d059bdfa6adIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\da4753ac-7ea8-470d-b71d-3d059bdfa6adIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\da6459ee-6a78-4042-adfb-5aa0f3b26443mers2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\da6459ee-6a78-4042-adfb-5aa0f3b26443mers2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\da6459ee-6a78-4042-adfb-5aa0f3b26443mers2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e0020edd-8f17-47c6-996d-5b517344fa7bcruze4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e0020edd-8f17-47c6-996d-5b517344fa7bcruze4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\e0020edd-8f17-47c6-996d-5b517344fa7bcruze4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e2142106-92bd-4724-8d7f-742cbf62cfb7photo_3_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e2142106-92bd-4724-8d7f-742cbf62cfb7photo_3_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\e2142106-92bd-4724-8d7f-742cbf62cfb7photo_3_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e7c6007f-a052-4b83-a8e4-c7ab24d3e022photo_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e7c6007f-a052-4b83-a8e4-c7ab24d3e022photo_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\e7c6007f-a052-4b83-a8e4-c7ab24d3e022photo_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e9c5bc47-b007-441b-b93a-d3a7edd5435aphoto_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\e9c5bc47-b007-441b-b93a-d3a7edd5435aphoto_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\e9c5bc47-b007-441b-b93a-d3a7edd5435aphoto_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ec19cb00-ef18-489c-89a2-f365e3750683bmw.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ec19cb00-ef18-489c-89a2-f365e3750683bmw.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\ec19cb00-ef18-489c-89a2-f365e3750683bmw.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f0f9b46b-2fcf-48ee-9756-d4eafed4d2e5cruze4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f0f9b46b-2fcf-48ee-9756-d4eafed4d2e5cruze4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\f0f9b46b-2fcf-48ee-9756-d4eafed4d2e5cruze4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f24b70ab-3e8b-458a-b70c-e4e06d2bc24cmers4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f24b70ab-3e8b-458a-b70c-e4e06d2bc24cmers4.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\f24b70ab-3e8b-458a-b70c-e4e06d2bc24cmers4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f40b3372-f76e-4201-9192-ebfbee1b5524mers2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f40b3372-f76e-4201-9192-ebfbee1b5524mers2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\f40b3372-f76e-4201-9192-ebfbee1b5524mers2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f4336b0e-fdf1-4359-a897-af5104fe23f2cruze3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f4336b0e-fdf1-4359-a897-af5104fe23f2cruze3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\f4336b0e-fdf1-4359-a897-af5104fe23f2cruze3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f5ac9e74-7b05-4ce7-b09a-eed3154848e3IMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f4f27f44-5e38-4455-8539-09d690a7b16fPhoto19-08-2020_162432_1200x1200.webp",
+      "PackagePath": "staticwebassets\\Images\\Cars\\f4f27f44-5e38-4455-8539-09d690a7b16fPhoto19-08-2020_162432_1200x1200.webp"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\f5ac9e74-7b05-4ce7-b09a-eed3154848e3IMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\f5ac9e74-7b05-4ce7-b09a-eed3154848e3IMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\fcbdf047-dfc7-4858-bff9-9dc68939e875mers3.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\fcbdf047-dfc7-4858-bff9-9dc68939e875mers3.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\fcbdf047-dfc7-4858-bff9-9dc68939e875mers3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\fe853777-74f8-4171-b349-4f1a105cbfd3mers1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\fe853777-74f8-4171-b349-4f1a105cbfd3mers1.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\fe853777-74f8-4171-b349-4f1a105cbfd3mers1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ff2a7079-662b-460d-ab77-5a2b7e901f24cruze2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ff2a7079-662b-460d-ab77-5a2b7e901f24cruze2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Cars\\ff2a7079-662b-460d-ab77-5a2b7e901f24cruze2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ffbb4718-75c8-4359-8a64-8e7cd86d4463IMG_1675-2.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ffbb4718-75c8-4359-8a64-8e7cd86d4463IMG_1675-2.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\ffbb4718-75c8-4359-8a64-8e7cd86d4463IMG_1675-2.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ffecb964-cee9-4a7b-806d-0c3e8df3582cx5_111063111044l.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Cars\\ffecb964-cee9-4a7b-806d-0c3e8df3582cx5_111063111044l.jpg",
       "PackagePath": "staticwebassets\\Images\\Cars\\ffecb964-cee9-4a7b-806d-0c3e8df3582cx5_111063111044l.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\03278da5-399c-4fb9-9291-ae9989a05a69korae.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\03278da5-399c-4fb9-9291-ae9989a05a69korae.webp",
       "PackagePath": "staticwebassets\\Images\\Countries\\03278da5-399c-4fb9-9291-ae9989a05a69korae.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\03f58cc2-cb1e-499c-8a19-a4d0aa5bb9dfazerbaijan.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\03f58cc2-cb1e-499c-8a19-a4d0aa5bb9dfazerbaijan.png",
       "PackagePath": "staticwebassets\\Images\\Countries\\03f58cc2-cb1e-499c-8a19-a4d0aa5bb9dfazerbaijan.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\30d27013-4097-4911-893a-b78a7db2aefaturkey.avif",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\30d27013-4097-4911-893a-b78a7db2aefaturkey.avif",
       "PackagePath": "staticwebassets\\Images\\Countries\\30d27013-4097-4911-893a-b78a7db2aefaturkey.avif"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\75de4250-5651-4320-98dc-bd0481d0c52busa.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\75de4250-5651-4320-98dc-bd0481d0c52busa.webp",
       "PackagePath": "staticwebassets\\Images\\Countries\\75de4250-5651-4320-98dc-bd0481d0c52busa.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\8f22d882-8495-4e69-96aa-48d45842c376russia.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\8f22d882-8495-4e69-96aa-48d45842c376russia.png",
       "PackagePath": "staticwebassets\\Images\\Countries\\8f22d882-8495-4e69-96aa-48d45842c376russia.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\b5a7a98c-e1aa-48ad-9d55-2c70cd6bb84dturkey.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\b5a7a98c-e1aa-48ad-9d55-2c70cd6bb84dturkey.png",
       "PackagePath": "staticwebassets\\Images\\Countries\\b5a7a98c-e1aa-48ad-9d55-2c70cd6bb84dturkey.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\efbf314d-395a-41db-85ae-1759c3f377degeorgia.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\efbf314d-395a-41db-85ae-1759c3f377degeorgia.png",
       "PackagePath": "staticwebassets\\Images\\Countries\\efbf314d-395a-41db-85ae-1759c3f377degeorgia.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\unflag.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Countries\\unflag.webp",
       "PackagePath": "staticwebassets\\Images\\Countries\\unflag.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\01-blog-570x400.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\01-blog-570x400.jpg",
       "PackagePath": "staticwebassets\\Images\\Document_files\\01-blog-570x400.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\01-featured.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\01-featured.jpg",
       "PackagePath": "staticwebassets\\Images\\Document_files\\01-featured.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\all.min.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\all.min.css",
       "PackagePath": "staticwebassets\\Images\\Document_files\\all.min.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\bootstrap.min.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Images\\Document_files\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\car.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\car.jpg",
       "PackagePath": "staticwebassets\\Images\\Document_files\\car.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\css2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\css2",
       "PackagePath": "staticwebassets\\Images\\Document_files"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\feature-image.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\feature-image.jpg",
       "PackagePath": "staticwebassets\\Images\\Document_files\\feature-image.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\home.js.download",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\home.js.download",
       "PackagePath": "staticwebassets\\Images\\Document_files\\home.js.download"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo_white.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\logo_white.png",
       "PackagePath": "staticwebassets\\Images\\Document_files\\logo_white.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\main.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Document_files\\main.css",
       "PackagePath": "staticwebassets\\Images\\Document_files\\main.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\13d50036-972e-43b1-9140-4cbed4a6f12amercedes-amg-cls-63_1.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\13d50036-972e-43b1-9140-4cbed4a6f12amercedes-amg-cls-63_1.webp",
       "PackagePath": "staticwebassets\\Images\\Settings\\13d50036-972e-43b1-9140-4cbed4a6f12amercedes-amg-cls-63_1.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png",
       "PackagePath": "staticwebassets\\Images\\Settings\\16419abd-6161-4fa6-b15a-39b09198e6aaLogo.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\1ae0e726-0411-4a58-85a6-db82ed9ffdd6bmw.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\1ae0e726-0411-4a58-85a6-db82ed9ffdd6bmw.jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\1ae0e726-0411-4a58-85a6-db82ed9ffdd6bmw.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\3565fed9-7990-46f1-bb0d-4cd1de8fe545bmw.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\3565fed9-7990-46f1-bb0d-4cd1de8fe545bmw.jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\3565fed9-7990-46f1-bb0d-4cd1de8fe545bmw.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\9ed748d3-1c95-4528-90ea-58eb72371548images (1).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\9ed748d3-1c95-4528-90ea-58eb72371548images (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\9ed748d3-1c95-4528-90ea-58eb72371548images (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\a04f743f-dfb3-431b-9b3b-e78ccfe1f1afseo-logo.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\a04f743f-dfb3-431b-9b3b-e78ccfe1f1afseo-logo.jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\a04f743f-dfb3-431b-9b3b-e78ccfe1f1afseo-logo.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\b689a752-ce01-48f5-84d4-388241e82424cls.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\b689a752-ce01-48f5-84d4-388241e82424cls.jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\b689a752-ce01-48f5-84d4-388241e82424cls.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\mLogo.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\mLogo.jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\mLogo.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\mWhite.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Settings\\mWhite.jpg",
       "PackagePath": "staticwebassets\\Images\\Settings\\mWhite.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\03b2de15-b046-4988-a377-1a9bf5a108b9mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\03b2de15-b046-4988-a377-1a9bf5a108b9mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\03b2de15-b046-4988-a377-1a9bf5a108b9mercedes-benz-mercedes-e-class-vath-wallpaper-preview.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\042c7a2c-3da4-44ec-9665-cd40f755e0e2download.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\042c7a2c-3da4-44ec-9665-cd40f755e0e2download.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\042c7a2c-3da4-44ec-9665-cd40f755e0e2download.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\146fdffb-98ed-4bd0-87b9-2e782ad3ca0de39.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\146fdffb-98ed-4bd0-87b9-2e782ad3ca0de39.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\146fdffb-98ed-4bd0-87b9-2e782ad3ca0de39.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\33aa1208-a400-4ad3-bc9e-b7cd7aa5305dphoto_2_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\33aa1208-a400-4ad3-bc9e-b7cd7aa5305dphoto_2_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\33aa1208-a400-4ad3-bc9e-b7cd7aa5305dphoto_2_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\4b25d063-4feb-4622-bfdb-50b2b11d5e902020-lexus-lx570-sport-1-1564416151.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\4b25d063-4feb-4622-bfdb-50b2b11d5e902020-lexus-lx570-sport-1-1564416151.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\4b25d063-4feb-4622-bfdb-50b2b11d5e902020-lexus-lx570-sport-1-1564416151.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\52ea6c79-868f-4a98-800a-810bc360a3c6142f22467940c857d469d6dc9f635be9.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\5b942e31-5a2d-428c-b393-fdbc53ce1983images.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5db79db9-2c45-41a6-94d0-b0b0fc0fde6e01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\5db79db9-2c45-41a6-94d0-b0b0fc0fde6e01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp",
       "PackagePath": "staticwebassets\\Images\\Sliders\\5db79db9-2c45-41a6-94d0-b0b0fc0fde6e01-E63-AMG_1080x_ccec43cf-cda1-4e99-8ea8-1b627a6b669a_1024x1024.webp"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\7d8c587b-2777-40a8-9431-e5ce01c1d31cIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\7d8c587b-2777-40a8-9431-e5ce01c1d31cIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\7d8c587b-2777-40a8-9431-e5ce01c1d31cIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\88a4d961-2f6e-42ac-b75d-09c0df4355abimages (1).jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\88a4d961-2f6e-42ac-b75d-09c0df4355abimages (1).jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\88a4d961-2f6e-42ac-b75d-09c0df4355abimages (1).jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\90dafd34-e162-4c1e-befb-fa35b5690eecclas.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\90dafd34-e162-4c1e-befb-fa35b5690eecclas.png",
       "PackagePath": "staticwebassets\\Images\\Sliders\\90dafd34-e162-4c1e-befb-fa35b5690eecclas.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\ba4481f5-9305-42db-885b-013ca5c4339bcar.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\ba4481f5-9305-42db-885b-013ca5c4339bcar.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\ba4481f5-9305-42db-885b-013ca5c4339bcar.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\e1c2ee96-e85b-41c9-a644-9469118df9a6e39.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Sliders\\e1c2ee96-e85b-41c9-a644-9469118df9a6e39.jpg",
       "PackagePath": "staticwebassets\\Images\\Sliders\\e1c2ee96-e85b-41c9-a644-9469118df9a6e39.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\0aa4f4f6-bfef-434e-87f0-55a4dd625e0fIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\0aa4f4f6-bfef-434e-87f0-55a4dd625e0fIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\0aa4f4f6-bfef-434e-87f0-55a4dd625e0fIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\1b891ee0-026c-498b-91d1-6811df25e524avatar.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\1b891ee0-026c-498b-91d1-6811df25e524avatar.png",
       "PackagePath": "staticwebassets\\Images\\Staffs\\1b891ee0-026c-498b-91d1-6811df25e524avatar.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\77197af3-bca9-4224-9b5b-a9d98a2d1117PHOTO-2023-04-03-09-08-11.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\77197af3-bca9-4224-9b5b-a9d98a2d1117PHOTO-2023-04-03-09-08-11.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\77197af3-bca9-4224-9b5b-a9d98a2d1117PHOTO-2023-04-03-09-08-11.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\d0366ea7-1403-4e5c-ae2f-c90e39fe3d99IMG_5237.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\d0366ea7-1403-4e5c-ae2f-c90e39fe3d99IMG_5237.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\d0366ea7-1403-4e5c-ae2f-c90e39fe3d99IMG_5237.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\d995971f-3c50-4ae8-b781-ea43919d473bcar1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\d995971f-3c50-4ae8-b781-ea43919d473bcar1.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\d995971f-3c50-4ae8-b781-ea43919d473bcar1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\df677bb2-289f-412c-93bf-0b01ed315a75photo_2023-08-18_17-34-08.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\df677bb2-289f-412c-93bf-0b01ed315a75photo_2023-08-18_17-34-08.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\df677bb2-289f-412c-93bf-0b01ed315a75photo_2023-08-18_17-34-08.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\df928698-f403-471c-b007-87ee9dc94300nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\df928698-f403-471c-b007-87ee9dc94300nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\df928698-f403-471c-b007-87ee9dc94300nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\fb1781cc-cdae-41de-b5a7-b297b7adf45bcar.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Staffs\\fb1781cc-cdae-41de-b5a7-b297b7adf45bcar.jpg",
       "PackagePath": "staticwebassets\\Images\\Staffs\\fb1781cc-cdae-41de-b5a7-b297b7adf45bcar.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\0b7d3a07-772c-4fa5-b79c-ea96d64e766dIMG_8338.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\0b7d3a07-772c-4fa5-b79c-ea96d64e766dIMG_8338.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\0b7d3a07-772c-4fa5-b79c-ea96d64e766dIMG_8338.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\151a8d6d-c6bf-4eed-af29-5ff7f4009637IMG_2950.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\151a8d6d-c6bf-4eed-af29-5ff7f4009637IMG_2950.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\151a8d6d-c6bf-4eed-af29-5ff7f4009637IMG_2950.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1c4e0ae5-3936-4c4d-9270-03d402edeb10nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1c4e0ae5-3936-4c4d-9270-03d402edeb10nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\1c4e0ae5-3936-4c4d-9270-03d402edeb10nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1f8f0bb8-abbe-4a43-bc28-2f2a45ff3c6dnijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\1f8f0bb8-abbe-4a43-bc28-2f2a45ff3c6dnijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\1f8f0bb8-abbe-4a43-bc28-2f2a45ff3c6dnijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\2e792e1b-1faa-4351-819e-c715b7758995IMG_2950.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\2e792e1b-1faa-4351-819e-c715b7758995IMG_2950.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\2e792e1b-1faa-4351-819e-c715b7758995IMG_2950.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\30e6348d-1525-4f54-b968-7255d8cada55IMG_2950.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\30e6348d-1525-4f54-b968-7255d8cada55IMG_2950.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\30e6348d-1525-4f54-b968-7255d8cada55IMG_2950.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\35a818d5-a2d8-44cb-b7d9-86a201ce9a0anijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\35a818d5-a2d8-44cb-b7d9-86a201ce9a0anijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\35a818d5-a2d8-44cb-b7d9-86a201ce9a0anijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\41c90d0f-6c99-42a8-b325-59d56a58dab9m.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\41c90d0f-6c99-42a8-b325-59d56a58dab9m.png",
       "PackagePath": "staticwebassets\\Images\\Users\\41c90d0f-6c99-42a8-b325-59d56a58dab9m.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\53bba9c9-c3ee-43bd-8438-013b8f77b3d9nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\44a41c40-75c6-45ff-8ca5-c7e31517f531IMG_6664.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\44a41c40-75c6-45ff-8ca5-c7e31517f531IMG_6664.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\53bba9c9-c3ee-43bd-8438-013b8f77b3d9nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\53bba9c9-c3ee-43bd-8438-013b8f77b3d9nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\71474973-84e3-47eb-bd9f-4df539796cabphoto_1_2023-08-24_11-01-47.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\71474973-84e3-47eb-bd9f-4df539796cabphoto_1_2023-08-24_11-01-47.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\71474973-84e3-47eb-bd9f-4df539796cabphoto_1_2023-08-24_11-01-47.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\853c55cd-4a06-45da-84eb-7d70c20b2ab8nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\853c55cd-4a06-45da-84eb-7d70c20b2ab8nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\853c55cd-4a06-45da-84eb-7d70c20b2ab8nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\8c6ff7f2-0451-4c28-853b-5ceb64449baanijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\8c6ff7f2-0451-4c28-853b-5ceb64449baanijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\8c6ff7f2-0451-4c28-853b-5ceb64449baanijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\User-avatar.svg.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\90898eb6-93ff-451f-93c4-483724da5e33Img.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\90898eb6-93ff-451f-93c4-483724da5e33Img.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\User-avatar.svg.png",
       "PackagePath": "staticwebassets\\Images\\Users\\User-avatar.svg.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\admin.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\admin.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\admin.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\b9a1b44c-455b-4b96-9b89-5c5991d75d80car3.avif",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\b9a1b44c-455b-4b96-9b89-5c5991d75d80car3.avif",
       "PackagePath": "staticwebassets\\Images\\Users\\b9a1b44c-455b-4b96-9b89-5c5991d75d80car3.avif"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\bcfee8ce-9560-47e0-a68a-dc241a8e343bIMG_2950.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\bcfee8ce-9560-47e0-a68a-dc241a8e343bIMG_2950.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\bcfee8ce-9560-47e0-a68a-dc241a8e343bIMG_2950.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\bea87e55-a406-4348-90bb-4a64cda5f599IMG_2644.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\bea87e55-a406-4348-90bb-4a64cda5f599IMG_2644.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\bea87e55-a406-4348-90bb-4a64cda5f599IMG_2644.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\c52c137c-8b04-4219-bf19-5c2cbaa80bf7car2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\c52c137c-8b04-4219-bf19-5c2cbaa80bf7car2.jpeg",
       "PackagePath": "staticwebassets\\Images\\Users\\c52c137c-8b04-4219-bf19-5c2cbaa80bf7car2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\cc61093c-3b65-4135-ae9a-1f27a65ddf4cnijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\cc61093c-3b65-4135-ae9a-1f27a65ddf4cnijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\cc61093c-3b65-4135-ae9a-1f27a65ddf4cnijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\cfad3cd0-480c-443a-964c-13c98ce39cd6IMG_2950.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\cfad3cd0-480c-443a-964c-13c98ce39cd6IMG_2950.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\cfad3cd0-480c-443a-964c-13c98ce39cd6IMG_2950.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\d3b63036-e762-4e66-b9be-3469232af19davatar.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\d3b63036-e762-4e66-b9be-3469232af19davatar.png",
       "PackagePath": "staticwebassets\\Images\\Users\\d3b63036-e762-4e66-b9be-3469232af19davatar.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\deba7bd7-fb13-41f4-876e-c47f2b8cf109nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\deba7bd7-fb13-41f4-876e-c47f2b8cf109nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\deba7bd7-fb13-41f4-876e-c47f2b8cf109nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\e5627343-787f-4c0f-8146-544914e72f81IMG_5237.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\e5627343-787f-4c0f-8146-544914e72f81IMG_5237.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\e5627343-787f-4c0f-8146-544914e72f81IMG_5237.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\e89c047b-5dfe-4071-a4de-714a4aec78aenijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\e89c047b-5dfe-4071-a4de-714a4aec78aenijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\e89c047b-5dfe-4071-a4de-714a4aec78aenijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\fbcfba13-c108-4de8-ba04-dd8372b1fa78nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\fbcfba13-c108-4de8-ba04-dd8372b1fa78nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\fbcfba13-c108-4de8-ba04-dd8372b1fa78nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\ffded672-2b58-45ae-b5d5-21252b1bca67nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\Users\\ffded672-2b58-45ae-b5d5-21252b1bca67nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\Users\\ffded672-2b58-45ae-b5d5-21252b1bca67nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\avatar.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\avatar.png",
       "PackagePath": "staticwebassets\\Images\\avatar.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\azerbaijan.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\azerbaijan.png",
       "PackagePath": "staticwebassets\\Images\\azerbaijan.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car.jpg",
       "PackagePath": "staticwebassets\\Images\\car.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car1.jpg",
       "PackagePath": "staticwebassets\\Images\\car1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car2.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car2.jpeg",
       "PackagePath": "staticwebassets\\Images\\car2.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car3.avif",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car3.avif",
       "PackagePath": "staticwebassets\\Images\\car3.avif"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car4.jpeg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\car4.jpeg",
       "PackagePath": "staticwebassets\\Images\\car4.jpeg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\header.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\header.jpg",
       "PackagePath": "staticwebassets\\Images\\header.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.heic",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.heic",
       "PackagePath": "staticwebassets\\Images\\nijat.heic"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\nijat.jpg",
       "PackagePath": "staticwebassets\\Images\\nijat.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\serviceSection.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Images\\serviceSection.jpg",
       "PackagePath": "staticwebassets\\Images\\serviceSection.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\about.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\about.js",
       "PackagePath": "staticwebassets\\JavaScript\\about.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\blog-detail.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\blog-detail.js",
       "PackagePath": "staticwebassets\\JavaScript\\blog-detail.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\car-update.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\car-update.js",
       "PackagePath": "staticwebassets\\JavaScript\\car-update.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\home.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\home.js",
       "PackagePath": "staticwebassets\\JavaScript\\home.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\login.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\login.js",
       "PackagePath": "staticwebassets\\JavaScript\\login.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\search.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\search.js",
       "PackagePath": "staticwebassets\\JavaScript\\search.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\service.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\service.js",
       "PackagePath": "staticwebassets\\JavaScript\\service.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\shop-detail.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\shop-detail.js",
       "PackagePath": "staticwebassets\\JavaScript\\shop-detail.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\sidebar.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\sidebar.js",
       "PackagePath": "staticwebassets\\JavaScript\\sidebar.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\spinner.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\spinner.js",
       "PackagePath": "staticwebassets\\JavaScript\\spinner.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\swipper.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\swipper.js",
       "PackagePath": "staticwebassets\\JavaScript\\swipper.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\test.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\JavaScript\\test.js",
       "PackagePath": "staticwebassets\\JavaScript\\test.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_reset.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_reset.scss",
       "PackagePath": "staticwebassets\\Scss\\base\\_reset.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_typrography.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\base\\_typrography.scss",
       "PackagePath": "staticwebassets\\Scss\\base\\_typrography.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\components\\_headers.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\components\\_headers.scss",
       "PackagePath": "staticwebassets\\Scss\\components\\_headers.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\layout\\_footer.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\layout\\_footer.scss",
       "PackagePath": "staticwebassets\\Scss\\layout\\_footer.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\layout\\_navbar.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\layout\\_navbar.scss",
       "PackagePath": "staticwebassets\\Scss\\layout\\_navbar.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\main.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\main.css",
       "PackagePath": "staticwebassets\\Scss\\main.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\main.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\main.scss",
       "PackagePath": "staticwebassets\\Scss\\main.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_about.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_about.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_about.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog-detail.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog-detail.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_blog-detail.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_blog.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_blog.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_contact.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_contact.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_contact.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_homepage.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_homepage.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_homepage.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_login.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_login.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_login.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_service.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_service.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_service.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop-detail.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop-detail.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_shop-detail.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\pages\\_shop.scss",
       "PackagePath": "staticwebassets\\Scss\\pages\\_shop.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_colors.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_colors.scss",
       "PackagePath": "staticwebassets\\Scss\\utils\\_colors.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_mixins.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_mixins.scss",
       "PackagePath": "staticwebassets\\Scss\\utils\\_mixins.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_variables.scss",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Scss\\utils\\_variables.scss",
       "PackagePath": "staticwebassets\\Scss\\utils\\_variables.scss"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\carBuying.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\carBuying.html",
       "PackagePath": "staticwebassets\\Templates\\carBuying.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\email.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\email.html",
       "PackagePath": "staticwebassets\\Templates\\email.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\subEmail.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\Templates\\subEmail.html",
       "PackagePath": "staticwebassets\\Templates\\subEmail.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\car-update.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\car-update.css",
       "PackagePath": "staticwebassets\\admin\\assets\\css\\car-update.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\maps\\style.css.map",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\maps\\style.css.map",
       "PackagePath": "staticwebassets\\admin\\assets\\css\\maps\\style.css.map"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\style.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\admin\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.eot",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.eot",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Black.eot"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.ttf",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.ttf",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Black.ttf"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.woff",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.woff",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Black.woff"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.woff2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Black.woff2",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Black.woff2"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.eot",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.eot",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.eot"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.ttf",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.ttf",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.ttf"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.woff",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.woff",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.woff"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.woff2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.woff2",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Bold.woff2"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.eot",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.eot",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Light.eot"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.ttf",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.ttf",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Light.ttf"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.woff",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.woff",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Light.woff"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.woff2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Light.woff2",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Light.woff2"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.eot",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.eot",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.eot"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.ttf",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.ttf",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.ttf"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.woff",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.woff",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.woff"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.woff2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.woff2",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Medium.woff2"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.eot",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.eot",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.eot"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.ttf",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.ttf",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.ttf"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.woff",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.woff",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.woff"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.woff2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.woff2",
       "PackagePath": "staticwebassets\\admin\\assets\\fonts\\Roboto\\Roboto-Regular.woff2"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\images\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\images\\auth\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\lockscreen-bg.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\auth\\lockscreen-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\login-bg.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\login-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\auth\\login-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\register-bg.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\auth\\register-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\auth\\register-bg.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face1.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face1.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face10.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face10.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face10.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face11.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face11.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face11.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face12.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face12.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face12.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face13.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face13.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face13.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face14.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face14.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face14.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face15.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face15.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face15.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face16.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face16.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face16.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face17.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face17.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face17.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face18.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face18.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face18.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face19.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face19.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face19.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face2.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face2.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face2.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face20.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face20.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face20.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face21.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face21.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face21.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face22.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face22.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face22.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face23.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face23.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face23.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face24.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face24.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face24.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face25.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face25.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face25.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face26.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face26.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face26.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face27.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face27.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face27.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face3.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face3.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face3.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face4.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face4.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face4.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face5.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face5.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face5.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face6.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face6.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face6.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face7.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face7.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face7.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face8.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face8.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face8.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face9.jpg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\faces\\face9.jpg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\faces\\face9.jpg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\favicon.png",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\favicon.png",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo-mini.svg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo-mini.svg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\logo-mini.svg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo.svg",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\images\\logo.svg",
       "PackagePath": "staticwebassets\\admin\\assets\\images\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\js\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\Chart.min.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\Chart.min.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\chart.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\chart.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\chart.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\dashboard.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\dashboard.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\dashboard.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\data-table.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\data-table.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\data-table.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\dataTables.bootstrap4.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\dataTables.bootstrap4.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\dataTables.bootstrap4.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\documentation.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\documentation.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\documentation.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\file-upload.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\file-upload.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\file-upload.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\hoverable-collapse.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\hoverable-collapse.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\hoverable-collapse.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\jquery.cookie.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\jquery.cookie.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\jquery.cookie.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\jquery.dataTables.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\jquery.dataTables.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\off-canvas.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\off-canvas.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\off-canvas.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\sidebar.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\sidebar.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\sidebar.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\tabs.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\tabs.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\tabs.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\template.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\js\\template.js",
       "PackagePath": "staticwebassets\\admin\\assets\\js\\template.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\charts\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\charts\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\charts\\chartjs.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\charts\\chartjs.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\charts\\chartjs.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\forms\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\forms\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\forms\\basic_elements.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\forms\\basic_elements.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\forms\\basic_elements.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\icons\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\icons\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\icons\\mdi.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\icons\\mdi.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\icons\\mdi.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\samples\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\lock-screen.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\lock-screen.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\samples\\lock-screen.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login-2.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login-2.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\samples\\login-2.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\login.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\samples\\login.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register-2.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register-2.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\samples\\register-2.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\samples\\register.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\samples\\register.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\tables\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\tables\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\tables\\basic-table.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\tables\\basic-table.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\tables\\basic-table.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\ui-features\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\pages\\ui-features\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\ui-features\\buttons.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\ui-features\\buttons.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\ui-features\\buttons.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\ui-features\\typography.html",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\pages\\ui-features\\typography.html",
       "PackagePath": "staticwebassets\\admin\\assets\\pages\\ui-features\\typography.html"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\assets\\vendors\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\base\\bootstrap.min.js.map",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\base\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\base\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\base\\vendor.bundle.base.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\base\\vendor.bundle.base.css",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\base\\vendor.bundle.base.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\base\\vendor.bundle.base.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\base\\vendor.bundle.base.js",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\base\\vendor.bundle.base.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\chart.js\\Chart.min.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\chart.js\\Chart.min.js",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\chart.js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\datatables.net\\jquery.dataTables.js"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\mdi\\css\\materialdesignicons.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff"
     },
     {
-      "Id": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
+      "Id": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.App\\wwwroot\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
       "PackagePath": "staticwebassets\\admin\\assets\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
     },
     {

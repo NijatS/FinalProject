@@ -28,6 +28,7 @@ namespace Miles.Service.Services.Implementations
             Message Message = _mapper.Map<Message>(dto);
             await _repository.AddAsync(Message);
             await _repository.SaveAsync();
+            Message.CreatedAt = DateTime.Now;
             return new ApiResponse
             {
                 StatusCode = 201,

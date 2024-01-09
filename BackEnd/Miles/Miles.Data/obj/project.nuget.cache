@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Twkm+B+NFe8Vgak/Lc81zMxI+HtPbjBnm41/5Q8BjUBOhMmXBMRFn8ZVOKK2Yv05lsPPSBJwucaU2bOHA8Pf/A==",
+  "dgSpecHash": "Uy2YdeDuwWiPSTYFT19gbi1llFGaPc9R1vUhZefhymPfDe6stqczhvipv4l0nEs3ReTNVfCxVnomOPECokM6xw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Data\\Miles.Data.csproj",
+  "projectFilePath": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Data\\Miles.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nijat\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Nijat\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -117,7 +117,7 @@ document.querySelector(".reportBtn").addEventListener("click", () => {
         date = null
     }
   
-    href = `/admin/home/index?date=${date}&todate=${todate}`;
+    href = `/admin/home/search?date=${date}&todate=${todate}`;
     fetch(href)
         .then(x => x.json())
         .then(x => {

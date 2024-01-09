@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Miles.Service
-build_property.ProjectDir = C:\Users\Nijat\OneDrive\Desktop\FinalProject\BackEnd\Miles\Miles.Service\
+build_property.ProjectDir = C:\Codes\FinalProject\BackEnd\Miles\Miles.Service\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

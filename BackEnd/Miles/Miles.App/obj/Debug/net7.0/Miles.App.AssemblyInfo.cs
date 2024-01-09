@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Miles.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a747638a6b2124ab86756fc10aac55c73f34ec0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Miles.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Miles.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

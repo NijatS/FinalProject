@@ -18,6 +18,11 @@ using System.Runtime.ConstrainedExecution;
 using System.Collections;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
+using System.Threading.Channels;
+using Telegram.Bot;
+using System.Net;
+using static System.Net.Mime.MediaTypeNames;
+using System.IO;
 
 namespace Miles.Service.Extensions
 {
@@ -25,7 +30,7 @@ namespace Miles.Service.Extensions
     {
         public static async Task SendMessage(this IServiceCollection services)
         {
-            var botClient = new TelegramBotClient("6597617001:AAERJApJXF8qNXK44i3Zb3Bcy0V_vH3nbhY");
+            var botClient = new TelegramBotClient("6410356240:AAFScjubC7OYJC78m9s_Te_mcvRJyaXd-p4");
             using CancellationTokenSource cts = new();
             // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
             ReceiverOptions receiverOptions = new()
@@ -56,14 +61,16 @@ namespace Miles.Service.Extensions
             {
                 message = await botClient.SendTextMessageAsync(
                 chatId: chatId,
-                text: "Hello,I am MilesBot!\nKey words:\n\n\n/address - you can info about address\n/auction - you can info about cars which wait auction",
+                text: "Hello,I am MilesBot!\nKey words:\n\n\n/address - you can info about address\n/auction - you can info about cars which wait auction" +
+                "\n/blog - you can info about blog",
                 cancellationToken: cancellationToken);
             }
             else if (message.Text.ToLower().Trim() is "salam")
             {
                 message = await botClient.SendTextMessageAsync(
                chatId: chatId,
-               text: "Salam,mən MilesBot-am!\nAçar sözlər:\n\n\n/address - address haqqında məlumat\n/auction - aksiyonda olan maşınlar haqqında",
+               text: "Salam,mən MilesBot-am!\nAçar sözlər:\n\n\n/address - address haqqında məlumat\n/auction - aksiyonda olan maşınlar haqqında məlumat" +
+               "\n/blog - bloqlar haqqında məlumat",
                cancellationToken: cancellationToken);
             }
             else if (message.Text.ToLower().Trim() is "/auction")
@@ -71,7 +78,8 @@ namespace Miles.Service.Extensions
                 string text = null;
                 using (SqlConnection conn = new SqlConnection())
                 {
-                    conn.ConnectionString = "Server=DESKTOP-NIJAT;Database=MilesApp;Trusted_Connection=True;Encrypt=False;MultipleActiveResultSets=true";
+                    conn.ConnectionString = "Data Source=SQL5108.site4now.net;Initial Catalog=db_a9ede5_nijats;User Id=db_a9ede5_nijats_admin;MultipleActiveResultSets=true;Password=Nicat1966.";
+                   // conn.ConnectionString = "Server=DESKTOP-NIJAT;Database=MilesApp;Trusted_Connection=True;Encrypt=False;MultipleActiveResultSets=true";
                     try
                     {
                         SqlCommand cmd = new SqlCommand();
@@ -90,12 +98,19 @@ namespace Miles.Service.Extensions
                             string image = sdr.GetValue(6).ToString();
                             text = "Id: " + id.ToString() + "   \nModel: " +brand+" "+ sdr.GetString(1) +" " + date.ToString() +
                                 "\nAuction Start Price: $" + price.ToString() + "   \nAuction Date: " + auctionDate+ "\n";
-                            Message messageP = await botClient.SendPhotoAsync(
-                            chatId: chatId,
-                              photo: InputFile.FromUri("http://nijats-001-site1.btempurl.com/Images/Cars/" + image),
-                               parseMode: ParseMode.Html,
-                           cancellationToken: cancellationToken);
-
+                            try
+                            {
+                                Message messageP = await botClient.SendPhotoAsync(
+                                chatId: chatId,
+                                  photo: InputFile.FromUri("http://nijats-001-site1.btempurl.com/Images/Cars/" + image),
+                                   parseMode: ParseMode.Html,
+                               cancellationToken: cancellationToken);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.Write(ex.ToString());
+                            }
+                           
                             message = await botClient.SendTextMessageAsync(
                             chatId: chatId,
                             text: text,
@@ -116,7 +131,8 @@ namespace Miles.Service.Extensions
                 string text = null;
                 using (SqlConnection conn = new SqlConnection())
                 {
-                    conn.ConnectionString = "Server=DESKTOP-NIJAT;Database=MilesApp;Trusted_Connection=True;Encrypt=False;MultipleActiveResultSets=true";
+                    conn.ConnectionString = "Data Source=SQL5108.site4now.net;Initial Catalog=db_a9ede5_nijats;User Id=db_a9ede5_nijats_admin;MultipleActiveResultSets=true;Password=Nicat1966.";
+                    //conn.ConnectionString = "Server=DESKTOP-NIJAT;Database=MilesApp;Trusted_Connection=True;Encrypt=False;MultipleActiveResultSets=true";
                     try
                     {
                         SqlCommand cmd = new SqlCommand();
@@ -134,10 +150,18 @@ namespace Miles.Service.Extensions
                             string desc = sdr.GetValue(4).ToString().Substring(0,100);
                             text = "Id: " + id.ToString() + "   \nTitle: " + title+
                                 "\nAuthor: " + author + "\nText: " + desc+"...";
-                            //await botClient.SendPhotoAsync(
-                            //chatId: chatId,
-                            //  photo: InputFile.FromUri("http://nijats-001-site1.btempurl.com/Images/Blogs/" + image),
-                            //   parseMode: ParseMode.Html);
+                            try
+                            {
+                                await botClient.SendPhotoAsync(
+                                chatId: chatId,
+                                  photo: InputFile.FromUri("http://nijats-001-site1.btempurl.com/Images/Blogs/" + image),
+                                   parseMode: ParseMode.Html);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.Write(ex.ToString());
+                            }
+
 
                             message = await botClient.SendTextMessageAsync(
                             chatId: chatId,

@@ -88,7 +88,7 @@ namespace Miles.App.Controllers
                     Http = new HttpClient();
                     string response = null;
                     // Replace [INSERT_YOUR_OWN_API_KEY] with a valid OpenAI API key
-                    var apiKey = "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";
+                    var apiKey = "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";
                     Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
 
                     // JSON content for the API call

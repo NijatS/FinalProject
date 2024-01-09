@@ -6,6 +6,7 @@ const sidebarMenuOverlay = document.querySelector(".sidebar-menu-overlay");
 const searchBtn = document.querySelector("#search-item .fa-search");
 const closeBtn = document.querySelector("#search-item .fa-close");
 const example = document.querySelector(".example");
+const host = window.location.protocol + "//" + window.location.host;
 let INDEX = 0;
 let n = 0;
 var user = null;
@@ -66,7 +67,6 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
 
 
 })
-
     function generate_message(msg, type) {
         INDEX++;
         var str = "";
@@ -74,16 +74,16 @@ document.querySelector("#chat-submit").addEventListener("click", (e) => {
         str += "          <span class=\"msg-avatar\">";
         if (type == 'self') {
             if (user == null) {
-                str += "            <img src=\"https://localhost:7109/Images/Users/User-avatar.svg.png\">";
+                str += `            <img src=\"${host}/Images/Users/User-avatar.svg.png\">`;
 
             }
             else {
-                str += `            <img src=\"https://localhost:7109/Images/Users/${user.image}\">`;
+                str += `            <img src=\"${host}/Images/Users/${user.image}\">`;
 
             }
         }
         else {
-            str += "            <img src=\"https://localhost:7109/Images/Users/admin.jpg\">";
+            str += `            <img src=\"${host}/Images/Users/admin.jpg\">`;
 
         }
         str += "          <\/span>";

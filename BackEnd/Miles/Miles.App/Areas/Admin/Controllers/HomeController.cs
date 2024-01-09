@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Braintree;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Miles.Core.Entities;
 using Miles.Service.Services.Interfaces;
 using Miles.Service.ViewModels;
+using NuGet.Protocol;
 using System.Globalization;
 
 namespace Miles.App.Areas.Admin.Controllers
@@ -25,7 +27,48 @@ namespace Miles.App.Areas.Admin.Controllers
             _statusService = statusService;
             _staffService = staffService;
         }
+        public async Task<IActionResult> Search(string? date, string? todate)
+        {
+            var result = await _accountService.GetAllAdmin(0, 0);
+            AdminPanelVM adminPanelVM = new AdminPanelVM
+            {
+                Admins = (IEnumerable<AppUser>)result.items
+            };
 
+            CultureInfo culture = new CultureInfo("en-US");
+            if (date != "null" && todate == "null")
+            {
+                DateTime tempDate = Convert.ToDateTime(date, culture);
+                result = await _carService.GetAllAsync(0, 0, x => x.StatusId == 3 && x.WinDate > tempDate);
+                adminPanelVM.Cars = (IEnumerable<Car>)result.items;
+                result = await _bidService.GetAllAsync(0, 0, x => !x.IsDeleted && x.CreatedAt > tempDate);
+                adminPanelVM.Bids = (IEnumerable<Bid>)result.items;
+                return Json(adminPanelVM);
+            }
+            else if (todate != "null" && date == "null")
+            {
+                DateTime tempDate = Convert.ToDateTime(todate, culture);
+                result = await _carService.GetAllAsync(0, 0, x => x.StatusId == 3 && x.WinDate < tempDate);
+                adminPanelVM.Cars = (IEnumerable<Car>)result.items;
+                result = await _bidService.GetAllAsync(0, 0, x => !x.IsDeleted && x.CreatedAt < tempDate);
+                adminPanelVM.Bids = (IEnumerable<Bid>)result.items;
+                return Json(adminPanelVM);
+            }
+            else if (todate == "null" && date == "null")
+            {
+                return Json(adminPanelVM);
+            }
+            else 
+            {
+                DateTime tempDate = Convert.ToDateTime(date, culture);
+                DateTime tempDate1 = Convert.ToDateTime(todate, culture);
+                result = await _carService.GetAllAsync(0, 0, x => x.StatusId == 3 && x.WinDate > tempDate && x.WinDate < tempDate1);
+                adminPanelVM.Cars = (IEnumerable<Car>)result.items;
+                result = await _bidService.GetAllAsync(0, 0, x => !x.IsDeleted && x.CreatedAt > tempDate && x.CreatedAt < tempDate1);
+                adminPanelVM.Bids = (IEnumerable<Bid>)result.items;
+                return Json(adminPanelVM);
+            }
+        }
         public async Task<IActionResult> Index(string? date,string? todate)
         {
             var result = await _accountService.GetAllAdmin(0, 0);
@@ -42,39 +85,7 @@ namespace Miles.App.Areas.Admin.Controllers
             adminPanelVM.Statuses = (IEnumerable<Status>)result.items;
             result = await _staffService.GetAllAsync(0, 0);
             adminPanelVM.Staffs = (IEnumerable<Staff>)result.items;
-            CultureInfo culture = new CultureInfo("en-US");
-            if (date != "null" && todate =="null") {
-                DateTime tempDate = Convert.ToDateTime(date, culture);
-                result = await _carService.GetAllAsync(0, 0, x => x.StatusId == 3 && x.WinDate > tempDate);
-                adminPanelVM.Cars = (IEnumerable<Car>)result.items;
-                result = await _bidService.GetAllAsync(0, 0, x => !x.IsDeleted && x.CreatedAt > tempDate);
-                adminPanelVM.Bids = (IEnumerable<Bid>)result.items;
-                return Json(adminPanelVM);
-            }
-            else if(todate !="null" && date == "null")
-            {
-                DateTime tempDate = Convert.ToDateTime(todate, culture);
-                result = await _carService.GetAllAsync(0, 0, x => x.StatusId == 3 && x.WinDate < tempDate);
-                adminPanelVM.Cars = (IEnumerable<Car>)result.items;
-                result = await _bidService.GetAllAsync(0, 0, x => !x.IsDeleted && x.CreatedAt < tempDate);
-                adminPanelVM.Bids = (IEnumerable<Bid>)result.items;
-                return Json(adminPanelVM);
-            }
-            else if (todate == "null" && date == "null")
-            {
-                return Json(adminPanelVM);
-            }
-            else if(todate is not null && date is not null)
-            {
-                DateTime tempDate = Convert.ToDateTime(date, culture);
-                DateTime tempDate1 = Convert.ToDateTime(todate, culture);
-                result = await _carService.GetAllAsync(0, 0, x => x.StatusId == 3 && x.WinDate > tempDate && x.WinDate<tempDate1);
-                adminPanelVM.Cars = (IEnumerable<Car>)result.items;
-                result = await _bidService.GetAllAsync(0, 0, x => !x.IsDeleted && x.CreatedAt > tempDate && x.CreatedAt<tempDate1);
-                adminPanelVM.Bids = (IEnumerable<Bid>)result.items;
-                return Json(adminPanelVM);
-            }
-          
+         
             return View(adminPanelVM);
         }
         public async Task<IActionResult> Date(string? date)

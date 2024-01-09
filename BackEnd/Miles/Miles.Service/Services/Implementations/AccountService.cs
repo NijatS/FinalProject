@@ -229,7 +229,7 @@ namespace Miles.Service.Services.Implementations
     Include(x => x.Country).
     Include(x => x.UserPricing).
     Include(x => x.Cars)
-    .Where(x => x.Name == _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
+    .Where(x => x.UserName == _http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
             if (!await _userManager.IsInRoleAsync(appUser, "User"))
             {
                 return new ApiResponse
@@ -255,7 +255,7 @@ namespace Miles.Service.Services.Implementations
                 Include(x=>x.Country).
                 Include(x=>x.UserPricing).
                 Include(x=>x.Cars)
-                .Where(x=>x.Name==_http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
+                .Where(x=>x.UserName==_http.HttpContext.User.Identity.Name).FirstOrDefaultAsync();
             if (user is null)
             {
                 return new ApiResponse
@@ -354,19 +354,25 @@ namespace Miles.Service.Services.Implementations
         {
 
             List<AppUser> users = new List<AppUser>();
+            List<AppUser> allusers = new List<AppUser>();
             if (count != 0 && page != 0)
             {
-                foreach (var user in await _userManager.Users.Include(x => x.Country).Skip((page - 1) * count).Take(count).ToListAsync())
+                foreach (var user in await _userManager.Users.Include(x => x.Country).Include(x=>x.UserPricing).ToListAsync())
                 {
                     if (await _userManager.IsInRoleAsync(user, "User"))
                     {
-                        users.Add(user);
+                        allusers.Add(user);
                     }
+                }
+
+                foreach (var user in  (List<AppUser>)allusers.Skip((page - 1) * count).Take(count).ToList())
+                {
+                        users.Add(user);
                 }
             }
             else
             {
-                foreach (var user in await _userManager.Users.Include(x => x.Country).ToListAsync())
+                foreach (var user in await _userManager.Users.Include(x => x.Country).Include(x => x.UserPricing).ToListAsync())
                 {
                     if (await _userManager.IsInRoleAsync(user, "User"))
                     {

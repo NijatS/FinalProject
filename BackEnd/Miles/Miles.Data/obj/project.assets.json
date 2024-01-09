@@ -3377,11 +3377,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Data\\Miles.Data.csproj",
+      "projectUniqueName": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Data\\Miles.Data.csproj",
       "projectName": "Miles.Data",
-      "projectPath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Data\\Miles.Data.csproj",
+      "projectPath": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Data\\Miles.Data.csproj",
       "packagesPath": "C:\\Users\\Nijat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Data\\obj\\",
+      "outputPath": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nijat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3398,8 +3398,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj": {
-              "projectPath": "C:\\Users\\Nijat\\OneDrive\\Desktop\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj"
+            "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj": {
+              "projectPath": "C:\\Codes\\FinalProject\\BackEnd\\Miles\\Miles.Core\\Miles.Core.csproj"
             }
           }
         }
@@ -3439,7 +3439,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
